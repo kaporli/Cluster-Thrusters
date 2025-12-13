@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "failed_reloads_per_session": 5,
+  "default_packs": [
+    "builtin/add_pack_finders_test",
+    "builtin/emissive_ores_compatibility",
+    "eatinganimations_compat",
+    "a_good_place:default_animations",
+    "mod/subtle_effects:resourcepacks/biome_color_water_particles",
+    "file/Created Simple Storage 1.3.zip",
+    "file/\u00A75\u00A7lModded \u00A7f\u00A7lContainers\u00A78.zip",
+    "file/\u00A7lcolourful containers\u00A78.zip",
+    "obscure_tooltips/packs/vibrant_tooltips",
+    "file/Visual Titles 1.1.zip",
+    "file/Alex's Titles.zip",
+    "file/cubic-sun-moon-v1.8.4a.zip",
+    "file/Icon Xaero's 1.21.zip",
+    "file/Icon Fresh 1.3.zip",
+    "file/trabens-3d-arrows-1.2.zip",
+    "file/boss-refreshed-v2-1.19-1.21.zip",
+    "file/\u00A754Drodi's Blazes [V1.4.1].zip",
+    "file/FreshAnimations_v1.10.2.zip",
+    "file/FA+All_Extensions-v1.7.zip",
+    "file/Fresh Skeleton Physics.zip",
+    "file/\u00A754Drodi's Blazes FA [V1.2].zip",
+    "file/Semos Animation Lib 1.1.5.zip",
+    "file/Freshly Modded 2.0.3.zip",
+    "file/pack_edits"
+  ],
+  "default_overrides": {
+    "force_compatible": true
+  },
+  "pack_overrides": {
+    "group_a": [
+      "file/Freshly Modded 2.0.3.zip",
+      "file/Semos Animation Lib 1.1.5.zip"
+    ],
+    "group_b": [
+      "file/\u00A754Drodi's Blazes FA [V1.2].zip",
+      "file/Fresh Skeleton Physics.zip",
+      "file/FA+All_Extensions-v1.7.zip",
+      "file/FreshAnimations_v1.10.2.zip"
+    ],
+    "$$group_a": {
+      "fixed_position": true,
+      "required": true
+    },
+    "$$group_b": {
+      "fixed_position": true,
+      "required": true
+    },
+    "file/pack_edits": {
+      "fixed_position": true,
+      "required": true
+    },
+    "file/A Good Place Sample Pack.zip": {
+      "hidden": true
+    },
+    "file/SE Vanilla Consistency 1.20.1.zip": {
+      "hidden": true
+    },
+    "supplementaries:darker_ropes": {
+      "hidden": true
+    },
+    "railways:legacy_semaphore": {
+      "hidden": true
+    },
+    "railways:legacy_palettes": {
+      "hidden": true
+    },
+    "railways:green_signals": {
+      "hidden": true
+    }
+  }
+}
