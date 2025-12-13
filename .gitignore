@@ -13,6 +13,7 @@ icon.png
 usernamecache.json
 usercache.json
 options.txt
+shaderpacks/ComplementaryReimagined_r5.6.1 + EuphoriaPatches_1.7.8.txt
 cherishedworlds-favorites.dat
 
 # === World Data ===
@@ -30,3 +31,4 @@ cherishedworlds-favorites.dat
 /coremods
 patchouli_data.json
 usercache.json
+/XaeroWaypoints_BACKUP*
