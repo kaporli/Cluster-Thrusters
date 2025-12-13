@@ -3,37 +3,35 @@
 icon.png
 
 # === Minecraft Resource Directories ===
-/screenshots
-/texturepacks
-/config
+/.minecraft/screenshots
+/.minecraft/texturepacks
+/.minecraft/config
 
 # === Player-Specific Data ===
 usernamecache.json
 usercache.json
-options.txt
-shaderpacks/ComplementaryReimagined_r5.6.1 + EuphoriaPatches_1.7.8.txt
-cherishedworlds-favorites.dat
+/.minecraft/options.txt
+/.minecraft/cherishedworlds-favorites.dat
 
 # === World Data ===
-/saves
-/data
+/.minecraft/saves
+/.minecraft/data
 
 # === Player-Specific Mod Data ===
-/xaero
-
+/.minecraft/xaero
 # === Runtime/Generated Directories ===
-/logs
-/crash-reports
-/modernfix
-/mod_data
-/coremods
-patchouli_data.json
-usercache.json
-/XaeroWaypoints_BACKUP*
-/mods/.index
-/mods/.connector
-.mixin.out
-fabricloader.log
+/.minecraft/logs
+/.minecraft/crash-reports
+/.minecraft/modernfix
+/.minecraft/mod_data
+/.minecraft/coremods
+/.minecraft/patchouli_data.json
+/.minecraft/usercache.json
+/.minecraft/XaeroWaypoints_BACKUP*
+/.minecraft/mods/.index
+/.minecraft/mods/.connector
+/.minecraft/.mixin.out
+/.minecraft/fabricloader.log
 
 # === Disabled Mods ===
-.minecraft/mods/**/*.disabled
+/.minecraft/mods/**/*.disabled
