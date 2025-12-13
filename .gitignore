@@ -1,0 +1,31 @@
+# === Prism Launcher Metadata ===
+mmc-pack.json
+instance.cfg
+.packignore
+icon.png
+
+# === Minecraft Resource Directories ===
+/screenshots
+/texturepacks
+/config
+
+# === Player-Specific Data ===
+usernamecache.json
+usercache.json
+options.txt
+cherishedworlds-favorites.dat
+
+# === World Data ===
+/saves
+/data
+
+# === Player-Specific Mod Data ===
+/xaero
+
+# === Runtime/Generated Directories ===
+/logs
+/crash-reports
+/modernfix
+/mod_data
+/coremods
+patchouli_data.json
