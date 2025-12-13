@@ -35,3 +35,6 @@ usercache.json
 
 # === Disabled Mods ===
 /.minecraft/mods/**/*.disabled
+
+# === IDE Specific Files ===
+.vscode/settings.json
