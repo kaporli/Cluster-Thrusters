@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "epicsamurai:textures/entity/komainu.png": "outlined_sprite:epicsamurai/komainu.png",
-        "epicsamurai:textures/entity/komainu_red.png": "outlined_sprite:epicsamurai/komainu_red.png",
-        "epicsamurai:textures/entity/komainu_blue.png": "outlined_sprite:epicsamurai/komainu_blue.png",
-        "layersAllowed": true
-    }
-}

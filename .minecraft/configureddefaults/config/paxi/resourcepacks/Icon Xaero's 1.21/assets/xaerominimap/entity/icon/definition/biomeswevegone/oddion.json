@@ -1,8 +1,0 @@
-{
-	"variants": {
-		"biomeswevegone:textures/entity/oddion/pink.png": "outlined_sprite:biomeswevegone/oddion/pink.png",
-		"biomeswevegone:textures/entity/oddion/albino.png": "outlined_sprite:biomeswevegone/oddion/albino.png",
-		"biomeswevegone:textures/entity/oddion/standard.png": "outlined_sprite:biomeswevegone/oddion/standard.png",
-		"layersAllowed": true
-	}
-}

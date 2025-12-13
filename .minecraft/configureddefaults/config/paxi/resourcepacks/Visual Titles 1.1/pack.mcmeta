@@ -1,7 +1,0 @@
-{
-  "pack": {
-        "description": "1.1 by §6unroman",
-        "pack_format": 6,
-        "supported_formats": {"min_inclusive": 6, "max_inclusive": 999}
-  }
-}
