@@ -34,3 +34,6 @@ usercache.json
 /mods/.connector
 .mixin.out
 fabricloader.log
+
+# === Disabled Mods ===
+.minecraft/mods/**/*.disabled
