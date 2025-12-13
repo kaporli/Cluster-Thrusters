@@ -32,16 +32,6 @@
     "force_compatible": true
   },
   "pack_overrides": {
-
-    "fa": [
-      "file/Freshly Modded 2.0.3.zip",
-      "file/Semos Animation Lib 1.1.5.zip",
-      "file/\u00A74Drodi's Blazes FA [V1.2].zip",
-      "file/Fresh Skeleton Physics.zip",
-      "file/FA+All_Extensions-v1.7.zip",
-      "file/FreshAnimations_v1.10.2.zip"
-    ],
-
     "hidden": [
       "fabric",
       "mod_resources",
@@ -54,10 +44,6 @@
       "railways:legacy_palettes",
       "railways:green_signals"
     ],
-
-    "$$fa": {
-      "fixed_position": true
-    },
 
     "$$hidden": {
       "hidden": true
