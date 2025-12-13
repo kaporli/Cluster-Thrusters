@@ -1,0 +1,6 @@
+{
+    "variants": {
+      "default": "outlined_sprite:occultism/goat_familiar.png",
+      "layersAllowed": true
+    }
+  }

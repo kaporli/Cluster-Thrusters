@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "ambientadditions:textures/entity/chocolate_chip_starfish/starfish_1.png": "outlined_sprite:ambientadditions/chocolate_chip_starfish/starfish_1.png",
+    "ambientadditions:textures/entity/chocolate_chip_starfish/starfish_2.png": "outlined_sprite:ambientadditions/chocolate_chip_starfish/starfish_2.png",
+    "ambientadditions:textures/entity/chocolate_chip_starfish/starfish_3.png": "outlined_sprite:ambientadditions/chocolate_chip_starfish/starfish_3.png",
+    "ambientadditions:textures/entity/chocolate_chip_starfish/starfish_4.png": "outlined_sprite:ambientadditions/chocolate_chip_starfish/starfish_4.png",
+    "ambientadditions:textures/entity/chocolate_chip_starfish/starfish_5.png": "outlined_sprite:ambientadditions/chocolate_chip_starfish/starfish_5.png",
+    "layersAllowed": true
+  }
+}

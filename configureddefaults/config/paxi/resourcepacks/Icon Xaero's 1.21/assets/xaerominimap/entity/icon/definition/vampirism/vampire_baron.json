@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "vampirism:textures/entity/baron.png": "outlined_sprite:vampirism/baron.png",
+    "vampirism:textures/entity/baron_enraged.png": "outlined_sprite:vampirism/baron_enraged.png",
+    "vampirism:textures/entity/baroness.png": "outlined_sprite:vampirism/baroness.png",
+    "vampirism:textures/entity/baroness_enraged.png": "outlined_sprite:vampirism/baroness_enraged.png",
+    "layersAllowed": true
+  }
+}

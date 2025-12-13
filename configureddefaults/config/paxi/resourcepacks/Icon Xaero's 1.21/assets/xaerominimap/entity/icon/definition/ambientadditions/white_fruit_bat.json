@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/white_fruit_bat.png",
+    "layersAllowed": true
+  }
+}

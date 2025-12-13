@@ -1,0 +1,13 @@
+filename = 'dtnatures_spirit-1.20.1-forge-1.1.1-beta.jar'
+name = "Dynamic Trees for Nature's Spirit"
+side = 'both'
+
+[download]
+hash = '40d45fe5f0dd87a0908e58bf9001218e79d6f9b5680e063b40839084d0840595fa35256f5a80aede20965d962d2c4283235414a43868a10225f20e690d68c711'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/RenmoBVn/versions/k8AbiKnv/dtnatures_spirit-1.20.1-forge-1.1.1-beta.jar'
+
+[update.modrinth]
+mod-id = 'RenmoBVn'
+version = 'k8AbiKnv'

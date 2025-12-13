@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 15,
+    "supported_formats": [
+      1,
+      63
+    ],
+    "description": "§6Kyo98(godkyo98) - §7Adds icons mod to Xaero's Minimap and WorldMap"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "vampirism:textures/entity/vampire/vampire1.png": "outlined_sprite:vampirism/vampire/vampire1.png",
+    "vampirism:textures/entity/vampire/vampire3.png": "outlined_sprite:vampirism/vampire/vampire3.png",
+    "vampirism:textures/entity/vampire/vampire4.png": "outlined_sprite:vampirism/vampire/vampire4.png",
+    "vampirism:textures/entity/vampire/vampire5.png": "outlined_sprite:vampirism/vampire/vampire5.png",
+    "vampirism:textures/entity/vampire/vampire6.png": "outlined_sprite:vampirism/vampire/vampire6.png",
+    "vampirism:textures/entity/vampire/vampire8.png": "outlined_sprite:vampirism/vampire/vampire8.png",
+    "vampirism:textures/entity/vampire/vampire9.png": "outlined_sprite:vampirism/vampire/vampire9.png",
+    "vampirism:textures/entity/vampire/vampire10.png": "outlined_sprite:vampirism/vampire/vampire10.png",
+    "vampirism:textures/entity/vampire/vampire11.png": "outlined_sprite:vampirism/vampire/vampire11.png",
+    "vampirism:textures/entity/vampire/vampire12.png": "outlined_sprite:vampirism/vampire/vampire12.png",
+    "vampirism:textures/entity/vampire/vampire13.png": "outlined_sprite:vampirism/vampire/vampire13.png",
+    "vampirism:textures/entity/vampire/vampire14.png": "outlined_sprite:vampirism/vampire/vampire14.png",
+    "vampirism:textures/entity/vampire/vampire15.png": "outlined_sprite:vampirism/vampire/vampire15.png",
+    "vampirism:textures/entity/vampire/vampire16.png": "outlined_sprite:vampirism/vampire/vampire16.png",
+    "vampirism:textures/entity/vampire/vampire17.png": "outlined_sprite:vampirism/vampire/vampire17.png",
+    "layersAllowed": true
+  }
+}

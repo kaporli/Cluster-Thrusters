@@ -1,0 +1,9 @@
+{
+	"variants": {
+		"byg:textures/entity/manowar/blue.png": "outlined_sprite:byg/manowar/blue.png",
+		"byg:textures/entity/manowar/magenta.png": "outlined_sprite:byg/manowar/magenta.png",
+		"byg:textures/entity/manowar/purple.png": "outlined_sprite:byg/manowar/purple.png",
+		"byg:textures/entity/manowar/rainbow.png": "outlined_sprite:byg/manowar/rainbow.png",
+		"layersAllowed": true
+	}
+}

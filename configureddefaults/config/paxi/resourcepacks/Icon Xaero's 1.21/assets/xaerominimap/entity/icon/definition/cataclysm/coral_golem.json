@@ -1,0 +1,6 @@
+{
+	"variants" : {
+        "default" : "outlined_sprite:cataclysm/deepling/coral_golem.png",
+		"layersAllowed":true
+	}
+}

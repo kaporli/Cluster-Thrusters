@@ -1,0 +1,19 @@
+{
+  "variants": {
+      "iceandfire:textures/models/hippogryph/black.png": "outlined_sprite:iceandfire/hippogryph/black.png",
+      "iceandfire:textures/models/hippogryph/black_blink.png": "outlined_sprite:iceandfire/hippogryph/black_blink.png",
+      "iceandfire:textures/models/hippogryph/brown.png": "outlined_sprite:iceandfire/hippogryph/brown.png",
+      "iceandfire:textures/models/hippogryph/brown_blink.png": "outlined_sprite:iceandfire/hippogryph/brown_blink.png",
+      "iceandfire:textures/models/hippogryph/chestnut.png": "outlined_sprite:iceandfire/hippogryph/chestnut.png",
+      "iceandfire:textures/models/hippogryph/chestnut_blink.png": "outlined_sprite:iceandfire/hippogryph/chestnut_blink.png",
+      "iceandfire:textures/models/hippogryph/creamy.png": "outlined_sprite:iceandfire/hippogryph/creamy.png",
+      "iceandfire:textures/models/hippogryph/creamy_blink.png": "outlined_sprite:iceandfire/hippogryph/creamy_blink.png",
+      "iceandfire:textures/models/hippogryph/dark_brown.png": "outlined_sprite:iceandfire/hippogryph/dark_brown.png",
+      "iceandfire:textures/models/hippogryph/dark_brown_blink.png": "outlined_sprite:iceandfire/hippogryph/dark_brown_blink.png",
+      "iceandfire:textures/models/hippogryph/gray.png": "outlined_sprite:iceandfire/hippogryph/gray.png",
+      "iceandfire:textures/models/hippogryph/gray_blink.png": "outlined_sprite:iceandfire/hippogryph/gray_blink.png",
+      "iceandfire:textures/models/hippogryph/snow_white.png": "outlined_sprite:iceandfire/hippogryph/snow_white.png",
+      "iceandfire:textures/models/hippogryph/snow_white_blink.png": "outlined_sprite:iceandfire/hippogryph/snow_white_blink.png",
+      "layersAllowed": true
+  }
+}

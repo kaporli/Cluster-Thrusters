@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:seadwellers/mermorph_coral_orange.png",
+	"layersAllowed": true
+    }
+}

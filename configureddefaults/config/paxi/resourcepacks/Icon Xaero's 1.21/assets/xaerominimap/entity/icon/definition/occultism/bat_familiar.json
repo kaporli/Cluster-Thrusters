@@ -1,0 +1,6 @@
+{
+    "variants": {
+      "default": "outlined_sprite:occultism/bat_familiar.png",
+      "layersAllowed": true
+    }
+  }

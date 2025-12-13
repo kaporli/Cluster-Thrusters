@@ -1,0 +1,7 @@
+{
+	"variants" : {
+		"cataclysm:textures/entity/":"outlined_sprite:cataclysm/ignis_soul.png",
+        "default" : "outlined_sprite:cataclysm/ignis.png",
+		"layersAllowed":true
+	}
+}

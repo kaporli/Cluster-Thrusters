@@ -1,0 +1,16 @@
+filename = 'BattleArtsAPI-20.10.7.7.jar'
+name = 'Battle Arts API'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '4a4dbdb2da78f09b0050c390a7d5a97237ece55775d7f02d3a07b352676d10464bc5849dcaf7c1c624523225affae082c77d5aefd12a85d77b40c96c27f7f50e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/7baP43pD/versions/HXOA6Y6F/BattleArtsAPI-20.10.7.7.jar'
+
+[update.modrinth]
+mod-id = '7baP43pD'
+version = 'HXOA6Y6F'

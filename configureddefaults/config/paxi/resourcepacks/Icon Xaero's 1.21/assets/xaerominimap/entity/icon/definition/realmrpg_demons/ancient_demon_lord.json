@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:realmrpg_demons/ancient_demon_lord.png",
+	"layersAllowed": true
+    }
+}

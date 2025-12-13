@@ -1,0 +1,43 @@
+[
+  {
+    "mob": [
+      "dawnera:diabloceratops",
+      "dawnera:struthiomimus",
+      "dawnera:ceratosaurus",
+      "dawnera:dunkleosteus",
+      "dawnera:dimorphodon",
+      "dawnera:tyrannosaurus",
+      "dawnera:psittacosaurus",
+      "dawnera:triceratops",
+      "dawnera:sturgeon",
+      "dawnera:alligator_gar",
+      "dawnera:sabertooth_salmon",
+      "dawnera:coelacanth",
+      "dawnera:mixosaurus",
+      "dawnera:worm",
+      "dawnera:pond_snail"
+    ],
+    "biome": "alexscaves:primordial_caves",
+    "result": "allow"
+  },
+  {
+    "mob": [
+      "dawnera:diabloceratops",
+      "dawnera:struthiomimus",
+      "dawnera:ceratosaurus",
+      "dawnera:dunkleosteus",
+      "dawnera:dimorphodon",
+      "dawnera:tyrannosaurus",
+      "dawnera:psittacosaurus",
+      "dawnera:triceratops",
+      "dawnera:sturgeon",
+      "dawnera:alligator_gar",
+      "dawnera:sabertooth_salmon",
+      "dawnera:coelacanth",
+      "dawnera:mixosaurus",
+      "dawnera:worm",
+      "dawnera:pond_snail"
+    ],
+    "result": "deny"
+  }
+]

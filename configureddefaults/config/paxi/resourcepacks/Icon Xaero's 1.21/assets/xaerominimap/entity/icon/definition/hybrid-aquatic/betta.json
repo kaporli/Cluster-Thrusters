@@ -1,0 +1,14 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/fish/betta/betta_black.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_black.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_blue.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_blue.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_blue_yellow.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_blue_yellow.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_green.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_green.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_pink.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_pink.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_red.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_red.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_red_blue.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_red_blue.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta_white.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta_white.png",
+    "hybrid-aquatic:textures/entity/fish/betta/betta.png":"outlined_sprite:hybrid-aquatic/fish/betta/betta.png",
+    "layersAllowed": true
+    }
+} 

@@ -1,0 +1,16 @@
+filename = 'DynamicTreesPlus-1.20.1-1.2.1.jar'
+name = 'Dynamic Trees Plus'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'f12420479ad4232c494ad17ee02faf59743d2200939630188685a699c715eed9d409ed0abcd8d0113c859a2a07b3e7d52d5e7a518c51702bd69376adda6d0a84'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/qaO9Dqpu/versions/KXHtN7Rf/DynamicTreesPlus-1.20.1-1.2.1.jar'
+
+[update.modrinth]
+mod-id = 'qaO9Dqpu'
+version = 'KXHtN7Rf'

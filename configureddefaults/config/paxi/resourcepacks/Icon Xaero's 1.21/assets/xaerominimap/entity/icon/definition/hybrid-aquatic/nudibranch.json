@@ -1,0 +1,15 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nucibranch.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nucibranch.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_baba.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_baba.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_bullock.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_bullock.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_festiva.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_festiva.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_kubaryana.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_kubaryana.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_kuniei.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_kuniei.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_magnificent.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_magnificent.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_pyjama.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_pyjama.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_sagami.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_sagami.png",
+    "hybrid-aquatic:textures/entity/critter/nudibranch/nudibranch_yonowae.png":"outlined_sprite:hybrid-aquatic/critter/nudibranch/nudibranch_yonowae.png",
+    "layersAllowed": true
+    }
+}

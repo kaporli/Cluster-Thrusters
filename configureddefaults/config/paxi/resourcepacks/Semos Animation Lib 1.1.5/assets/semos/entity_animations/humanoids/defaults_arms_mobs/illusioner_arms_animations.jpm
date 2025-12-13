@@ -1,0 +1,19 @@
+{
+    "credit": "Created by Semos for Freshly Modded",
+    "animations": [
+        {	
+			"fake_left_arm.rx": "left_arm.rx",
+			"fake_left_arm.ry": "left_arm.ry",
+			"fake_left_arm.rz": "left_arm.rz",
+			"fake_left_arm.tx": "left_arm.tx+main_body.tx",
+			"fake_left_arm.ty": "if(is_in_water,left_arm.ty-2,left_arm.ty+main_body.ty+22)",     
+			"fake_left_arm.tz": "left_arm.tz+main_body.tz",
+			"fake_right_arm.rx": "right_arm.rx",
+			"fake_right_arm.ry": "right_arm.ry",
+			"fake_right_arm.rz": "right_arm.rz",
+			"fake_right_arm.tx": "right_arm.tx+main_body.tx",
+			"fake_right_arm.ty": "if(is_in_water,right_arm.ty-2,right_arm.ty+main_body.ty+22)",      
+			"fake_right_arm.tz": "right_arm.tz+main_body.tz"
+		}
+	]
+}

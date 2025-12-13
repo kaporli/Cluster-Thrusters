@@ -1,0 +1,39 @@
+{
+	"credit": "Created by Semos for Freshly Modded",
+	"animations": [
+		{
+			"fake_left_arm.rx": "if(var.aggro>0.01||var.eat_right_handed==1,left_arm.rx,var.left_arm_idle_rx+main_body.rx)",
+			"fake_left_arm.ry": "if(var.aggro>0.01||var.eat_right_handed==1,left_arm.ry,var.left_arm_idle_ry+main_body.ry)",
+			"fake_left_arm.rz": "if(var.aggro>0.01||var.eat_right_handed==1,left_arm.rz,var.left_arm_idle_rz+main_body.rz)",
+			"fake_left_arm.tx": "if(var.aggro>0.01||var.eat_right_handed==1,left_arm.tx,var.left_arm_idle_tx+main_body.tx)",
+			"fake_left_arm.ty": "if(var.aggro>0.01||var.eat_right_handed==1,left_arm.ty-24,var.left_arm_idle_ty+main_body.ty)",
+			"fake_left_arm.tz": "if(var.aggro>0.01||var.eat_right_handed==1,left_arm.tz,var.left_arm_idle_tz+main_body.tz)",
+			"fake_right_arm.rx": "if(var.aggro>0.01||var.eat_left_handed==1,right_arm.rx,var.right_arm_idle_rx+main_body.rx)",
+			"fake_right_arm.ry": "if(var.aggro>0.01||var.eat_left_handed==1,right_arm.ry,var.right_arm_idle_ry+main_body.ry)",
+			"fake_right_arm.rz": "if(var.aggro>0.01||var.eat_left_handed==1,right_arm.rz,var.right_arm_idle_rz+main_body.rz)",
+			"fake_right_arm.tx": "if(var.aggro>0.01||var.eat_left_handed==1,right_arm.tx,var.right_arm_idle_tx+main_body.tx)",
+			"fake_right_arm.ty": "if(var.aggro>0.01||var.eat_left_handed==1,right_arm.ty-24,var.right_arm_idle_ty+main_body.ty)",
+			"fake_right_arm.tz": "if(var.aggro>0.01||var.eat_left_handed==1,right_arm.tz,var.right_arm_idle_tz+main_body.tz)"
+		},
+		{
+			"var.armor_left_arm_rx": "fake_left_arm.rx",
+			"var.armor_left_arm_ry": "fake_left_arm.ry",
+			"var.armor_left_arm_rz": "fake_left_arm.rz",
+			"var.armor_left_arm_tx": "fake_left_arm.tx",
+			"var.armor_left_arm_ty": "fake_left_arm.ty+24",
+			"var.armor_left_arm_tz": "fake_left_arm.tz",
+			"var.armor_right_arm_rx": "fake_right_arm.rx",
+			"var.armor_right_arm_ry": "fake_right_arm.ry",
+			"var.armor_right_arm_rz": "fake_right_arm.rz",
+			"var.armor_right_arm_tx": "fake_right_arm.tx",
+			"var.armor_right_arm_ty": "fake_right_arm.ty+24",
+			"var.armor_right_arm_tz": "fake_right_arm.tz",
+			"var.armor_body_rx": "main_body.rx",
+			"var.armor_body_ry": "main_body.ry",
+			"var.armor_body_rz": "main_body.rz",
+			"var.armor_body_tx": "main_body.tx",
+			"var.armor_body_ty": "main_body.ty+24",
+			"var.armor_body_tz": "main_body.tz"
+		}
+	]
+}

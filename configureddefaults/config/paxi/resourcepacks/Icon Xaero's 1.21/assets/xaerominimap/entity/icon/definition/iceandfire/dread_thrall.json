@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "iceandfire:textures/models/dread/dread_thrall.png":"outlined_sprite:iceandfire/dread/dread_thrall.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%1":"outlined_sprite:iceandfire/dread/thrall_chest_1.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%2":"outlined_sprite:iceandfire/dread/thrall_chest_2.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%3":"outlined_sprite:iceandfire/dread/thrall_chest_3.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%4":"outlined_sprite:iceandfire/dread/thrall_chest_4.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%5":"outlined_sprite:iceandfire/dread/thrall_chest_5.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%6":"outlined_sprite:iceandfire/dread/thrall_chest_6.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%7":"outlined_sprite:iceandfire/dread/thrall_chest_7.png",
+    "iceandfire:textures/models/dread/dread_thrall.png%chest%8":"outlined_sprite:iceandfire/dread/thrall_chest_8.png",
+    "layersAllowed": true
+  }
+}

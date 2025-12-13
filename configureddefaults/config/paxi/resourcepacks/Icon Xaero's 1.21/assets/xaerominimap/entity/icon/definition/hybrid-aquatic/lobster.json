@@ -1,0 +1,16 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_black.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_black.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_blue.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_blue.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_green.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_green.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_palestine.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_palestine.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_red.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_red.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_white.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_white.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_yellow.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_yellow.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_american.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_american.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_california_spiny.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_california_spiny.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_ornate_spiny.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_ornate_spiny.png",
+    "hybrid-aquatic:textures/entity/crustacean/lobster/lobster_regal_slipper.png":"outlined_sprite:hybrid-aquatic/crustacean/lobster/lobster_regal_slipper.png",
+    "layersAllowed": true
+    }
+} 

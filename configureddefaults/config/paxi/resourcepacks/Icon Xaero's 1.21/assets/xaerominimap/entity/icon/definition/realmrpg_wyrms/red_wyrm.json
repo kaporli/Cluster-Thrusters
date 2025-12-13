@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:realmrpg_wyrms/red_wyrm.png",
+	"layersAllowed": true
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "meadow:textures/entity/sheep/flecked_sheep.png": "outlined_sprite:meadow/sheep/flecked_sheep.png",
+    "meadow:textures/entity/sheep/flecked_sheep_fur.png": "outlined_sprite:meadow/sheep/flecked_sheep.png",
+    "meadow:textures/entity/sheep/fuzzy_sheep.png": "outlined_sprite:meadow/sheep/fuzzy_sheep.png",
+    "meadow:textures/entity/sheep/fuzzy_sheep_fur.png": "outlined_sprite:meadow/sheep/fuzzy_sheep.png",
+    "meadow:textures/entity/sheep/inky_sheep.png": "outlined_sprite:meadow/sheep/inky_sheep.png",
+    "meadow:textures/entity/sheep/inky_sheep_fur.png": "outlined_sprite:meadow/sheep/inky_sheep.png",
+    "meadow:textures/entity/sheep/long_nosed_sheep.png": "outlined_sprite:meadow/sheep/long_nosed_sheep.png",
+    "meadow:textures/entity/sheep/long_nosed_sheep_fur.png": "outlined_sprite:meadow/sheep/long_nosed_sheep.png",
+    "meadow:textures/entity/sheep/patched_sheep.png": "outlined_sprite:meadow/sheep/patched_sheep.png",
+    "meadow:textures/entity/sheep/patched_sheep_fur.png": "outlined_sprite:meadow/sheep/patched_sheep.png",
+    "meadow:textures/entity/sheep/rocky_sheep.png": "outlined_sprite:meadow/sheep/rocky_sheep.png",
+    "meadow:textures/entity/sheep/rocky_sheep_fur.png": "outlined_sprite:meadow/sheep/rocky_sheep.png",
+    "default": "outlined_sprite:meadow/sheep/flecked_sheep.png",
+    "layersAllowed": true
+  }
+}

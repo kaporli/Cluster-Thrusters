@@ -1,0 +1,25 @@
+{
+	"credit": "Created by Semos for Freshly Modded",
+	"animations": [
+				{
+					"left_arm.rx": "var.armor_left_arm_rx",
+					"left_arm.ry": "var.armor_left_arm_ry",
+					"left_arm.rz": "var.armor_left_arm_rz",
+					"left_arm.tx": "var.armor_left_arm_tx",
+					"left_arm.ty": "var.armor_left_arm_ty",
+					"left_arm.tz": "var.armor_left_arm_tz",
+					"right_arm.rx": "var.armor_right_arm_rx",
+					"right_arm.ry": "var.armor_right_arm_ry",
+					"right_arm.rz": "var.armor_right_arm_rz",
+					"right_arm.tx": "var.armor_right_arm_tx",
+					"right_arm.ty": "var.armor_right_arm_ty",
+					"right_arm.tz": "var.armor_right_arm_tz",
+					"body.rx": "var.armor_body_rx",
+					"body.ry": "var.armor_body_ry",
+					"body.rz": "var.armor_body_rz",
+					"body.tx": "var.armor_body_tx",
+					"body.ty": "var.armor_body_ty",
+					"body.tz": "var.armor_body_tz"
+				}
+	]
+}

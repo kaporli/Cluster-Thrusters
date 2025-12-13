@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "default": "model:0"
+    },
+    "modelConfigs": [
+        {
+            "baseScale": 1,
+            "rotationY": 0,
+            "rotationX": 0,
+            "rotationZ": 0,
+            "offsetX": 0,
+            "offsetY": 0,
+            "modelPartsFields": [],
+            "modelMainPartFieldAliases": [
+                "com.klikli_dev.occultism.client.model.entity.BeaverFamiliarModel;head"
+            ],
+            "renderingFullModel": false,
+            "modelPartsRotationReset": true,
+            "layersAllowed": true
+        }
+    ]
+}

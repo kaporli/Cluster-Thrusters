@@ -1,0 +1,6 @@
+{
+	"variants" : {
+        "default" : "outlined_sprite:cataclysm/ancient_remnant/modern_remnant.png",
+		"layersAllowed":true
+	}
+}

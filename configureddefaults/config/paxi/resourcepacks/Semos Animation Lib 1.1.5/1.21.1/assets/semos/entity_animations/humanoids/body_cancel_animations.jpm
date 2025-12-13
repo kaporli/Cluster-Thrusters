@@ -1,0 +1,21 @@
+{
+	"credit": "Created by Semos for Freshly Modded",
+	"animations": [
+		{
+			"left_shoulder_guard.visible": "!nbt(Inventory,raw:iregex:.*chestplate.*)",
+			"right_shoulder_guard.visible": "!nbt(Inventory,raw:iregex:.*chestplate.*)",
+			"arms.rx": "if(is_sneaking,-body.rx+body.rx,-body.rx)",
+			"arms.ry": "if(is_sneaking,-body.ry+body.ry,-body.ry)",
+			"arms.rz": "if(is_sneaking,-body.rz+body.rz,-body.rz)",
+			"arms.tx": "if(is_sneaking,-body.tx+body.tx,-body.tx)",
+			"arms.ty": "if(is_sneaking,-body.ty+body.ty,-body.ty)",
+			"arms.tz": "if(is_sneaking,-body.tz+body.tz,-body.tz)",
+			"body.rx": "if(is_sneaking,main_body.rx,main_body.rx-main_body.rx)",
+			"body.ry": "if(is_sneaking,main_body.ry,main_body.ry-main_body.ry)",
+			"body.rz": "if(is_sneaking,main_body.rz,main_body.rz-main_body.rz)",
+			"body.tx": "if(is_sneaking,main_body.tx-main_body.tx,main_body.tx-main_body.tx)",
+			"body.ty": "if(is_sneaking,main_body.ty-main_body.ty,main_body.ty-main_body.ty)",
+			"body.tz": "if(is_sneaking,main_body.tz-main_body.tz,main_body.tz-main_body.tz)"
+		}
+	]
+}

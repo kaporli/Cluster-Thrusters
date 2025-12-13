@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/pink_fairy_armadillo.png",
+    "layersAllowed": true
+  }
+}

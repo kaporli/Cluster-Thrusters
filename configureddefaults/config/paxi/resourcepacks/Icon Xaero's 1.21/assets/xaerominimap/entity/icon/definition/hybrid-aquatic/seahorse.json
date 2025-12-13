@@ -1,0 +1,16 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_big_belly.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_big_belly.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_blue.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_blue.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_common.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_common.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_green.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_green.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_orange.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_orange.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_pink.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_pink.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_purple.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_purple.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_pygmy.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_pygmy.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_thorny.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_thorny.png",
+    "hybrid-aquatic:textures/entity/fish/seahorse/seahorse_yellow.png":"outlined_sprite:hybrid-aquatic/fish/seahorse/seahorse_yellow.png",
+    "layersAllowed": true
+    }
+} 

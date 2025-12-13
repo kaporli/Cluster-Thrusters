@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "ambientadditions:textures/entity/harlequin_shrimp/blue.png": "outlined_sprite:ambientadditions/harlequin_shrimp/blue.png",
+    "ambientadditions:textures/entity/harlequin_shrimp/pink.png": "outlined_sprite:ambientadditions/harlequin_shrimp/pink.png",
+    "ambientadditions:textures/entity/harlequin_shrimp/purple.png": "outlined_sprite:ambientadditions/harlequin_shrimp/purple.png",
+    "layersAllowed": true
+  }
+}

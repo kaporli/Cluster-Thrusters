@@ -1,0 +1,8 @@
+{
+  "variants": {
+  "hybrid-aquatic:textures/entity/fish/stingray/stingray_spotted_eagle.png":"outlined_sprite:hybrid-aquatic/fish/stingray/stingray_spotted_eagle.png",
+  "hybrid-aquatic:textures/entity/fish/stingray/stingray.png":"outlined_sprite:hybrid-aquatic/fish/stingray/stingray.png",
+  "hybrid-aquatic:textures/entity/fish/stingray/stingray_blue_spotted.png":"outlined_sprite:hybrid-aquatic/fish/stingray/stingray_blue_spotted.png",
+  "layersAllowed": true
+  }
+} 

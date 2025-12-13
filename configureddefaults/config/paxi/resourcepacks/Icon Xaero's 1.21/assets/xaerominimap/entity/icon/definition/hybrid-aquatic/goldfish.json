@@ -1,0 +1,7 @@
+{
+  "variants": {
+  "hybrid-aquatic:textures/entity/fish/goldfish/goldfish.png":"outlined_sprite:hybrid-aquatic/fish/goldfish/goldfish.png",
+  "hybrid-aquatic:textures/entity/fish/goldfish/goldfish_shubunkin.png":"outlined_sprite:hybrid-aquatic/fish/goldfish/goldfish_shubunkin.png",
+  "layersAllowed": true
+  }
+} 

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "ambientadditions:textures/entity/pancake_slug/pancake_slug_1.png": "outlined_sprite:ambientadditions/pancake_slug/pancake_slug_1.png",
+    "ambientadditions:textures/entity/pancake_slug/pancake_slug_2.png": "outlined_sprite:ambientadditions/pancake_slug/pancake_slug_2.png",
+    "ambientadditions:textures/entity/pancake_slug/pancake_slug_3.png": "outlined_sprite:ambientadditions/pancake_slug/pancake_slug_3.png",
+    "layersAllowed": true
+  }
+}

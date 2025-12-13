@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/yeti_crab.png",
+    "layersAllowed": true
+  }
+}

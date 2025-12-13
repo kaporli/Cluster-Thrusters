@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/leaf_frog.png",
+    "layersAllowed": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+	"credit": "Created by Semos for Freshly Modded",
+	"animations": [
+		{
+			"head.rx": "sin(torad(90)+var.ls*2)/8*limb_speed+torad(10)+clamp(-torad(10)*(limb_speed*3),torad(-10),0)+sin(torad(-90)+var.b)/40+torad(head_pitch-15)/1.4-(sin(swing_progress*pi*2)/3)",
+			"head.ry": "torad(head_yaw)/1.2",
+			"head.rz": "sin(torad(180)+var.ls)/15*limb_speed+torad(head_yaw)/4",
+			"head.tx": "-sin(var.ls)*limb_speed",
+			"head.ty": "if(var.steve==1,0,var.steve==2,2,1)+if(is_in_water&&!is_on_ground,+10,0)+0.5+(sin(var.b)/4-sin(torad(if(limb_speed>=0.6,-45,45))+var.ls*2+if(limb_speed>=0.6,0,-cos(var.ls*2)/3))*1.5*limb_speed)/1+(sin(pi*swing_progress)*2)+if(is_riding,if(var.boat_fix==1,-0.5,10),0)",
+			"head.tz": "-sin(var.b)/4+(sin(-pi*swing_progress)*2)",
+			"main_body.rx": "((sin(limb_swing+age/11)/40)*(1-limb_speed))+torad(5)*limb_speed",
+			"main_body.ry": "-sin(limb_swing/1.2)/5*limb_speed/1.3",
+			"main_body.rz": "sin(torad(45)+limb_swing/1.2)/15*limb_speed/1.3",
+			"main_body.tx": "head.tx",
+			"main_body.ty": "if(var.steve==1,head.ty-24,var.steve==2,head.ty-26,head.ty-25)",
+			"main_body.tz": "head.tz"
+		},
+		{
+			"left_leg.rx": "if(is_riding,torad(-80),!is_riding&&!is_on_ground&&is_in_water,-sin(limb_swing+age/4)/1.5,((sin(limb_swing+age/13)/40)*(1-limb_speed))-sin(limb_swing/1.2)*limb_speed/1.3+torad(10)*limb_speed)+torad(head_yaw)/30",
+			"left_leg.ry": "clamp(torad(-5)+limb_speed,torad(-5),0)+if(is_riding,torad(-20),0)",
+			"left_leg.rz": "if(!is_riding&&!is_on_ground&&is_in_water,clamp((-sin(limb_swing/10)),torad(-7.5),torad(7.5)),clamp(torad(-1)+limb_speed,torad(-1),0))",
+			"left_leg.tx": "2",
+			"left_leg.ty": "0.2+clamp(12+(sin(torad(-90)+limb_swing/1.2)*3)*limb_speed+(1*limb_speed),0,12.2)+if(is_riding,if(var.boat_fix==1,-0.5,10),if(!is_riding&&!is_on_ground&&is_in_water,head.ty-1.5,0))",
+			"left_leg.tz": "sin(limb_swing/1.2)*1.2*limb_speed+if(is_riding,0,-sin(limb_swing+age/13)/3)-torad(head_yaw)/2",
+			"right_leg.rx": "if(is_riding,torad(-80),!is_riding&&!is_on_ground&&is_in_water,sin(limb_swing+age/4)/1.5,((sin(limb_swing+age/13)/40)*(1-limb_speed))+sin(limb_swing/1.2)*limb_speed/1.3+torad(10)*limb_speed)-torad(head_yaw)/30",
+			"right_leg.ry": "clamp(torad(2)-limb_speed,0,torad(2))+if(is_riding,torad(20),0)",
+			"right_leg.rz": "if(!is_riding&&!is_on_ground&&is_in_water,clamp((sin(limb_swing/10)),torad(-7.5),torad(7.5)),clamp(torad(1)-limb_speed,0,torad(1)))",
+			"right_leg.tx": "-2",
+			"right_leg.ty": "0.2+clamp(12+(sin(torad(90)+limb_swing/1.2)*3)*limb_speed+(1*limb_speed),0,12.2)+if(is_riding,if(var.boat_fix==1,-0.5,10),if(!is_riding&&!is_on_ground&&is_in_water,head.ty-1.5,0))",
+			"right_leg.tz": "-sin(limb_swing/1.2)*1.2*limb_speed+if(is_riding,0,-sin(limb_swing+age/13)/3)+torad(head_yaw)/2"
+		}
+	]
+}

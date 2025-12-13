@@ -1,0 +1,6 @@
+{
+	"variants" : {
+        "default" : "outlined_sprite:cataclysm/koboleton/kobolediator.png",
+		"layersAllowed":true
+	}
+}

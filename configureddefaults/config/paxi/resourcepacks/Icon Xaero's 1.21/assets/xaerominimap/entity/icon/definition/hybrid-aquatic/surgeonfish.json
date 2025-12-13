@@ -1,0 +1,13 @@
+{
+  "variants": {
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_blue_tang.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_blue_tang.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_lined.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_lined.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_orangeshoulder.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_orangeshoulder.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_powder_blue_tang.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_powder_blue_tang.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_sohal.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_sohal.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_unicornfish.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_unicornfish.png",
+  "hybrid-aquatic:textures/entity/fish/surgeonfish/surgeonfish_yellow_tang.png":"outlined_sprite:hybrid-aquatic/fish/surgeonfish/surgeonfish_yellow_tang.png",
+  "layersAllowed": true
+  }
+} 

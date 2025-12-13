@@ -1,0 +1,8 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/fish/mahi/mahi.png":"outlined_sprite:hybrid-aquatic/fish/mahi/mahi.png",
+    "hybrid-aquatic:textures/entity/fish/mahi/mahi_mahi.png":"outlined_sprite:hybrid-aquatic/fish/mahi/mahi_mahi.png",
+    "hybrid-aquatic:textures/entity/fish/mahi/mahi_pompano.png":"outlined_sprite:hybrid-aquatic/fish/mahi/mahi_pompano.png",
+    "layersAllowed": true
+    }
+} 

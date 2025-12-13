@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:occultism/familiar_devil.png",
+    "layersAllowed": true
+  }
+}

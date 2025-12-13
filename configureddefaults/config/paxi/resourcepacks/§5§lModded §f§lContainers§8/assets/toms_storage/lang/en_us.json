@@ -1,0 +1,10 @@
+{
+
+	"ts.storage_terminal": "S. Terminal",
+	"ts.crafting_terminal": "C. Terminal",
+	"ts.connector_filtered": "",
+	"ts.level_emitter": "",
+	"ts.inventory_connector": "",
+	"ts.inventory_connector.beacon_level": "Beacon Level: %d"
+	
+}

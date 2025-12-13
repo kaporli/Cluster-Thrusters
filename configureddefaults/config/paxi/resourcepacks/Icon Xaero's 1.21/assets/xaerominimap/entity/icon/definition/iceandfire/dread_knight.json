@@ -1,0 +1,11 @@
+{
+  "variants": {
+      "iceandfire:textures/models/dread/dread_knight_1.png": "outlined_sprite:iceandfire/dread/dread_knight_1.png",
+      "iceandfire:textures/models/dread/dread_knight_2.png": "outlined_sprite:iceandfire/dread/dread_knight_2.png",
+      "iceandfire:textures/models/dread/dread_knight_3.png": "outlined_sprite:iceandfire/dread/dread_knight_3.png",
+      "iceandfire:textures/models/dread/dread_knight_4.png": "outlined_sprite:iceandfire/dread/dread_knight_4.png",
+      "iceandfire:textures/models/dread/dread_knight_5.png": "outlined_sprite:iceandfire/dread/dread_knight_5.png",
+      "iceandfire:textures/models/dread/dread_knight_6.png": "outlined_sprite:iceandfire/dread/dread_knight_6.png",
+      "layersAllowed": true
+  }
+}

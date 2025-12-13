@@ -1,0 +1,13 @@
+filename = 'dynamictrees_createcompat-1.0.1.jar'
+name = 'Dynamic Trees Create Compat'
+side = 'both'
+
+[download]
+hash = 'c460f52a0d59bfbb4e7a79b5dbe0ded4193a7407'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5150571
+project-id = 980611

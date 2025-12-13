@@ -1,0 +1,6 @@
+{
+    "variants": {
+      "default": "outlined_sprite:occultism/dragon_familiar.png",
+      "layersAllowed": true
+    }
+  }

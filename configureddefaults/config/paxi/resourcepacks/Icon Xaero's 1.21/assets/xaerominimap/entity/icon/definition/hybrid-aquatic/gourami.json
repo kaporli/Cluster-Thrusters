@@ -1,0 +1,9 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/fish/gourami/gourami.png":"outlined_sprite:hybrid-aquatic/fish/gourami/gourami.png",
+    "hybrid-aquatic:textures/entity/fish/gourami/gourami_pink.png":"outlined_sprite:hybrid-aquatic/fish/gourami/gourami_pink.png",
+    "hybrid-aquatic:textures/entity/fish/gourami/gourami_purple.png":"outlined_sprite:hybrid-aquatic/fish/gourami/gourami_purple.png",
+    "hybrid-aquatic:textures/entity/fish/gourami/gourami_yellow.png":"outlined_sprite:hybrid-aquatic/fish/gourami/gourami_yellow.png",
+    "layersAllowed": true
+    }
+} 

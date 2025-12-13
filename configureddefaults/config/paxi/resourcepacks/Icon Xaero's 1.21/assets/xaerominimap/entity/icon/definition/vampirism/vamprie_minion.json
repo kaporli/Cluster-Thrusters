@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "vampirism:textures/entity/minion/vampire/vampire1_slim.png": "outlined_sprite:vampirism/minion/vampire/vampire1_slim.png",
+    "vampirism:textures/entity/minion/vampire/vampire2_slim.png": "outlined_sprite:vampirism/minion/vampire/vampire2_slim.png",
+    "vampirism:textures/entity/minion/vampire/vampire3_slim.png": "outlined_sprite:vampirism/minion/vampire/vampire3_slim.png",
+    "vampirism:textures/entity/minion/vampire/vampire4_slim.png": "outlined_sprite:vampirism/minion/vampire/vampire4_slim.png",
+    "vampirism:textures/entity/minion/vampire/vampire5_slim.png": "outlined_sprite:vampirism/minion/vampire/vampire5_slim.png",
+    "vampirism:textures/entity/minion/vampire/vampire6_slim.png": "outlined_sprite:vampirism/minion/vampire/vampire6_slim.png",
+    "layersAllowed": true
+  }
+}

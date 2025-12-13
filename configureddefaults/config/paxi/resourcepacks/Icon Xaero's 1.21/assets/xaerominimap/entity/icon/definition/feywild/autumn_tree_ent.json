@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:feywild/autumn/tree_ent.png",
+    "layersAllowed": true
+  }
+}

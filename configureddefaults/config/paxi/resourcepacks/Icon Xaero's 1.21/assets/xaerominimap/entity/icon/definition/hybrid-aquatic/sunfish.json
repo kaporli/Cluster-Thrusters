@@ -1,0 +1,9 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/fish/sunfish/sunfish.png":"outlined_sprite:hybrid-aquatic/fish/sunfish/sunfish.png",
+    "hybrid-aquatic:textures/entity/fish/sunfish/sunfish_hoodwinker.png":"outlined_sprite:hybrid-aquatic/fish/sunfish/sunfish_hoodwinker.png",
+    "hybrid-aquatic:textures/entity/fish/sunfish/sunfish_ocean.png":"outlined_sprite:hybrid-aquatic/fish/sunfish/sunfish_ocean.png",
+    "hybrid-aquatic:textures/entity/fish/sunfish/sunfish_sharptail.png":"outlined_sprite:hybrid-aquatic/fish/sunfish/sunfish_sharptail.png",
+    "layersAllowed": true
+    }
+} 

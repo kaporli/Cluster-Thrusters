@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "iceandfire:textures/models/deathworm/deathworm_red.png": "outlined_sprite:iceandfire/deathworm/deathworm_red.png",
+    "iceandfire:textures/models/deathworm/deathworm_white.png": "outlined_sprite:iceandfire/deathworm/deathworm_white.png",
+    "iceandfire:textures/models/deathworm/deathworm_yellow.png": "outlined_sprite:iceandfire/deathworm/deathworm_yellow.png",
+    "layersAllowed": true
+  }
+}

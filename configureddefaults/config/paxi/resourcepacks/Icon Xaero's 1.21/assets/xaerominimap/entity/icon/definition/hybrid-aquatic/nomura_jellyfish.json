@@ -1,0 +1,6 @@
+{
+    "variants": {
+    "default":"outlined_sprite:hybrid-aquatic/jellyfish/nomura_jellyfish.png",
+    "layersAllowed": true
+    }
+} 

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/spider_tailed_adder.png",
+    "layersAllowed": true
+  }
+}

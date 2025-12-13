@@ -1,0 +1,16 @@
+filename = 'epic_fight_avalon-20.12.4.jar'
+name = 'Epic Fight - Avalon'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'd7d520df2f99ecef4c8eb6cf18ae3318929d33e4'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7225899
+project-id = 1268823

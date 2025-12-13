@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "feywild:textures/entity/bee_knight.png": "outlined_sprite:feywild/bee_knight.png",
+    "feywild:textures/entity/angry_bee_knight.png": "outlined_sprite:feywild/angry_bee_knight.png",
+    "layersAllowed": true
+  }
+}

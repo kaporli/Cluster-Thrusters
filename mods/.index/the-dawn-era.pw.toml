@@ -1,0 +1,16 @@
+filename = 'thedawnera-1.20.1-0.642.jar'
+name = 'TheDawnEra'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1', '1.20.2', '1.20.3', '1.20.4', '1.20.5', '1.20.6' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'd21c5bb439cb1e97508b1979703d00527bc0d29e3bef662d82d9eddd1c17e3684c341a3e7bc78b4105ac3a87ade28b7bc77afdbb0c5e29f7d99e2e0e95de82bf'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/XaPEV3Jl/versions/8RTEnc9g/thedawnera-1.20.1-0.642.jar'
+
+[update.modrinth]
+mod-id = 'XaPEV3Jl'
+version = '8RTEnc9g'

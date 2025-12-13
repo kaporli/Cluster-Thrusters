@@ -1,0 +1,6 @@
+{
+    "variants": {
+      "default": "outlined_sprite:occultism/cthulhu_familiar.png",
+      "layersAllowed": true
+    }
+  }

@@ -1,0 +1,143 @@
+{
+	"credit": "Created by Semos to match Fresh animation in modded",
+	"textureSize": [64, 64],
+	"models": [
+		{
+			"part": "root",
+			"id": "root",
+			"model": "semos:entity_animations/humanoids/common_variables"	
+		},
+		{
+			"part": "hat",
+			"id": "hat",
+			"model": "semos:entity_animations/humanoids/body_cancel_animations"	
+		},
+		{
+			"part": "nose",
+			"id": "nose",
+			"model": "semos:entity_animations/humanoids/body_animations.jpm"
+		},
+		{
+			"part": "left_closed_arm",
+			"id": "left_closed_arm",
+			"model": "semos:entity_animations/humanoids/one_weapon_mobs/weapons_detection_variables.jpm"
+		},
+		{
+			"part": "right_closed_arm",
+			"id": "right_closed_arm",
+			"model": "semos:entity_animations/humanoids/arms_crossed_mobs/crossed_arms_animations.jpm"
+		},
+		{
+			"part": "middle_closed_arm",
+			"id": "middle_closed_arm",
+			"model": "semos:entity_animations/humanoids/one_weapon_mobs/bows_animations.jpm"
+		},
+		{
+			"part": "right_arm",
+			"id": "right_arm",
+			"model": "semos:entity_animations/humanoids/arms_weaponized_mobs/guards_arms_animations.jpm"
+		},
+		{
+			"part": "left_arm",
+			"id": "left_arm",
+			"animations": [
+				{
+				"fake_left_arm.visible":"left_arm.sx==1",
+				"fake_right_arm.visible":"right_arm.sx==1",
+				"fake_left_arm.ty": "left_arm.ty",
+				"fake_right_arm.ty": "right_arm.ty"
+				}
+			]
+		},
+		{
+			"part": "left_leg",
+			"id": "left_leg",
+			"invertAxis": "xy",
+			"translate": [2, -12, 0],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [-3.5, 0, -1.5, 3, 12, 3], "textureOffset": [0, 18]}
+			]
+		},
+		{
+			"part": "right_leg",
+			"id": "right_leg",
+			"invertAxis": "xy",
+			"translate": [-2, -12, 0],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [0.5, 0, -1.5, 3, 12, 3], "textureOffset": [0, 18]}
+			]
+		},
+		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [-4, 24, -4, 8, 10, 8], "textureOffset": [0, 0]}
+			],
+			"submodels": [
+				{
+					"id": "nose2",
+					"invertAxis": "xy",
+					"translate": [0, 26.5, -4],
+					"boxes": [
+						{"coordinates": [-1, -3.5, -2, 2, 4, 2], "textureOffset": [24, 0]}
+					]
+				}
+			]
+		},
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"scale": 1,
+			"submodels": [
+				{
+					"id": "arms2",
+					"invertAxis": "xy",
+					"translate": [0, 22, 0],
+					"submodels": [
+						{
+							"id": "fake_left_arm",
+							"invertAxis": "xy",
+							"translate": [-5, 0, 0],
+							"boxes": [
+								{"coordinates": [-2, -10, -1.5, 3, 12, 3], "textureOffset": [40, 19]}
+							]
+						},
+						{
+							"id": "fake_right_arm",
+							"invertAxis": "xy",
+							"translate": [5, 0, 0],
+							"boxes": [
+								{"coordinates": [-1, -10, -1.5, 3, 12, 3], "textureOffset": [40, 19]}
+							]
+						},
+						{
+							"id": "fake_folded_arms",
+							"invertAxis": "xy",
+							"translate": [0, 0, 0],
+							"boxes": [
+								{"coordinates": [-7, -7, -2, 3, 8, 3], "textureOffset": [32, 0]},
+								{"coordinates": [4, -7, -2, 3, 8, 3], "textureOffset": [32, 0]},
+								{"coordinates": [-4, -7, -2, 8, 3, 3], "textureOffset": [32, 11]}
+							]
+						}
+					]
+				},
+				{
+					"id": "main_body",
+					"invertAxis": "xy",
+					"translate": [0, 24, 0],
+					"boxes": [
+						{"coordinates": [-4, -12, -3, 8, 12, 6], "textureOffset": [12, 18]}
+					]
+				}
+			]
+		}
+	]
+}

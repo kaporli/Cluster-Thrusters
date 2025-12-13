@@ -1,0 +1,6 @@
+{
+  "variants": {
+      "default": "outlined_sprite:iceandfire/stymphalianbird/stymphalian_bird.png",
+      "layersAllowed": true
+  }
+}

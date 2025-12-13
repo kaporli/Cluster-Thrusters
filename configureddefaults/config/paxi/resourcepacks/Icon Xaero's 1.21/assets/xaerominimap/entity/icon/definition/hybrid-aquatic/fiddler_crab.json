@@ -1,0 +1,9 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/crustacean/fiddler_crab/fiddler_crab.png":"outlined_sprite:hybrid-aquatic/crustacean/fiddler_crab/fiddler_crab.png",
+    "hybrid-aquatic:textures/entity/crustacean/fiddler_crab/fiddler_crab_palestine.png":"outlined_sprite:hybrid-aquatic/crustacean/fiddler_crab/fiddler_crab_palestine.png",
+    "hybrid-aquatic:textures/entity/crustacean/fiddler_crab/fiddler_crab_purple.png":"outlined_sprite:hybrid-aquatic/crustacean/fiddler_crab/fiddler_crab_purple.png",
+    "hybrid-aquatic:textures/entity/crustacean/fiddler_crab/fiddler_crab_red.png":"outlined_sprite:hybrid-aquatic/crustacean/fiddler_crab/fiddler_crab_red.png",
+    "layersAllowed": true
+    }
+} 

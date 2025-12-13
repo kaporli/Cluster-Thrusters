@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:evilcraft/vengeance_spirit.png",
+    "layersAllowed": true
+  }
+}

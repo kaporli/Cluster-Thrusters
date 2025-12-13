@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "epicsamurai:textures/entity/kitsune_small.png": "outlined_sprite:epicsamurai/kitsune_small.png",
+        "epicsamurai:textures/entity/kitsune_small_blue.png": "outlined_sprite:epicsamurai/kitsune_small_blue.png",
+        "layersAllowed": true
+    }
+}

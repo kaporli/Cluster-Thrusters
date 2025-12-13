@@ -1,0 +1,7 @@
+{
+    "variants": {
+      "occultism:textures/entity/djinni_worker.png": "outlined_sprite:occultism/djinni_worker.png",
+      "occultism:textures/entity/djinni_machine_manager.png": "outlined_sprite:occultism/djinni_machine_manager.png",
+      "layersAllowed": true
+    }
+  }

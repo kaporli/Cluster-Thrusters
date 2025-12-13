@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"byg:textures/entity/pumpkin_warden.png": "outlined_sprite:byg/pumpkin_warden.png",
+		"byg:textures/entity/pumpkin_warden_hiding.png": "outlined_sprite:byg/pumpkin_warden_hiding.png",
+		"layersAllowed": true
+	}
+}

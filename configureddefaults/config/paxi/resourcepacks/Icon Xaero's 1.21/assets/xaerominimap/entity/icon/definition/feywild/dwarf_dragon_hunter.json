@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:feywild/dwarf/dragon_hunter.png",
+    "layersAllowed": true
+  }
+}

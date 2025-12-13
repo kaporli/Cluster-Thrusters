@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "ambientadditions:textures/entity/mole/star_nosed_mole.png": "outlined_sprite:ambientadditions/mole/star_nosed_mole.png",
+    "ambientadditions:textures/entity/mole/eastern_mole.png": "outlined_sprite:ambientadditions/mole/eastern_mole.png",
+    "ambientadditions:textures/entity/mole/hairy_tailed_mole.png": "outlined_sprite:ambientadditions/mole/hairy_tailed_mole.png",
+    "layersAllowed": true
+  }
+}

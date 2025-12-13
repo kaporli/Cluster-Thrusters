@@ -1,0 +1,6 @@
+{
+    "variants": {
+    "default":"outlined_sprite:hybrid-aquatic/crustacean/vampire_crab/vampire_crab.png",
+    "layersAllowed": true
+    }
+} 

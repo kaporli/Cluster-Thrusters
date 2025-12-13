@@ -1,0 +1,16 @@
+filename = 'ias_spellbooks-1.1.0-1.20.1.jar'
+name = "Illage and Spell-age: Iron's Spells Addon"
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '3e4b185fb1c06372a755a089cb2e9b5b08451373'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7003776
+project-id = 1152648

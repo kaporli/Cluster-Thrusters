@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "iceandfire:textures/models/dread/dread_lich_0.png": "outlined_sprite:iceandfire/dread/dread_lich_0.png",
+    "iceandfire:textures/models/dread/dread_lich_1.png": "outlined_sprite:iceandfire/dread/dread_lich_1.png",
+    "iceandfire:textures/models/dread/dread_lich_2.png": "outlined_sprite:iceandfire/dread/dread_lich_2.png",
+    "iceandfire:textures/models/dread/dread_lich_3.png": "outlined_sprite:iceandfire/dread/dread_lich_3.png",
+    "iceandfire:textures/models/dread/dread_lich_4.png": "outlined_sprite:iceandfire/dread/dread_lich_4.png",
+    "layersAllowed": true
+  }
+}

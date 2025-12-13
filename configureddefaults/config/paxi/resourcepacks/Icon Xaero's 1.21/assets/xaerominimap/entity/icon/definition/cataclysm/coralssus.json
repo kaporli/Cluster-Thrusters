@@ -1,0 +1,9 @@
+{
+	"variants" : {
+        "cataclysm:textures/entity/deepling/coralssus_horn.png" : "outlined_sprite:cataclysm/deepling/coralssus_horn.png",
+		"cataclysm:textures/entity/deepling/coralssus_tube.png" : "outlined_sprite:cataclysm/deepling/coralssus_tube.png",
+		"cataclysm:textures/entity/deepling/coralssus_sponge_horn.png" : "outlined_sprite:cataclysm/deepling/coralssus_sponge_horn.png",
+		"cataclysm:textures/entity/deepling/coralssus_fire.png" : "outlined_sprite:cataclysm/deepling/coralssus_fire.png",
+		"layersAllowed":true
+	}
+}

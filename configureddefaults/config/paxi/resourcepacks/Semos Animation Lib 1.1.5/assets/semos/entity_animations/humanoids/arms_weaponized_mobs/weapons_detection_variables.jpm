@@ -1,0 +1,59 @@
+{
+	"credit": "Created by Semos for Freshly Modded",
+	"animations": [
+		{
+			"var.main_hand_item_present": "if(nbt(Inventory,raw:iregex:.*slot:5b.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*),1,0)",
+			"var.offhand_item_present": "if(nbt(Inventory,raw:iregex:.*slot:4b.*),1,0)+if(nbt(Items,raw:iregex:.*slot:4b.*),1,0)",
+			"var.empty_offhand": "if(var.offhand_item_present==0,1,0)",
+			"var.empty_hand": "if(var.main_hand_item_present==0,1,0)",
+			"var.no_weapons":"if(var.empty_hand==1&&var.empty_offhand==1,1,0)",
+			"var.food_offhand": "if(var.offhand_item_present==1&&var.shield_offhand==0&&var.sword_offhand==0&&var.axe_offhand==0&&var.mace_offhand==0&&var.trident_offhand==0&&var.hoe_offhand==0&&var.scythe_offhand==0&&var.halbedier_offhand==0&&var.special_sword_offhand==0&&var.ardonis_staff_offhand==0&&var.derp_fish_offhand==0,1,0)",
+			"var.food": "if(var.main_hand_item_present==1&&var.shield==0&&var.sword==0&&var.axe==0&&var.mace==0&&var.trident==0&&var.hoe==0&&var.scythe==0&&var.halbedier==0&&var.special_sword==0&&var.ardonis_staff==0&&var.derp_fish==0,1,0)",
+			"var.eat": "if(is_right_handed&&is_swinging_left_arm&&!is_aggressive,1,if(!is_right_handed&&is_swinging_right_arm&&!is_aggressive,1,0))",
+			"var.eat_right_handed": "if(is_right_handed&&is_swinging_left_arm&&!is_aggressive&&var.food_offhand==1,1,0)",
+			"var.eat_left_handed": "if(!is_right_handed&&is_swinging_right_arm&&!is_aggressive&&var.food_offhand==1,1,0)"	
+		},
+		{
+			"var.shield_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*shield.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*shield.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*shield.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*shield.*),1,0))",
+			"var.shield": "if(nbt(Inventory,raw:iregex:.*slot:5b.*shield.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*shield.*),1,0)"
+		},
+		{
+			"var.sword_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*sword.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*sword.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*sword.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*sword.*),1,0))",
+			"var.sword": "if(nbt(Inventory,raw:iregex:.*slot:5b.*sword.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*sword.*),1,0)",
+			"var.axe_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*axe.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*axe.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*axe.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*axe.*),1,0))",
+			"var.axe": "if(nbt(Inventory,raw:iregex:.*slot:5b.*axe.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*axe.*),1,0)",
+			"var.mace_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*mace.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*mace.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*mace.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*mace.*),1,0))",
+			"var.mace": "if(nbt(Inventory,raw:iregex:.*slot:5b.*mace.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*mace.*),1,0)",
+			"var.trident_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*trident.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*trident.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*trident.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*trident.*),1,0))",
+			"var.trident": "if(nbt(Inventory,raw:iregex:.*slot:5b.*trident.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*trident.*),1,0)",
+			"var.hoe_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*hoe.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*hoe.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*hoe.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*hoe.*),1,0))",
+			"var.hoe": "if(nbt(Inventory,raw:iregex:.*slot:5b.*hoe.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*hoe.*),1,0)",
+			"var.scythe_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*(Scythe|Staff\\s3|Staff\\s8).*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*(Scythe|Staff\\s3|Staff\\s8).*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*(Scythe|Staff\\s3|Staff\\s8).*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*(Scythe|Staff\\s3|Staff\\s8).*),1,0))",
+			"var.scythe": "if(nbt(Inventory,raw:iregex:.*slot:5b.*(Scythe|Staff\\s3|Staff\\s8).*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*(Scythe|Staff\\s3|Staff\\s8).*),1,0)",
+			"var.halbedier_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*(Staff\\s1|Staff\\s6|Staff\\s7|Staff\\s10|Staff\\s11|Staff\\s13).*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*(Staff\\s1|Staff\\s6|Staff\\s7|Staff\\s10|Staff\\s11|Staff\\s13).*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*(Staff\\s1|Staff\\s6|Staff\\s7|Staff\\s10|Staff\\s11|Staff\\s13).*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*(Staff\\s1|Staff\\s6|Staff\\s7|Staff\\s10|Staff\\s11|Staff\\s13).*),1,0))",
+			"var.halbedier": "if(nbt(Inventory,raw:iregex:.*slot:5b.*(Staff\\s1|Staff\\s6|Staff\\s7|Staff\\s10|Staff\\s11|Staff\\s13).*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*(Staff\\s1|Staff\\s6|Staff\\s7|Staff\\s10|Staff\\s11|Staff\\s13).*),1,0)",
+			"var.special_sword_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*(Deathsinger|Hadion|Niika|Thalleous).*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*(Deathsinger|Hadion|Niika|Thalleous).*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*(Deathsinger|Hadion|Niika|Thalleous).*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*(Deathsinger|Hadion|Niika|Thalleous).*),1,0))",
+			"var.special_sword": "if(nbt(Inventory,raw:iregex:.*slot:5b.*(Deathsinger|Hadion|Niika|Thalleous).*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*(Deathsinger|Hadion|Niika|Thalleous).*),1,0)",
+			"var.special_axe_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*(Chronos|GreatAxe|Xaria|Zeru|Double\\sHalberd|Halberd).*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*(Chronos|GreatAxe|Xaria|Zeru|Double\\sHalberd|Halberd).*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*(Chronos|GreatAxe|Xaria|Zeru|Double\\sHalberd|Halberd).*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*(Chronos|GreatAxe|Xaria|Zeru|Double\\sHalberd|Halberd).*),1,0))",
+			"var.special_axe": "if(nbt(Inventory,raw:iregex:.*slot:5b.*(Chronos|GreatAxe|Xaria|Zeru|Double\\sHalberd|Halberd).*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*(Chronos|GreatAxe|Xaria|Zeru|Double\\sHalberd|Halberd).*),1,0)",
+			"var.ardonis_staff_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*(Kaltaris|Mendoris|Nestoris|Sendaris|Tidesinger|Voltaris|Staff\\s2|Staff\\s4|Staff\\s5|Staff\\s9|Staff\\s12).*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*(Kaltaris|Mendoris|Nestoris|Sendaris|Tidesinger|Voltaris|Staff\\s2|Staff\\s4|Staff\\s5|Staff\\s9|Staff\\s12).*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*(Kaltaris|Mendoris|Nestoris|Sendaris|Tidesinger|Voltaris|Staff\\s2|Staff\\s4|Staff\\s5|Staff\\s9|Staff\\s12).*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*(Kaltaris|Mendoris|Nestoris|Sendaris|Tidesinger|Voltaris|Staff\\s2|Staff\\s4|Staff\\s5|Staff\\s9|Staff\\s12).*),1,0))",
+			"var.ardonis_staff": "if(nbt(Inventory,raw:iregex:.*slot:5b.*(Kaltaris|Mendoris|Nestoris|Sendaris|Tidesinger|Voltaris|Staff\\s2|Staff\\s4|Staff\\s5|Staff\\s9|Staff\\s12).*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*(Kaltaris|Mendoris|Nestoris|Sendaris|Tidesinger|Voltaris|Staff\\s2|Staff\\s4|Staff\\s5|Staff\\s9|Staff\\s12).*),1,0)",
+			"var.derp_fish_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*(Derp).*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*(Derp).*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*(Derp).*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*(Derp).*),1,0))",
+			"var.derp_fish": "if(nbt(Inventory,raw:iregex:.*slot:5b.*(Derp).*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*(Derp).*),1,0)"
+		},
+		{
+			"var.shield_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*shield.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*shield.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*shield.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*shield.*),1,0))",
+			"var.shield": "if(nbt(Inventory,raw:iregex:.*slot:5b.*shield.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*shield.*),1,0)",
+			"var.crossbow_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*crossbow.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*crossbow.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*crossbow.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*crossbow.*),1,0))",
+			"var.crossbow": "if(nbt(Inventory,raw:iregex:.*slot:5b.*crossbow.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*crossbow.*),1,0)",
+			"var.bow_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*bow.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*bow.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*bow.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*bow.*),1,0))",
+			"var.bow": "if(nbt(Inventory,raw:iregex:.*slot:5b.*bow.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*bow.*),1,0)"
+		},
+		{
+			"var.riffle_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*musket.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*musket.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*musket.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*musket.*),1,0))",
+			"var.riffle": "if(nbt(Inventory,raw:iregex:.*slot:5b.*musket.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*musket.*),1,0)",
+			"var.pistol_offhand": "if(var.main_hand_item_present==1,if(nbt(Inventory,raw:iregex:.*slot:4b.*pistol.*slot:5b.*),1,0),if(nbt(Inventory,raw:iregex:.*slot:4b.*pistol.*),1,0))+if(var.main_hand_item_present==1,if(nbt(Items,raw:iregex:.*slot:4b.*pistol.*slot:5b.*),1,0),if(nbt(Items,raw:iregex:.*slot:4b.*pistol.*),1,0))",
+			"var.pistol": "if(nbt(Inventory,raw:iregex:.*slot:5b.*pistol.*),1,0)+if(nbt(Items,raw:iregex:.*slot:5b.*pistol.*),1,0)"
+		}
+	]
+}

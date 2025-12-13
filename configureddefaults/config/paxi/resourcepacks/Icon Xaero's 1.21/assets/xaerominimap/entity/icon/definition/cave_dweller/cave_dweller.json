@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:cave_dweller/cave_dweller_texture.png",
+    "layersAllowed": true
+  }
+}

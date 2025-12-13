@@ -1,0 +1,16 @@
+filename = 'enigmaticaddons-1.2.5.jar'
+name = 'Enigmatic Addons'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c08feab99e0da042d0d9b7be32b961ea638fdaf68e0371e9f265d7f26e8f944f7e8c7e111cf0c55256d194b4a331d6a655ce099e265e73d3b24ee689a93bfeb2'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/dxNvj4GU/versions/aPY6JZQ4/enigmaticaddons-1.2.5.jar'
+
+[update.modrinth]
+mod-id = 'dxNvj4GU'
+version = 'aPY6JZQ4'

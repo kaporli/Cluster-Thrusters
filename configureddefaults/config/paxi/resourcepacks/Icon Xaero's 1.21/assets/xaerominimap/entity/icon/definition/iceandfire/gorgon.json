@@ -1,0 +1,10 @@
+{
+  "variants": {
+      "iceandfire:textures/models/gorgon/gorgon_active.png": "outlined_sprite:iceandfire/gorgon/gorgon_active.png",
+      "iceandfire:textures/models/gorgon/gorgon_decapitated.png": "outlined_sprite:iceandfire/gorgon/gorgon_decapitated.png",
+      "iceandfire:textures/models/gorgon/gorgon_passive.png": "outlined_sprite:iceandfire/gorgon/gorgon_passive.png",
+      "iceandfire:textures/models/gorgon/head_active.png": "outlined_sprite:iceandfire/gorgon/head_active.png",
+      "iceandfire:textures/models/gorgon/head_inactive.png": "outlined_sprite:iceandfire/gorgon/head_inactive.png",
+      "layersAllowed": true
+  }
+}

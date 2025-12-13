@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/blunthead_tree_snake.png",
+    "layersAllowed": true
+  }
+}

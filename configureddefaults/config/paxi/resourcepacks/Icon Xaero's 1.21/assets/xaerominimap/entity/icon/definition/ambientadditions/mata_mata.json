@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/mata_mata.png",
+    "layersAllowed": true
+  }
+}

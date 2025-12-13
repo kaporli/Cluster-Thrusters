@@ -1,0 +1,30 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_black.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_black.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_blue.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_blue.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_green.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_green.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_purple.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_purple.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_red.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_red.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_white.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_white.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_yellow.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_yellow.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_orange.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_orange.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_brittlestar_white.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_brittlestar_white.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_brittlestar_black.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_brittlestar_black.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_brittlestar_yellow.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_brittlestar_yellow.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_blue.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_blue.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_green.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_green.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_knobbed_blue.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_knobbed_blue.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_knobbed_green.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_knobbed_green.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_knobbed_orange.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_knobbed_orange.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_knobbed_purple.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_knobbed_purple.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_knobbed_red.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_knobbed_red.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_knobbed_yellow.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_knobbed_yellow.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_orange.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_orange.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_purple.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_purple.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_red.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_red.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_medium_yellow.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_medium_yellow.png",
+    "hybrid-aquatic:textures/entity/critter/starfish/starfish_crown_of_thorns.png":"outlined_sprite:hybrid-aquatic/critter/starfish/starfish_crown_of_thorns.png",
+    "layersAllowed": true
+    }
+} 

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/pembroke_corgi.png",
+    "layersAllowed": true
+  }
+}

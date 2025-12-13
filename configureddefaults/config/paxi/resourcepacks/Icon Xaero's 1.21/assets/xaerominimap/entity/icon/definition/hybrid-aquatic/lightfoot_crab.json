@@ -1,0 +1,6 @@
+{
+    "variants": {
+    "default":"outlined_sprite:hybrid-aquatic/crustacean/lightfoot_crab/lightfoot_crab.png",
+    "layersAllowed": true
+    }
+} 

@@ -1,0 +1,6 @@
+{
+  "variants": {
+      "default": "outlined_sprite:iceandfire/dread/dread_beast.png",
+      "layersAllowed": true
+  }
+}

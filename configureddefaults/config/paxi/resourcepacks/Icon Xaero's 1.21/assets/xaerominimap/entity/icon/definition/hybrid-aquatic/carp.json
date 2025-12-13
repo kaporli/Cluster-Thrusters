@@ -1,0 +1,9 @@
+{
+  "variants": {
+  "hybrid-aquatic:textures/entity/fish/carp/carp_koi_ai_goromo.png":"outlined_sprite:hybrid-aquatic/fish/carp/carp_koi_ai_goromo.png",
+  "hybrid-aquatic:textures/entity/fish/carp/carp_koi_hajiro.png":"outlined_sprite:hybrid-aquatic/fish/carp/carp_koi_hajiro.png",
+  "hybrid-aquatic:textures/entity/fish/carp/carp_koi_platinum.png":"outlined_sprite:hybrid-aquatic/fish/carp/carp_koi_platinum.png",
+  "hybrid-aquatic:textures/entity/fish/carp/carp_koi_tancho.png":"outlined_sprite:hybrid-aquatic/fish/carp/carp_koi_tancho.png",
+  "layersAllowed": true
+  }
+} 

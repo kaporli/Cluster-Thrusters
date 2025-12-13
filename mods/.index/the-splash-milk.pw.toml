@@ -1,0 +1,13 @@
+filename = 'splash_milk-2.1.0.jar'
+name = 'The Splash Milk'
+side = 'both'
+
+[download]
+hash = '000732c1bb3eb9ff1aa7557a650d64b65dd075511ef193a8806b159b75de7f25cfc54246aca129168e8b137847401036840478e2c8d388d0a633ad21696807ca'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ELrdP6OH/versions/6FdFS2mV/splash_milk-2.1.0.jar'
+
+[update.modrinth]
+mod-id = 'ELrdP6OH'
+version = '6FdFS2mV'

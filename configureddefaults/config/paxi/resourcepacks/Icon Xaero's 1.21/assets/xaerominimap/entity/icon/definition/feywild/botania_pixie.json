@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "feywild:textures/entity/autumn/botania_pixie.png": "outlined_sprite:feywild/autumn/botania_pixie.png",
+    "feywild:textures/entity/default/botania_pixie.png": "outlined_sprite:feywild/default/botania_pixie.png",
+    "feywild:textures/entity/spring/botania_pixie.png": "outlined_sprite:feywild/spring/botania_pixie.png",
+    "feywild:textures/entity/summer/botania_pixie.png": "outlined_sprite:feywild/summer/botania_pixie.png",
+    "feywild:textures/entity/winter/botania_pixie.png": "outlined_sprite:feywild/winter/botania_pixie.png",
+    "layersAllowed": true
+  }
+}

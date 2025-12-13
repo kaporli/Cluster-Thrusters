@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/rubber_ducky_isopod.png",
+    "layersAllowed": true
+  }
+}

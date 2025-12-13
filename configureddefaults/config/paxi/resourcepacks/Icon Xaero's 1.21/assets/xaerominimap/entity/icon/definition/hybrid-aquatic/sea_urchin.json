@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_black.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_black.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_blue.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_blue.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_purple.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_purple.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_red.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_red.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_long_red.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_long_red.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_long_purple.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_long_purple.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_long_blue.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_long_blue.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin_long_black.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin_long_black.png",
+        "hybrid-aquatic:textures/entity/critter/sea_urchin/sea_urchin.png": "outlined_sprite:hybrid-aquatic/critter/sea_urchin/sea_urchin.png",
+        "layersAllowed": true
+    }
+}

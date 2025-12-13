@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:seadwellers/mermorph_farmer.png",
+	"layersAllowed": true
+    }
+}

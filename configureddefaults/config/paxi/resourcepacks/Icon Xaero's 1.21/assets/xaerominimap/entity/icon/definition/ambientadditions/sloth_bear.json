@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "ambientadditions:textures/entity/sloth_bear/bear.png": "outlined_sprite:ambientadditions/sloth_bear/bear.png",
+    "ambientadditions:textures/entity/sloth_bear/angry.png": "outlined_sprite:ambientadditions/sloth_bear/angry.png",
+    "layersAllowed": true
+  }
+}

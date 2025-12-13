@@ -1,0 +1,14 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_cinnamon.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_cinnamon.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_clarkii.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_clarkii.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_ocellaris.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_ocellaris.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_orange_skunk.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_orange_skunk.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_percula.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_percula.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_pink_skunk.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_pink_skunk.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_tomato.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_tomato.png",
+    "hybrid-aquatic:textures/entity/fish/clownfish/clownfish_whiteband.png":"outlined_sprite:hybrid-aquatic/fish/clownfish/clownfish_whiteband.png",
+    "layersAllowed": true
+    }
+} 

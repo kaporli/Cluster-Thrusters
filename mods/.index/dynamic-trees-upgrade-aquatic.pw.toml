@@ -1,0 +1,13 @@
+filename = 'DynamicTreesUpgradeAquatic-1.20.1-1.2.0.jar'
+name = 'Dynamic Trees - Upgrade Aquatic'
+side = 'both'
+
+[download]
+hash = 'f9046784e6fad4f48e260db13014a9f53fb8985a'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5566898
+project-id = 570119

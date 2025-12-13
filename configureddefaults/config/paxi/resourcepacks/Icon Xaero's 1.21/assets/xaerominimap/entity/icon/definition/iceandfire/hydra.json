@@ -1,0 +1,8 @@
+{
+  "variants": {
+      "iceandfire:textures/models/hydra/hydra_0.png": "outlined_sprite:iceandfire/hydra/hydra_0.png",
+      "iceandfire:textures/models/hydra/hydra_1.png": "outlined_sprite:iceandfire/hydra/hydra_1.png",
+      "iceandfire:textures/models/hydra/hydra_2.png": "outlined_sprite:iceandfire/hydra/hydra_2.png",
+      "layersAllowed": true
+  }
+}

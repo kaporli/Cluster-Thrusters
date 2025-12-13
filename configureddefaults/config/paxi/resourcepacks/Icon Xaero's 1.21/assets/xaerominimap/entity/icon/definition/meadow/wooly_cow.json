@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "meadow:textures/entity/cow/highland_cattle.png": "outlined_sprite:meadow/cow/highland_cattle.png",
+    "meadow:textures/entity/cow/highland_cattle_sheared.png": "outlined_sprite:meadow/cow/highland_cattle_sheared.png",
+    "meadow:textures/entity/cow/umbra_cow.png": "outlined_sprite:meadow/cow/umbra_cow.png",
+    "meadow:textures/entity/cow/umbra_cow_sheared.png": "outlined_sprite:meadow/cow/umbra_cow_sheared.png",
+    "meadow:textures/entity/cow/warped_cow.png": "outlined_sprite:meadow/cow/warped_cow.png",
+    "meadow:textures/entity/cow/warped_cow_sheared.png": "outlined_sprite:meadow/cow/warped_cow_sheared.png",
+    "default": "outlined_sprite:meadow/cow/highland_cattle.png",
+    "layersAllowed": true
+  }
+}

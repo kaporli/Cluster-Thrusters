@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/stag_beetle.png",
+    "layersAllowed": true
+  }
+}

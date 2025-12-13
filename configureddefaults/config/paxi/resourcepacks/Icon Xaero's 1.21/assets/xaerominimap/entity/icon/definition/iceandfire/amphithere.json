@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "iceandfire:textures/models/amphithere/amphithere_blue.png": "outlined_sprite:iceandfire/amphithere/amphithere_blue.png",
+    "iceandfire:textures/models/amphithere/amphithere_blue_blink.png": "outlined_sprite:iceandfire/amphithere/amphithere_blue_blink.png",
+    "iceandfire:textures/models/amphithere/amphithere_green.png": "outlined_sprite:iceandfire/amphithere/amphithere_green.png",
+    "iceandfire:textures/models/amphithere/amphithere_green_blink.png": "outlined_sprite:iceandfire/amphithere/amphithere_green_blink.png",
+    "iceandfire:textures/models/amphithere/amphithere_olive.png": "outlined_sprite:iceandfire/amphithere/amphithere_olive.png",
+    "iceandfire:textures/models/amphithere/amphithere_olive_blink.png": "outlined_sprite:iceandfire/amphithere/amphithere_olive_blink.png",
+    "iceandfire:textures/models/amphithere/amphithere_red.png": "outlined_sprite:iceandfire/amphithere/amphithere_red.png",
+    "iceandfire:textures/models/amphithere/amphithere_red_blink.png": "outlined_sprite:iceandfire/amphithere/amphithere_red_blink.png",
+    "iceandfire:textures/models/amphithere/amphithere_yellow.png": "outlined_sprite:iceandfire/amphithere/amphithere_yellow.png",
+    "iceandfire:textures/models/amphithere/amphithere_yellow_blink.png": "outlined_sprite:iceandfire/amphithere/amphithere_yellow_blink.png",
+    "layersAllowed": true
+  }
+}

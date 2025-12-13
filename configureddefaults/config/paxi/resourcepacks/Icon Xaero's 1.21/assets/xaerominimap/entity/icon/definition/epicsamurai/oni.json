@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "default": "outlined_sprite:epicsamurai/oni.png",
+        "layersAllowed": true
+    }
+}

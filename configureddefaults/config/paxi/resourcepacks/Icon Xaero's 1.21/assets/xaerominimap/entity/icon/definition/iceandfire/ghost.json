@@ -1,0 +1,8 @@
+{
+  "variants": {
+      "iceandfire:textures/models/ghost/ghost_blue.png": "outlined_sprite:iceandfire/ghost/ghost_blue.png",
+      "iceandfire:textures/models/ghost/ghost_green.png": "outlined_sprite:iceandfire/ghost/ghost_green.png",
+      "iceandfire:textures/models/ghost/ghost_white.png": "outlined_sprite:iceandfire/ghost/ghost_white.png",
+      "layersAllowed": true
+  }
+}

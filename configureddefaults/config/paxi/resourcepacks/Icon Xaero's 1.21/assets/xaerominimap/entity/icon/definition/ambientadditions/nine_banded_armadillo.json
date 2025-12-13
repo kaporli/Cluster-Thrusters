@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/nine_banded_armadillo.png",
+    "layersAllowed": true
+  }
+}

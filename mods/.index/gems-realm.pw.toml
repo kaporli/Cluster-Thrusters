@@ -1,0 +1,16 @@
+filename = 'gemsrealm-1.20-2.9.3.jar'
+name = 'Every Compat (Gems Realm)'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '7ef17411acaef8b7a861710289613335cc2e4b19e15d2d8ae8bab2499a228a422a4608f8fa2158ec9e89523656433e7902e0cc1c56db03b6b04b6524d0fa340e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/v259p1An/versions/XXiVpGNp/gemsrealm-1.20-2.9.3.jar'
+
+[update.modrinth]
+mod-id = 'v259p1An'
+version = 'XXiVpGNp'

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "occultism:textures/entity/foliot_worker.png": "outlined_sprite:occultism/foliot_worker.png",
+        "occultism:textures/entity/foliot_crusher.png": "outlined_sprite:occultism/foliot_crusher.png",
+        "occultism:textures/entity/foliot_janitor.png": "outlined_sprite:occultism/foliot_janitor.png",
+        "occultism:textures/entity/foliot_lumberjack.png": "outlined_sprite:occultism/foliot_lumberjack.png",
+        "occultism:textures/entity/foliot_sapling_trader.png": "outlined_sprite:occultism/foliot_sapling_trader.png",
+        "occultism:textures/entity/foliot_otherstone_trader.png": "outlined_sprite:occultism/foliot_otherstone_trader.png",
+        "occultism:textures/entity/foliot_transporter.png": "outlined_sprite:occultism/foliot_transporter.png",
+        "layersAllowed": true
+    }
+}

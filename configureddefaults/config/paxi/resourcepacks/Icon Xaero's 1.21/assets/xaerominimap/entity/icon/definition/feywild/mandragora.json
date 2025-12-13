@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "feywild:textures/entity/mandragora/melon.png": "outlined_sprite:feywild/mandragora/melon.png",
+    "feywild:textures/entity/mandragora/onion.png": "outlined_sprite:feywild/mandragora/onion.png",
+    "feywild:textures/entity/mandragora/potato.png": "outlined_sprite:feywild/mandragora/potato.png",
+    "feywild:textures/entity/mandragora/pumpkin.png": "outlined_sprite:feywild/mandragora/pumpkin.png",
+    "feywild:textures/entity/mandragora/tomato.png": "outlined_sprite:feywild/mandragora/tomato.png",
+    "layersAllowed": true
+  }
+}

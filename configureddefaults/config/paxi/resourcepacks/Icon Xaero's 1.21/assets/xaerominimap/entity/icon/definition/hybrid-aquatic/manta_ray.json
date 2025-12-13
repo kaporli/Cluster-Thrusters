@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:hybrid-aquatic/fish/manta_ray/manta_ray.png",
+    "layersAllowed": true
+  }
+}

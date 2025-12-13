@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:seadwellers/mermorph_architect.png",
+	"layersAllowed": true
+    }
+}

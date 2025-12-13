@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:realmrpg_demons/imp_guard.png",
+	"layersAllowed": true
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/ring_tailed_lemur.png",
+    "layersAllowed": true
+  }
+}

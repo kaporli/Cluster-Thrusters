@@ -1,0 +1,8 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/crustacean/hermit_crab/hermit_crab.png":"outlined_sprite:hybrid-aquatic/crustacean/hermit_crab/hermit_crab.png",
+    "hybrid-aquatic:textures/entity/crustacean/hermit_crab/hermit_crab_shell.png":"outlined_sprite:hybrid-aquatic/crustacean/hermit_crab/hermit_crab_shell.png",
+    "hybrid-aquatic:textures/entity/crustacean/hermit_crab/hermit_crab_skull.png":"outlined_sprite:hybrid-aquatic/crustacean/hermit_crab/hermit_crab_skull.png",
+    "layersAllowed": true
+    }
+} 

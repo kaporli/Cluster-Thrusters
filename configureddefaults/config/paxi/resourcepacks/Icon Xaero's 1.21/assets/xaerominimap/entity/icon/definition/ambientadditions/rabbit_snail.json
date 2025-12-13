@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/rabbit_snail.png",
+    "layersAllowed": true
+  }
+}

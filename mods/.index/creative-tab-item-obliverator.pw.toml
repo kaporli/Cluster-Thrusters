@@ -1,0 +1,16 @@
+filename = 'Creative-Tab-Item-Obliterator-Forge-1.20.1-1.0.jar'
+name = 'Creative Tab Item Obliverator'
+side = 'client'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'ab3b291dfff0eecd62147711fb6341c2588ea83c8c5dc6c8a85446d7a22a47521c83680911284d2b1977b945419183fc042bdcccc53c5bad48af5bc0139847e8'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Vc68T2UE/versions/gU5C0NLA/Creative-Tab-Item-Obliterator-Forge-1.20.1-1.0.jar'
+
+[update.modrinth]
+mod-id = 'Vc68T2UE'
+version = 'gU5C0NLA'

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "iceandfire:textures/models/myrmex/myrmex_jungle_worker.png": "outlined_sprite:iceandfire/myrmex/myrmex_jungle_worker.png",
+    "iceandfire:textures/models/myrmex/myrmex_desert_worker.png": "outlined_sprite:iceandfire/myrmex/myrmex_desert_worker.png",
+    "layersAllowed": true
+  }
+}

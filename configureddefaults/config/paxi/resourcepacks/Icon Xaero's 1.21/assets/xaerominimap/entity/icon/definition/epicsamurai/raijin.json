@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "default": "outlined_sprite:epicsamurai/raijin.png",
+        "layersAllowed": true
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "variants": {
+      "iceandfire:textures/models/firedragon/egg_bronze.png": "outlined_sprite:iceandfire/firedragon/egg_bronze.png",
+      "iceandfire:textures/models/firedragon/egg_gray.png": "outlined_sprite:iceandfire/firedragon/egg_gray.png",
+      "iceandfire:textures/models/firedragon/egg_green.png": "outlined_sprite:iceandfire/firedragon/egg_green.png",
+      "iceandfire:textures/models/firedragon/egg_red.png": "outlined_sprite:iceandfire/firedragon/egg_red.png",
+      "iceandfire:textures/models/icedragon/egg_blue.png": "outlined_sprite:iceandfire/icedragon/egg_blue.png",
+      "iceandfire:textures/models/icedragon/egg_sapphire.png": "outlined_sprite:iceandfire/icedragon/egg_sapphire.png",
+      "iceandfire:textures/models/icedragon/egg_silver.png": "outlined_sprite:iceandfire/icedragon/egg_silver.png",
+      "iceandfire:textures/models/icedragon/egg_white.png": "outlined_sprite:iceandfire/icedragon/egg_white.png",
+      "iceandfire:textures/models/lightningdragon/egg_amythest.png": "outlined_sprite:iceandfire/lightningdragon/egg_amythest.png",
+      "iceandfire:textures/models/lightningdragon/egg_black.png": "outlined_sprite:iceandfire/lightningdragon/egg_black.png",
+      "iceandfire:textures/models/lightningdragon/egg_copper.png": "outlined_sprite:iceandfire/lightningdragon/egg_copper.png",
+      "iceandfire:textures/models/lightningdragon/egg_electric.png": "outlined_sprite:iceandfire/lightningdragon/egg_electric.png",
+      "layersAllowed": true
+  }
+}

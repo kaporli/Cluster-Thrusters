@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "vampirism:textures/entity/hunter/hunter1.png": "outlined_sprite:vampirism/hunter/hunter1.png",
+    "vampirism:textures/entity/hunter/hunter2.png": "outlined_sprite:vampirism/hunter/hunter2.png",
+    "vampirism:textures/entity/hunter/hunter3.png": "outlined_sprite:vampirism/hunter/hunter3.png",
+    "vampirism:textures/entity/hunter/hunter4.png": "outlined_sprite:vampirism/hunter/hunter4.png",
+    "vampirism:textures/entity/hunter/hunter5_slim.png": "outlined_sprite:vampirism/hunter/hunter5_slim.png",
+    "vampirism:textures/entity/hunter/hunter6_slim.png": "outlined_sprite:vampirism/hunter/hunter6_slim.png",
+    "vampirism:textures/entity/hunter/hunter7_slim.png": "outlined_sprite:vampirism/hunter/hunter7_slim.png",
+    "vampirism:textures/entity/hunter/hunter8_slim.png": "outlined_sprite:vampirism/hunter/hunter8_slim.png",
+    "vampirism:textures/entity/hunter/hunter9.png": "outlined_sprite:vampirism/hunter/hunter9.png",
+    "vampirism:textures/entity/hunter/hunter10.png": "outlined_sprite:vampirism/hunter/hunter10.png",
+    "vampirism:textures/entity/hunter/hunter11.png": "outlined_sprite:vampirism/hunter/hunter11.png",
+    "vampirism:textures/entity/hunter/hunter12_slim.png": "outlined_sprite:vampirism/hunter/hunter12_slim.png",
+    "vampirism:textures/entity/hunter/hunter13.png": "outlined_sprite:vampirism/hunter/hunter13.png",
+    "vampirism:textures/entity/hunter/hunter14.png": "outlined_sprite:vampirism/hunter/hunter14.png",
+    "layersAllowed": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_1.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_1.png",
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_2.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_2.png",
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_3.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_3.png",
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_4.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_4.png",
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_5.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_5.png",
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_6.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_6.png",
+    "ambientadditions:textures/entity/veiled_chameleon/veiled_chameleon_7.png": "outlined_sprite:ambientadditions/veiled_chameleon/veiled_chameleon_7.png",
+    "layersAllowed": true
+  }
+}

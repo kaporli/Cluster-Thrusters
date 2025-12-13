@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "default": "outlined_sprite:ambientadditions/blue_spotted_stingray.png",
+    "layersAllowed": true
+  }
+}

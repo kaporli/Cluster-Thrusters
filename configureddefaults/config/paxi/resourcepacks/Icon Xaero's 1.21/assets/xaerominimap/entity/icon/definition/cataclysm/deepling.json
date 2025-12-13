@@ -1,0 +1,6 @@
+{
+	"variants" : {
+        "default" : "outlined_sprite:cataclysm/deepling/deepling_1.png",
+		"layersAllowed":true
+	}
+}

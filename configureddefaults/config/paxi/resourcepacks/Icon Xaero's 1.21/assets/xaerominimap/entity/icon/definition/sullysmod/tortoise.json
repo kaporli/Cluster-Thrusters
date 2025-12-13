@@ -1,0 +1,7 @@
+{
+    "variants": {
+      "sullysmod:textures/entity/tortoise/tortoise_crafting.png": "outlined_sprite:sullysmod/tortoise/tortoise_crafting.png",
+      "sullysmod:textures/entity/tortoise/tortoise_jukebox.png": "outlined_sprite:sullysmod/tortoise/tortoise_jukebox.png",
+      "layersAllowed": true
+    }
+  }

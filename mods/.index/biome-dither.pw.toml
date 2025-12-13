@@ -1,0 +1,16 @@
+filename = 'puffish_biome_dither-1.0.0-1.19.2-forge.jar'
+name = "Pufferfish's Biome Dither"
+side = 'server'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.19.2', '1.19.3', '1.19.4', '1.20', '1.20.1', '1.20.2', '1.20.3' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'a552af6d64c56498d7056551438a6b899979909dbfe02cb04da5d2c98a1eac11ad9d0dabed20ef037ac1879e64b3bae535af3787d8b8a56f48b135aa4e6f16e7'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/xlybdB0E/versions/WUgsnq8e/puffish_biome_dither-1.0.0-1.19.2-forge.jar'
+
+[update.modrinth]
+mod-id = 'xlybdB0E'
+version = 'WUgsnq8e'

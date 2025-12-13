@@ -1,0 +1,11 @@
+{
+    "variants": {
+    "hybrid-aquatic:textures/entity/critter/sea_cucumber/sea_cucumber_black.png":"outlined_sprite:hybrid-aquatic/critter/sea_cucumber/sea_cucumber_black.png",
+    "hybrid-aquatic:textures/entity/critter/sea_cucumber/sea_cucumber_blue.png":"outlined_sprite:hybrid-aquatic/critter/sea_cucumber/sea_cucumber_blue.png",
+    "hybrid-aquatic:textures/entity/critter/sea_cucumber/sea_cucumber_green.png":"outlined_sprite:hybrid-aquatic/critter/sea_cucumber/sea_cucumber_green.png",
+    "hybrid-aquatic:textures/entity/critter/sea_cucumber/sea_cucumber_red.png":"outlined_sprite:hybrid-aquatic/critter/sea_cucumber/sea_cucumber_red.png",
+    "hybrid-aquatic:textures/entity/critter/sea_cucumber/sea_cucumber_sea_pig.png":"outlined_sprite:hybrid-aquatic/critter/sea_cucumber/sea_cucumber_sea_pig.png",
+    "hybrid-aquatic:textures/entity/critter/sea_cucumber/sea_cucumber.png":"outlined_sprite:hybrid-aquatic/critter/sea_cucumber/sea_cucumber.png",
+    "layersAllowed": true
+    }
+} 

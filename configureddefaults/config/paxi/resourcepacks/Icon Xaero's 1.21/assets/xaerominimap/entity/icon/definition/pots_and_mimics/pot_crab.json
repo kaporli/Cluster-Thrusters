@@ -1,0 +1,6 @@
+{
+    "variants": {
+	"default" : "outlined_sprite:pots_and_mimics/pot_crab.png",
+	"layersAllowed": true
+    }
+}

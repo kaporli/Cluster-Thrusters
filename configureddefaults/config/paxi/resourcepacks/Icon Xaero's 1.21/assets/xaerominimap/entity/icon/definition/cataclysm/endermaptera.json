@@ -1,0 +1,6 @@
+{
+	"variants" : {
+        "default" : "outlined_sprite:cataclysm/endermaptera.png",
+		"layersAllowed":true
+	}
+}

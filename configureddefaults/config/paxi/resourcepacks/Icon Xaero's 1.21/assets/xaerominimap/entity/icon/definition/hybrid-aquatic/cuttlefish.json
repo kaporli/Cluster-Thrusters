@@ -1,0 +1,6 @@
+{
+    "variants": {
+    "default":"outlined_sprite:hybrid-aquatic/cephalopod/cuttlefish/cuttlefish.png",
+    "layersAllowed": true
+    }
+} 
