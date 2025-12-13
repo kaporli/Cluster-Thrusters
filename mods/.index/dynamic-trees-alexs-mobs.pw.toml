@@ -1,0 +1,13 @@
+filename = 'DynamicTreesAlexsMobs-1.20.1-1.0.0.jar'
+name = "Dynamic Trees - Alex's Mobs"
+side = 'both'
+
+[download]
+hash = '4e6f9b07ef4f048252ec12274e8c2d1e02620cbc'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5664015
+project-id = 1091039

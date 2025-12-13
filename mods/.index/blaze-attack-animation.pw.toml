@@ -1,0 +1,16 @@
+filename = 'blaze-attack-animation-1.0.jar'
+name = 'Blaze Attack Animation'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.19.4', '1.20', '1.20.1', '1.20.2', '1.20.3', '1.20.4', '1.20.5', '1.20.6' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '929b0880e992ee4ab81c31d60a31063078801f8c7b30c8dcafb5873938a7486944032717a3f983047d1c15df1c0ac5e418f6194820a6806894a89e0dd4da4704'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/UT8WxaW1/versions/kQLWymdq/blaze-attack-animation-1.0.jar'
+
+[update.modrinth]
+mod-id = 'UT8WxaW1'
+version = 'kQLWymdq'

@@ -1,0 +1,16 @@
+filename = 'natures_delight-1.12-1.20.1.jar'
+name = "Nature's Delight"
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '03a5f832dea7cd759c30357cfa7a54f5157d6ab626eeb8354cdeb5b99e403d83209c6a90aac4e1181eb1ede13e966e4a4f6bb056f289d802f69f6b508363bd61'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/18s8zHvJ/versions/QaYspRvH/natures_delight-1.12-1.20.1.jar'
+
+[update.modrinth]
+mod-id = '18s8zHvJ'
+version = 'QaYspRvH'

@@ -1,0 +1,13 @@
+filename = 'VoidFog-1.20.1-2.0.23.jar'
+name = 'Void Fog'
+side = 'client'
+
+[download]
+hash = '447b41204341595563d325ee2354c120884e242d0bf3639c5b16dacfb6961c9ca38a4cb085507aecb9b310858084e424750a646774d529bdb921cad246221ec2'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/cAptbNNE/versions/bqAkiZJb/VoidFog-1.20.1-2.0.23.jar'
+
+[update.modrinth]
+mod-id = 'cAptbNNE'
+version = 'bqAkiZJb'

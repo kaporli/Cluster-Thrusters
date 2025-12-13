@@ -1,0 +1,13 @@
+filename = 'namepain-1.5.0 forge-1.20.x.jar'
+name = 'Name Pain'
+side = 'client'
+
+[download]
+hash = 'cbd66dd2d5f367b48db717db3b483ee842cddcec5a5378368a8c2d4134c78a6b74f6a10b25d8f179a5132b7868acb7be1676f7e5796fad53e59f47ac476feae3'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/cJk2qbxw/versions/vrp8rYJu/namepain-1.5.0 forge-1.20.x.jar'
+
+[update.modrinth]
+mod-id = 'cJk2qbxw'
+version = 'vrp8rYJu'

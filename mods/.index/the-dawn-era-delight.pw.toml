@@ -1,0 +1,13 @@
+filename = 'dawnera_delight-1.0.0.jar'
+name = 'The Dawn Era Delight'
+side = 'both'
+
+[download]
+hash = '4c33abb50c2727f4bd9196fa9c38ccda450b61e25c83998e03aa2888b77eb068d4606ced34fdb04dcacf5ea2070a0272afa94b76756a104e2ae67a8b49d9c868'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/K0EXdLCM/versions/GbOM46pJ/dawnera_delight-1.0.0.jar'
+
+[update.modrinth]
+mod-id = 'K0EXdLCM'
+version = 'GbOM46pJ'

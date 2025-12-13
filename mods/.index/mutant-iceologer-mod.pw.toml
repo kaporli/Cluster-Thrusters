@@ -1,0 +1,13 @@
+filename = 'Mutant Iceologer 2.0.2.jar'
+name = 'Mutant Iceologer'
+side = 'both'
+
+[download]
+hash = '083cf183266ed8d419d3ff865350a43c81f1b58fc1f2a955b9377a88cb363ae9ad97ac53c3df8a36e50b4ad1297868287587caed6e6e68ff2ab6971acbf0d005'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/9lbfIPsl/versions/JKht7D2L/Mutant Iceologer 2.0.2.jar'
+
+[update.modrinth]
+mod-id = '9lbfIPsl'
+version = 'JKht7D2L'

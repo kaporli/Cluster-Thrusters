@@ -1,0 +1,13 @@
+filename = 'torchflower_relit-1.0.0.jar'
+name = 'Torchflower: Relit'
+side = 'client'
+
+[download]
+hash = '42952479305ec364417b388d077915fc8584787bdcc79569e23ecdccfedf8885bb6b66b8de722778f5f16db9e8c77dc8ba58c7a4f1190051d4976c11d836460e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/hXkAAXvL/versions/DRm70FKR/torchflower_relit-1.0.0.jar'
+
+[update.modrinth]
+mod-id = 'hXkAAXvL'
+version = 'DRm70FKR'

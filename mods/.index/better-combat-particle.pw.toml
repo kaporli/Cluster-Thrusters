@@ -1,0 +1,16 @@
+filename = 'bc_particle-0.0.2-1.20.1.jar'
+name = 'Better Combat Particle'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '04e4beac6c72f0f8ecbac3cadcff6d5a65be95b86bba5db7d374106880abf3e67e489488610e456d8d9b86d3245dc71aac94235777290b36edfbc4c1ce06d2b1'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Nc3f2m7t/versions/DTH8O9oL/bc_particle-0.0.2-1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'Nc3f2m7t'
+version = 'DTH8O9oL'

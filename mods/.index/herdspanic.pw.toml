@@ -1,0 +1,13 @@
+filename = 'herdspanic-1.1.0.jar'
+name = 'HerdsPanic'
+side = 'both'
+
+[download]
+hash = '54ee66624b8685926d1f98a0b3efa92df72e9e75ea342796d2661dd7231e7ae24c153c40006dad6e7061ed474e4886d2a85ee8ddd1c186a99abcc690899a5199'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/U64ZYLjC/versions/rJqUdjSw/herdspanic-1.1.0.jar'
+
+[update.modrinth]
+mod-id = 'U64ZYLjC'
+version = 'rJqUdjSw'

@@ -1,0 +1,13 @@
+filename = 'adventureredefined-0.1.0-1.20.1.jar'
+name = 'Reactive Music'
+side = 'client'
+
+[download]
+hash = '8ec6c9466564aa76083f2dd8f10fffa55460b8fb6847a42a6a20cce235edf13f50bc0b98d777a0f8c562ec365067ee2c3bea71e091a5a4fcf27f2a74af540b1f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Bqnfeesx/versions/UKVbOc12/adventureredefined-0.1.0-1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'Bqnfeesx'
+version = 'UKVbOc12'

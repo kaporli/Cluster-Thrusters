@@ -1,0 +1,13 @@
+filename = 'dynamicassetgenerator-forge-1.20.1-4.2.2.jar'
+name = 'Dynamic Asset Generator'
+side = 'both'
+
+[download]
+hash = '33f1650bcf3d935eb565b36f798528853063ef08c62e2e7064c8112ed3a485e2676e10ec777d8299de9137f0da4455a623ecf1b4778dfda964587185557bd879'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/83pFEQVb/versions/gC6FX5Kn/dynamicassetgenerator-forge-1.20.1-4.2.2.jar'
+
+[update.modrinth]
+mod-id = '83pFEQVb'
+version = 'gC6FX5Kn'

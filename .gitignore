@@ -34,3 +34,5 @@ usercache.json
 /XaeroWaypoints_BACKUP*
 /mods/.index
 /mods/.connector
+.mixin.out
+fabricloader.log

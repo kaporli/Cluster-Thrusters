@@ -1,0 +1,13 @@
+filename = 'SimpleStorageNetwork-1.20.1-1.12.2.jar'
+name = 'Simple Storage Network'
+side = 'both'
+
+[download]
+hash = '5e12a4d3ccaba482a3bd93c37c371a534ede8736'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6013980
+project-id = 268495

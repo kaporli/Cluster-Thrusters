@@ -1,0 +1,16 @@
+filename = 'doespotatotick-1.20.1-5.5.3.jar'
+name = 'DoesPotatoTick'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '9fac6d05bef1beca62cdb6e9bba924d370d35abb'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7266844
+project-id = 825355
