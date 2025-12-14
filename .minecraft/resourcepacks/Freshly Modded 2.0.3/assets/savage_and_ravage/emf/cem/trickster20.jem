@@ -1,0 +1,247 @@
+{
+	"credit": "Created by Semos to match Fresh animation in modded",
+	"textureSize": [64, 64],
+	"models": [
+		{
+			"part": "root",
+			"id": "root",
+			"model": "semos:entity_animations/humanoids/common_variables"
+		},
+		{
+			"part": "hat",
+			"id": "hat",
+			"model": "semos:entity_animations/humanoids/body_cancel_animations"
+		},
+		{
+			"part": "nose",
+			"id": "nose",
+			"model": "semos:entity_animations/humanoids/body_animations.jpm"
+		},
+		{
+			"part": "right_wiggly",
+			"id": "right_wiggly",
+			"model": "semos:entity_animations/humanoids/arms_weaponized_mobs/guards_common_animations.jpm"
+		},
+		{
+			"part": "left_wiggly",
+			"id": "left_wiggly",
+			"model": "semos:entity_animations/humanoids/defaults_arms_mobs/trickster_arms_animations.jpm"
+		},
+		{
+			"part": "left_wiggly",
+			"id": "left_wiggly",
+			"animations": [
+				{
+					"right_decor2.ry": "sin(age/4)/15",
+					"right_decor2.rx": "sin(age/2)/10",
+					"right_decor2.rz": "sin(age/4)/25",
+					"left_decor2.ry": "sin(age/4)/15",
+					"left_decor2.rx": "sin(age/2)/10",
+					"left_decor2.rz": "sin(age/4)/25"
+				}
+			],
+			"invertAxis": "xy",
+			"translate": [0, 0, 0]
+		},
+		{
+			"part": "right_decor",
+			"id": "right_decor",
+			"invertAxis": "xy",
+			"translate": [0, 0, 0]
+		},
+		{
+			"part": "left_decor",
+			"id": "left_decor",
+			"invertAxis": "xy",
+			"translate": [0, 0, 0]
+		},
+		{
+			"part": "right_arm",
+			"id": "right_arm",
+			"invertAxis": "xy",
+			"translate": [0, 0, 0]
+		},
+		{
+			"part": "left_arm",
+			"id": "left_arm",
+			"invertAxis": "xy",
+			"translate": [0, 0, 0]
+		},
+		{
+			"part": "right_leg",
+			"id": "right_leg",
+			"invertAxis": "xy",
+			"translate": [-2, -12, 0],
+			"boxes": [
+				{"coordinates": [0, 0, -2, 4, 10, 4], "textureOffset": [32, 18]}
+			]
+		},
+		{
+			"part": "left_leg",
+			"id": "left_leg",
+			"invertAxis": "xy",
+			"translate": [2, -12, 0],
+			"boxes": [
+				{"coordinates": [-4, 0, -2, 4, 10, 4], "textureOffset": [48, 18]}
+			]
+		},
+		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"submodels": [
+				{
+					"id": "bone",
+					"invertAxis": "xy",
+					"translate": [0, 24, 0],
+					"boxes": [
+						{
+							"coordinates": [-4, -4, -4, 8, 10, 8],
+							"uvNorth": [8, 8, 16, 18],
+							"uvEast": [0, 8, 8, 18],
+							"uvSouth": [24, 8, 32, 18],
+							"uvWest": [16, 8, 24, 18],
+							"uvUp": [16, 8, 8, 0],
+							"uvDown": [24, 0, 16, 8]
+						}
+					],
+					"submodels": [
+						{
+							"id": "nose2",
+							"invertAxis": "xy",
+							"translate": [0, 2.5, -4],
+							"boxes": [
+								{
+									"coordinates": [-1, -7.5, -2, 2, 4, 2],
+									"uvNorth": [26, 2, 28, 6],
+									"uvEast": [24, 2, 26, 6],
+									"uvSouth": [30, 2, 32, 6],
+									"uvWest": [28, 2, 30, 6],
+									"uvUp": [28, 2, 26, 0],
+									"uvDown": [30, 0, 28, 2]
+								}
+							]
+						},
+						{
+							"id": "left_wiggly2",
+							"invertAxis": "xy",
+							"translate": [-4, 10, 0],
+							"rotate": [0, 0, 25],
+							"boxes": [
+								{
+									"coordinates": [-7.7, -7.6, -2, 6, 4, 4],
+									"uvNorth": [54, 8, 60, 12],
+									"uvEast": [60, 12, 64, 16],
+									"uvSouth": [54, 12, 60, 16],
+									"uvWest": [60, 12, 64, 16],
+									"uvUp": [48, 8, 54, 12],
+									"uvDown": [48, 12, 54, 16]
+								}
+							]
+						},
+						{
+							"id": "right_wiggly2",
+							"invertAxis": "xy",
+							"translate": [4, 10, 0],
+							"rotate": [0, 0, -25],
+							"boxes": [
+								{
+									"coordinates": [1.7, -7.6, -2, 6, 4, 4],
+									"uvNorth": [54, 0, 60, 4],
+									"uvEast": [60, 4, 64, 8],
+									"uvSouth": [54, 4, 60, 8],
+									"uvWest": [60, 4, 64, 8],
+									"uvUp": [48, 0, 54, 4],
+									"uvDown": [48, 4, 54, 8]
+								}
+							]
+						},
+						{
+							"id": "left_decor2",
+							"invertAxis": "xy",
+							"translate": [-7.5, -1, 0],
+							"boxes": [
+								{
+									"coordinates": [-1, -1, -1, 2, 2, 2],
+									"uvNorth": [4, 0, 6, 2],
+									"uvEast": [0, 2, 2, 4],
+									"uvSouth": [4, 2, 6, 4],
+									"uvWest": [6, 2, 8, 4],
+									"uvUp": [2, 0, 4, 2],
+									"uvDown": [2, 2, 4, 4]
+								}
+							]
+						},
+						{
+							"id": "right_decor2",
+							"invertAxis": "xy",
+							"translate": [7.5, -1, 0],
+							"boxes": [
+								{
+									"coordinates": [-1, -1, -1, 2, 2, 2],
+									"uvNorth": [4, 0, 6, 2],
+									"uvEast": [0, 2, 2, 4],
+									"uvSouth": [4, 2, 6, 4],
+									"uvWest": [6, 2, 8, 4],
+									"uvUp": [2, 0, 4, 2],
+									"uvDown": [2, 2, 4, 4]
+								}
+							]
+						}
+					]
+				}
+			],
+			"animations": [
+				{
+					"right_decor2.ry": "sin(age/4)/15",
+					"right_decor2.rx": "sin(age/2)/10",
+					"right_decor2.rz": "sin(age/4)/25",
+					"left_decor2.ry": "sin(age/4)/15",
+					"left_decor2.rx": "sin(age/2)/10",
+					"left_decor2.rz": "sin(age/4)/25"
+				}
+			]
+		},
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"submodels": [
+				{
+					"id": "arms2",
+					"invertAxis": "xy",
+					"translate": [0, 22, 0],
+					"submodels": [
+						{
+							"id": "fake_left_arm",
+							"invertAxis": "xy",
+							"mirrorTexture": "u",
+							"translate": [-5, 0, 0],
+							"boxes": [
+								{"coordinates": [-3, -12, -2, 4, 10, 4], "textureOffset": [0, 50]}
+							]
+						},
+						{
+							"id": "fake_right_arm",
+							"invertAxis": "xy",
+							"translate": [5, 0, 0],
+							"boxes": [
+								{"coordinates": [-1, -12, -2, 4, 10, 4], "textureOffset": [0, 34]}
+							]
+						}
+					]
+				},
+				{
+					"id": "main_body",
+					"invertAxis": "xy",
+					"translate": [0, 24, 0],
+					"boxes": [
+						{"coordinates": [-4, -14, -3, 8, 10, 6], "textureOffset": [0, 18], "sizeAdd": -0.001}
+					]
+				}
+			]
+		}
+	]
+}

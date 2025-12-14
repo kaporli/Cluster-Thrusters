@@ -1,0 +1,34 @@
+## Friends and Foes (Fabric/Forge):
+	- Iceologer
+	- Moobloom
+	- Wildfire
+	
+## Guard Villager (Fabric/Forge):
+	- Guard
+	- Steve Guard
+	
+## More Mobs Variant (Fabric/Forge) (Only textures tweaks, needs Fresh Animation):
+
+	- Cat
+	- Cow
+	- Pig
+	- Sheep
+	- Wolf
+	
+## Ravage and Cabbage
+
+	- Cabbager
+	- Ravager
+	
+## Savage and Ravage
+
+	- Creepie
+	- Executioner
+	- Griefer
+	- Trickster
+	- Iceologer
+	- Skeleton Villager
+	
+## Pet Armor
+
+	- Only the armor! You need Fresh animation for the dog itself!

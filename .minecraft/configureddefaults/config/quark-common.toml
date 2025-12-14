@@ -1054,7 +1054,7 @@
 	[world.chorus_vegetation]
 		Rarity = 150
 		Radius = 7
-		"Chunk Attempts" = 120
+		"Chunk Attempts" = 80
 		"Highlands Chance" = 1.0
 		"Midlands Chance" = 0.2
 		"Other End Biomes Chance" = 0.0

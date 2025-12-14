@@ -53,6 +53,23 @@
     }
   },
   {
+    "mob": "dawnera:torvosaurus",
+    "persecond": 0.001,
+    "attempts": 1,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100,
+      "maxdist": 120,
+      "minheight": -35,
+      "maxheight": -20,
+      "maxthis": 4
+    }
+  },
+  {
     "mob": "dawnera:dunkleosteus",
     "persecond": 0.1,
     "attempts": 1,
@@ -245,6 +262,96 @@
       "mindist": 100,
       "maxdist": 120,
       "minheight": -60,
+      "maxheight": -20,
+      "maxthis": 6
+    }
+  },
+  {
+    "mob": "dawnera:dodo",
+    "persecond": 0.1,
+    "attempts": 1,
+    "amount": {
+      "minimum": 2,
+      "maximum": 5,
+      "groupdistance": 40
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100,
+      "maxdist": 120,
+      "minheight": -35,
+      "maxheight": -20,
+      "maxthis": 10
+    }
+  },
+  {
+    "mob": "dawnera:deinonychus",
+    "persecond": 0.1,
+    "attempts": 1,
+    "amount": {
+      "minimum": 2,
+      "maximum": 5,
+      "groupdistance": 40
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100,
+      "maxdist": 120,
+      "minheight": -35,
+      "maxheight": -20,
+      "maxthis": 10
+    }
+  },
+  {
+    "mob": "dawnera:diplocaulus",
+    "persecond": 0.1,
+    "attempts": 1,
+    "amount": {
+      "minimum": 2,
+      "maximum": 5,
+      "groupdistance": 40
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100,
+      "maxdist": 120,
+      "minheight": -35,
+      "maxheight": -20,
+      "maxthis": 6
+    }
+  },
+  {
+    "mob": "dawnera:diplocaulus",
+    "persecond": 0.001,
+    "attempts": 1,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1,
+      "groupdistance": 40
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100,
+      "maxdist": 120,
+      "minheight": -35,
+      "maxheight": -20,
+      "maxthis": 4
+    }
+  },
+  {
+    "mob": "dawnera:aegirocassis",
+    "persecond": 0.1,
+    "attempts": 1,
+    "amount": {
+      "minimum": 2,
+      "maximum": 5,
+      "groupdistance": 40
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100,
+      "maxdist": 120,
+      "minheight": -35,
       "maxheight": -20,
       "maxthis": 6
     }

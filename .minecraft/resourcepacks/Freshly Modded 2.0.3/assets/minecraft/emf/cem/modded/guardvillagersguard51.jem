@@ -1,0 +1,157 @@
+{
+	"credit": "Created by Semos to match Fresh animation in modded",
+	"textureSize": [128, 128],
+	"models": [
+		{
+			"part": "root",
+			"id": "root",
+			"model": "semos:entity_animations/humanoids/common_variables"					
+		},
+		{
+			"part": "hat",
+			"id": "hat",
+			"model": "semos:entity_animations/humanoids/body_cancel_animations"	
+		},
+		{
+			"part": "nose",
+			"id": "nose",
+			"model": "semos:entity_animations/humanoids/body_animations.jpm"			
+		},
+		{
+			"part": "shoulderPad_left",
+			"id": "shoulderPad_left",
+			"model": "semos:entity_animations/humanoids/arms_weaponized_mobs/weapons_detection_variables.jpm"
+		},
+		{
+			"part": "shoulderPad_right",
+			"id": "shoulderPad_right",
+			"model": "semos:entity_animations/humanoids/arms_weaponized_mobs/guards_common_animations.jpm"
+		},
+		{
+			"part": "right_arm",
+			"id": "right_arm",
+			"model": "semos:entity_animations/humanoids/arms_weaponized_mobs/guards_gunpowder_animations.jpm"
+		},
+		{
+			"part": "left_arm",
+			"id": "left_arm",
+			"model": "semos:entity_animations/humanoids/arms_weaponized_mobs/guards_arms_animations.jpm"
+		},
+		{
+			"part": "quiver",
+			"id": "quiver",
+			"animations": [{"var.steve":"0"}]
+		},
+		{
+			"part": "left_leg",
+			"id": "left_leg",
+			"invertAxis": "xy",
+			"mirrorTexture": "u",
+			"translate": [1.9, -12, 0],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [-4, 0, -2, 4, 12, 4], "textureOffset": [16, 48]}
+			]
+		},
+		{
+			"part": "right_leg",
+			"id": "right_leg",
+			"invertAxis": "xy",
+			"translate": [-1.9, -12, 0],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [0, 0, -2, 4, 12, 4], "textureOffset": [16, 28]}
+			]
+		},
+		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -23, 0],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [-4, 24, -4, 8, 10, 8], "textureOffset": [49, 99]}
+			],
+			"submodels": [
+				{
+					"id": "head_second_layer",
+					"invertAxis": "xy",
+					"mirrorTexture": "u",
+					"translate": [0, 0, 0],
+					"boxes": [
+						{"coordinates": [-4, 24, -4, 8, 10, 8], "textureOffset": [4, 0], "sizeAdd": 0.25}
+					]
+				},
+				{
+					"id": "nose2",
+					"invertAxis": "xy",
+					"translate": [0, 26.5, -4],
+					"boxes": [
+						{"coordinates": [-1, -3.5, -2, 2, 4, 2], "textureOffset": [54, 0]}
+					]
+				}
+			]
+		},
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"scale": 1,
+			"submodels": [
+				{
+					"id": "arms",
+					"invertAxis": "xy",
+					"translate": [0, 22, 0],
+					"submodels": [
+						{
+							"id": "fake_left_arm",
+							"invertAxis": "xy",
+							"mirrorTexture": "u",
+							"translate": [-5, 0, 0],
+							"boxes": [
+								{"coordinates": [-3, -10, -2, 4, 12, 4], "textureOffset": [33, 48]}
+							],
+							"submodels": [
+								{
+									"id": "left_shoulder_guard",
+									"invertAxis": "xy",
+									"translate": [11, 2, 0],
+									"boxes": [
+										{"coordinates": [-14, -3, -2, 4, 3, 4], "textureOffset": [43, 22], "sizeAdd": 0.5}
+									]
+								}
+							]
+						},
+						{
+							"id": "fake_right_arm",
+							"invertAxis": "xy",
+							"translate": [5, 0, 0],
+							"boxes": [
+								{"coordinates": [-1, -10, -2, 4, 12, 4], "textureOffset": [33, 48]}
+							],
+							"submodels": [
+								{
+									"id": "right_shoulder_guard",
+									"invertAxis": "xy",
+									"translate": [1, 2, 0],
+									"boxes": [
+										{"coordinates": [-2, -3, -2, 4, 3, 4], "textureOffset": [75, 35], "sizeAdd": 0.5}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "main_body",
+					"invertAxis": "xy",
+					"translate": [0, 24, 0],
+					"boxes": [
+						{"coordinates": [-4, -12, -2, 8, 12, 4], "textureOffset": [52, 50]}
+					]
+				}
+			]
+		}
+	]
+}
