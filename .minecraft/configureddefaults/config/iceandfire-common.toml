@@ -375,7 +375,7 @@
 	#Range: 0.0 ~ 1.0
 	"Easter Egg Tinkers Tool Disarm chance" = 0.20000000298023224
 	#True if the summon crystal can load chunks to find dragons.
-	"Chunk Load Summon Crystal" = true
+	"Chunk Load Summon Crystal" = false
 	#True if the dragon bone fire sword ignites attackers.
 	"Dragon Bone Fire Abilities" = true
 	#True if the dragon bone ice sword freezes attackers.

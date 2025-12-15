@@ -3,19 +3,21 @@ const replacements = {
     "neapolitan:chimpanzee": "alexsmobs:capuchin_monkey"
 };
 
-EntityEvents.spawned(event => {
-    const oldType = event.entity.type;
+EntityEvents.checkSpawn(event => {
+    const oldType = event.entity.type.toString();
     const newType = replacements[oldType];
 
-    if (newType) {
-        const { x, y, z, level } = event.entity;
+    if (!newType) return;
 
-        event.entity.remove();
+    const { x, y, z, level } = event.entity;
 
-        let replacement = level.createEntity(newType);
-        replacement.x = x;
-        replacement.y = y;
-        replacement.z = z;
+    event.cancel();
+    
+    level.server.scheduleInTicks(1, () => {
+        const replacement = level.createEntity(newType);
+        if (!replacement) return;
+
+        replacement.setPos(x, y, z);
         replacement.spawn();
-    }
+    });
 });
