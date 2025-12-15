@@ -16,6 +16,13 @@
   // Items here will be unusable completely
   //    Example: minecraft:diamond
   "blacklisted_items": [
+    // Ice and Fire
+    "iceandfire:weezer_blue_album",
+
+    // Neapolitan
+    "neapolitan:chimpanzee_head",
+    "neapolitan:chimpanzee_spawn_egg",
+
     // Biomes O' Plenty Maple Items
     "everycomp:mcd/biomesoplenty/maple_barn_door",
     "biomesoplenty:maple_hanging_sign",
