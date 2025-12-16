@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # === Prism Launcher Metadata ===
 .packignore
 icon.png
@@ -48,3 +49,45 @@ usercache.json
 
 .minecraft/shaderpacks
 .minecraft/resourcepacks
+=======
+# === Prism Launcher Metadata ===
+.packignore
+icon.png
+
+# === Minecraft Resource Directories ===
+/.minecraft/screenshots
+/.minecraft/texturepacks
+/.minecraft/config
+
+# === Player-Specific Data ===
+usernamecache.json
+usercache.json
+/.minecraft/options.txt
+/.minecraft/cherishedworlds-favorites.dat
+
+# === World Data ===
+/.minecraft/saves
+/.minecraft/data
+
+# === Player-Specific Mod Data ===
+/.minecraft/xaero
+# === Runtime/Generated Directories ===
+/.minecraft/logs
+/.minecraft/crash-reports
+/.minecraft/modernfix
+/.minecraft/mod_data
+/.minecraft/coremods
+/.minecraft/patchouli_data.json
+/.minecraft/usercache.json
+/.minecraft/XaeroWaypoints_BACKUP*
+/.minecraft/mods/.index
+/.minecraft/mods/.connector
+/.minecraft/.mixin.out
+/.minecraft/fabricloader.log
+
+# === Mods ===
+/.minecraft/mods
+
+# === IDE Specific Files ===
+.vscode/settings.json
+>>>>>>> Stashed changes
