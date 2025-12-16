@@ -32,9 +32,15 @@ usercache.json
 /.minecraft/mods/.connector
 /.minecraft/.mixin.out
 /.minecraft/fabricloader.log
+/.minecraft/shaderpacks
+/.minecraft/*.log
+/.minecraft/rhino.local.properties
 
 # === Disabled Mods ===
 /.minecraft/mods/**/*.disabled
+/.minecraft/mods/**/*.duplicate
 
 # === IDE Specific Files ===
 .vscode/settings.json
+
+.DS_Store
