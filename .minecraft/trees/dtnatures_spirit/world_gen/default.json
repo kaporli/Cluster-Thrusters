@@ -1,0 +1,62 @@
+[
+  {
+    "select": {
+      "name": "natures_spirit:fir_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtbop:mega_fir": 1
+        }
+      },
+      "density": [0.85],
+      "chance": 0.89,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:snowy_fir_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtbop:mega_fir": 1
+        }
+      },
+      "density": [0.9],
+      "chance": 0.78,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:tundra"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtbop:fir": 1
+        }
+      },
+      "density": [0.9],
+      "chance": 0.4,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:prairie"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtbop:fir": 1
+        }
+      },
+      "density": [0.9],
+      "chance": 0.85,
+      "forestness": 1.0
+    }
+  }
+]
