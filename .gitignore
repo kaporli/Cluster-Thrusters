@@ -14,7 +14,11 @@ instance.cfg
 # === Player-Specific Data ===
 usernamecache.json
 usercache.json
+
 .minecraft/options.txt
+.minecraft/shaderpacks/ComplementaryReimagined_r5.6.1 + EuphoriaPatches_1.7.8.txt
+.minecraft/shaderpacks/ComplementaryUnbound_r5.6.1 + EuphoriaPatches_1.7.8.txt
+
 .minecraft/cherishedworlds-favorites.dat
 
 # === Player-Specific Mod Data ===
@@ -24,24 +28,30 @@ usercache.json
 .minecraft/saves
 .minecraft/data
 
-# === Runtime/Generated Directories ===
+# === Server Data ===
+.minecraft/servers.dat_old
+.minecraft/servers.dat
+.minecraft/Distant_Horizons_server_data
+
+# === Runtime Generated Files/Directories ===
 .minecraft/logs
+.minecraft/*.log
 .minecraft/crash-reports
-.minecraft/modernfix
+
 .minecraft/mod_data
 .minecraft/coremods
-.minecraft/patchouli_data.json
+
 .minecraft/usercache.json
-.minecraft/XaeroWaypoints_BACKUP*
+
+# === Misc Mod Data ===
 .minecraft/mods/.index
 .minecraft/mods/.connector
 .minecraft/.mixin.out
-.minecraft/fabricloader.log
-.minecraft/*.log
-
-# === Misc Mod Data ===
 .minecraft/local
 .minecraft/rhino.local.properties
+.minecraft/modernfix
+.minecraft/patchouli_data.json
+.minecraft/XaeroWaypoints_BACKUP*
 
 # === IDE Specific Files ===
 .vscode/settings.json
