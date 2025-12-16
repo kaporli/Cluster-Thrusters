@@ -16,6 +16,7 @@ usercache.json
 # === World Data ===
 /.minecraft/saves
 /.minecraft/data
+/.minecraft/mods
 
 # === Player-Specific Mod Data ===
 /.minecraft/xaero
@@ -32,9 +33,18 @@ usercache.json
 /.minecraft/mods/.connector
 /.minecraft/.mixin.out
 /.minecraft/fabricloader.log
+/.minecraft/shaderpacks
+/.minecraft/*.log
+/.minecraft/rhino.local.properties
 
 # === Disabled Mods ===
 /.minecraft/mods/**/*.disabled
+/.minecraft/mods/**/*.duplicate
 
 # === IDE Specific Files ===
 .vscode/settings.json
+
+.DS_Store
+
+.minecraft/shaderpacks
+.minecraft/resourcepacks
