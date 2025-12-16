@@ -1,0 +1,55 @@
+{
+  "family": "dtnatures_spirit:fir",
+  "tapering": 0.3,
+  "signal_energy": 32.0,
+  "up_probability": 7,
+  "lowest_branch_height": 7,
+  "growth_rate": 1.0,
+  "soil_longevity": 18,
+  "max_branch_radius": 24,
+  "growth_logic_kit": {
+    "name": "conifer",
+    "properties": {
+      "energy_divisor": 4.5,
+      "height_variation": 4.5
+    }
+  },
+  "leaves_properties": "dtnatures_spirit:fir",
+  "environment_factors": {
+    "#forge:is_hot": 0.50,
+    "#forge:is_dry": 0.25,
+    "#forge:is_wet": 0.75
+  },
+  "perfect_biomes": {
+    "tag": "#forge:is_coniferous"
+  },
+  "always_show_on_waila": true,
+  "generate_seed": false,
+  "generate_sapling": false,
+  "acceptable_soils": [
+    "dirt_like"
+  ],
+  "world_gen_acceptable_soils": [
+    "snow_like"
+  ],
+  "features": [
+    "conifer_topper",
+    {
+      "name": "alt_leaves",
+      "properties": {
+        "alternative_leaves": "dtnatures_spirit:frosty_fir",
+        "place_chance": 0.8,
+        "quantity": 5
+      }
+    },
+    {
+      "name": "mound",
+      "properties": {
+        "mound_cutoff_radius": 999
+      }
+    },
+    "clear_volume",
+    "podzol",
+    "bottom_flare"
+  ]
+}

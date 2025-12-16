@@ -6,10 +6,13 @@
     "apply": {
       "species": {
         "random": {
-          "dtbop:mega_fir": 1
+          "dtnatures_spirit:fir": 1,
+          "dtnatures_spirit:mega_fir": 3
         }
       },
-      "density": [0.85],
+      "density": [
+        0.85
+      ],
       "chance": 0.89,
       "forestness": 1.0
     }
@@ -21,11 +24,54 @@
     "apply": {
       "species": {
         "random": {
-          "dtbop:mega_fir": 1
+          "dtnatures_spirit:frosty_fir": 1,
+          "dtnatures_spirit:mega_frosty_fir": 3
         }
       },
-      "density": [0.9],
+      "density": [
+        0.9
+      ],
       "chance": 0.78,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:boreal_taiga"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 6,
+          "dtnatures_spirit:fir": 5,
+          "dynamictrees:spruce": 2,
+          "dtnatures_spirit:mega_fir": 1
+        }
+      },
+      "density": [
+        0.85
+      ],
+      "chance": 0.95,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:coniferous_covert"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 6,
+          "dtnatures_spirit:fir": 5,
+          "dynamictrees:spruce": 2,
+          "dtnatures_spirit:mega_fir": 1
+        }
+      },
+      "density": [
+        0.85
+      ],
+      "chance": 0.95,
       "forestness": 1.0
     }
   },
@@ -36,25 +82,34 @@
     "apply": {
       "species": {
         "random": {
-          "dtbop:fir": 1
+          "dtnatures_spirit:fir": 3,
+          "dtnatures_spirit:mega_fir": 1
         }
       },
-      "density": [0.9],
+      "density": [
+        0.9
+      ],
       "chance": 0.4,
       "forestness": 1.0
     }
   },
   {
     "select": {
-      "name": "natures_spirit:prairie"
+      "name": "natures_spirit:woody_highlands"
     },
     "apply": {
       "species": {
         "random": {
-          "dtbop:fir": 1
+          "dtnatures_spirit:larch": 6,
+          "dtnatures_spirit:fir": 5,
+          "dtnatures_spirit:saxaul": 11,
+          "dynamictrees:spruce": 2,
+          "dtnatures_spirit:mega_fir": 1
         }
       },
-      "density": [0.9],
+      "density": [
+        0.8
+      ],
       "chance": 0.85,
       "forestness": 1.0
     }
