@@ -44,3 +44,5 @@ usercache.json
 .vscode/settings.json
 
 .DS_Store
+
+.minecraft/shaderpacks/**
