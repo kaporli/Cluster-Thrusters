@@ -1,93 +1,50 @@
-<<<<<<< Updated upstream
-# === Prism Launcher Metadata ===
-.packignore
-icon.png
+# === Modmanager Files ===
+instance.cfg
 
 # === Minecraft Resource Directories ===
-/.minecraft/screenshots
-/.minecraft/texturepacks
-/.minecraft/config
-
-# === Player-Specific Data ===
-usernamecache.json
-usercache.json
-/.minecraft/options.txt
-/.minecraft/cherishedworlds-favorites.dat
-
-# === World Data ===
-/.minecraft/saves
-/.minecraft/data
-/.minecraft/mods
-
-# === Player-Specific Mod Data ===
-/.minecraft/xaero
-# === Runtime/Generated Directories ===
-/.minecraft/logs
-/.minecraft/crash-reports
-/.minecraft/modernfix
-/.minecraft/mod_data
-/.minecraft/coremods
-/.minecraft/patchouli_data.json
-/.minecraft/usercache.json
-/.minecraft/XaeroWaypoints_BACKUP*
-/.minecraft/mods/.index
-/.minecraft/mods/.connector
-/.minecraft/.mixin.out
-/.minecraft/fabricloader.log
-/.minecraft/shaderpacks
-/.minecraft/*.log
-/.minecraft/rhino.local.properties
-
-# === Disabled Mods ===
-/.minecraft/mods/**/*.disabled
-/.minecraft/mods/**/*.duplicate
-
-# === IDE Specific Files ===
-.vscode/settings.json
-
-.DS_Store
+.minecraft/mods
+.minecraft/config
 
 .minecraft/shaderpacks
 .minecraft/resourcepacks
-=======
-# === Prism Launcher Metadata ===
-.packignore
-icon.png
 
-# === Minecraft Resource Directories ===
-/.minecraft/screenshots
-/.minecraft/texturepacks
-/.minecraft/config
+.minecraft/texturepacks
+.minecraft/screenshots
 
 # === Player-Specific Data ===
 usernamecache.json
 usercache.json
-/.minecraft/options.txt
-/.minecraft/cherishedworlds-favorites.dat
-
-# === World Data ===
-/.minecraft/saves
-/.minecraft/data
+.minecraft/options.txt
+.minecraft/cherishedworlds-favorites.dat
 
 # === Player-Specific Mod Data ===
-/.minecraft/xaero
-# === Runtime/Generated Directories ===
-/.minecraft/logs
-/.minecraft/crash-reports
-/.minecraft/modernfix
-/.minecraft/mod_data
-/.minecraft/coremods
-/.minecraft/patchouli_data.json
-/.minecraft/usercache.json
-/.minecraft/XaeroWaypoints_BACKUP*
-/.minecraft/mods/.index
-/.minecraft/mods/.connector
-/.minecraft/.mixin.out
-/.minecraft/fabricloader.log
+.minecraft/xaero
 
-# === Mods ===
-/.minecraft/mods
+# === World Data ===
+.minecraft/saves
+.minecraft/data
+
+# === Runtime/Generated Directories ===
+.minecraft/logs
+.minecraft/crash-reports
+.minecraft/modernfix
+.minecraft/mod_data
+.minecraft/coremods
+.minecraft/patchouli_data.json
+.minecraft/usercache.json
+.minecraft/XaeroWaypoints_BACKUP*
+.minecraft/mods/.index
+.minecraft/mods/.connector
+.minecraft/.mixin.out
+.minecraft/fabricloader.log
+.minecraft/*.log
+
+# === Misc Mod Data ===
+.minecraft/local
+.minecraft/rhino.local.properties
 
 # === IDE Specific Files ===
 .vscode/settings.json
->>>>>>> Stashed changes
+
+# === System Files ===
+.DS_Store
