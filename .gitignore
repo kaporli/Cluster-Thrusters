@@ -16,6 +16,7 @@ usercache.json
 # === World Data ===
 /.minecraft/saves
 /.minecraft/data
+/.minecraft/mods
 
 # === Player-Specific Mod Data ===
 /.minecraft/xaero
