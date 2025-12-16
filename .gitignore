@@ -45,4 +45,4 @@ usercache.json
 
 .DS_Store
 
-.minecraft/shaderpacks/**
+.minecraft/shaderpacks
