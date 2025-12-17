@@ -3,7 +3,6 @@
   "failed_reloads_per_session": 5,
   "default_packs": [
     "obscure_tooltips/packs/vibrant_tooltips",
-    "builtin/add_pack_finders_test",
     "eatinganimations_compat",
     "file/Create Immersive Aircraft Warship ResourcePack v1.2.zip",
     "file/Create Immersive Aircrafts Resource Pack 1.20.1 - 2.0.zip",
@@ -50,7 +49,6 @@
       "mod_resources",
       "fragmentum_layer",
       "Moonlight Mods Dynamic Assets",
-      "file/A Good Place Sample Pack.zip",
       "file/SE Vanilla Consistency 1.20.1.zip",
       "builtin/plank_consistency",
       "supplementaries:darker_ropes",

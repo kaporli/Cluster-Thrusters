@@ -1,3 +1,4 @@
 JEIEvents.hideItems(event => {
-  event.hide(/xaero.*/);
+  event.hide(/^xaeroworldmap:.*/);
+  event.hide(/^xaerominimap:.*/);
 });

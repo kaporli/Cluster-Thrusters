@@ -16,6 +16,21 @@
   // Items here will be unusable completely
   //    Example: minecraft:diamond
   "blacklisted_items": [
+    // Bosses'Rises
+    "block_factorys_bosses:tall_candles",
+    "block_factorys_bosses:tall_candles_cross",
+    "block_factorys_bosses:under_world_tall_candles",
+    "block_factorys_bosses:under_world_tall_candles_cross",
+    "block_factorys_bosses:corpse",
+    "block_factorys_bosses:bones_remains_rib_cage",
+    "block_factorys_bosses:bones_remains_legs",
+    "block_factorys_bosses:bones_remains",
+
+    //TheDawnEra
+    "dawnera:worm_spawn_egg",
+    "dawnera:worm",
+    "dawnera:worm_dirt",
+
     // Ice and Fire
     "iceandfire:weezer_blue_album",
 
