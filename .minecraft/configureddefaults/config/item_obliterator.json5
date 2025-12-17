@@ -15,6 +15,7 @@
   // -----------------------------------------------------------
   // Items here will be unusable completely
   //    Example: minecraft:diamond
+  
   "blacklisted_items": [
     // Bosses'Rises
     "block_factorys_bosses:tall_candles",
