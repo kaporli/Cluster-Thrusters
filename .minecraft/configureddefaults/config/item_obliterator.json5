@@ -17,6 +17,19 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Mekanism Uranium
+    "mekanism:block_uranium",
+    "mekanism:block_raw_uranium",
+    "mekanism:uranium_ore",
+    "mekanism:deepslate_uranium_ore",
+    "mekanism:shard_uranium",
+    "mekanism:crystal_uranium",
+    "mekanism:dust_uranium",
+    "mekanism:dirty_dust_uranium",
+    "mekanism:clump_uranium",
+    "mekanism:raw_uranium",
+    "mekanism:nugget_uranium",
+
     // Bosses'Rises
     "block_factorys_bosses:tall_candles",
     "block_factorys_bosses:tall_candles_cross",
@@ -27,7 +40,10 @@
     "block_factorys_bosses:bones_remains_legs",
     "block_factorys_bosses:bones_remains",
 
-    //TheDawnEra
+    // Mowzie's Mobs
+    "mowziesmobs:mob_remover",
+
+    // TheDawnEra
     "dawnera:worm_spawn_egg",
     "dawnera:worm",
     "dawnera:worm_dirt",

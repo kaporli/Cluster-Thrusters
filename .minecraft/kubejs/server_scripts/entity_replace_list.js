@@ -1,6 +1,6 @@
 const replacements = {
-    "savage_and_ravage:iceologer": "friendsandfoes:iceologer",
-    "neapolitan:chimpanzee": "alexsmobs:capuchin_monkey"
+    "savage_and_ravage:iceologer": "friendsandfoes:iceologer"
+    // "neapolitan:chimpanzee": "alexsmobs:capuchin_monkey"
 };
 
 EntityEvents.checkSpawn(event => {
