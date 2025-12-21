@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 15,
+    "description": "Removes worm_dirt from all biomes using Forge biome modifiers"
+  }
+}
