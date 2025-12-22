@@ -1,0 +1,38 @@
+{
+  "itemGroup.whaleborne.whaleborne": "Whaleborne",
+
+  "block.whaleborne.barnacle": "Barnacle Block",
+  "block.whaleborne.rough_barnacle": "Rough Barnacle Block",
+
+  "item.whaleborne.barnacle": "Barnacle Block",
+  "item.whaleborne.rough_barnacle": "Rough Barnacle Block",
+
+  "subtitles.block.barnacle.organ": "Barnacle sings",
+
+  "item.whaleborne.sail": "Sail",
+  "item.whaleborne.anchor": "Anchor",
+  "item.whaleborne.mast": "Mast",
+  "item.whaleborne.helm": "Helm",
+  "item.whaleborne.cannon": "Cannon",
+
+  "entity.whaleborne.sail": "Sail",
+  "entity.whaleborne.anchor": "Anchor",
+  "entity.whaleborne.anchor_head": "Anchor Head",
+  "entity.whaleborne.mast": "Mast",
+  "entity.whaleborne.helm": "Helm",
+  "entity.whaleborne.cannon": "Cannon",
+
+  "menu.title.whaleborne.cannon": "Cannon",
+
+  "item.whaleborne.hullback_spawn_egg": "Lord of the Sea Spawn Egg",
+  "entity.whaleborne.hullback": "Lord of the Sea",
+
+  "subtitles.entity.hullback.ambient": "Lord of the Sea sings",
+  "subtitles.entity.hullback.hurt": "Lord of the Sea hurts",
+  "subtitles.entity.hullback.death": "Lord of the Sea dies",
+  "subtitles.entity.hullback.happy": "Lord of the Sea amused",
+  "subtitles.entity.hullback.tame": "Lord of the Sea sings happily",
+  "subtitles.entity.hullback.mad": "Lord of the Sea groans",
+  "subtitles.entity.hullback.swim": "Lord of the Sea swims",
+  "subtitles.entity.hullback.breathe": "Lord of the Sea breaches"
+}
