@@ -30,6 +30,27 @@
     "mekanism:raw_uranium",
     "mekanism:nugget_uranium",
 
+    // Excavated Variants Uranium Items
+    "excavated_variants:create_limestone_uranium_ore",
+    "excavated_variants:andesite_uranium_ore",
+    "excavated_variants:create_veridium_uranium_ore",
+    "excavated_variants:smooth_basalt_uranium_ore",
+    "excavated_variants:create_crimsite_uranium_ore",
+    "excavated_variants:dripstone_uranium_ore",
+    "excavated_variants:quark_limestone_uranium_ore",
+    "excavated_variants:granite_uranium_ore",
+    "excavated_variants:tuff_uranium_ore",
+    "excavated_variants:calcite_uranium_ore",
+    "excavated_variants:diorite_uranium_ore",
+    "excavated_variants:red_sandstone_uranium_ore",
+    "excavated_variants:create_ochrum_uranium_ore",
+    "excavated_variants:create_scorchia_uranium_ore",
+    "excavated_variants:create_asurine_uranium_ore",
+    "excavated_variants:quark_shale_uranium_ore",
+    "excavated_variants:quark_jasper_uranium_ore",
+    "excavated_variants:sandstone_uranium_ore",
+    "excavated_variants:create_scoria_uranium_ore",
+
     // Bosses'Rises
     "block_factorys_bosses:tall_candles",
     "block_factorys_bosses:tall_candles_cross",
@@ -42,6 +63,9 @@
 
     // Mowzie's Mobs
     "mowziesmobs:mob_remover",
+
+    // Alex's Mobs
+    "alexsmobs:spawn_egg_cachalot_whale",
 
     // TheDawnEra
     "dawnera:worm_spawn_egg",
