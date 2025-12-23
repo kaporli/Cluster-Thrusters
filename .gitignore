@@ -59,3 +59,4 @@ usercache.json
 # === System Files ===
 .DS_Store
 .minecraft/kubejs/config/common.properties
+.minecraft/TrashSlotSaveState.json

@@ -125,7 +125,7 @@
 	#Only entity types in the enhancedai:mobs/air_stealer tag are affected by this feature.
 	"Enable Air steal" = true
 	#Mobs will jump off the ground to emit a shockwave when falling damaging nearby entities. Only entity types in enhancedai:mobs/shockwave/can_use tag are affected by this feature and entity types in the enhancedai:mobs/shockwave/damage_invulnerable tag will not be damaged by the shockwave.
-	"Enable Falling shockwave" = true
+	"Enable Falling shockwave" = false
 	#Mobs can mine blocks to reach the target. Uses offhand item to mine. Only mobs in the entity type tag enhancedai:mobs/can_mine can spawn with the ability to mine and blocks in the tag enhancedai:miner_blacklist cannot be mined. This feature also adds the block reach attribute to all entities.
 	"Enable Miner mobs" = true
 	#Endermen will make the player's item fall from his hands. Add/remove mobs via the enhancedai:mobs/can_disrupt_item entity type tag
@@ -140,7 +140,7 @@
 	#Makes mobs teleport other mobs close to the target. Mobs in the `enhancedai:mobs/teleport_to_target/can_be_teleported` tag will be able to be picked up, while mobs in the `enhancedai:mobs/teleport_to_target/can_teleport` tag will be able to pick up other mobs.
 	"Enable Teleport to target" = true
 	#Allows mobs to call reinforcements (like vanilla zombies can, but better) and have leaders that have a high chance to call reinforcements. Only entity types in the `enhancedai:mobs/leaders` tag can jump. PLEASE NOTE that this feature uses a custom attribute (enhancedai:spawn_reinforcements_chance) instead of the vanilla one. This feature has also an MPR condition `enhancedai:is_leader` to check if the mob is a leader.
-	"Enable Leaders" = true
+	"Enable Leaders" = false
 	"Enable Pathfinding" = true
 	#Gives mobs a chance to negate damage when equipped with a shield. Only entity types in `enhancedai:mobs/can_equip_shield` tag will be equipped a shield.
 	"Enable Shielding" = true
@@ -182,7 +182,7 @@
 	#Makes mobs ride other mobs. Mobs in the `enhancedai:mobs/riding/can_be_mounted` tag will be able to be mounted, while mobs in the `enhancedai:mobs/riding/can_mount` tag will be able to mount other mobs.
 	"Enable Riding" = true
 	#Enables a Mobs Properties Randomness data pack that adds even more buffs to mobs.
-	"Enable MPR data pack" = true
+	"Enable MPR data pack" = false
 
 	#Only entity types in the enhancedai:mobs/air_stealer tag are affected by this feature.
 	[Mobs."Air steal"]
@@ -824,7 +824,7 @@
 	#Various changes to Creepers exploding. Ignoring Walls, Walking Fuse and smarter exploding based off explosion size. Only creepers in the enhancedai:creeper/change_swell entity type tag are affected by this feature.
 	"Enable Creeper swell" = true
 	#Creepers can ignite and throw themselves at players. Only entity types in the enhancedai:creeper/can_launch tag will be affected by this feature.
-	"Enable Creeper launch" = true
+	"Enable Creeper launch" = false
 
 	#Creepers will ignite when they take explosion damage. Only entity types in the enhancedai:creeper/tnt_like tag will be affected by this feature.
 	[Creepers."Tnt like creepers"]
@@ -866,18 +866,18 @@
 		[Creepers."Creeper swell".Angry]
 			#Chance for a creeper to spawn angry
 			#Range: 0.0 ~ 1.0
-			Chance = 0.03
+			Chance = 0.0
 			#If true, Angry Creeper emits particles
 			Particles = true
 			#The special sound effect that the Angry Creeper plays
 			#Allowed Values: NONE, CENA, WTF_BOOM, OLD
-			Sounds = "CENA"
+			Sounds = "NONE"
 			#If true, Angry Creeper will have a name
-			Name = true
+			Name = false
 			#When ignited, Angry Creeper will not stop swelling
 			"Force explosion" = false
 			#Makes angry creepers blow up on death like when they were added back in 0.30
-			"Explode on death" = true
+			"Explode on death" = false
 			#If true, Angry Creeper explosion will generate fire
 			Fire = false
 			#Explosion power of Angry Creeper
