@@ -20,7 +20,7 @@ import com.relicskeybind.ResearchKeybind;
 public class RelicsKeybindItemMixin {
     @Inject(method = "appendHoverText", at = @At("TAIL"))
     private void relicskeybind$replaceShiftTooltip(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
-        // Only run for Relics, RAR-Compat, or Artifacts items (broad match)
+        if (!(stack.getItem() instanceof IRelicItem)) return;
         String keyName = ResearchKeybind.RESEARCH_KEY.getTranslatedKeyMessage().getString();
         for (int i = 0; i < tooltip.size(); i++) {
             Component comp = tooltip.get(i);
