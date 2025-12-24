@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.relicskeybind.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.relicskeybind.refmap.json",
+  "client": [
+    "RelicsKeybindItemMixin",
+    "RelicsKeybindResearchRedirectMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

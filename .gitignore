@@ -60,3 +60,4 @@ usercache.json
 .DS_Store
 .minecraft/kubejs/config/common.properties
 .minecraft/TrashSlotSaveState.json
+.minecraft/.qmenu_opened.marker

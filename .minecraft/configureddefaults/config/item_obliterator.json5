@@ -17,6 +17,9 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Aether
+    "aether:aether_portal_frame",
+
     // Mekanism Uranium
     "mekanism:block_uranium",
     "mekanism:block_raw_uranium",

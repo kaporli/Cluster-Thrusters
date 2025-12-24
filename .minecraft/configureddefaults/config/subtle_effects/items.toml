@@ -10,8 +10,8 @@ waterEvaporateFromBucketSteam = true
 waterBucketUseParticles = true
 lavaBucketUseParticles = true
 powderSnowBucketUseParticles = true
-lingeringPotionClouds = true
-splashPotionClouds = true
+lingeringPotionClouds = false
+splashPotionClouds = false
 structureVoidItemMarker = true
 
 [itemRarity]
