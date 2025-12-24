@@ -20,12 +20,13 @@ import com.relicskeybind.ResearchKeybind;
 public class RelicsKeybindItemMixin {
     @Inject(method = "appendHoverText", at = @At("TAIL"))
     private void relicskeybind$replaceShiftTooltip(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag, CallbackInfo ci) {
-        if (!(stack.getItem() instanceof IRelicItem)) return;
+        // Only run for Relics, RAR-Compat, or Artifacts items (broad match)
         String keyName = ResearchKeybind.RESEARCH_KEY.getTranslatedKeyMessage().getString();
         for (int i = 0; i < tooltip.size(); i++) {
             Component comp = tooltip.get(i);
-            if (comp.getContents() instanceof TranslatableContents tc && tc.getKey().equals("tooltip.relics.researching.info")) {
-                tooltip.set(i, Component.literal("Hold [" + keyName + "] to research..."));
+            String str = comp.getString();
+            if (str.contains("[Shift]")) {
+                tooltip.set(i, Component.literal(str.replace("[Shift]", "[" + keyName + "]")));
             }
         }
     }

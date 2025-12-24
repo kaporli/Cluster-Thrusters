@@ -6,7 +6,8 @@
   "refmap": "mixins.relicskeybind.refmap.json",
   "client": [
     "RelicsKeybindItemMixin",
-    "RelicsKeybindResearchRedirectMixin"
+    "RelicsKeybindResearchRedirectMixin",
+    "RARCompatTooltipHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 0
