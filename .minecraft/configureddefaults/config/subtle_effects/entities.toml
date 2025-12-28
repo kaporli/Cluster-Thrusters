@@ -36,8 +36,8 @@ improvedWetWolfShakeEffects = true
 improvedVillagerSweatingEffects = true
 
 [sleeping]
-playerSnoreChance = 1.0
-playerSnoreSoundVolume = 1.0
+playerSnoreChance = 0.0
+playerSnoreSoundVolume = 0.0
 playersHaveSleepingZs = true
 villagerSnoreChance = 1.0
 villagerSnoreSoundVolume = 1.0
@@ -51,7 +51,7 @@ adjustNameTagWhenSleeping = true
 
 [humanoids]
 drowningBubblesDisplayType = "DEFAULT"
-drowningBubblesDensity = 3
+drowningBubblesDensity = 1
 drowningBubbleAlpha = 1.0
 forceDrowningBubblesToColumn = false
 potionRingsDisplayType = "DEFAULT"
@@ -110,14 +110,14 @@ creeperSparks = true
 [splashes]
 splashEffects = true
 splashRipples = true
-splashDroplets = true
+splashDroplets = false
 splashBubbles = true
 explosionsCauseSplashes = true
 splashOverlayTint = 0.2
 splashOverlayAlpha = 0.8
 splashVelocityThreshold = 0.35
 entityBlocklist = [  ]
-secondarySplash = true
+secondarySplash = false
 secondarySplashRipples = false
 secondarySplashVelocityThreshold = 0.3
 lavaSplashes = true
