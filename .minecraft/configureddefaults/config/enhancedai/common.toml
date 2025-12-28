@@ -963,7 +963,7 @@
 
 [Skeletons]
 	#Skeletons try to stay away from the target. Only entity types in `enhancedai:skeleton/can_flee` tag are affected by this feature. This disables itself if Skeleton Shoot feature is disabled
-	"Enable Skeleton flee target" = true
+	"Enable Skeleton flee target" = false
 	#Skeletons are more precise when shooting and can hit a target farther away. Only entity types in `enhancedai:skeleton/better_shooting` tag are affected by this feature
 	"Enable Skeleton shoot" = true
 	#Wither skeletons can shoot Wither arrows.
