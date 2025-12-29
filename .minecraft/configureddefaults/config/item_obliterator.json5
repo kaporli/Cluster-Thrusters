@@ -17,6 +17,37 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // AE2
+    "ae2:facade",
+    "ae2:nether_quartz_pickaxe",
+    "ae2:nether_quartz_axe",
+    "ae2:nether_quartz_shovel",
+    "ae2:nether_quartz_wrench",
+    "ae2:nether_quartz_hoe",
+    "ae2:nether_quartz_sword",
+    "ae2:nether_quartz_cutting_knife",
+    "ae2:certus_quartz_pickaxe",
+    "ae2:certus_quartz_axe",
+    "ae2:certus_quartz_shovel",
+    "ae2:certus_quartz_wrench",
+    "ae2:certus_quartz_hoe",
+    "ae2:certus_quartz_sword",
+    "ae2:fluix_pickaxe",
+    "ae2:fluix_axe",
+    "ae2:fluix_shovel",
+    "ae2:fluix_hoe",
+    "ae2:fluix_sword",
+
+    // Nature's Spirit
+    "natures_spirit:chert_coal_ore",
+    "natures_spirit:chert_iron_ore",
+    "natures_spirit:chert_copper_ore",
+    "natures_spirit:chert_gold_ore",
+    "natures_spirit:chert_redstone_ore",
+    "natures_spirit:chert_emerald_ore",
+    "natures_spirit:chert_lapis_ore",
+    "natures_spirit:chert_diamond_ore",
+
     // Abnormal's Mods
     "upgrade_aquatic:bedroll",
     "upgrade_aquatic:white_bedroll",
@@ -100,6 +131,28 @@
 
     // Ice and Fire
     "iceandfire:weezer_blue_album",
+    "iceandfire:copper_nugget",
+    "iceandfire:copper_helmet",
+    "iceandfire:copper_chestplate",
+    "iceandfire:copper_leggings",
+    "iceandfire:copper_boots",
+    "iceandfire:copper_sword",
+    "iceandfire:copper_pickaxe",
+    "iceandfire:copper_axe",
+    "iceandfire:copper_shovel",
+    "iceandfire:copper_hoe",
+    "iceandfire:dragonarmor_copper_head",
+    "iceandfire:dragonarmor_copper_neck",
+    "iceandfire:dragonarmor_copper_body",
+    "iceandfire:dragonarmor_copper_tail",
+
+    // Ice and Fire Spellbooks
+    "ice_and_fire_spellbooks:toornahkriin",
+    "ice_and_fire_spellbooks:fodaan",
+    "ice_and_fire_spellbooks:vulonqo",
+    "ice_and_fire_spellbooks:vulnilviir",
+    "ice_and_fire_spellbooks:vulsilah",
+    "ice_and_fire_spellbooks:wooden_mask",
 
     // Neapolitan
     "neapolitan:chimpanzee_head",

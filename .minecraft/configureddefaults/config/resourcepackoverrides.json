@@ -72,7 +72,6 @@
             "file/Quark Programmer Art.zip",
             "builtin/builtin_resource_packs/legacy_dead_king_resource_pack",
             "builtin/emissive_ores_compatibility"
-            ,"builtin/resource/redux_tips"
         ],
         "$$hidden": {
             "hidden": true

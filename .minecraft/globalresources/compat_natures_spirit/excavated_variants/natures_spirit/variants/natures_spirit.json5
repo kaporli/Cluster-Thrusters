@@ -1,0 +1,56 @@
+{
+  mod_id: 'natures_spirit',
+  provided_stones: [
+    {
+      block_id: 'natures_spirit:chert',
+      types: [
+        'stone',
+      ],
+      id: 'natures_spirit_chert',
+      lang: {
+        en_us: 'Chert',
+      },
+    },
+    {
+      block_id: 'natures_spirit:travertine',
+      types: [
+        'stone',
+      ],
+      id: 'natures_spirit_travertine',
+      lang: {
+        en_us: 'Travertine',
+      },
+    },
+    {
+      block_id: 'natures_spirit:pink_sandstone',
+      types: [
+        'stone',
+      ],
+      id: 'natures_spirit_pink_sandstone',
+      lang: {
+        en_us: 'Pink Sandstone',
+      },
+    },
+    {
+      block_id: 'natures_spirit:kaolin',
+      types: [
+        'stone',
+      ],
+      id: 'natures_spirit_kaolin',
+      lang: {
+        en_us: 'Kaolin',
+      },
+    },
+    {
+      block_id: 'natures_spirit:white_chalk',
+      types: [
+        'stone',
+      ],
+      id: 'natures_spirit_white_chalk',
+      lang: {
+        en_us: 'White Chalk',
+      },
+    },
+  ],
+  provided_ores: [],
+}
