@@ -45,7 +45,7 @@ _version = 3
 				# 
 				# Lowest Quality: HEIGHT_MAP
 				# Highest Quality: EXTREME
-				verticalQuality = "HIGH"
+				verticalQuality = "VERY_HIGH"
 				#
 				# How should LOD transparency be handled. 
 				# 
@@ -682,7 +682,7 @@ _version = 3
 		# Only visible block/biome changes are recorded in the database. 
 		# Hidden blocks (IE ores) are ignored.  
 		# Expected Compression Ratio: 0.7
-		worldCompression = "VISUALLY_EQUAL"
+		worldCompression = "MERGE_SAME_BLOCKS"
 		#
 		# True: Recalculate chunk height maps before chunks can be used by DH.
 		#       This can fix problems with worlds created by World Painter or 
