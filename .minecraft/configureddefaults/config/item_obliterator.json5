@@ -17,6 +17,17 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Create
+    "create:creative_motor",
+    "create:creative_fluid_tank",
+    "create:creative_crate",
+    "create:creative_blaze_cake",
+    "create:handheld_worldshaper",
+
+    // Simple Storage Network
+    "simplestorage:creative_vending_upgrade",
+    "simplestorage:creative_storage_upgrade",
+
     // AE2
     "ae2:facade",
     "ae2:nether_quartz_pickaxe",
@@ -37,6 +48,9 @@
     "ae2:fluix_shovel",
     "ae2:fluix_hoe",
     "ae2:fluix_sword",
+    "ae2:creative_energy_cell",
+    "ae2:creative_fluid_cell",
+    "ae2:creative_item_cell",
 
     // Nature's Spirit
     "natures_spirit:chert_coal_ore",
@@ -73,7 +87,7 @@
     // Aether
     "aether:aether_portal_frame",
 
-    // Mekanism Uranium
+    // Mekanism
     "mekanism:block_uranium",
     "mekanism:block_raw_uranium",
     "mekanism:uranium_ore",
@@ -85,6 +99,19 @@
     "mekanism:clump_uranium",
     "mekanism:raw_uranium",
     "mekanism:nugget_uranium",
+    "mekanism:flamethrower",
+    "mekanism:creative_chemical_tank",
+    "mekanism:creative_fluid_tank",
+    "mekanism:creative_energy_cube",
+    "mekanism:creative_bin",
+    "mekanism:cardboard_box",
+    "mekanism:hazmat_mask",
+    "mekanism:hazmat_gown",
+    "mekanism:hazmat_pants",
+    "mekanism:hazmat_boots",
+
+    // Applied Mekanistics
+    "appmek:creative_chemical_cell",
 
     // Excavated Variants Uranium Items
     "excavated_variants:create_limestone_uranium_ore",
@@ -130,6 +157,7 @@
     "dawnera:worm_dirt",
 
     // Ice and Fire
+    "iceandfire:creative_dragon_meal",
     "iceandfire:weezer_blue_album",
     "iceandfire:copper_nugget",
     "iceandfire:copper_helmet",
