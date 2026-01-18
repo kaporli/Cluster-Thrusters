@@ -17,6 +17,73 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Alex's Caves Delight
+    "alexscavesdelight:uranium_knife",
+    "alexscavesdelight:tectonic_knife",
+    "alexscavesdelight:pearl_knife",
+    "alexscavesdelight:gingerbread_knife",
+    "alexscavesdelight:candy_knife",
+    "alexscavesdelight:sweet_tooth_knife",
+    "alexscavesdelight:caramel_knife",
+
+    // Delightful
+    "delightful:bone_knife",
+    "delightful:tin_knife",
+    "delightful:steel_knife",
+    "delightful:brass_knife",
+    "delightful:bronze_knife",
+    "delightful:lead_knife",
+    "delightful:zinc_knife",
+    "delightful:certus_quartz_knife",
+    "delightful:fluix_knife",
+
+    // Luminous Beasts
+    "luminous_beasts:tree_ent_trophy",
+    "luminous_beasts:hermit_king_trophy",
+    "luminous_beasts:mummy_trophy",
+    "luminous_beasts:viper_trophy",
+    "luminous_beasts:yeti_trophy",
+    "luminous_beasts:vile_gator_trophy",
+    "luminous_beasts:phoenix_trophy",
+    "luminous_beasts:bone_stalker_trophy",
+    "luminous_beasts:witch_doctor_trophy",
+    "luminous_beasts:spitter_trophy",
+    "luminous_beasts:executioner_trophy",
+    "luminous_beasts:furnace_trophy",
+    "luminous_beasts:horseless_headsman_trophy",
+    "luminous_beasts:rare_tree_ent_trophy",
+    "luminous_beasts:rare_hermit_king_trophy",
+    "luminous_beasts:rare_mummy_trophy",
+    "luminous_beasts:rare_viper_trophy",
+    "luminous_beasts:rare_yeti_trophy",
+    "luminous_beasts:rare_vile_gator_trophy",
+    "luminous_beasts:rare_phoenix_trophy",
+    "luminous_beasts:rare_bone_stalker_trophy",
+    "luminous_beasts:rare_witch_doctor_trophy",
+    "luminous_beasts:rare_spitter_trophy",
+    "luminous_beasts:rare_executioner_trophy",
+    "luminous_beasts:soul_furnace_trophy",
+    "luminous_beasts:scarecrow_trophy",
+    "luminous_beasts:ultimate_bestiary",
+
+    // My Nether's Delight
+    "mynethersdelight:hoglin_trophy",
+    "mynethersdelight:zoglin_trophy",
+    "mynethersdelight:skoglin_trophy",
+    "mynethersdelight:waxed_hoglin_trophy",
+
+    // EEEAB's Mobs
+    "eeeabsmobs:animation_controller",
+    "eeeabsmobs:remove_mob",
+
+    // Dark Doppelganger
+    "darkdoppelganger:summon_scroll",
+
+    // Farmer's Delight
+    "farmersdelight:carrot_crate",
+    "farmersdelight:potato_crate",
+    "farmersdelight:beetroot_crate",
+
     // Create
     "create:creative_motor",
     "create:creative_fluid_tank",
@@ -109,6 +176,10 @@
     "mekanism:hazmat_gown",
     "mekanism:hazmat_pants",
     "mekanism:hazmat_boots",
+    "mekanism:jetpack",
+    "mekanism:jetpack_armored",
+    "mekanism:scuba_mask",
+    "mekanism:scuba_tank",
 
     // Applied Mekanistics
     "appmek:creative_chemical_cell",

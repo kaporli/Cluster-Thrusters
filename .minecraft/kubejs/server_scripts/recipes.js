@@ -28,4 +28,37 @@ ServerEvents.recipes(event => {
     //     C: 'minecraft:brown_mushroom',
     //     D: 'minecraft:bone'
     // }).id('kubejs:sopa_de_macaco_neapolitan');
+
+    // Wither armor recipes using iceandfire:witherbone
+    // event.shaped('immersive_armors:wither_helmet', [
+    //     'AAA',
+    //     'A A',
+    //     '   '
+    // ], {
+    //     A: 'iceandfire:witherbone'
+    // });
+
+    // event.shaped('immersive_armors:wither_chestplate', [
+    //     'A A',
+    //     'AAA',
+    //     'AAA'
+    // ], {
+    //     A: 'iceandfire:witherbone'
+    // });
+
+    // event.shaped('immersive_armors:wither_leggings', [
+    //     'AAA',
+    //     'A A',
+    //     'A A'
+    // ], {
+    //     A: 'iceandfire:witherbone'
+    // });
+
+    // event.shaped('immersive_armors:wither_boots', [
+    //     '   ',
+    //     'A A',
+    //     'A A'
+    // ], {
+    //     A: 'iceandfire:witherbone'
+    // });
 });
