@@ -1,0 +1,3 @@
+[interaction]
+	vanillaLeavesCollision = true
+    enableBranchClimbing = false

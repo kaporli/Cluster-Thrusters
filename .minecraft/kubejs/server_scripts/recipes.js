@@ -17,6 +17,29 @@ ServerEvents.recipes(event => {
         Ingredient.of(['supplementaries:antique_ink', 'minecraft:ink_sac'])
     ]).id('kubejs:common_ink_from_ink_and_essence');
 
+    // legendary_monsters:withered_ribcage
+    event.remove({ output: 'legendary_monsters:withered_ribcage' });
+    event.shaped('legendary_monsters:withered_ribcage', [
+        '   ',
+        'ABA',
+        ' B '
+    ], {
+        A: 'legendary_monsters:withered_horn',
+        B: 'iceandfire:witherbone'
+    });
+
+    // legendary_monsters:withered_scythe
+    event.remove({ output: 'legendary_monsters:withered_scythe' });
+    event.shaped('legendary_monsters:withered_scythe', [
+        ' AA',
+        'CB ',
+        ' B '
+    ], {
+        A: 'legendary_monsters:withered_horn',
+        B: 'iceandfire:witherbone',
+        C: 'minecraft:gold_block'
+    });
+
     // alexsmobs:sopa_de_macaco alternate recipe with neapolitan banana
     // event.shaped('alexsmobs:sopa_de_macaco', [
     //     'AB ',

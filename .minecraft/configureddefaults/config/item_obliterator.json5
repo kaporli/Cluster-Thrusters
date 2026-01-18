@@ -17,6 +17,9 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Legendary Monsters
+    "legendary_monsters:withered_bone",
+
     // Alex's Caves Delight
     "alexscavesdelight:uranium_knife",
     "alexscavesdelight:tectonic_knife",
