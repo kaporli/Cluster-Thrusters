@@ -1,0 +1,4 @@
+#Key bindings listed here will be hidden from the key bindings menu.
+#Use this to hide key bindings that are not used by the player.
+hide_key_bindings = ["key.modernfix.config", "quark.keybind.patreon_emote.dance", "key.raised.options", "desc.seasonhud.keybind.options", "quark.keybind.narrator_readout", "key.jade.narrate", "quark.keybind.patreon_emote.tpose", "quark.keybind.patreon_emote.jet", "quark.keybind.narrator_full_readout", "quark.keybind.patreon_emote.exorcist", "key.configured.open_mod_list", "key.toastcontrol.clear", "placebo.toggleWings", "quark.keybind.patreon_emote.dab", "quark.keybind.patreon_emote.zombie", "gnetum.config.keyMapping", "placebo.toggleTrails"]
+

@@ -17,6 +17,17 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Waystones
+    "waystones:deepslate_waystone",
+    "waystones:blackstone_waystone",
+    "waystones:end_stone_waystone",
+
+    // Stonezone
+    "!stonezone:wys/.*",
+
+    // Storage Drawers
+    "storagedrawers:personal_key_cofh",
+
     // Legendary Monsters
     "legendary_monsters:withered_bone",
 
