@@ -65,8 +65,7 @@
         "file/[1.4.1] Enhanced Boss Bars.zip",
         "file/malfu_simple_animation-1.0.zip",
         "file/MSA V2 - SeriousPlayerAnimation.zip",
-        "file/MSA V3 - Run\u0026Walk - SPA.zip",
-        "file/JustExpressions_v1.1.zip"
+        "file/MSA V3 - Run\u0026Walk - SPA.zip"
     ],
     "default_overrides": {
         "force_compatible": true
