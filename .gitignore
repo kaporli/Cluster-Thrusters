@@ -61,10 +61,4 @@ usercache.json
 .minecraft/kubejs/config/common.properties
 .minecraft/TrashSlotSaveState.json
 .minecraft/.qmenu_opened.marker
-.minecraft/chesttracker/connection_settings.dat
-.minecraft/chesttracker/singleplayer/New World (108).nbt
-.minecraft/chesttracker/singleplayer/New World (108).nbt.meta
-.minecraft/chesttracker/singleplayer/New World (109).nbt
-.minecraft/chesttracker/singleplayer/New World (109).nbt.meta
-.minecraft/chesttracker/singleplayer/New World (110).nbt
-.minecraft/chesttracker/singleplayer/New World (110).nbt.meta
+.minecraft/chesttracker
