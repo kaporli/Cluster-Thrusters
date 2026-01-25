@@ -14,7 +14,7 @@ _version = 3
 			#  
 			# IE disabling vanilla clouds (which render on top of DH LODs), 
 			#    and chunk fading (DH already fades MC chunks)
-			overrideVanillaGraphicsSettings = true
+			overrideVanillaGraphicsSettings = false
 
 			[client.advanced.graphics.quality]
 				#
