@@ -17,6 +17,10 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Obscure API
+    "obscure_api:vial_of_knowledge",
+    "obscure_api:astral_dust",
+
     // Waystones
     "waystones:deepslate_waystone",
     "waystones:blackstone_waystone",
