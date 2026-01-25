@@ -1,4 +1,11 @@
 ServerEvents.recipes(event => {
+    // Remove all recipes that are processed IN scguns machines
+    event.remove({ type: 'scguns:mechanical_pressing' });
+    event.remove({ type: 'scguns:powered_mechanical_pressing' });
+    event.remove({ type: 'scguns:macerating' });
+    event.remove({ type: 'scguns:powered_macerating' });
+    event.remove({ type: 'scguns:gun_bench' });
+
     // storagenetwork:stock_upgrade recipe
     event.remove({ output: 'storagenetwork:stock_upgrade' });
     event.shaped('storagenetwork:stock_upgrade', [

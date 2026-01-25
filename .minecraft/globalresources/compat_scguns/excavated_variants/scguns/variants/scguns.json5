@@ -1,0 +1,40 @@
+{
+  mod_id: 'scguns',
+  provided_stones: [],
+  provided_ores: [
+    {
+      id: 'anthralite_ore',
+      stone: [
+        'stone',
+        'deepslate',
+      ],
+      block_id: [
+        'scguns:anthralite_ore',
+        'scguns:deepslate_anthralite_ore',
+      ],
+      lang: {
+        en_us: 'Anthralite Ore',
+      },
+      types: [
+        'stone',
+      ],
+    },
+    {
+      id: 'sulfur_ore',
+      stone: [
+        'stone',
+        'deepslate',
+      ],
+      block_id: [
+        'scguns:sulfur_ore',
+        'scguns:deepslate_sulfur_ore',
+      ],
+      lang: {
+        en_us: 'Sulfur Ore',
+      },
+      types: [
+        'stone',
+      ],
+    },
+  ],
+}

@@ -17,6 +17,28 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Scorched Guns
+    "scguns:gun_bench",
+    "scguns:macerator",
+    "scguns:mechanical_press",
+    "scguns:powered_macerator",
+    "scguns:powered_mechanical_press",
+    "scguns:cryoniter",
+    "scguns:thermolith",
+    "scguns:war_axe",
+    "scguns:cog_mace",
+    "scguns:enchanted_bandage",
+    "scguns:dragon_salve",
+    "scguns:honey_sulfur_poultice",
+    "scguns:basic_poultice",
+    "scguns:cold_pack",
+    "scguns:anthralite_pickaxe",
+    "scguns:anthralite_axe",
+    "scguns:anthralite_shovel",
+    "scguns:anthralite_hoe",
+    "scguns:anthralite_sword",
+    "scguns:anthralite_knife",
+
     // Obscure API
     "obscure_api:vial_of_knowledge",
     "obscure_api:astral_dust",
