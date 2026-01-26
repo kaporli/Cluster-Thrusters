@@ -34,7 +34,7 @@
 		#Range: > 1
 		energyProductionRate = 50
 		#If true, guns will toggle ADS mode.
-		toggleADS = true
+		toggleADS = false
 		#Global multiplier for all gun damage. 1.0 = normal damage, 0.5 = half damage, 2.0 = double damage. Affects all projectile damage from guns.
 		#Range: 0.01 ~ 100.0
 		globalDamageMultiplier = 1.0
