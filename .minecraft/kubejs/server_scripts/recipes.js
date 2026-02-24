@@ -6,6 +6,11 @@ ServerEvents.recipes(event => {
     event.remove({ type: 'scguns:powered_macerating' });
     event.remove({ type: 'scguns:gun_bench' });
 
+    event.remove({ type: 'create_armorer:create_workbench' });
+    event.remove({ type: 'tacz:gun_smith_table' });
+    event.remove({ type: 'tacz:attachment_workbench' });
+    event.remove({ type: 'tacz:ammo_workbench' });
+
     // storagenetwork:stock_upgrade recipe
     event.remove({ output: 'storagenetwork:stock_upgrade' });
     event.shaped('storagenetwork:stock_upgrade', [
