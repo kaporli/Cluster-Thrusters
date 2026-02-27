@@ -192,7 +192,7 @@
 		"Enable Iron Ladder" = true
 
 	[building.japanese_palette]
-		"Enable Paper Blocks" = true
+		"Enable Paper Blocks" = false
 		"Enable Bamboo Mats" = true
 
 	[building.leaf_carpet]
