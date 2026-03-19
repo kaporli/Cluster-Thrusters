@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MODS="$(dirname "$0")/.minecraft/mods"
+MODS="/home/felikx/ketting/mods"
 
 CLIENT_MODS=(
     "accurate-block-placement-1.2.1.jar"
