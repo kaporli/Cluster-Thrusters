@@ -75,6 +75,7 @@ CLIENT_MODS=(
     "xaerominimap-forge-1.20.1-25.3.10.jar"
     "xaeroworldmap-forge-1.20.1-1.40.11.jar"
     "XaeroPlus-2.30.9+forge-1.20.1-WM1.40.11-MM25.3.10.jar"
+    "xaeros_waystones_compability-1.0.jar"
 )
 
 disabled=0

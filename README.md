@@ -82,4 +82,5 @@ These mods are client-side only and do not need to be installed on the server.
 - World Play Time
 - Xaero's Minimap
 - Xaero's World Map
+- Xaero's Waystones Compatibility
 - XaeroPlus
