@@ -6,7 +6,7 @@ instance.cfg
 .minecraft/config
 
 .minecraft/shaderpacks
-
+.minecraft/resourcepacks/.index
 .minecraft/texturepacks
 .minecraft/screenshots
 
