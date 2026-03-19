@@ -5,7 +5,8 @@
 </p>
 
 ## Mods incompatible with Mac OS
-- It's the little things
+- It's The Little Things
+- Distant Horizons
 
 ## Client-Side Only Mods
 
