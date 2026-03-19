@@ -5,7 +5,7 @@ instance.cfg
 .minecraft/mods
 .minecraft/config
 
-.minecraft/shaderpacks
+# .minecraft/shaderpacks
 .minecraft/resourcepacks/.index
 .minecraft/texturepacks
 .minecraft/screenshots
