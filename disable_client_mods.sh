@@ -72,7 +72,7 @@ CLIENT_MODS=(
     "vanillin-forge-1.20.1-1.1.3.jar"
     "waveycapes-forge-1.8.2-mc1.20.1.jar"
     "worldplaytime-1.2.3-1.20.x-FORGE.jar"
-    "xaerominimap-forge-1.20.1-25.3.10.jar"
+    # "xaerominimap-forge-1.20.1-25.3.10.jar"
     # "xaeroworldmap-forge-1.20.1-1.40.11.jar"
     "XaeroPlus-2.30.9+forge-1.20.1-WM1.40.11-MM25.3.10.jar"
     # "xaeros_waystones_compability-1.0.jar"
