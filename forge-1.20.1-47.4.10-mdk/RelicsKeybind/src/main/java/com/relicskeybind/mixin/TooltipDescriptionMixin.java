@@ -1,6 +1,7 @@
 package com.relicskeybind.mixin;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import com.relicskeybind.ResearchKeybind;
 import it.hurts.sskirillss.relics.client.screen.description.misc.DescriptionTextures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -23,6 +24,7 @@ public class TooltipDescriptionMixin {
     )
     private static boolean relicskeybind$useWKeyInsteadOfShift() {
         long window = Minecraft.getInstance().getWindow().getWindow();
-        return InputConstants.isKeyDown(window, GLFW.GLFW_KEY_W);
+        int customKey = ResearchKeybind.RESEARCH_KEY.getKey().getValue();
+        return org.lwjgl.glfw.GLFW.glfwGetKey(window, customKey) == GLFW.GLFW_PRESS;
     }
 }

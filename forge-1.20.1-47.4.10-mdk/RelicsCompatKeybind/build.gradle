@@ -7,10 +7,10 @@ plugins {
 }
 
 version = '1.0.0'
-group = 'com.relicskeybind'
+group = 'com.relicscompatkeybind'
 
 base {
-    archivesName = 'relicskeybind'
+    archivesName = 'relicscompatkeybind'
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -19,7 +19,7 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 
 minecraft {
     mappings channel: 'official', version: '1.20.1'
-    
+
     runs {
         client {
             workingDirectory project.file('run')
@@ -27,9 +27,9 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            
+
             mods {
-                relicskeybind {
+                relicscompatkeybind {
                     source sourceSets.main
                 }
             }
@@ -38,8 +38,8 @@ minecraft {
 }
 
 mixin {
-    add sourceSets.main, 'mixins.relicskeybind.refmap.json'
-    config 'mixins.relicskeybind.json'
+    add sourceSets.main, 'mixins.relicscompatkeybind.refmap.json'
+    config 'mixins.relicscompatkeybind.json'
 }
 
 repositories {
@@ -50,21 +50,21 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    
-    // Add Relics mod as compile-only dependency
+
     compileOnly files('C:/Users/Elias/Documents/Modding/Prism Launcher/instances/Cluster Thrusters/.minecraft/mods/relics-1.20.1-0.8.0.13.jar')
+    compileOnly files('C:/Users/Elias/Documents/Modding/Prism Launcher/instances/Cluster Thrusters/.minecraft/mods/rarcompat-1.20.1-0.5.jar')
 }
 
 jar {
     manifest {
         attributes([
-            'Specification-Title'     : 'Relics Keybind',
-            'Specification-Vendor'    : 'RelicsKeybind',
+            'Specification-Title'     : 'Relics Compat Keybind',
+            'Specification-Vendor'    : 'RelicsCompatKeybind',
             'Specification-Version'   : '1',
             'Implementation-Title'    : project.name,
             'Implementation-Version'  : project.jar.archiveVersion,
-            'Implementation-Vendor'   : 'RelicsKeybind',
-            'MixinConfigs'            : 'mixins.relicskeybind.json'
+            'Implementation-Vendor'   : 'RelicsCompatKeybind',
+            'MixinConfigs'            : 'mixins.relicscompatkeybind.json'
         ])
     }
 }

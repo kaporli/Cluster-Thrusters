@@ -1,6 +1,7 @@
 package com.relicskeybind.mixin;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import com.relicskeybind.ResearchKeybind;
 import it.hurts.sskirillss.relics.items.relics.base.RelicItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
@@ -18,11 +19,12 @@ import java.util.List;
 public class RelicsTooltipFixMixin {
     @Inject(method = "appendHoverText", at = @At("RETURN"))
     private void relicskeybind$fixTooltip(ItemStack stack, net.minecraft.world.level.Level level, List<Component> tooltip, net.minecraft.world.item.TooltipFlag flag, CallbackInfo ci) {
+        String keyName = ResearchKeybind.RESEARCH_KEY.getTranslatedKeyMessage().getString();
         for (int i = 0; i < tooltip.size(); i++) {
             Component comp = tooltip.get(i);
             String str = comp.getString();
             if (str.contains("[Shift]")) {
-                tooltip.set(i, Component.literal(str.replace("[Shift]", "[W]")));
+                tooltip.set(i, Component.literal(str.replace("[Shift]", "[" + keyName + "]")));
             }
         }
     }

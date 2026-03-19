@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="relicscompatkeybind"
+version="1.0.0"
+displayName="Relics Compat Keybind"
+description="Fixes rarcompat tooltip to display the Relics research keybind instead of hardcoded [Shift]."
+
+[[dependencies.relicscompatkeybind]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.relicscompatkeybind]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.relicscompatkeybind]]
+    modId="relics"
+    mandatory=true
+    versionRange="[0.8,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.relicscompatkeybind]]
+    modId="rarcompat"
+    mandatory=false
+    versionRange="[0.1,)"
+    ordering="AFTER"
+    side="BOTH"

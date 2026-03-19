@@ -1,6 +1,7 @@
 package com.relicskeybind.mixin;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import com.relicskeybind.ResearchKeybind;
 import it.hurts.sskirillss.relics.client.handlers.DescriptionHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -26,16 +27,18 @@ public class DescriptionHandlerMixin {
     )
     private static boolean relicskeybind$useWKeyInsteadOfShift() {
         long window = Minecraft.getInstance().getWindow().getWindow();
-        return InputConstants.isKeyDown(window, GLFW.GLFW_KEY_W);
+        int customKey = ResearchKeybind.RESEARCH_KEY.getKey().getValue();
+        return org.lwjgl.glfw.GLFW.glfwGetKey(window, customKey) == GLFW.GLFW_PRESS;
     }
 
     @Inject(method = "addDescription", at = @At("RETURN"), remap = false)
     private static void relicskeybind$fixTooltip(List<Component> tooltip, CallbackInfo ci) {
+        String keyName = ResearchKeybind.RESEARCH_KEY.getTranslatedKeyMessage().getString();
         for (int i = 0; i < tooltip.size(); i++) {
             Component comp = tooltip.get(i);
             String str = comp.getString();
             if (str.contains("[Shift]")) {
-                tooltip.set(i, Component.literal(str.replace("[Shift]", "[W]")));
+                tooltip.set(i, Component.literal(str.replace("[Shift]", "[" + keyName + "]")));
             }
         }
     }
