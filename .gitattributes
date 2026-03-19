@@ -1,3 +1,0 @@
-*.jar filter=lfs diff=lfs merge=lfs -text
-.minecraft/**/*.jar filter=lfs diff=lfs merge=lfs -text
-.minecraft/shaderpacks/*.txt filter=strip-shader-timestamp
