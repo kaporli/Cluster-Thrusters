@@ -1,359 +1,236 @@
 [
   {
     "mob": "dawnera:diabloceratops",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 3,
-      "groupdistance": 40
-    },
+    "persecond": 0.2,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 2, "groupdistance": 40 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 10
-    }
-  },
-  {
-    "mob": "dawnera:struthiomimus",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 6,
-      "groupdistance": 40
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 8
-    }
-  },
-  {
-    "mob": "dawnera:ceratosaurus",
-    "persecond": 0.01,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 1
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 6
-    }
-  },
-  {
-    "mob": "dawnera:torvosaurus",
-    "persecond": 0.001,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 1
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 4
-    }
-  },
-  {
-    "mob": "dawnera:dunkleosteus",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 1
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "inwater": true,
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -60,
-      "maxheight": -20,
-      "maxthis": 4
-    }
-  },
-  {
-    "mob": "dawnera:dimorphodon",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 10
-    }
-  },
-  {
-    "mob": "dawnera:tyrannosaurus",
-    "persecond": 0.001,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 1
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 4       
-    }
-  },
-  {
-    "mob": "dawnera:psittacosaurus",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 6,
-      "groupdistance": 40
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 10
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 6,
+      "sturdy": true
     }
   },
   {
     "mob": "dawnera:triceratops",
-    "persecond": 0.01,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 2,
-      "groupdistance": 40
-    },
+    "persecond": 0.15,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 2, "groupdistance": 40 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 110,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 6
+      "mindist": 110, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 4,
+      "sturdy": true
     }
   },
   {
-    "mob": "dawnera:sturgeon",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
+    "mob": "dawnera:struthiomimus",
+    "persecond": 0.25,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 4, "groupdistance": 40 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 6
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 8,
+      "sturdy": true
     }
   },
   {
-    "mob": "dawnera:alligator_gar",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 15
-    },
+    "mob": "dawnera:psittacosaurus",
+    "persecond": 0.2,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 3, "groupdistance": 40 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "inwater": true,
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -60,
-      "maxheight": -20,
-      "maxthis": 4
-    }
-  },
-  {
-    "mob": "dawnera:sabertooth_salmon",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 15
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "inwater": true,
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -60,
-      "maxheight": -35,
-      "maxthis": 4
-    }
-  },
-  {
-    "mob": "dawnera:coelacanth",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 6
-    }
-  },
-  {
-    "mob": "dawnera:mixosaurus",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 3
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "inwater": true,
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -60,
-      "maxheight": -20,
-      "maxthis": 8
-    }
-  },
-  {
-    "mob": "dawnera:worm",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -60,
-      "maxheight": -20,
-      "maxthis": 6
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 8,
+      "sturdy": true
     }
   },
   {
     "mob": "dawnera:dodo",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
+    "persecond": 0.3,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 3, "groupdistance": 40 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 10
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 8,
+      "sturdy": true
+    }
+  },
+  {
+    "mob": "dawnera:diplocaulus",
+    "persecond": 0.15,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 1, "groupdistance": 40 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 6,
+      "sturdy": true
     }
   },
   {
     "mob": "dawnera:deinonychus",
     "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 2, "groupdistance": 40 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 10
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 6,
+      "sturdy": true
     }
   },
   {
-    "mob": "dawnera:diplocaulus",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
+    "mob": "dawnera:ceratosaurus",
+    "persecond": 0.05,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 1 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 6
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 3,
+      "sturdy": true
     }
   },
   {
-    "mob": "dawnera:diplocaulus",
-    "persecond": 0.001,
-    "attempts": 1,
-    "amount": {
-      "minimum": 1,
-      "maximum": 1,
-      "groupdistance": 40
-    },
+    "mob": "dawnera:torvosaurus",
+    "persecond": 0.05,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 1 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 4
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 2,
+      "sturdy": true
+    }
+  },
+  {
+    "mob": "dawnera:tyrannosaurus",
+    "persecond": 0.05,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 1 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 2,
+      "sturdy": true
+    }
+  },
+  {
+    "mob": "dawnera:dimorphodon",
+    "persecond": 0.05,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 2, "groupdistance": 40 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": 5,
+      "maxthis": 6,
+      "sturdy": true
+    }
+  },
+  {
+    "mob": "dawnera:dunkleosteus",
+    "persecond": 0.2,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 1 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 4,
+      "inwater": true
+    }
+  },
+  {
+    "mob": "dawnera:sturgeon",
+    "persecond": 0.33,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 2 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 6,
+      "inwater": true
+    }
+  },
+  {
+    "mob": "dawnera:alligator_gar",
+    "persecond": 0.22,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 1 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 4,
+      "inwater": true
+    }
+  },
+  {
+    "mob": "dawnera:sabertooth_salmon",
+    "persecond": 0.25,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 2 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 4,
+      "inwater": true
+    }
+  },
+  {
+    "mob": "dawnera:coelacanth",
+    "persecond": 0.3,
+    "attempts": 8,
+    "amount": { "minimum": 2, "maximum": 3 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 6,
+      "inwater": true
+    }
+  },
+  {
+    "mob": "dawnera:mixosaurus",
+    "persecond": 0.17,
+    "attempts": 8,
+    "amount": { "minimum": 3, "maximum": 3 },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 8,
+      "inwater": true
     }
   },
   {
     "mob": "dawnera:aegirocassis",
-    "persecond": 0.1,
-    "attempts": 1,
-    "amount": {
-      "minimum": 2,
-      "maximum": 5,
-      "groupdistance": 40
-    },
+    "persecond": 0.3,
+    "attempts": 8,
+    "amount": { "minimum": 1, "maximum": 2 },
     "conditions": {
       "dimension": "minecraft:overworld",
-      "mindist": 100,
-      "maxdist": 120,
-      "minheight": -35,
-      "maxheight": -20,
-      "maxthis": 6
+      "mindist": 100, "maxdist": 120,
+      "minheight": -55, "maxheight": -10,
+      "maxthis": 6,
+      "inwater": true
     }
   }
 ]
