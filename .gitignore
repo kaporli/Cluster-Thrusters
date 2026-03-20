@@ -51,6 +51,12 @@ usercache.json
 .minecraft/modernfix
 .minecraft/patchouli_data.json
 .minecraft/XaeroWaypoints_BACKUP*
+.minecraft/server-resource-packs
+.minecraft/schematics
+.minecraft/patchouli_books
+.minecraft/moonlight-global-datapacks
+.minecraft/defaultconfigs
+.minecraft/.cache
 
 # === IDE Specific Files ===
 .vscode/settings.json
