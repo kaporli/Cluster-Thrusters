@@ -1048,7 +1048,7 @@ if (mat < 11024) {
                                     if (color.r != color.g) { // Copper Ore:Raw Copper Part
                                         #include "/lib/materials/specificMaterials/terrain/rawCopperBlock.glsl"
                                         #ifdef GLOWING_ORE_COPPER
-                                            if (max(color.r * 0.5, color.g) - color.b > 0.12 || (color.g > color.r && color.g - color.b > 0.05) || (max(color.r * 0.5, color.g) - color.b > 0.05 && max(color.r, max(color.g, color.b)) < 0.28) || (max(color.r * 0.5, color.g) - color.b > 0.09 && max(color.r, max(color.g, color.b)) > 0.85)) { // Granite fix: C1 raised to 0.12; C2 G>R olive/green; C3 dark orange max<0.28; C4 bright salmon pixels R=243,G=130,B=104
+                                            if (max(color.r * 0.5, color.g) - color.b > 0.12 || (color.g > color.r * 1.4 && color.g - color.b > 0.05) || (max(color.r * 0.5, color.g) - color.b > 0.05 && max(color.r, max(color.g, color.b)) < 0.28) || (max(color.r * 0.5, color.g) - color.b > 0.09 && max(color.r, max(color.g, color.b)) > 0.85)) { // Granite fix: C1 raised to 0.12; C2 G>R olive/green; C3 dark orange max<0.28; C4 bright salmon pixels R=243,G=130,B=104
                                                 emission = color.r * 2.0 + 0.7;
 
                                                 overlayNoiseIntensity = 0.6, overlayNoiseEmission = 0.5;
