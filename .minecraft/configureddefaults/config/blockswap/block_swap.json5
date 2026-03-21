@@ -107,5 +107,31 @@ to make editing this file much easier.
 			// "createdeco:copper_bars":"caverns_and_chasms:waxed_copper_bars"
 			// "createmetallurgy:wolframite_ore": "minecraft:netherrack"
 		    // "legendary_monsters:polished_diorite_pillar": "quark:diorite_pillar"
+
+			// Mekanism uranium ores
+			"mekanism:uranium_ore": "minecraft:stone",
+			"mekanism:deepslate_uranium_ore": "minecraft:deepslate",
+
+			// Excavated Variants uranium ores
+			"excavated_variants:create_limestone_uranium_ore": "create:limestone",
+			"excavated_variants:andesite_uranium_ore": "minecraft:andesite",
+			"excavated_variants:create_veridium_uranium_ore": "create:veridium",
+			"excavated_variants:smooth_basalt_uranium_ore": "minecraft:smooth_basalt",
+			"excavated_variants:create_crimsite_uranium_ore": "create:crimsite",
+			"excavated_variants:dripstone_uranium_ore": "minecraft:dripstone_block",
+			"excavated_variants:quark_limestone_uranium_ore": "quark:limestone",
+			"excavated_variants:granite_uranium_ore": "minecraft:granite",
+			"excavated_variants:tuff_uranium_ore": "minecraft:tuff",
+			"excavated_variants:calcite_uranium_ore": "minecraft:calcite",
+			"excavated_variants:diorite_uranium_ore": "minecraft:diorite",
+			"excavated_variants:red_sandstone_uranium_ore": "minecraft:red_sandstone",
+			"excavated_variants:create_ochrum_uranium_ore": "create:ochrum",
+			"excavated_variants:create_scorchia_uranium_ore": "create:scorchia",
+			"excavated_variants:create_asurine_uranium_ore": "create:asurine",
+			"excavated_variants:quark_shale_uranium_ore": "quark:shale",
+			"excavated_variants:quark_jasper_uranium_ore": "quark:jasper",
+			"excavated_variants:sandstone_uranium_ore": "minecraft:sandstone",
+			"excavated_variants:create_scoria_uranium_ore": "create:scoria",
+			"excavated_variants:biomesoplenty_black_sandstone_uranium_ore": "biomesoplenty:black_sandstone"
 	}
 }
