@@ -17,6 +17,10 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    // Dynamic Trees
+    "dynamictrees:staff",
+    "dynamictrees:dirt_bucket",
+
     // Create Armorer
     "create_armorer:create_workbench",
     "create_armorer:special_melee_wrench",

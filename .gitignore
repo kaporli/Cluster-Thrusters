@@ -15,8 +15,7 @@ usernamecache.json
 usercache.json
 
 .minecraft/options.txt
-.minecraft/shaderpacks/ComplementaryReimagined_r5.6.1 + EuphoriaPatches_1.7.8.txt
-.minecraft/shaderpacks/ComplementaryUnbound_r5.6.1 + EuphoriaPatches_1.7.8.txt
+
 
 .minecraft/cherishedworlds-favorites.dat
 
@@ -55,7 +54,6 @@ usercache.json
 .minecraft/schematics
 .minecraft/patchouli_books
 .minecraft/moonlight-global-datapacks
-.minecraft/defaultconfigs
 .minecraft/.cache
 
 # === IDE Specific Files ===
@@ -69,3 +67,4 @@ usercache.json
 .minecraft/chesttracker
 .minecraft/tacz_backup/tacz_default_gun/backup-20260126-171053-c9211eb4c1d923ab052e498fe025f1d6.zip
 .claude
+.minecraft\ntgl
