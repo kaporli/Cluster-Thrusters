@@ -55,6 +55,7 @@ usercache.json
 .minecraft/patchouli_books
 .minecraft/moonlight-global-datapacks
 .minecraft/.cache
+.minecraft/cache
 
 # === IDE Specific Files ===
 .vscode/settings.json
