@@ -1,0 +1,26 @@
+{
+  mod_id: 'yungscavesbiomes',
+  provided_stones: [
+    {
+      block_id: 'yungscavesbiomes:ancient_sandstone',
+      types: [
+        'stone',
+      ],
+      id: 'yungscavesbiomes_ancient_sandstone',
+      lang: {
+        en_us: 'Ancient Sandstone',
+      },
+    },
+    {
+      block_id: 'yungscavesbiomes:layered_ancient_sandstone',
+      types: [
+        'stone',
+      ],
+      id: 'yungscavesbiomes_layered_ancient_sandstone',
+      lang: {
+        en_us: 'Layered Ancient Sandstone',
+      },
+    },
+  ],
+  provided_ores: [],
+}
