@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="trashslotquarkcompat"
+version="1.0.0"
+displayName="TrashSlot Quark Backpack Compat"
+description="Adds TrashSlot support to the Quark Oddities backpack GUI."
+
+[[dependencies.trashslotquarkcompat]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.trashslotquarkcompat]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.trashslotquarkcompat]]
+    modId="trashslot"
+    mandatory=true
+    versionRange="[15,)"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.trashslotquarkcompat]]
+    modId="quark"
+    mandatory=true
+    versionRange="[4,)"
+    ordering="AFTER"
+    side="CLIENT"

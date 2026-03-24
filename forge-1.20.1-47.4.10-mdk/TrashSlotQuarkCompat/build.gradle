@@ -1,0 +1,59 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = '1.0.0'
+group = 'com.trashslotquarkcompat'
+
+base {
+    archivesName = 'trashslot-quark-compat'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                trashslotquarkcompat {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
+
+    compileOnly files('C:/Users/Elias/Documents/Modding/Prism Launcher/instances/Cluster Thrusters/.minecraft/mods/trashslot-forge-1.20.1-15.1.3.jar')
+    compileOnly files('C:/Users/Elias/Documents/Modding/Prism Launcher/instances/Cluster Thrusters/.minecraft/mods/Quark-4.0-462.jar')
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title'     : 'TrashSlot Quark Compat',
+            'Specification-Vendor'    : 'trashslotquarkcompat',
+            'Specification-Version'   : '1',
+            'Implementation-Title'    : project.name,
+            'Implementation-Version'  : project.jar.archiveVersion,
+            'Implementation-Vendor'   : 'trashslotquarkcompat',
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
