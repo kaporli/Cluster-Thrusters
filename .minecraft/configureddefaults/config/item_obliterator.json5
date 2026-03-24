@@ -17,6 +17,12 @@
   //    Example: minecraft:diamond
   
   "blacklisted_items": [
+    //
+    "lowlands_clothing:rawgrizzlymeat",
+    "lowlands_clothing:cookedgrizzlymeat",
+    "lowlands_clothing:furpelt",
+    "lowlands_clothing:grizzly_bear_spawn_egg",
+
     // Dynamic Trees
     "dynamictrees:staff",
     "dynamictrees:dirt_bucket",
