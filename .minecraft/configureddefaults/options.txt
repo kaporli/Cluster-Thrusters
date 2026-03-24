@@ -13,7 +13,6 @@ graphicsMode:1
 ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:5
-renderClouds:"fast"
 advancedItemTooltips:true
 mipmapLevels:4
 tutorialStep:none
