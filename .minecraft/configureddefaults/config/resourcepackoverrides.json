@@ -32,6 +32,9 @@
         "file/trabens-3d-arrows-1.1.zip",
         "file/Standardized Ingots v12.0.zip",
         "delightful:overhauls",
+        "file/sweety_items_18.zip",
+        "file/Armor Trim Compat 1.1.zip",
+        "file/Modded Omelet.zip",
         "file/BB'sBOMDTweaks0.6.zip",
         "file/Leoseeeabsmobsretexture.zip",
         "file/boss-refreshed-v2-1.19-1.21.zip",
@@ -59,7 +62,8 @@
         "file/[1.5] Enhanced Boss Bars.zip",
         "file/malfu_simple_animation-1.0.zip",
         "file/MSA V2 - SeriousPlayerAnimation.zip",
-        "file/MSA V3 - Run&Walk - SPA.zip"
+        "file/MSA V3 - Run&Walk - SPA.zip",
+        "file/MCA_resourcepack-V3.1.1.zip"
     ],
     "default_overrides": {
         "force_compatible": true
