@@ -37,7 +37,7 @@ simulationDistance:12
 entityDistanceScaling:1.0
 guiScale:3
 particles:0
-maxFps:240
+maxFps:150
 graphicsMode:1
 ao:true
 prioritizeChunkUpdates:0
