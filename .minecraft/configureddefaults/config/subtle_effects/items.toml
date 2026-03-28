@@ -14,7 +14,7 @@ lingeringPotionClouds = false
 splashPotionClouds = false
 structureVoidItemMarker = true
 spawnEggUseSoundVolume = 0.5
-spawnEggUseParticles = false
+spawnEggUseParticles = true
 
 [itemRarity]
 particlesDisplayType = "OFF"
