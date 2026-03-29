@@ -1,0 +1,12 @@
+{
+  "tip": {
+    "color": "white",
+    "translate": "aether.pro_tips.line.aether.phoenix_armor_submerging"
+  },
+  "title": {
+    "bold": true,
+    "color": "#9384F4",
+    "translate": "tipsmod.title.default",
+    "underlined": true
+  }
+}

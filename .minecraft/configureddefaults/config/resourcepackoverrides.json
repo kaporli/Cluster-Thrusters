@@ -7,6 +7,7 @@
         "eatinganimations_compat",
         "file/ArmorTrimsCompat_1.0.zip",
         "obscure_tooltips/packs/vibrant_tooltips",
+        "builtin/aether_tips",
         "file/§eEating Animations More Compat.zip",
         "file/More Cave Sounds.zip",
         "file/Cataclysmic_tunes_V8(Maledictus_update).zip",
@@ -32,6 +33,7 @@
         "file/Standardized Ingots v12.0.zip",
         "delightful:overhauls",
         "file/sweety_items_18.zip",
+        "file/Aether Regenerated v1.2.1.zip",
         "file/Armor Trim Compat 1.1.zip",
         "file/Modded Omelet.zip",
         "file/BB'sBOMDTweaks0.6.zip",
@@ -75,6 +77,14 @@
             "fabric",
             "mod_resources",
             "generated/fragmentum_layer",
+            "builtin/aether_tips",
+            "builtin/resource/redux_tips",
+            "builtin/resource/overrides_pack",
+            "builtin/compatibility/deep_aether_assets",
+            "builtin/compatibility/aether_emissivity",
+            "builtin/client/golden_swet_ball/DAGoldenSwetBallFixClient",
+            "builtin/client/deep_aether_emissivity",
+            "builtin/ancient_aether_texture_tweaks",
             "default_seamless",
             "builtin/add_pack_finders_test",
             "mod/subtle_effects:resourcepacks/biome_color_water_particles",
@@ -94,6 +104,18 @@
         ],
         "$$hidden": {
             "hidden": true
+        },
+        "hidden_disabled": [
+            "builtin/aether_125_art",
+            "builtin/aether_b173_art",
+            "builtin/ancient_aether_programmer_art",
+            "builtin/aether_colorblind",
+            "builtin/aether_tooltips",
+            "lost_aether_content:classic_pack"
+        ],
+        "$$hidden_disabled": {
+            "hidden": true,
+            "required": false
         },
         "file/pack_edits": {
             "fixed_position": true,
