@@ -1,7 +1,7 @@
 #Whether Obscure Tooltips should be active at all.
 enabled = true
 #Whether Obscure Tooltips should display the second line in the tooltip header.
-labelsEnabled = true
+labelsEnabled = false
 #Whether Obscure Tooltips should display drop shadows.
 shadowsEnabled = true
 #The opacity of the drop shadows.
