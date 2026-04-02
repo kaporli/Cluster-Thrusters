@@ -1,5 +1,3 @@
-// Auto-generated from the create_applied_energistics_recipes_alts datapack.
-// This ports all recipes into KubeJS and rewrites Fabric-style c:* tags to Forge tags.
 ServerEvents.recipes(event => {
   const recipeEntries = [
     {
@@ -17,7 +15,7 @@ ServerEvents.recipes(event => {
     {
       "id": "ae2:charger/charged_certus_quartz_crystal_calt2",
       "recipe": {
-        "type": "extendedae:ex_charger",
+        "type": "extendedae:ex_charger", // TODO
         "ingredient": {
           "item": "create:polished_rose_quartz"
         },
@@ -2646,7 +2644,11 @@ ServerEvents.recipes(event => {
   ];
 
   for (const entry of recipeEntries) {
-    event.remove({ id: entry.id });
+    // const rString = JSON.stringify(entry.recipe);
+    // if (rString.includes('twigs:') && !Platform.isLoaded('twigs')) continue;
+    // if (rString.includes('create_new_age:') && !Platform.isLoaded('create_new_age')) continue;
+
+    // event.remove({ id: entry.id });
     event.custom(entry.recipe).id(entry.id);
   }
 });
