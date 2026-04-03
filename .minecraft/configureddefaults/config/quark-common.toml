@@ -138,7 +138,7 @@
 	"Variant Chests" = true
 	"Variant Furnaces" = true
 	"Variant Ladders" = true
-	"Vertical Planks" = true
+	"Vertical Planks" = false
 	"Vertical Slabs" = true
 	"Wooden Posts" = true
 	"More Stone Variants" = true

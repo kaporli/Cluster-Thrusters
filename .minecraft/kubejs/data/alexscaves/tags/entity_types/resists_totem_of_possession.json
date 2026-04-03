@@ -1,0 +1,30 @@
+{
+  "__comment": "all mobs that cannot be controlled with a totem of possession.",
+  "values": [
+    "#forge:bosses",
+    "minecraft:warden",
+    "minecraft:armor_stand",
+    "alexscaves:hullbreaker",
+    "alexscaves:forsaken",
+    "alexscaves:atlatitan",
+    "alexscaves:tremorzilla",
+    "mowziesmobs:ferrous_wroughtnaut",
+    "mowziesmobs:frostmaw",
+    "mowziesmobs:umvuthi",
+    "aquamirae:captain_cornelia",
+    "eeeabsmobs:guling_sentinel_heavy",
+    "legendary_monsters:endersent", 
+    "legendary_monsters:shulker_mimic",
+    "legendary_monsters:skeletosaurus",
+    "legendary_monsters:withered_abomination",
+    "legendary_monsters:lava_eater",
+    "legendary_monsters:frostbitten_golem",
+    "legendary_monsters:cloud_golem",
+    "legendary_monsters:overgrown_colossus",
+    "legendary_monsters:ancient_guardian",
+    "legendary_monsters:posessed_paladin",
+    "legendary_monsters:dune_sentinel", 
+    "legendary_monsters:cloud_golem",
+    "legendary_monsters:ancient_guardian"
+  ]
+}
