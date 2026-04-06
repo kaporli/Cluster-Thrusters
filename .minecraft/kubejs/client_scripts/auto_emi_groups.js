@@ -25,7 +25,6 @@ EmiPlusPlusEvents.registerGroups(event => {
     Object.keys(taxonomy).forEach(parentKey => {
         registerTaxonomyNode(parentKey, taxonomy[parentKey]);
     });
-    });
 
     // 2. Process standalone tags
     Object.keys(standaloneTags).forEach(key => {
