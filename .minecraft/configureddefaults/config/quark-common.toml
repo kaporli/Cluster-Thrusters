@@ -131,7 +131,7 @@
 	"Shear Vines" = true
 	Shingles = true
 	"Soul Sandstone" = true
-	Stools = true
+	Stools = false
 	"Sturdy Stone" = true
 	Thatch = true
 	"Variant Bookshelves" = true
@@ -140,7 +140,7 @@
 	"Variant Ladders" = true
 	"Vertical Planks" = false
 	"Vertical Slabs" = true
-	"Wooden Posts" = true
+	"Wooden Posts" = false
 	"More Stone Variants" = true
 
 	[building.celebratory_lamps]

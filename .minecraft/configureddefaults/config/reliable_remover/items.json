@@ -1,6 +1,8 @@
 {
     "action": "REMOVE",
     "items": [
+        "create_connected:incomplete_control_chip",
+        "upgrade_aquatic:glass_door",
         "lowlands_clothing:rawgrizzlymeat",
         "lowlands_clothing:cookedgrizzlymeat",
         "lowlands_clothing:furpelt",
@@ -1129,6 +1131,8 @@
         "natures_delight:maple_cabinet"
     ],
     "patterns": [
-        "stonezone:wys/.*"
+        "stonezone:wys/.*",
+        "railways:.*incomplete.*",
+        "gtbcs_spell_lib:.*example.*"
     ]
 }
