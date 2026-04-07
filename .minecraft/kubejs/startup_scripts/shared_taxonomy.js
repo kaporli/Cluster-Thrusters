@@ -166,10 +166,22 @@ global.taxonomy = {
             "windows_two": "(?:plank_)?window2$"
         }
     },
+    "window_panes": {
+        pattern: "window_pane$",
+        children: {}
+    },
     "shutters": {
         pattern: "shutter$",
         children: {
             "louvered_shutters": "louvered_shutter$"
+        }
+    },
+    "shutters": {
+        pattern: "shutter$",
+        children: {
+            "waxed_corundums": "waxed_.*_corundum$",
+            "corundum_panes": "corundum_pane$",
+            "corundum_clusters": "corundum_cluster$",
         }
     },
     "roofs": {
@@ -376,7 +388,7 @@ global.standaloneTags = {
     "tiki_torches": "tiki_torch$",
     "ores": "[a-z0-9_]+_ores?$",
     "raw_ores": "raw_(?:iron|gold|copper|zinc|silver|lead|nickel|tin|aluminum|uranium|osmium|platinum|tungsten|bismuth|cobalt|[a-z0-9_]+_ore)$",
-    "bars": "[a-z0-9_]+_bars$"
+    // "bars": "[a-z0-9_]+_bars$"
 };
 
 // Modifiers (like smooth_blocks, cut_blocks) match prefixes, so we globally exclude ALL standard shapes 
@@ -390,7 +402,8 @@ global.allShapes = [
 global.basicSuffixes = [
     "fence_gate", "button", "pressure_plate", "bricks", "tiles", "pillar", "cobblestone",
     "planks", "leaves", "sapling", "bed", "sign", "hanging_sign",
-    "candle", "banner", "shulker_box", "ingot", "nugget", "dust", "seeds",
+    "candle", "banner", "shulker_box", "seeds",
+    // "ingot", "nugget", "dust",
     // "shovel", "hoe", "sword", "helmet", "chestplate", "leggings", "boots", "axe", "pickaxe",
     "brick", "chain", "torch", "lantern", "campfire", "stem", "hyphae",
     "coral", "coral_block", "coral_fan",

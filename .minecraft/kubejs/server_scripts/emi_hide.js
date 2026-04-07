@@ -8,7 +8,7 @@ ServerEvents.tags('item', event => {
         "moonlight:placeable_item",
         "create_connected:incomplete_control_chip",
         "extra_compat:foul_soup_cup",
-        "extra_compat:cavern_explorer_stew_soup",
+        "extra_compat:cavern_explorer_stew_cup",
         "extra_compat:miso_with_bamboo_sprouts_cup",
         "extra_compat:mosquito_repellent_stew_cup",
         "extra_compat:acacia_blossom_soup_cup",
