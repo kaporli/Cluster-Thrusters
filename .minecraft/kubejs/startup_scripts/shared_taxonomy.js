@@ -176,6 +176,13 @@ global.taxonomy = {
             "louvered_shutters": "louvered_shutter$"
         }
     },
+    "train_tracks": {
+        pattern: "^track_",
+        children: {
+            "narrow_train_tracks": "^track_.*_narrow$",
+            "wide_train_tracks": "^track_.*_wide$",
+        }
+    },
     "shutters": {
         pattern: "shutter$",
         children: {
@@ -480,7 +487,6 @@ global.nativeEmiGroups = [
     "farmersdelight:cabinets",
     "domesticationinnovation:pet_beds",
     "railways:conductor_caps",
-    "create:tracks",
     "aether:dart_shooters",
     "opposing_force:laser_blades",
     "opposing_force:blasters",
