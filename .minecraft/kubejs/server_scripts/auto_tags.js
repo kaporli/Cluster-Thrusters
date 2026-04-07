@@ -30,10 +30,12 @@ ServerEvents.tags('item', event => {
         }
     }
 
-    function processTaxonomyNode(key, nodeData) {
+function processTaxonomyNode(key, nodeData) {
         let regStr = "";
         let exactIn = [];
         let exactOut = [];
+        let tagsIn = [];
+        let tagsOut = [];
         let children = {};
         let excludeRegex = null;
 
@@ -41,13 +43,17 @@ ServerEvents.tags('item', event => {
             regStr = nodeData;
         } else if (Array.isArray(nodeData)) {
             regStr = nodeData[0];
-            exactIn = nodeData.slice(1).filter(i => !i.startsWith('-'));
-            exactOut = nodeData.slice(1).filter(i => i.startsWith('-')).map(i => i.substring(1));
+            exactIn = nodeData.slice(1).filter(i => !i.startsWith('-') && !i.startsWith('#'));
+            exactOut = nodeData.slice(1).filter(i => i.startsWith('-') && !i.startsWith('-#')).map(i => i.substring(1));
+            tagsIn = nodeData.slice(1).filter(i => i.startsWith('#')).map(i => i.substring(1));
+            tagsOut = nodeData.slice(1).filter(i => i.startsWith('-#')).map(i => i.substring(2));
         } else {
             regStr = nodeData.pattern || "";
             if (nodeData.exact) {
-                exactIn = nodeData.exact.filter(i => !i.startsWith('-'));
-                exactOut = nodeData.exact.filter(i => i.startsWith('-')).map(i => i.substring(1));
+                exactIn = nodeData.exact.filter(i => !i.startsWith('-') && !i.startsWith('#'));
+                exactOut = nodeData.exact.filter(i => i.startsWith('-') && !i.startsWith('-#')).map(i => i.substring(1));
+                tagsIn = nodeData.exact.filter(i => i.startsWith('#')).map(i => i.substring(1));
+                tagsOut = nodeData.exact.filter(i => i.startsWith('-#')).map(i => i.substring(2));
             }
             if (nodeData.exclude) {
                 excludeRegex = new RegExp(nodeData.exclude);
@@ -63,16 +69,20 @@ ServerEvents.tags('item', event => {
             let cData = children[cKey];
             let cRegStr = typeof cData === 'string' ? cData : (Array.isArray(cData) ? cData[0] : cData.pattern);
             let cExact = [];
+            let cTagsIn = [];
             if (Array.isArray(cData)) {
-                cExact = cData.slice(1).filter(i => !i.startsWith('-'));
+                cExact = cData.slice(1).filter(i => !i.startsWith('-') && !i.startsWith('#'));
+                cTagsIn = cData.slice(1).filter(i => i.startsWith('#')).map(i => i.substring(1));
             } else if (typeof cData === 'object' && cData.exact) {
-                cExact = cData.exact.filter(i => !i.startsWith('-'));
+                cExact = cData.exact.filter(i => !i.startsWith('-') && !i.startsWith('#'));
+                cTagsIn = cData.exact.filter(i => i.startsWith('#')).map(i => i.substring(1));
             }
             
             return {
                 key: cKey,
                 regex: cRegStr ? new RegExp(`^.*(?:^|[_/:])${cRegStr}`) : null,
-                exactIn: cExact
+                exactIn: cExact,
+                tagsIn: cTagsIn
             };
         });
 
@@ -81,19 +91,20 @@ ServerEvents.tags('item', event => {
             processTaxonomyNode(cKey, children[cKey]);
         }
 
-        // Evaluate this node against all items
+// Evaluate this node against all items for exactIn and regex matches
         for (let id of allItemIds) {
             let idStr = String(id);
             
-            // Does it belong in my group?
+            // Does it belong in my group natively (via regex or explicit ID)?
             let matchedMe = false;
             if (myRegex && myRegex.test(idStr)) matchedMe = true;
             if (exactIn.includes(idStr)) matchedMe = true;
+            // Removed: tagsIn logic because .getObjectIds() is empty during this phase!
             
             if (matchedMe && !exactOut.includes(idStr)) {
                 if (excludeRegex && excludeRegex.test(idStr)) continue;
 
-                // It fits in my group natively. Does it fit into a child's?
+                // It fits in my group. Does it fit into a child's?
                 let matchesChild = childNodes.some(c => (c.regex && c.regex.test(idStr)) || c.exactIn.includes(idStr));
                 
                 // If it doesn't fit a child, put it in this parent
@@ -101,6 +112,30 @@ ServerEvents.tags('item', event => {
                     event.add(`kubejs:${key}`, idStr);
                 }
             }
+        }
+
+        // Native Injection phase: For any external tags requested (#forge:something),
+        // we add them directly to our group since we cannot read their IDs dynamically.
+        tagsIn.forEach(t => {
+            event.add(`kubejs:${key}`, `#${t}`);
+        });
+
+        // However, if we blindly inherit an external tag, it might contain items that belong
+        // to our children! So we must explicitly tell KubeJS to REMOVE everything our
+        // children would capture natively, as well as exclusions!
+        if (tagsIn.length > 0) {
+            exactOut.forEach(idStr => event.remove(`kubejs:${key}`, idStr));
+            tagsOut.forEach(t => event.remove(`kubejs:${key}`, `#${t}`));
+            
+            if (excludeRegex) {
+                event.remove(`kubejs:${key}`, excludeRegex);
+            }
+
+            childNodes.forEach(c => {
+                if (c.regex) event.remove(`kubejs:${key}`, c.regex);
+                c.exactIn.forEach(idStr => event.remove(`kubejs:${key}`, idStr));
+                c.tagsIn.forEach(ct => event.remove(`kubejs:${key}`, `#${ct}`));
+            });
         }
     }
 

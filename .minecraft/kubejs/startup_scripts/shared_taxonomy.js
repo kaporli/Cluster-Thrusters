@@ -292,9 +292,15 @@ global.taxonomy = {
         }
     },
     "paths": {
-        pattern: "path$",
+        pattern: "^(mcwpaths:|stonezone:mcp/).*path$",
         children: {
-            "planks_paths": "planks_path$"
+            "planks_paths": "planks_path$",
+            "running_bond_paths": "running_bond_path$",
+            "rocky_paths": "rocky_path$",
+            "rocky_paths": "rocky_path$",
+            "windmill_weave_paths": "windmill_weave_path$",
+            "flagstone_paths": "flagstone_path$",
+            "crystal_floor_paths": "crystal_floor_path$",
         }
     },
     "pavings": {
@@ -318,21 +324,25 @@ global.taxonomy = {
         children: {
             "kitchen_sinks": "kitchen_sink$"
         }
-    }
-    ,
-
+    },
     "chests": {
-        pattern: "chest$",
+        pattern: "",
+        exact: ["#forge:chests/wooden"],
         children: {
             "trapped_chests": "trapped_chest$"
         }
+    },
+    "ladders": {
+        pattern: "",
+        exact: ["#quark:ladders", "#blueprint:wooden_ladders"],
+        children: {}
     },
     "boats": {
         pattern: "boat$",
         children: {
             "furnace_boats": "furnace_boat$",
             "chest_boats": "chest_boat$",
-            "large_boats": "large_*_boat$"
+            "large_boats": "large_.*_boat$"
         }
     },
     "sandstone": {
@@ -343,6 +353,10 @@ global.taxonomy = {
             "chiseled_sandstone": "chiseled_sandstone$",
             "layered_sandstone": "layered_.*sandstone$",
         }
+    },
+    "beehives": {
+        pattern: "beehive",
+        children: {}
     }
 };
 
@@ -360,7 +374,6 @@ global.standaloneTags = {
     "parapets": "(?:log_|plank_)?parapet$",
     "ceiling_fan_lights": "ceiling_fan_light$",
     "tiki_torches": "tiki_torch$",
-    "ladders": "^(?:quark|blueprint):.*ladders?$",
     "ores": "[a-z0-9_]+_ores?$",
     "raw_ores": "raw_(?:iron|gold|copper|zinc|silver|lead|nickel|tin|aluminum|uranium|osmium|platinum|tungsten|bismuth|cobalt|[a-z0-9_]+_ore)$",
     "bars": "[a-z0-9_]+_bars$"
@@ -377,10 +390,11 @@ global.allShapes = [
 global.basicSuffixes = [
     "fence_gate", "button", "pressure_plate", "bricks", "tiles", "pillar", "cobblestone",
     "planks", "leaves", "sapling", "bed", "sign", "hanging_sign",
-    "candle", "banner", "shulker_box", "ingot", "nugget", "dust", "pickaxe", "axe",
-    "shovel", "hoe", "sword", "helmet", "chestplate", "leggings", "boots", "seeds",
+    "candle", "banner", "shulker_box", "ingot", "nugget", "dust", "seeds",
+    // "shovel", "hoe", "sword", "helmet", "chestplate", "leggings", "boots", "axe", "pickaxe",
     "brick", "chain", "torch", "lantern", "campfire", "stem", "hyphae",
-    "coral", "coral_block", "coral_fan", "nylium", "wart_block"
+    "coral", "coral_block", "coral_fan",
+    // "nylium", "wart_block"
 ];
 
 // Curios types to create simple pass-through EMI groups for
@@ -399,7 +413,7 @@ global.customEmiGroups = {
     "ae2:crafting_storage": "^ae2:.*crafting_storage",
     "ae2:lumen_paint_balls": "^ae2:.*lumen_paint_ball",
 
-    "appmek:chemical_storage_cells": "^appmek:hemical_storage_cell.*",
+    "appmek:chemical_storage_cells": "^appmek:chemical_storage_cell.*",
     "appmek:portable_chemical_storage_cells": "^appmek:portable_chemical_storage_cell.*",
 
     "endergetic:bolloom_balloons": "^endergetic:.*_bolloom_balloon$",
@@ -409,6 +423,7 @@ global.customEmiGroups = {
     "supplementaries:bamboo_spikes_tipped": "supplementaries:bamboo_spikes_tipped",
     "irons_spellbooks:scrolls": "irons_spellbooks:scroll",
     "alexscaves:jelly_beans": "alexscaves:jelly_bean",
+    "alexscaves:cave_paintings": "^alexscaves:cave_painting.*",
     "quark:seed_pouches": "quark:seed_pouch",
     "quark:pathfinders_quills": "quark:pathfinders_quill"
 };
@@ -456,4 +471,7 @@ global.nativeEmiGroups = [
     "aether:dart_shooters",
     "opposing_force:laser_blades",
     "opposing_force:blasters",
+    "alexscaves:rock_candies",
+    "alexscaves:radon_lamps",
+    "forge:tools/knives",
 ];
