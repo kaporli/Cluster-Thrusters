@@ -4,6 +4,7 @@
 global.taxonomy = {
     "doors": {
         pattern: "door$",
+        exclude: ["mekanism", "copycat", "block_factorys_bosses", "cabinet"],
         children: {
             "bamboo_doors": ["bamboo_door$", "mcwdoors:print_bamboo"],
             "barn_doors": "barn_door$",
@@ -62,14 +63,8 @@ global.taxonomy = {
     },
     "stairs": {
         pattern: "stairs?$",
+        applyModifiers: ["stone"],
         children: {
-            "cut_stairs": "cut_[a-z0-9_]*stairs?$",
-            "smooth_stairs": "smooth_[a-z0-9_]*stairs?$",
-            "chiseled_stairs": "chiseled_[a-z0-9_]*stairs?$",
-            "polished_stairs": "polished_[a-z0-9_]*stairs?$",
-            "cut_sandstone_stairs": "cut_sandstone_stairs?$",
-            "smooth_sandstone_stairs": "smooth_sandstone_stairs?$",
-            "chiseled_sandstone_stairs": "chiseled_sandstone_stairs?$",
             "bulk_stairs": "bulk_stairs?$",
             "compact_stairs": "compact_stairs?$",
             "loft_stairs": "loft_stairs?$",
@@ -78,42 +73,21 @@ global.taxonomy = {
             "bridge_stairs": "bridge_stair$"
         }
     },
-
-    "vertical_slabs": {
-        pattern: "vertical_slabs?$",
-        children: {
-            "cut_vertical_slabs": "cut_[a-z0-9_]*vertical_slabs?$",
-            "smooth_vertical_slabs": "smooth_[a-z0-9_]*vertical_slabs?$",
-            "chiseled_vertical_slabs": "chiseled_[a-z0-9_]*vertical_slabs?$",
-            "polished_vertical_slabs": "polished_[a-z0-9_]*vertical_slabs?$",
-            "cut_sandstone_vertical_slabs": "cut_sandstone_vertical_slabs?$",
-            "smooth_sandstone_vertical_slabs": "smooth_sandstone_vertical_slabs?$",
-            "chiseled_sandstone_vertical_slabs": "chiseled_sandstone_vertical_slabs?$",
-        }
-    },
     "slabs": {
         pattern: "slabs?$",
-        exclude: ".*vertical_",
+        applyModifiers: ["stone"],
         children: {
-            "cut_slabs": "cut_[a-z0-9_]*slabs?$",
-            "smooth_slabs": "smooth_[a-z0-9_]*slabs?$",
-            "chiseled_slabs": "chiseled_[a-z0-9_]*slabs?$",
-            "polished_slabs": "polished_[a-z0-9_]*slabs?$",
-            "cut_sandstone_slabs": "cut_sandstone_slabs?$",
-            "smooth_sandstone_slabs": "smooth_sandstone_slabs?$",
-            "chiseled_sandstone_slabs": "chiseled_sandstone_slabs?$",
+            "vertical_slabs": {
+                pattern: "vertical_slabs?$",
+                applyModifiers: ["stone"],
+                children: {}
+            },
         }
     },
     "walls": {
         pattern: "walls?$",
+        applyModifiers: ["stone"],
         children: {
-            "cut_walls": "cut_[a-z0-9_]*walls?$",
-            "smooth_walls": "smooth_[a-z0-9_]*walls?$",
-            "chiseled_walls": "chiseled_[a-z0-9_]*walls?$",
-            "polished_walls": "polished_[a-z0-9_]*walls?$",
-            "cut_sandstone_walls": "cut_sandstone_walls?$",
-            "smooth_sandstone_walls": "smooth_sandstone_walls?$",
-            "chiseled_sandstone_walls": "chiseled_sandstone_walls?$",
             "brick_walls": "^(mcwfences:|stonezone:mcf/).*brick_wall$",
             "pillar_walls": "pillar_wall$",
             "railing_walls": "railing_.*wall$",
@@ -132,6 +106,17 @@ global.taxonomy = {
             "cheval_de_frises": "cheval_de_frise$",
         }
     },
+    "fence_gates": {
+        pattern: "gate$",
+        exclude: "supplementaries",
+        children: {
+            "railing_gates": "railing_gate$",
+            "highley_gates": "highley_gate$",
+            "pyramid_gates": "pyramid_gate$",
+            "curved_gates": "curved_gate$",
+            "metal_fence_gates": "metal_fence_gate$",
+        }
+    },
     "bridges": {
         pattern: "bridge$",
         children: {
@@ -144,26 +129,91 @@ global.taxonomy = {
         }
     },
     "logs": {
-        pattern: "log$",
-        exclude: ".*wood.*",
+        pattern: "(?:log|stem)$",
+        applyModifiers: ["stripped"],
+        exclude: [".*(?:wood|hyphae).*", "natures_spirit:lotus_stem", "aether:berry_bush_stem", "aethersdelight:peppermint_bush_stem", "aether_redux:zanberry_bush_stem"],
+        exact: ["upgrade_aquatic:driftwood_log", "minecraft:bamboo_block", "natures_spirit:redwood_log"],
         children: {
             "hollow_logs": "hollow_.*_log$",
-            "stripped_logs": "stripped_.*_log$"
+            "stripped_logs": {
+                pattern: "stripped_(?:.*_)?(?:log|stem)$",
+                exact: ["minecraft:stripped_bamboo_block"],
+                children: {}
+            }
         }
     },
     "wood": {
-        pattern: "wood$",
-        exclude: ".*log.*",
+        pattern: "(?:wood|hyphae|driftwood|redwood)$",
+        applyModifiers: ["stripped"],
+        exclude: [".*(?:log|stem).*", "supplementaries", "suppsquared", "railways"],
         children: {
-            "stripped_wood": "stripped_.*_wood$"
         }
     },
     "windows": {
-        pattern: "(?:plank_)?window$",
+        pattern: "^(?:mcwwindows:|everycomp:mcw/|stonezone:mcw/).*window$",
+        applyModifiers: ["stripped"],
         children: {
-            "windows_four": "(?:plank_)?four_window$",
-            "pane_windows": "(?:plank_)?pane_window$",
-            "windows_two": "(?:plank_)?window2$"
+            "plank_windows": {
+                pattern: ".*plank_window$",
+                children: {
+                    "plank_windows_four": ".*plank_four_window$",
+                    "plank_pane_windows": ".*plank_pane_window$",
+                    "plank_windows_two": ".*plank_window2$"
+                }
+            },
+            "windows_four": {
+                pattern: "four_window$",
+                children: {
+                    "plank_windows_four": ".*plank_four_window$"
+                }
+            },
+            "pane_windows": {
+                pattern: "pane_window$",
+                children: {
+                    "plank_pane_windows": ".*plank_pane_window$"
+                }
+            },
+            "windows_two": {
+                pattern: "window2$",
+                children: {
+                    "plank_windows_two": ".*plank_window2$"
+                }
+            }
+        }
+    },
+    "create_windows": {
+        pattern: "^(?:everycomp:c/|create:|railways:).*window$",
+        children: {
+            "single_pane_locometal_windows": ".*single_pane_locometal_window$",
+            "two_pane_locometal_windows": ".*two_pane_locometal_window$",
+            "four_pane_locometal_windows": ".*four_pane_locometal_window$",
+            "round_pane_locometal_windows": ".*round_pane_locometal_window$"
+        }
+    },
+    "stained_glass": {
+        pattern: "",
+        exact: ["#forge:stained_glass"],
+        children: {
+            "stained_glass_panes": {
+                pattern: "",
+                exact: ["#forge:stained_glass_panes"]
+            },
+            "stained_framed_glass": {
+                pattern: "",
+                exact: ["#quark:stained_framed_glasses"],
+                children: {
+                    "stained_framed_glass_panes": {
+                        pattern: "",
+                        exact: ["#quark:stained_framed_glass_panes"]
+                    }
+                }
+            }
+        }
+    },
+    "mosaic_glass": {
+        pattern: "mosaic_glass$",
+        children: {
+            "mosaic_glass_panes": "mosaic_glass_pane$"
         }
     },
     "window_panes": {
@@ -177,19 +227,27 @@ global.taxonomy = {
         }
     },
     "train_tracks": {
-        pattern: "^track_",
+        pattern: "railways:track_",
         children: {
-            "narrow_train_tracks": "^track_.*_narrow$",
-            "wide_train_tracks": "^track_.*_wide$",
+            "narrow_train_tracks": "railways:track_.*_narrow$",
+            "wide_train_tracks": "railways:track_.*_wide$",
         }
     },
-    "shutters": {
-        pattern: "shutter$",
+    "corundums": {
+        pattern: "corundum$",
         children: {
             "waxed_corundums": "waxed_.*_corundum$",
             "corundum_panes": "corundum_pane$",
             "corundum_clusters": "corundum_cluster$",
         }
+    },
+    "gutter_bases": {
+        pattern: "^mcwroofs:.*gutter_base",
+        children: {}
+    },
+    "gutter_middles": {
+        pattern: "^mcwroofs:.*gutter_middle",
+        children: {}
     },
     "roofs": {
         pattern: "roof$",
@@ -212,78 +270,152 @@ global.taxonomy = {
     },
     "chairs": {
         pattern: "chair$",
+        applyModifiers: ["stripped"],
         children: {
-            "modern_chairs": "modern_chair$",
-            "stool_chairs": "stool_chair$",
-            "striped_chairs": "striped_chair$"
+            "modern_chairs": {
+                pattern: "modern_chair$",
+                children: {
+                }
+            },
+            "stool_chairs": {
+                pattern: "stool_chair$",
+                children: {
+                }
+            },
+            "striped_pattern_chairs": {
+                pattern: "striped_chair$",
+                children: {
+                }
+            }
         }
     },
     "tables": {
         pattern: "^(?:mcwfurnitures:|everycomp:mcfur/).*table$",
+        applyModifiers: ["stripped"],
         children: {
-            "coffee_tables": "coffee_table$",
-            "end_tables": "end_table$",
-            "glass_tables": "glass_table$"
+            "coffee_tables": {
+                pattern: "coffee_table$",
+                children: {
+                }
+            },
+            "end_tables": {
+                pattern: "end_table$",
+                children: {
+                }
+            },
+            "glass_tables": {
+                pattern: "glass_table$",
+                children: {
+                }
+            }
         }
     },
     "desks": {
         pattern: "desk$",
+        applyModifiers: ["stripped"],
+        exclude: "security_desk",
         children: {
-            "covered_desks": "covered_desk$",
-            "modern_desks": "modern_desk$"
+            "covered_desks": {
+                pattern: "covered_desk$",
+                children: {
+                }
+            },
+            "modern_desks": {
+                pattern: "modern_desk$",
+                children: {
+                }
+            }
         }
     },
     "counters": {
         pattern: "counter$",
+        applyModifiers: ["stripped"],
+        exclude: "geiger_counter",
         children: {
-            "cupboard_counters": "cupboard_counter$",
-            "double_drawer_counters": "double_drawer_counter$",
-            "drawer_counters": "drawer_counter$"
+            "cupboard_counters": {
+                pattern: "cupboard_counter$",
+                children: {
+                }
+            },
+            "drawer_counters": {
+                pattern: "drawer_counter$",
+                exclude: "cabinet_drawer",
+                children: {
+                    "double_drawer_counters": {
+                        pattern: "double_drawer_counter$",
+                        children: {
+                        }
+                    }
+                }
+            }
         }
     },
     "kitchen_cabinets": {
         pattern: "kitchen_cabinet$",
+        applyModifiers: ["stripped"],
         children: {
-            "double_kitchen_cabinets": "double_kitchen_cabinet$",
-            "glass_kitchen_cabinets": "glass_kitchen_cabinet$"
+            "double_kitchen_cabinets": {
+                pattern: "double_kitchen_cabinet$",
+                children: {
+                }
+            },
+            "glass_kitchen_cabinets": {
+                pattern: "glass_kitchen_cabinet$",
+                children: {
+                }
+            }
         }
     },
     "wardrobes": {
         pattern: "wardrobe$",
+        applyModifiers: ["stripped"],
         children: {
-            "double_wardrobes": "double_wardrobe$",
-            "modern_wardrobes": "modern_wardrobe$"
+            "double_wardrobes": {
+                pattern: "double_wardrobe$",
+                children: {
+                }
+            },
+            "modern_wardrobes": {
+                pattern: "modern_wardrobe$",
+                children: {
+                }
+            }
         }
     },
     "drawers": {
         pattern: "drawer$",
+        applyModifiers: ["stripped"],
         children: {
-            "bookshelf_drawers": "bookshelf_drawer$",
-            "double_drawers": "double_drawer$",
-            "large_drawers": "large_drawer$",
-            "lower_bookshelf_drawers": "lower_bookshelf_drawer$",
-            "lower_triple_drawers": "lower_triple_drawer$",
-            "triple_drawers": "triple_drawer$"
-        }
-    },
-    "carpets": {
-        pattern: "carpet$",
-        children: {
-            "leaf_carpets": ".*_leaf_(?:carpet|pile)$",
-            "wool_carpets": "[a-z0-9_]+_wool_carpet$",
-            "moss_carpets": "moss_carpet$"
-        }
-    },
-    "glass": {
-        pattern: "glass$",
-        children: {
-            "stained_glass": "stained_glass$"
-        }
-    },
-    "glass_panes": {
-        pattern: "glass_pane$",
-        children: {
-            "stained_glass_panes": "stained_glass_pane$"
+            "bookshelf_drawers": {
+                pattern: "bookshelf_drawer$",
+                children: {
+                    "lower_bookshelf_drawers": {
+                        pattern: "lower_bookshelf_drawer$",
+                        children: {
+                        }
+                    }
+                }
+            },
+            "double_drawers": {
+                pattern: "double_drawer$",
+                children: {
+                }
+            },
+            "large_drawers": {
+                pattern: "large_drawer$",
+                children: {
+                }
+            },
+            "triple_drawers": {
+                pattern: "triple_drawer$",
+                children: {
+                    "lower_triple_drawers": {
+                        pattern: "lower_triple_drawer$",
+                        children: {
+                        }
+                    }
+                }
+            }
         }
     },
     "concrete": {
@@ -298,28 +430,12 @@ global.taxonomy = {
             "glazed_terracotta": "glazed_terracotta$"
         }
     },
-
-    "gates": {
-        pattern: "gate$",
-        exclude: ".*fence_",
-        children: {
-            "railing_gates": "railing_gate$",
-            "highley_gates": "highley_gate$",
-            "pyramid_gates": "pyramid_gate$",
-            "curved_gates": "curved_gate$",
-            "metal_gates": "metal_gate$",
-        }
-    },
     "paths": {
         pattern: "^(mcwpaths:|stonezone:mcp/).*path$",
+        applyModifiers: ["stone"],
         children: {
             "planks_paths": "planks_path$",
-            "running_bond_paths": "running_bond_path$",
-            "rocky_paths": "rocky_path$",
-            "rocky_paths": "rocky_path$",
-            "windmill_weave_paths": "windmill_weave_path$",
-            "flagstone_paths": "flagstone_path$",
-            "crystal_floor_paths": "crystal_floor_path$",
+            "rocky_paths": "rocky_path$"
         }
     },
     "pavings": {
@@ -330,25 +446,49 @@ global.taxonomy = {
     },
     "bookshelves": {
         pattern: "bookshelf$",
-        children: {}
+        applyModifiers: ["stripped"],
+        children: {
+            "log_bookshelves": {
+                pattern: "^(?:mcwfurnitures:|everycomp:mcfur/).*bookshelf$",
+                children: {
+                }
+            }
+        }
     },
     "cupboards": {
         pattern: "cupboard$",
+        applyModifiers: ["stripped"],
         children: {
-            "bookshelf_cupboards": "bookshelf_cupboard$"
+            "bookshelf_cupboards": {
+                pattern: "bookshelf_cupboard$",
+                children: {
+                }
+            }
         }
     },
     "sinks": {
         pattern: "sink$",
+        applyModifiers: ["stripped"],
         children: {
-            "kitchen_sinks": "kitchen_sink$"
+            "kitchen_sinks": {
+                pattern: "kitchen_sink$",
+                children: {
+                }
+            }
         }
     },
     "chests": {
-        pattern: "",
-        exact: ["#forge:chests/wooden"],
+        pattern: "chest$",
+        exclude: ["cursed", "boat", "minecraft:ender_chest", "unusualend:warped_chest", "aether:treasure_chest", "rottencreatures:treasure_chest", "ae2:chest", "alexscaves:cave_painting_vallumraptor_chest", "echochest:echo_chest", "netherchested:nether_chest", "mekanism:personal_chest"],
         children: {
-            "trapped_chests": "trapped_chest$"
+            "trapped_chests": "trapped_.*chest$"
+        }
+    },
+    "corals": {
+        pattern: "coral$",
+        children: {
+            "coral_blocks": "coral_block$",
+            "coral_fans": "coral_fan$"
         }
     },
     "ladders": {
@@ -357,30 +497,251 @@ global.taxonomy = {
         children: {}
     },
     "boats": {
-        pattern: "boat$",
+        pattern: "(?:boat|raft)$",
         children: {
-            "furnace_boats": "furnace_boat$",
+            "furnace_boats": ["furnace_boat$", "minecraft:bamboo_furnace_raft"],
             "chest_boats": "chest_boat$",
-            "large_boats": "large_.*_boat$"
+            "large_boats": ["large_.*_boat$", "minecraft:wide_bamboo_raft"]
         }
     },
-    "sandstone": {
-        pattern: "sandstone$",
+    "potions": {
+        pattern: "potion$",
         children: {
-            "cut_sandstone": "cut_sandstone$",
-            "smooth_sandstone": "smooth_sandstone$",
-            "chiseled_sandstone": "chiseled_sandstone$",
-            "layered_sandstone": "layered_.*sandstone$",
+            "lingering_potions": "lingering_potion$",
+            "splash_potions": "splash_potion$"
         }
     },
-    "beehives": {
-        pattern: "beehive",
-        children: {}
+    "signs": {
+        pattern: "sign$",
+        exclude: ["spatial_sign"],
+        children: {
+            "hanging_signs": {
+                pattern: "hanging_(?:.*_)?sign$",
+                children: {
+                    "hanging_canvas_signs": "hanging_(?:.*_)?canvas_sign$"
+                }
+            }
+        }
+    },
+    "carpets": {
+        pattern: "carpet$",
+        exclude: ["bamboo", "cloudbloom", "bison", "fungal"],
+        children: {
+            "leaf_carpets": "leaf_carpet$",
+            "moss_carpets": "moss_carpet$",
+            "thatch_carpets": "thatch_carpet$"
+        }
+    },
+    "blocks": {
+        // omitSuffix: true,
+        bases: [
+            "stone", "cobblestone", "cracked_stone_bricks",
+            "granite", "diorite", "andesite",
+            "tuff", "deepslate",
+            "travertine", "chert",
+            "limestone", "jasper", "shale", "myalite", "permafrost",
+            "calcite", "dripstone", "scoria",
+            "kaolin", "chalk", "mud", "packed_mud", "brick", "gloomy",
+            "resin", "sandstone", "red_sandstone", "pink_sandstone", "snail_shell",
+            "soul_sandstone", "prismarine", "dark_prismarine", "tooth", "coralstone",
+            "nether_bricks", "red_nether_brick", "blue_nether_bricks", "blackstone", "end_stone",
+            "purpur", "eumus_bricks", "duskbound", "midori", "copper", "shimmer_stone", "ancient_sandstone",
+            "justicestone", "withered_blackstone", "warped_nether_bricks", "obsidian", "azure_seastone", "bone",
+            "gloopstone", "white_sandstone", "dread_stone", "radrock", "holystone", "guanostone", "ancient_dripstone",
+            "rose_quartz", "endstone", "abyssmarine", "void_purpur", "warped_stone", "frosted_stone", "guzzler_scale",
+            "vile_stone", "gloomy", "basalt", "purpur_block", "dimstone", "enderstone", "galena", "aseterite", "brimstone",
+            "gloopslate", "gneiss", "dullstone", "clorite", "driftshale", "scorchia", "veridium", "scoria", "ochrum", 
+            "dolomite", "crimsite", "asurine", "sky_stone", "ancient_sandstone", "sentrite", "sky", "citrine"
+        ],
+        exclude: ["create:polished_roze_quartz", "quark:iron_pillar", "alexscaves:scarlet_neodymium_pillar",
+            "alexscaves:azure_neodymium_pillar"
+        ],
+        applyModifiers: ["stone"]
     }
 };
 
+// --- Modifiers Registry ---
+// Define dynamic prefixes that apply to any node with `applyModifiers: ["modifier_name"]`
+global.modifierTypes = {
+    "stone": {
+        // Simple string = direct child of the base group.
+        // Object with subprefixes = direct child that also spawns its own sub-children.
+        // Note: "cut" and "chiseled" appear both standalone AND as subprefixes of
+        // "polished"/"bricks", producing e.g. cut_blocks AND cut_polished_blocks.
+        prefixes: [
+            // Simple prefix modifiers — these must come first so sibling-lookup nesting works
+            // for suffix modifiers that list them as subprefixes (e.g. bricks.subprefixes["mossy"])
+            "reinforced", "kelpy", "cut", "smooth", "chiseled", "layered", "cracked", "cobbled",
+
+            // Prefix modifiers with their own sub-children
+            // { name: "mossy",   subprefixes: ["cobblestone"] },
+            // { name: "cobbled", subprefixes: ["mossy"] },
+
+            // Suffix modifiers (the modifier word sits AFTER the material, e.g. stone_bricks)
+            { name: "running_bond", suffix: true, subprefixes: ["mossy", "cobbled", "chiseled"] },
+            { name: "windmill_weave", suffix: true, subprefixes: ["mossy", "cobbled", "chiseled"] },
+            { name: "flagstone", suffix: true, subprefixes: ["mossy", "cobbled", "chiseled"] },
+            { name: "crystal_floor", suffix: true, subprefixes: ["mossy", "cobbled", "chiseled"] },
+            { name: "tile", pattern: "tile|tiles", suffix: true, subprefixes: ["cracked", "mossy", "chiseled", "gilded", "blightmoss", "polished"] },
+            { name: "pillar", suffix: true, subprefixes: ["chiseled"] },
+            { name: "bricks", suffix: true, subprefixes: ["cracked", "mossy", "chiseled", "small"] },
+            { name: "polished", subprefixes: ["cut", "chiseled", "tile", "bricks"] },
+        ],
+        // {prefix} = "cut", {pattern} = "stairs?$" => "cut_(?:[a-z0-9_]*_)?stairs?$"
+        template: "{prefix}_(?:[a-z0-9_]*_)?{pattern}"
+    },
+    "stripped": {
+        prefixes: ["stripped"],
+        // {prefix} = "stripped", {pattern} = "chair$" => "stripped_(?:[a-z0-9_]*_)?chair$"
+        template: "{prefix}_(?:[a-z0-9_]*_)?{pattern}"
+    }
+};
+
+// Automagically inject modifier variants into the tree so we don't have to manually write them out
+function processModifiers(nodeTree, inheritedMods) {
+    inheritedMods = inheritedMods || [];
+    for (var key in nodeTree) {
+        var node = nodeTree[key];
+
+        // Normalize string/array shorthand to object form when inherited mods need to be applied.
+        // e.g. "bulk_stairs?$" becomes { pattern: "bulk_stairs?$", children: {} }
+        // so that bricks_bulk_stairs, polished_bulk_stairs etc. can be generated.
+        if (inheritedMods.length > 0 && (typeof node === 'string' || Array.isArray(node))) {
+            var pattern = typeof node === 'string' ? node : node[0];
+            var newNode = { pattern: pattern, children: {} };
+            if (Array.isArray(node) && node.length > 1) {
+                newNode.exact = node.slice(1);
+            }
+            nodeTree[key] = newNode;
+            node = newNode;
+        }
+
+        if (typeof node === 'object' && !Array.isArray(node)) {
+            // Combine modifiers
+            var mods = node.applyModifiers ? inheritedMods.concat(node.applyModifiers) : inheritedMods;
+            // Deduplicate
+            mods = mods.filter(function (item, pos) { return mods.indexOf(item) == pos; });
+
+            // Recurse first to process children with the inherited properties
+            if (node.children) processModifiers(node.children, mods);
+
+            if (mods.length > 0) {
+                if (!node.children) node.children = {};
+                var basePattern = node.basePattern || node.pattern || "";
+                var bases = node.bases || null;
+                var omitSuffix = node.omitSuffix === true;
+
+                mods.forEach(function (modName) {
+                    var modifierDef = global.modifierTypes[modName];
+                    if (modifierDef) {
+                        // Build name→pattern lookup so subprefix strings resolve their regex pattern
+                        var prefixPatternByName = {};
+                        modifierDef.prefixes.forEach(function (p) {
+                            if (typeof p === 'object') {
+                                prefixPatternByName[p.name] = p.pattern || p.name;
+                            }
+                        });
+
+                        modifierDef.prefixes.forEach(function (prefix) {
+                            var prefixName = typeof prefix === 'object' ? prefix.name : prefix;
+                            // prefixPattern is used in regexes; may differ from prefixName (e.g. "tile|tiles")
+                            var prefixPattern = (typeof prefix === 'object' && prefix.pattern) ? prefix.pattern : prefixName;
+                            // Wrap in non-capturing group if pattern contains | to prevent regex alternation bleed
+                            // e.g. "tile|tiles" → "(?:tile|tiles)" so it doesn't split the whole expression
+                            var safePrefixPattern = prefixPattern.indexOf('|') !== -1 ? '(?:' + prefixPattern + ')' : prefixPattern;
+                            var subprefixes = (typeof prefix === 'object' && prefix.subprefixes) ? prefix.subprefixes : [];
+                            var isSuffix = typeof prefix === 'object' && prefix.suffix === true;
+
+                            var generatedKey = omitSuffix ? prefixName : prefixName + "_" + key;
+                            // Only automatically generate it if it doesn't already manually exist
+                            if (!node.children[generatedKey]) {
+                                var childNode = { children: {} };
+
+                                if (isSuffix && bases) {
+                                    childNode.pattern = safePrefixPattern + "$";
+                                } else if (bases) {
+                                    childNode.modifierBases = bases;
+                                    childNode.modifierPrefix = safePrefixPattern;
+                                } else {
+                                    childNode.pattern = modifierDef.template.replace("{prefix}", safePrefixPattern).replace("{pattern}", basePattern.replace('$', ''));
+                                    if (basePattern.endsWith('$')) childNode.pattern += '$';
+                                }
+
+                                subprefixes.forEach(function (subprefix) {
+                                    var subKey = isSuffix
+                                        ? subprefix + "_" + generatedKey
+                                        : (omitSuffix ? prefixName + "_" + subprefix : prefixName + "_" + subprefix + "_" + key);
+                                    var subNode = { children: {} };
+                                    var rawSubPattern = prefixPatternByName[subprefix] || subprefix;
+                                    var safeSubPattern = rawSubPattern.indexOf('|') !== -1 ? '(?:' + rawSubPattern + ')' : rawSubPattern;
+                                    if (isSuffix && bases) {
+                                        subNode.pattern = safeSubPattern + "_(?:[a-z0-9_]*_)?" + safePrefixPattern + "$";
+                                    } else if (bases) {
+                                        subNode.modifierBases = bases;
+                                        subNode.modifierPrefix = safePrefixPattern + "_" + safeSubPattern;
+                                    } else if (isSuffix) {
+                                        subNode.pattern = safeSubPattern + "_(?:[a-z0-9_]*_)?" + childNode.pattern;
+                                    } else {
+                                        subNode.pattern = modifierDef.template.replace("{prefix}", safePrefixPattern + "_" + safeSubPattern).replace("{pattern}", basePattern.replace('$', ''));
+                                        if (basePattern.endsWith('$')) subNode.pattern += '$';
+                                    }
+
+                                    // For suffix modifiers: if the subprefix has its own sibling node
+                                    // (e.g. "mossy" → "mossy_stairs"), nest there so exclusion cascade works.
+                                    // Prefix modifier subchildren (e.g. polished_cut_stairs) live under the parent.
+                                    var subprefixSiblingKey = (isSuffix && !omitSuffix) ? subprefix + "_" + key : (isSuffix && omitSuffix) ? subprefix : null;
+                                    if (node.children[subprefixSiblingKey] && !node.children[subprefixSiblingKey].children[subKey]) {
+                                        node.children[subprefixSiblingKey].children[subKey] = subNode;
+                                    } else if (!childNode.children[subKey]) {
+                                        childNode.children[subKey] = subNode;
+                                    }
+                                });
+
+                                // Mirror structural children: if node has a child (e.g. vertical_slabs)
+                                // that already has this modifier's child generated inside it
+                                // (e.g. running_bond_vertical_slabs), add it here too so that
+                                // auto_tags.js can exclude vertical items from running_bond_slabs.
+                                for (var existingChildKey in node.children) {
+                                    var mirrorKey = omitSuffix ? prefixName : prefixName + "_" + existingChildKey;
+                                    var existingChild = node.children[existingChildKey];
+                                    if (typeof existingChild === 'object' && existingChild.children
+                                        && existingChild.children[mirrorKey]
+                                        && !childNode.children[mirrorKey]) {
+                                        childNode.children[mirrorKey] = existingChild.children[mirrorKey];
+                                    }
+                                }
+
+                                node.children[generatedKey] = childNode;
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    }
+}
+processModifiers(global.taxonomy);
+
 // Miscellaneous standalone tags that aren't part of a parent/child exclusion relationship
 global.standaloneTags = {
+    "paper_lanterns": "paper_lantern$",
+    "beehives": "beehive",
+    "food_displays": "^displaydelight:(?!.*(?:small_)?food_plate$).*",
+    "shingles": "^quark:.*shingles$",
+    "buttons": "button$",
+    "pressure_plates": "pressure_plate$",
+    "planks": "planks$",
+    "leaves": "leaves$",
+    "saplings": "(?:sapling|propagule)$",
+    "beds": "bed$",
+    "paintings": "painting$",
+    "candles": "candle$",
+    "banners": "banner$",
+    "shulker_boxes": "shulker_box$",
+    "seeds": "seeds$",
+    "torches": "torch$",
+    "campfires": "campfire$",
+    "banner_patterns": "banner_pattern",
     "hedges": "hedge$",
     "balconies": "balcony$",
     "platforms": "platform$",
@@ -390,34 +751,14 @@ global.standaloneTags = {
     "blinds": "blinds$",
     "curtains": "curtain$",
     "curtain_rods": "curtain_rod$",
-    "parapets": "(?:log_|plank_)?parapet$",
-    "ceiling_fan_lights": "ceiling_fan_light$",
-    "tiki_torches": "tiki_torch$",
+    "log_parapets": "log_parapet$",
+    "plank_parapets": "plank_parapet$",
     "ores": "[a-z0-9_]+_ores?$",
     "raw_ores": "raw_(?:iron|gold|copper|zinc|silver|lead|nickel|tin|aluminum|uranium|osmium|platinum|tungsten|bismuth|cobalt|[a-z0-9_]+_ore)$",
     // "bars": "[a-z0-9_]+_bars$"
 };
 
-// Modifiers (like smooth_blocks, cut_blocks) match prefixes, so we globally exclude ALL standard shapes 
-// to prevent "smooth_blocks" from eating "smooth_stairs".
-global.allShapes = [
-    "stairs?", "slabs?", "walls?", "fences?", "gate", "doors?", "trapdoors?", "buttons?", "plates?",
-    "pillars?", "bricks?", "tiles?", "carpet", "pane", "window", "roof", "bridge", "chair", "table",
-    "desk", "drawer", "cabinet", "counter", "paving", "path", "balcony", "platform", "railing", "chunk"
-].join("|");
 
-global.basicSuffixes = [
-    "fence_gate", "button", "pressure_plate", "bricks", "tiles", "pillar", "cobblestone",
-    "planks", "leaves", "sapling", "bed", "sign", "hanging_sign",
-    "candle", "banner", "shulker_box", "seeds",
-    // "ingot", "nugget", "dust",
-    // "shovel", "hoe", "sword", "helmet", "chestplate", "leggings", "boots", "axe", "pickaxe",
-    "brick", "chain", "torch", "lantern", "campfire", "stem", "hyphae",
-    "coral", "coral_block", "coral_fan",
-    // "nylium", "wart_block"
-];
-
-// Curios types to create simple pass-through EMI groups for
 global.curiosTypes = [
     "ring", "necklace", "belt", "bracelet", "charm", "head", "hands", "back"
 ];
@@ -432,6 +773,7 @@ global.customEmiGroups = {
     "ae2:fluid_storage_cells": "^ae2:fluid_storage_cell.*",
     "ae2:crafting_storage": "^ae2:.*crafting_storage",
     "ae2:lumen_paint_balls": "^ae2:.*lumen_paint_ball",
+    "iceandfire:podiums": "^iceandfire:podium",
 
     "appmek:chemical_storage_cells": "^appmek:chemical_storage_cell.*",
     "appmek:portable_chemical_storage_cells": "^appmek:portable_chemical_storage_cell.*",
@@ -441,18 +783,22 @@ global.customEmiGroups = {
     "ae2:facades": "ae2:facade",
     "supplementaries:buntings": "supplementaries:bunting",
     "supplementaries:bamboo_spikes_tipped": "supplementaries:bamboo_spikes_tipped",
-    "irons_spellbooks:scrolls": "irons_spellbooks:scroll",
+    "minecraft:tipped_arrows": "minecraft:tipped_arrow",
+    "minecraft:suspicious_stews": "minecraft:suspicious_stew",
+    "irons_spellbooks:scrolls": "irons_spellbooks:scroll", // TODO: exclude irons_spellbooks:scroll_forge
     "alexscaves:jelly_beans": "alexscaves:jelly_bean",
     "alexscaves:cave_paintings": "^alexscaves:cave_painting.*",
     "quark:seed_pouches": "quark:seed_pouch",
-    "quark:pathfinders_quills": "quark:pathfinders_quill"
+    "quark:pathfinders_quills": "quark:pathfinders_quill",
+    "mcwfurnitures:couches": "couch$",
+    "mcwfurnitures:chaises": "chaise$",
+    "minecraft:goat_horns": "minecraft:goat_horn"
 };
 
 // Pre-existing mod tags that you don't need to generate, but you DO want to register as EMI tabs
 global.nativeEmiGroups = [
     "minecraft:music_discs",
-    "quark:vertical_planks",
-    "quark:vertical_slabs",
+    "minecraft:paintings",
     "quark:posts",
     "vanillabackport:harnesses",
     "minecraft:buttons",
@@ -493,4 +839,12 @@ global.nativeEmiGroups = [
     "alexscaves:rock_candies",
     "alexscaves:radon_lamps",
     "forge:tools/knives",
+    "quark:crystal_lamp",
+    "create_kart:dyeable_karts",
+    "minecraft:decorated_pot_sherds",
+    "minecraft:wool",
+    "supplementaries:sconces",
+    "aether:aerclouds",
+    "irons_spellbooks:inscrubed_rune",
+    "minecraft:trim_templates"
 ];

@@ -5,7 +5,6 @@
 // Data imported from startup_scripts/shared_taxonomy.js
 const taxonomy = global.taxonomy;
 const standaloneTags = global.standaloneTags;
-const basicSuffixes = global.basicSuffixes;
 const customEmiGroups = global.customEmiGroups;
 const nativeEmiGroups = global.nativeEmiGroups;
 const curiosTypes = global.curiosTypes;
@@ -31,17 +30,6 @@ EmiPlusPlusEvents.registerGroups(event => {
         event.register(`kubejs:${key}`, `#kubejs:${key}`);
     });
 
-    // 3. Process modifier tags
-    let mods = ['smooth', 'cut', 'chiseled', 'polished'];
-    mods.forEach(mod => {
-        event.register(`kubejs:${mod}_blocks`, `#kubejs:${mod}_blocks`);
-    });
-
-    // 4. Processing basic fallbacks
-    basicSuffixes.forEach(suffix => {
-        event.register(`kubejs:${suffix}`, `#kubejs:${suffix}`);
-    });
-
     // 5. Explicitly Register Curios
     curiosTypes.forEach(c => {
         event.register(`curios:${c}s`, `#curios:${c}`);
@@ -54,7 +42,10 @@ EmiPlusPlusEvents.registerGroups(event => {
 
     // 7. Explicitly Register Native Mod Groups
     nativeEmiGroups.forEach(key => {
-        event.register(key, `#${key}`);
+        const isTag = key.startsWith('#');
+        const groupId = isTag ? key.substring(1) : key;
+        const tagArg = isTag ? key : `#${key}`;
+        event.register(groupId, tagArg);
     });
 
     console.log('EMI++ AUTO GROUPS REGISTRATION COMPLETE!');

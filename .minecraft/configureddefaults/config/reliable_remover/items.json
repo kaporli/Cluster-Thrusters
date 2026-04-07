@@ -1133,6 +1133,7 @@
     "patterns": [
         "stonezone:wys/.*",
         "railways:.*incomplete.*",
-        "gtbcs_spell_lib:.*example.*"
+        "gtbcs_spell_lib:.*example.*",
+        "farmersdelight:hanging_(?:.*_)?canvas_sign$"
     ]
 }

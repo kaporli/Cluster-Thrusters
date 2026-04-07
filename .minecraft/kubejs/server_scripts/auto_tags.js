@@ -5,8 +5,6 @@
 // Data imported from startup_scripts/shared_taxonomy.js
 const taxonomy = global.taxonomy;
 const standaloneTags = global.standaloneTags;
-const allShapes = global.allShapes;
-const basicSuffixes = global.basicSuffixes;
 const customEmiGroups = global.customEmiGroups;
 
 ServerEvents.tags('item', event => {
@@ -30,7 +28,7 @@ ServerEvents.tags('item', event => {
         }
     }
 
-function processTaxonomyNode(key, nodeData) {
+function processTaxonomyNode(key, nodeData, parentChildrenObj) {
         let regStr = "";
         let exactIn = [];
         let exactOut = [];
@@ -38,6 +36,10 @@ function processTaxonomyNode(key, nodeData) {
         let tagsOut = [];
         let children = {};
         let excludeRegex = null;
+
+        if (parentChildrenObj === undefined) {
+            parentChildrenObj = {};
+        }
 
         if (typeof nodeData === 'string') {
             regStr = nodeData;
@@ -49,6 +51,20 @@ function processTaxonomyNode(key, nodeData) {
             tagsOut = nodeData.slice(1).filter(i => i.startsWith('-#')).map(i => i.substring(2));
         } else {
             regStr = nodeData.pattern || "";
+            if (nodeData.modifierBases && nodeData.modifierPrefix) {
+                let baseWords = [];
+                nodeData.modifierBases.forEach(base => {
+                    // We cannot dynamically expand "#forge:tags" here because they are not fully loaded in KubeJS 1.20 yet!
+                    if (!base.startsWith("#")) {
+                        baseWords.push(base);
+                    }
+                });
+                if (baseWords.length > 0) {
+                    let uniqueWords = Array.from(new Set(baseWords));
+                    // example: "polished_(?:[a-z0-9_]*_)?(?:granite|kaolin|diorite)$"
+                    regStr = `${nodeData.modifierPrefix}_(?:[a-z0-9_]*_)?(?:${uniqueWords.join('|')})$`;
+                }
+            }
             if (nodeData.exact) {
                 exactIn = nodeData.exact.filter(i => !i.startsWith('-') && !i.startsWith('#'));
                 exactOut = nodeData.exact.filter(i => i.startsWith('-') && !i.startsWith('-#')).map(i => i.substring(1));
@@ -56,7 +72,7 @@ function processTaxonomyNode(key, nodeData) {
                 tagsOut = nodeData.exact.filter(i => i.startsWith('-#')).map(i => i.substring(2));
             }
             if (nodeData.exclude) {
-                excludeRegex = new RegExp(nodeData.exclude);
+                excludeRegex = new RegExp(Array.isArray(nodeData.exclude) ? nodeData.exclude.join('|') : nodeData.exclude);
             }
             if (nodeData.children) {
                 children = nodeData.children;
@@ -65,30 +81,65 @@ function processTaxonomyNode(key, nodeData) {
 
         let myRegex = regStr ? new RegExp(`^.*(?:^|[_/:])${regStr}`) : null;
         
-        let childNodes = Object.keys(children).map(cKey => {
-            let cData = children[cKey];
-            let cRegStr = typeof cData === 'string' ? cData : (Array.isArray(cData) ? cData[0] : cData.pattern);
-            let cExact = [];
-            let cTagsIn = [];
-            if (Array.isArray(cData)) {
-                cExact = cData.slice(1).filter(i => !i.startsWith('-') && !i.startsWith('#'));
-                cTagsIn = cData.slice(1).filter(i => i.startsWith('#')).map(i => i.substring(1));
-            } else if (typeof cData === 'object' && cData.exact) {
-                cExact = cData.exact.filter(i => !i.startsWith('-') && !i.startsWith('#'));
-                cTagsIn = cData.exact.filter(i => i.startsWith('#')).map(i => i.substring(1));
+        function getAllDescendants(nodeObj) {
+            let descendants = [];
+            for (let cKey in nodeObj) {
+                let cData = nodeObj[cKey];
+                let cRegStr = typeof cData === 'string' ? cData : (Array.isArray(cData) ? cData[0] : cData.pattern);
+                if (cData && cData.modifierBases && cData.modifierPrefix) {
+                    let baseWords = [];
+                    cData.modifierBases.forEach(base => {
+                        if (base.startsWith("#")) {
+                            event.get(base.substring(1)).getObjectIds().forEach(id => {
+                                baseWords.push(String(id).split(':')[1]);
+                            });
+                        } else {
+                            baseWords.push(base);
+                        }
+                    });
+                    if (baseWords.length > 0) {
+                        let uniqueWords = Array.from(new Set(baseWords));
+                        cRegStr = `${cData.modifierPrefix}_(?:[a-z0-9_]*_)?(?:${uniqueWords.join('|')})$`;
+                    }
+                }
+                let cExact = [];
+                let cTagsIn = [];
+                if (Array.isArray(cData)) {
+                    cExact = cData.slice(1).filter(i => !i.startsWith('-') && !i.startsWith('#'));
+                    cTagsIn = cData.slice(1).filter(i => i.startsWith('#')).map(i => i.substring(1));
+                } else if (typeof cData === 'object' && cData.exact) {
+                    cExact = cData.exact.filter(i => !i.startsWith('-') && !i.startsWith('#'));
+                    cTagsIn = cData.exact.filter(i => i.startsWith('#')).map(i => i.substring(1));
+                }
+                
+                descendants.push({
+                    key: cKey,
+                    regex: cRegStr ? new RegExp(`^.*(?:^|[_/:])${cRegStr}`) : null,
+                    exactIn: cExact,
+                    tagsIn: cTagsIn
+                });
+
+                if (typeof cData === 'object' && cData.children) {
+                    descendants = descendants.concat(getAllDescendants(cData.children));
+                }
             }
-            
-            return {
-                key: cKey,
-                regex: cRegStr ? new RegExp(`^.*(?:^|[_/:])${cRegStr}`) : null,
-                exactIn: cExact,
-                tagsIn: cTagsIn
-            };
-        });
+            return descendants;
+        }
+
+        let childNodes = getAllDescendants(children);
+
+        let siblingDescendants = [];
+        for (let sKey in parentChildrenObj) {
+            if (sKey === key) continue;
+            let sData = parentChildrenObj[sKey];
+            if (typeof sData === 'object' && sData.children) {
+                siblingDescendants = siblingDescendants.concat(getAllDescendants(sData.children));
+            }
+        }
 
         // Recurse into children FIRST so they register correctly
         for (let cKey in children) {
-            processTaxonomyNode(cKey, children[cKey]);
+            processTaxonomyNode(cKey, children[cKey], children);
         }
 
 // Evaluate this node against all items for exactIn and regex matches
@@ -104,11 +155,12 @@ function processTaxonomyNode(key, nodeData) {
             if (matchedMe && !exactOut.includes(idStr)) {
                 if (excludeRegex && excludeRegex.test(idStr)) continue;
 
-                // It fits in my group. Does it fit into a child's?
+                // It fits in my group. Does it fit into a child's? Or a sibling's child?
                 let matchesChild = childNodes.some(c => (c.regex && c.regex.test(idStr)) || c.exactIn.includes(idStr));
+                let matchesSiblingDescendant = siblingDescendants.some(s => (s.regex && s.regex.test(idStr)) || s.exactIn.includes(idStr));
                 
                 // If it doesn't fit a child, put it in this parent
-                if (!matchesChild) {
+                if (!matchesChild && !matchesSiblingDescendant) {
                     event.add(`kubejs:${key}`, idStr);
                 }
             }
@@ -136,11 +188,17 @@ function processTaxonomyNode(key, nodeData) {
                 c.exactIn.forEach(idStr => event.remove(`kubejs:${key}`, idStr));
                 c.tagsIn.forEach(ct => event.remove(`kubejs:${key}`, `#${ct}`));
             });
+            
+            siblingDescendants.forEach(s => {
+                if (s.regex) event.remove(`kubejs:${key}`, s.regex);
+                s.exactIn.forEach(idStr => event.remove(`kubejs:${key}`, idStr));
+                s.tagsIn.forEach(st => event.remove(`kubejs:${key}`, `#${st}`));
+            });
         }
     }
 
     Object.keys(taxonomy).forEach(parentKey => {
-        processTaxonomyNode(parentKey, taxonomy[parentKey]);
+        processTaxonomyNode(parentKey, taxonomy[parentKey], taxonomy);
     });
 
     // 2. Process standalone tags
@@ -149,15 +207,10 @@ function processTaxonomyNode(key, nodeData) {
     });
 
     // 3. Process modifier tags
-    let mods = ['smooth', 'cut', 'chiseled', 'polished'];
-    mods.forEach(mod => {
-        event.add(`kubejs:${mod}_blocks`, new RegExp(`^.*(?:^|[_/:])${mod}_(?!sandstone|red_sandstone)(?!.*(?:${allShapes})$)[a-z0-9_]+$`));
-    });
+    // (Removed: Modifiers are now handled as standard taxonomy nodes inside modifier_blocks)
 
     // 4. Processing basic fallbacks
-    basicSuffixes.forEach(suffix => {
-        event.add(`kubejs:${suffix}`, new RegExp(`^.*:(?:.*[_/])?${suffix}$`));
-    });
+    // (Removed: Folded into standaloneTags)
 });
 
 ServerEvents.tags('item', event => {
