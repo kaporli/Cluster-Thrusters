@@ -4,7 +4,7 @@
 global.taxonomy = {
     "doors": {
         pattern: "door$",
-        exclude: ["mekanism", "copycat", "block_factorys_bosses", "cabinet"],
+        exclude: ["mekanism", "copycat", "block_factorys_bosses", "cabinet", "garage"],
         children: {
             "bamboo_doors": ["bamboo_door$", "mcwdoors:print_bamboo"],
             "barn_doors": "barn_door$",
@@ -584,7 +584,7 @@ global.modifierTypes = {
             { name: "crystal_floor", suffix: true, subprefixes: ["mossy", "cobbled", "chiseled"] },
             { name: "tile", pattern: "tile|tiles", suffix: true, subprefixes: ["cracked", "mossy", "chiseled", "gilded", "blightmoss", "polished"] },
             { name: "pillar", suffix: true, subprefixes: ["chiseled"] },
-            { name: "bricks", suffix: true, subprefixes: ["cracked", "mossy", "chiseled", "small"] },
+            { name: "bricks", pattern: "bricks?", suffix: true, subprefixes: ["cracked", "mossy", "chiseled", "small", "cut"] },
             { name: "polished", subprefixes: ["cut", "chiseled", "tile", "bricks"] },
         ],
         // {prefix} = "cut", {pattern} = "stairs?$" => "cut_(?:[a-z0-9_]*_)?stairs?$"

@@ -1134,6 +1134,7 @@
         "stonezone:wys/.*",
         "railways:.*incomplete.*",
         "gtbcs_spell_lib:.*example.*",
-        "farmersdelight:hanging_(?:.*_)?canvas_sign$"
+        "farmersdelight:hanging_(?:.*_)?canvas_sign$",
+        "mcwfences|everycomp:mcf/.*_hedge$"
     ]
 }
