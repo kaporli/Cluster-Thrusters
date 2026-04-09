@@ -1145,7 +1145,11 @@
         "v_slab_compat:deep_aether/polished_aseterite_vertical_slab",
         "v_slab_compat:deep_aether/polished_clorite_vertical_slab",
         "ascended_quark:holystone_brick_vertical_slab",
-        "ascended_quark:big_holystone_bricks_vertical_slab"
+        "ascended_quark:big_holystone_bricks_vertical_slab",
+        "cataclysm:stone_tiles",
+        "cataclysm:stone_tile_slab",
+        "cataclysm:stone_tile_stairs",
+        "cataclysm:stone_tile_wall"
     ],
     "patterns": [
         "stonezone:wys/.*",

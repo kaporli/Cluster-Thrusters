@@ -608,10 +608,10 @@ global.taxonomy = {
             "vile_stone", "gloomy", "dimstone", "enderstone", "galena", "aseterite", "brimstone",
             "gloopslate", "dullstone", "clorite", "driftshale",
             "sky_stone", "sentrite", "sky", "citrine", "enderblob",
-            "gilded_holystone", "blightmoss_holystone", "honeycomb"
+            "gilded_holystone", "blightmoss_holystone", "honeycomb", "cirite", "icestone", "glowstone"
         ],
-        exclude: ["create:polished_roze_quartz", "quark:iron_pillar", "alexscaves:scarlet_neodymium_pillar",
-            "alexscaves:azure_neodymium_pillar"
+        exclude: ["quark:iron_pillar", "alexscaves:scarlet_neodymium_pillar",
+            "alexscaves:azure_neodymium_pillar", "locked", "treasure"
         ],
         applyModifiers: ["stone"]
     }
@@ -641,7 +641,7 @@ global.modifierTypes = {
             { name: "crystal_floor", suffix: true, subprefixes: ["mossy", "cobbled", "chiseled"] },
             { name: "tile", pattern: "tile|tiles", suffix: true, subprefixes: ["cracked", "chiseled", "polished"] }, // "mossy",
             { name: "pillar", suffix: true, subprefixes: ["chiseled"] },
-            { name: "brick", pattern: "bricks?", suffix: true, subprefixes: ["cracked", "chiseled", "small", "cut"] }, //  "mossy",
+            { name: "brick", pattern: "bricks?", suffix: true, subprefixes: ["cracked", "chiseled", "small", "cut", "polished"] }, //  "mossy",
             { name: "polished", subprefixes: ["cut", "chiseled", "tile", "bricks"] },
         ],
         // {prefix} = "cut", {pattern} = "stairs?$" => "cut_(?:[a-z0-9_]*_)?stairs?$"
@@ -654,7 +654,8 @@ global.modifierTypes = {
             "vanillabackport:resin_brick",
             "endergetic:eumus_brick",
             "ancient_aether:valkyrie_brick",
-            "alexscaves:cinder_brick"
+            "alexscaves:cinder_brick",
+            "create:polished_roze_quartz",
         ]
     },
     "stripped": {

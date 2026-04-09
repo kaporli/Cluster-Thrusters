@@ -72,3 +72,4 @@ usercache.json
 .minecraft/emi.json
 .gitignore
 .minecraft/seamless.txt
+.minecraft/fieldguide_cache/
