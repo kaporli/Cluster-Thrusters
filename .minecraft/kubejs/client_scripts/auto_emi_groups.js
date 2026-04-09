@@ -1,50 +1,57 @@
-// --- Dynamic UI Group Registration ---
-// This file mirrors the structure of auto_tags.js.
-// Any new group added to the objects here will automatically be drawn as a tab in EMI.
-
-// Data imported from startup_scripts/shared_taxonomy.js
 const taxonomy = global.taxonomy;
 const standaloneTags = global.standaloneTags;
 const customEmiGroups = global.customEmiGroups;
 const nativeEmiGroups = global.nativeEmiGroups;
+const modifierTokens = global.modifierTokens;
 
-EmiPlusPlusEvents.registerGroups(event => {
+EmiPlusPlusEvents.registerGroups((event) => {
+    function registerTaxonomyNode(key, nodeData, inheritedDynamic) {
+        var currentDynamic =
+            nodeData.dynamicGrouping || inheritedDynamic || false;
 
-    // 1. Process parent-child taxonomy
-    function registerTaxonomyNode(key, nodeData) {
-        event.register(`kubejs:${key}`, `#kubejs:${key}`);
-        let children = (typeof nodeData === 'object' && !Array.isArray(nodeData) && nodeData.children) ? nodeData.children : {};
-        Object.keys(children).forEach(cKey => {
-            registerTaxonomyNode(cKey, children[cKey]);
-        });
+        if (key !== "blocks") {
+            event.register("kubejs:" + key, "#kubejs:" + key);
+        }
+
+        if (currentDynamic) {
+            var suffix = nodeData.isSink ? "blocks" : key;
+            var tKeys = Object.keys(modifierTokens);
+            tKeys.forEach((t1) => {
+                event.register(
+                    "kubejs:" + t1 + "_" + suffix,
+                    "#kubejs:" + t1 + "_" + suffix,
+                );
+                tKeys.forEach((t2) => {
+                    if (t1 >= t2) return;
+                    var c2 = [t1, t2].sort().join("_");
+                    event.register(
+                        "kubejs:" + c2 + "_" + suffix,
+                        "#kubejs:" + c2 + "_" + suffix,
+                    );
+                });
+            });
+        }
+
+        var children =
+            typeof nodeData === "object" &&
+            !Array.isArray(nodeData) &&
+            nodeData.children
+                ? nodeData.children
+                : {};
+        Object.keys(children).forEach((ck) =>
+            registerTaxonomyNode(ck, children[ck], currentDynamic),
+        );
     }
 
-    Object.keys(taxonomy).forEach(parentKey => {
-        registerTaxonomyNode(parentKey, taxonomy[parentKey]);
+    Object.keys(taxonomy).forEach((pk) =>
+        registerTaxonomyNode(pk, taxonomy[pk], false),
+    );
+    Object.keys(standaloneTags).forEach((k) =>
+        event.register("kubejs:" + k, "#kubejs:" + k),
+    );
+    Object.keys(customEmiGroups).forEach((k) => event.register(k, "#" + k));
+    nativeEmiGroups.forEach((k) => {
+        var isTag = k.indexOf("#") === 0;
+        event.register(isTag ? k.substring(1) : k, isTag ? k : "#" + k);
     });
-
-    // 2. Process standalone tags
-    Object.keys(standaloneTags).forEach(key => {
-        event.register(`kubejs:${key}`, `#kubejs:${key}`);
-    });
-
-    // 3. Explicitly Register Custom Formed EMI Groups
-    Object.keys(customEmiGroups).forEach(key => {
-        event.register(key, `#${key}`);
-    });
-
-    // 4. Explicitly Register Native Mod Groups
-    nativeEmiGroups.forEach(key => {
-        const isTag = key.startsWith('#');
-        const groupId = isTag ? key.substring(1) : key;
-        const tagArg = isTag ? key : `#${key}`;
-        event.register(groupId, tagArg);
-    });
-
-    console.log('EMI++ AUTO GROUPS REGISTRATION COMPLETE!');
-});
-
-EmiPlusPlusEvents.registerGroups(event => {
-    console.log("=== EMI++ CLIENT REGISTRATION DEBUG ===");
-    // Just registering is fine, but how do we dump? We can't really dump EMI tags easily.
 });

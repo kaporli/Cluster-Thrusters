@@ -1149,13 +1149,14 @@
         "cataclysm:stone_tiles",
         "cataclysm:stone_tile_slab",
         "cataclysm:stone_tile_stairs",
-        "cataclysm:stone_tile_wall"
+        "cataclysm:stone_tile_wall",
+        "ae2:fluix_upgrade_smithing_template"
     ],
     "patterns": [
         "stonezone:wys/.*",
         "railways:.*incomplete.*",
         "gtbcs_spell_lib:.*example.*",
-        "farmersdelight:hanging_(?:.*_)?canvas_sign$",
+        "^farmersdelight:.*hanging_.*canvas_sign$",
         "mcwfences|everycomp:mcf/.*_hedge$",
         "railways:.*paint.*",
         "railways:(brown|maroon|red|vermilion|orange|granite|dripstone|ochrum|yellow|chartreuse|olive_green|lime|green|pine_green|cyan|sea_green|turquoise|light_blue|blue|royal_blue|purple|magenta|pink|white|diorite|limestone|light_gray|tuff|gray|scorchia|black)_.*"
