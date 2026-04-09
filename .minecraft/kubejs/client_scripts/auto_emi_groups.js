@@ -7,11 +7,9 @@ const taxonomy = global.taxonomy;
 const standaloneTags = global.standaloneTags;
 const customEmiGroups = global.customEmiGroups;
 const nativeEmiGroups = global.nativeEmiGroups;
-const curiosTypes = global.curiosTypes;
-
 
 EmiPlusPlusEvents.registerGroups(event => {
-    
+
     // 1. Process parent-child taxonomy
     function registerTaxonomyNode(key, nodeData) {
         event.register(`kubejs:${key}`, `#kubejs:${key}`);
@@ -30,17 +28,12 @@ EmiPlusPlusEvents.registerGroups(event => {
         event.register(`kubejs:${key}`, `#kubejs:${key}`);
     });
 
-    // 5. Explicitly Register Curios
-    curiosTypes.forEach(c => {
-        event.register(`curios:${c}s`, `#curios:${c}`);
-    });
-
-    // 6. Explicitly Register Custom Formed EMI Groups
+    // 3. Explicitly Register Custom Formed EMI Groups
     Object.keys(customEmiGroups).forEach(key => {
         event.register(key, `#${key}`);
     });
 
-    // 7. Explicitly Register Native Mod Groups
+    // 4. Explicitly Register Native Mod Groups
     nativeEmiGroups.forEach(key => {
         const isTag = key.startsWith('#');
         const groupId = isTag ? key.substring(1) : key;

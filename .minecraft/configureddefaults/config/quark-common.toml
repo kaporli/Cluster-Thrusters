@@ -108,7 +108,7 @@
 		"Delayed Update List" = ["minecraft:dispenser", "minecraft:dropper"]
 
 [building]
-	"Celebratory Lamps" = true
+	"Celebratory Lamps" = false
 	"Compressed Blocks" = true
 	"Duskbound Blocks" = true
 	"Framed Glass" = true
@@ -126,7 +126,7 @@
 	"More Potted Plants" = true
 	"Nether Brick Fence Gate" = true
 	"Rainbow Lamps" = true
-	"Raw Metal Bricks" = true
+	"Raw Metal Bricks" = false
 	Rope = true
 	"Shear Vines" = true
 	Shingles = true
@@ -522,14 +522,14 @@
 	"Dragon Scales" = true
 	"Dyeable Item Frames" = true
 	Emotes = true
-	"Enhanced Ladders" = true
+	"Enhanced Ladders" = false
 	"Glass Shard" = false
 	"Gold Tools Have Fortune" = true
 	"Grab Chickens" = true
 	"Hoe Harvesting" = true
 	"Horses Swim" = true
 	"Improved Sponges" = true
-	"Lock Rotation" = true
+	"Lock Rotation" = false
 	"Map Washing" = true
 	"More Banner Layers" = true
 	"More Note Block Sounds" = true

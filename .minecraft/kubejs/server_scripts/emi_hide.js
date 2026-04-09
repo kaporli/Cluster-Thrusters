@@ -18,7 +18,11 @@ ServerEvents.tags('item', event => {
         "monolib:debug_block",
         "monolib:debug_item",
         "fdlib:test_multiblock",
-        "alexsmobsinteraction:eggs"
+        "alexsmobsinteraction:eggs",
+        "cataclysm:stone_tiles",
+        "cataclysm:stone_tile_slab",
+        "cataclysm:stone_tile_stairs",
+        "cataclysm:stone_tile_wall",
     ];
 
     HIDDEN_ITEMS.forEach(id => {

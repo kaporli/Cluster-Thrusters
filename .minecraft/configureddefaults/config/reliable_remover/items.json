@@ -1128,13 +1128,32 @@
         "everycomp:mcfur/natures_spirit/stripped_maple_counter",
         "natures_spirit:maple_log",
         "natures_spirit:maple_sign",
-        "natures_delight:maple_cabinet"
+        "natures_delight:maple_cabinet",
+        "everycomp:q/alexscaves/pewen_chest",
+        "everycomp:q/alexscaves/pewen_trapped_chest",
+        "everycomp:q/alexscaves/pewen_ladder",
+        "everycomp:faf/alexscaves/pewen_beehive",
+        "everycomp:fd/alexscaves/pewen_cabinet",
+        "everycomp:fd/alexscaves/pewen_bookshelf",
+        "everycomp:q/alexscaves/thornwood_chest",
+        "everycomp:q/alexscaves/thornwood_trapped_chest",
+        "everycomp:faf/alexscaves/thornwood_beehive",
+        "everycomp:q/alexscaves/thornwood_ladder",
+        "everycomp:fd/alexscaves/thornwood_cabinet",
+        "everycomp:fd/alexscaves/thornwood_bookshelf",
+        "acended_quark:quicksoil_glass_shard",
+        "v_slab_compat:deep_aether/polished_aseterite_vertical_slab",
+        "v_slab_compat:deep_aether/polished_clorite_vertical_slab",
+        "ascended_quark:holystone_brick_vertical_slab",
+        "ascended_quark:big_holystone_bricks_vertical_slab"
     ],
     "patterns": [
         "stonezone:wys/.*",
         "railways:.*incomplete.*",
         "gtbcs_spell_lib:.*example.*",
         "farmersdelight:hanging_(?:.*_)?canvas_sign$",
-        "mcwfences|everycomp:mcf/.*_hedge$"
+        "mcwfences|everycomp:mcf/.*_hedge$",
+        "railways:.*paint.*",
+        "railways:(brown|maroon|red|vermilion|orange|granite|dripstone|ochrum|yellow|chartreuse|olive_green|lime|green|pine_green|cyan|sea_green|turquoise|light_blue|blue|royal_blue|purple|magenta|pink|white|diorite|limestone|light_gray|tuff|gray|scorchia|black)_.*"
     ]
 }

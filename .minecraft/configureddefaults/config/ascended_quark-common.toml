@@ -23,7 +23,7 @@
 	"Quicksoil Framed Glass" = true
 	#Enables skyroot woodset blocks for quark blocks, such as skyroot post. Disable if another mod already adds compat blocks. 
 	"Skyroot Quark Blocks" = true
-	"Skyroot Stool" = true
+	"Skyroot Stool" = false
 
 	[aether.a_q_pickarang]
 		"Enable Flamerang" = true
