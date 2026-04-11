@@ -23,7 +23,9 @@ global.excludes = {
         "dragonscale",
         "wrapped",
         "valve",
-        "raw"
+        "trap",
+        "tank",
+        // "cabinet"
     ],
 };
 
@@ -78,10 +80,10 @@ global.materials = {
     prismarine: { pattern: "prismarine", exclude: "coralstone" },
     blackstone: "blackstone",
     end_stone: "end_stone",
-    purpur: "purpur",
+    purpur: {pattern: "purpur", exclude: ["void"]},
     obsidian: { pattern: "obsidian", exclude: ["rune", "mystical"] },
     quartz: { pattern: "quartz", exclude: ["ae2"] },
-    copper: "copper",
+    copper: {pattern: "copper", exclude: ["raw"]},
     // bone: "bone",
     mud: "mud",
     dirt: {pattern: "dirt", exclude: ["fossiliferous", "suspicious", "path"]},

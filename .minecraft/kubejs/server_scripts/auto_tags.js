@@ -22,8 +22,12 @@ ServerEvents.tags("item", function (event) {
         return false;
     }
 
+    // ── Custom EMI groups (regex-matched) ────────────────────────────────
+    var customGroupRegexes = [];
     Object.keys(customEmiGroups).forEach(function (tag) {
-        event.add(tag, new RegExp(customEmiGroups[tag]));
+        var re = new RegExp(customEmiGroups[tag]);
+        event.add(tag, re);
+        customGroupRegexes.push(re);
     });
 
     var allItemIds;
@@ -159,6 +163,17 @@ ServerEvents.tags("item", function (event) {
     // ── Process taxonomy nodes ───────────────────────────────────────────
     var consumedIds = new Set();
     var excludedByNode = new Set();
+
+    // ── Pre-consume custom EMI groups ────────────────────────────────────
+    for (var _cg = 0; _cg < allItemIds.length; _cg++) {
+        var cgStr = String(allItemIds[_cg]);
+        for (var _cr = 0; _cr < customGroupRegexes.length; _cr++) {
+            if (customGroupRegexes[_cr].test(cgStr)) {
+                consumedIds.add(cgStr);
+                break;
+            }
+        }
+    }
 
     function processNormalNode(
         key,
@@ -315,20 +330,25 @@ ServerEvents.tags("item", function (event) {
         }
     });
 
-    // ── Consume items from native EMI groups ─────────────────────────────
-    // These tags are managed by mods, not by us. Mark their items as consumed
-    // so they don't leak into the blocks sink or get double-grouped.
+    // ── Consume native EMI groups ────────────────────────────────────────
+    // Runs after taxonomy + standalone so those get first priority.
+    // Auto-derives a consume pattern from the tag name.
+    // e.g. "farmersdelight:cabinets" → "cabinets?$" → matches cabinet/cabinets
     var nativeEmiGroups = global.nativeEmiGroups || [];
     nativeEmiGroups.forEach(function (k) {
-        var tagName = k.indexOf("#") === 0 ? k.substring(1) : k;
-        try {
-            var tagIds = Ingredient.of("#" + tagName).itemIds;
-            if (tagIds) {
-                for (var ni = 0; ni < tagIds.length; ni++) {
-                    consumedIds.add(String(tagIds[ni]));
-                }
+        var tagPath = k.indexOf("#") === 0 ? k.substring(1) : k;
+        tagPath = tagPath.split(":")[1] || tagPath;
+        var consumePat = tagPath.charAt(tagPath.length - 1) === "s"
+            ? tagPath.substring(0, tagPath.length - 1) + "s?"
+            : tagPath;
+        var consumeRegex = new RegExp("(?:^|[_/:])" + consumePat + "$");
+        for (var _nc = 0; _nc < allItemIds.length; _nc++) {
+            var ncStr = String(allItemIds[_nc]);
+            if (consumedIds.has(ncStr)) continue;
+            if (consumeRegex.test(ncStr)) {
+                consumedIds.add(ncStr);
             }
-        } catch (e) {}
+        }
     });
 
     // ── Blocks sink ──────────────────────────────────────────────────────

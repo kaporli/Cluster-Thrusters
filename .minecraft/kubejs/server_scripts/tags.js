@@ -20,4 +20,8 @@ ServerEvents.tags("item", function (event) {
     event.remove("minecraft:trim_templates", "legendary_monsters:annihilator_upgrade_smithing_template");
     event.remove("minecraft:trim_templates", "legendary_monsters:enderitium_upgrade_smithing_template");
     event.remove("minecraft:trim_templates", "deep_aether:stratus_smithing_template");
+
+    event.add("farmersdelight:cabinets", "mynethersdelight:blackstone_bricks_cabinet");
+    event.add("farmersdelight:cabinets", "mynethersdelight:red_nether_bricks_cabinet");
+    event.add("farmersdelight:cabinets", "aethersdelight:skyroot_cabinet");
 });
