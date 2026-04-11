@@ -29,6 +29,17 @@ ServerEvents.tags('item', event => {
         event.add('c:hidden_from_recipe_viewers', id);
     });
 
+    event.add('c:hidden_from_recipe_viewers', /minecraft:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /biomesoplenty:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /natures_spirit:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /autumnity:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /quark:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /aether:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /deep_aether:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /ancient_aether:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /upgrade_aquatic:.*sapling.*/);
+    event.add('c:hidden_from_recipe_viewers', /minecraft:.*propagule.*/);
+    event.add('c:hidden_from_recipe_viewers', /minecraft:.*propagule.*/);
     event.add('c:hidden_from_recipe_viewers', /xaeroworldmap:.*/);
     event.add('c:hidden_from_recipe_viewers', /xaerominimap:.*/);
     event.add('c:hidden_from_recipe_viewers', /citadel:.*/);

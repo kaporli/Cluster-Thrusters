@@ -1,567 +1,758 @@
 global.excludes = {
-    // Regex patterns (joined with |, tested against full item ID)
-    pattern: [
-        "copycat"
+    pattern: ["copycat"],
+    exact: [],
+    materialPattern: [
+        "frozen",
+        "charred",
+        "chared",
+        "crackled",
+        "lamp",
+        "casing",
+        "cluster",
+        "bud",
+        "furnace",
+        "spire",
+        "sentry",
+        "aeronautic",
+        "lantern",
+        "stove",
+        "pumpkin",
+        "squash",
+        "pot",
+        "pile",
+        "dragonscale",
+        "wrapped",
+        "valve",
+        "raw"
     ],
-    // Exact item IDs to exclude (no - prefix needed here, all entries are excludes)
-    exact: [
-        // "somemod:broken_item"
-    ]
 };
 
-// Shared Configuration for EMI Tags and Tabs
-// Edit your items here. Both the server tags and client EMI menus read from this global file.
-
+// ─── Modifier Tokens ─────────────────────────────────────────────────────
+// Structural variants that apply to taxonomy nodes with dynamicGrouping.
+// These create sub-groups like kubejs:polished_stairs, kubejs:brick_slabs etc.
 global.modifierTokens = {
-    cut: "cut",
-    smooth: "smooth",
-    chiseled: "chiseled",
-    layered: "layered",
-    cracked: "cracked",
-    cobbled: "cobbled",
-    running_bond: "running_bond",
-    windmill_weave: "windmill_weave",
-    flagstone: "flagstone",
-    crystal_floor: "crystal_floor",
-    tile: "tiles?",
-    pillar: "pillar",
-    small: { pattern: "small", requires: ["brick"] },
-    brick: "bricks?",
-    polished: "polished",
-    stripped: "stripped"
+    // cut: "cut",
+    // smooth: "smooth",
+    // chiseled: "chiseled",
+    // layered: "layered",
+    // cracked: "cracked",
+    // cobbled: "cobbled",
+    // running_bond: "running_bond",
+    // windmill_weave: "windmill_weave",
+    // flagstone: "flagstone",
+    // crystal_floor: "crystal_floor",
+    // tile: "tiles?",
+    // pillar: "pillar",
+    // small: { pattern: "small", requires: ["brick"] },
+    // brick: "bricks?",
+    // polished: "polished",
+    stripped: "stripped",
+    shingles: "shingles?",
+    sturdy: "sturdy",
 };
 
+// ─── Materials ───────────────────────────────────────────────────────────
+// Base substances. ONLY used by the blocks sink to sort unclaimed items
+// by what they're made of: kubejs:granite_blocks, kubejs:polished_granite_blocks etc.
+//
+// Specificity is automatic — longer patterns win. "end_stone" beats "stone",
+// "warped_stone" beats "stone", "azure_seastone" beats "stone" etc.
+//
+// Items that are consumed by taxonomy groups, standalone tags, or custom groups
+// before reaching the sink are never checked here, so you don't need exclude
+// lists for things like copper_ingot, copper_door, etc.
+global.materials = {
+    // Vanilla
+    stone: { pattern: "stone", exclude: ["void", "soul", "carved", "angelic", "hellfire", "gale", "nimbus", "citrine"] },
+    cobblestone: "cobblestone",
+    granite: "granite",
+    diorite: "diorite",
+    andesite: "andesite",
+    tuff: "tuff",
+    deepslate: { pattern: "deepslate", exclude: ["erosion", "reinforced"] },
+    calcite: "calcite",
+    dripstone: "dripstone",
+    basalt: "basalt",
+    sandstone: "sandstone",
+    red_sandstone: "red_sandstone",
+    prismarine: { pattern: "prismarine", exclude: "coralstone" },
+    blackstone: "blackstone",
+    end_stone: "end_stone",
+    purpur: "purpur",
+    obsidian: { pattern: "obsidian", exclude: ["rune", "mystical"] },
+    quartz: { pattern: "quartz", exclude: ["ae2"] },
+    copper: "copper",
+    // bone: "bone",
+    mud: "mud",
+    dirt: {pattern: "dirt", exclude: ["fossiliferous", "suspicious", "path"]},
+    resin: { pattern: "resin", exclude: ["myrmex"] },
+    terracotta: "terracotta",
+    // glowstone: "glowstone",
+
+    // Quark
+    limestone: "limestone",
+    jasper: "jasper",
+    shale: "shale",
+    myalite: "myalite",
+    permafrost: "permafrost",
+    soul_sandstone: "soul_sandstone",
+
+    // Create
+    scoria: "scoria",
+    scorchia: "scorchia",
+    ochrum: "ochrum",
+    veridium: { pattern: "veridium", exclude: ["aether"] },
+    asurine: "asurine",
+    crimsite: "crimsite",
+    dolomite: "dolomite",
+    gneiss: "gneiss",
+
+    // Aether / Deep Aether / Redux
+    holystone: "holystone",
+    gilded_holystone: "gilded_holystone",
+    icestone: "icestone",
+    frosted_stone: "frosted_stone",
+
+    // Alex's Caves
+    galena: "galena",
+    radrock: "radrock",
+    coprolith: "coprolith",
+    guanostone: "guanostone",
+
+    // Cataclysm
+    azure_seastone: {pattern: "azure_seastone", exclude: ["mural", "curved"]},
+
+    // AE2
+    certus_quartz: "ae2:.*quartz.*",
+    sky_stone: "sky_stone",
+
+    // Various mods
+    travertine: "travertine",
+    chert: "chert",
+    chalk: "chalk",
+    kaolin: "kaolin",
+    coralstone: "coralstone",
+    warped_stone: { pattern: "warped_stone", exclude: ["citrine"] },
+    dimstone: "dimstone",
+    dullstone: "dullstone",
+    justicestone: "justicestone",
+    gloopslate: { pattern: "gloopslate", exclude: ["prismalithic"] },
+    gloopstone: { pattern: "gloopstone", exclude: ["charged", "shiny"] },
+    driftshale: "driftshale",
+    aseterite: "aseterite",
+    clorite: "clorite",
+    sentrite: { pattern: "sentrite", exclude: ["refined"] },
+    citrine: {pattern: "citrine", exclude: ["warped"]},
+    brimstone: { pattern: "brimstone", exclude: ["fumarole"] },
+    scute: "scute",
+    shimmer_stone: "shimmer_stone",
+    vile_stone: "vile_stone",
+    nimbus: { pattern: "nimbus", exclude: ["light"] },
+    angelic: { pattern: "angelic", exclude: ["light"] },
+    hellfire: { pattern: "hellfire", exclude: ["light"] },
+    gale: { pattern: "gale", exclude: ["light"] },
+    valkyrie: {pattern: "valkyrie"},
+    aerogetic: "aerogetic",
+    carved: {pattern: "carved", exclude: ["mud"]},
+    dread_stone: "dread_stone",
+    aether_mud: "aether_mud",
+    aether_dirt: "aether_.*dirt",
+    golden_dirt: "golden.*dirt",
+    trembling: "trembling",
+    rose_quartz: "rose_quartz",
+    withered_quartz: "withered_quartz",
+    pink_sandstone: "pink_sandstone",
+    white_sandstone: "white_sandstone",
+    black_sandstone: "black_sandstone",
+    ancient_sandstone: "ancient_sandstone",
+    orange_sandstone: "orange_sandstone",
+    ancient_dripstone: "ancient_dripstone",
+    gloomy: "gloomy",
+    snail_shell: "snail_shell",
+    tooth: "tooth",
+    netherrack: "netherrack",
+    nether_brick: "nether_bricks?", // TODO: replace warped nether brick with blue nether brick
+    eumus: "eumus",
+    aergogel: "aerogel",
+    divinite: "divinite",
+    // quicksoil: "quicksoil",
+    enderstone: "enderstone",
+    endstone: "endstone",
+    abyssmarine: "abyssmarine",
+    fluix: "fluix",
+    gingerbread: "gingerbread",
+    wafer_cookie: "wafer_cookie",
+    bricks: "^minecraft:bricks?",
+    ash_bricks: "ash_bricks?",
+    aercloud: "aercloud",
+    shell: "shell",
+    lapis_lazuli: "lapis",
+    dragon_bone: "dragon_bone",
+    cinder_block: "cinder_block",
+    enderblob_moult: "enderblob_moult"
+};
+
+// ─── Taxonomy ────────────────────────────────────────────────────────────
 global.taxonomy = {
-    // ─── Doors & Trapdoors ───────────────────────────────────────────────
-    "doors": {
+    doors: {
         pattern: "door$",
         exclude: ["mekanism", "block_factorys_bosses", "cabinet", "garage"],
         children: {
-            "bamboo_doors": ["bamboo_door$", "mcwdoors:print_bamboo"],
-            "barn_doors": "barn_door$",
-            "beach_doors": ["beach_door$", "mcwdoors:print_jungle"],
-            "cottage_doors": ["cottage_door$", "mcwdoors:print_spruce"],
-            "four_panel_doors": ["four_panel_door$", "mcwdoors:print_dark_oak"],
-            "japanese_two_doors": "japanese2_door$",
-            "japanese_doors": "japanese_door$",
-            "modern_doors": "modern_door$",
-            "mystic_doors": ["mystic_door$", "mcwdoors:print_mystic"],
-            "nether_doors": ["nether_door$", "mcwdoors:print_nether"],
-            "paper_doors": ["paper_door$", "mcwdoors:print_birch"],
-            "stable_doors": "stable_door$",
-            "stable_head_doors": "stable_head_door$",
-            "swamp_doors": ["swamp_door$", "mcwdoors:print_swamp"],
-            "tropical_doors": ["tropical_door$", "mcwdoors:print_acacia"],
-            "waffle_doors": ["waffle_door$", "mcwdoors:print_waffle"],
-            "western_doors": "western_door$",
-            "whispering_doors": ["whispering_door$", "mcwdoors:print_whispering"],
-            "classic_doors": ["classic_door$", "mcwdoors:print_oak"],
-            "hinged_locometal_doors": "hinged_locometal_door$",
-            "sliding_locometal_doors": "sliding_locometal_door$",
-            "folding_locometal_doors": "folding_locometal_door$",
-            "glass_doors": {
+            bamboo_doors: ["bamboo_door$", "mcwdoors:print_bamboo"],
+            barn_doors: "barn_door$",
+            beach_doors: ["beach_door$", "mcwdoors:print_jungle"],
+            cottage_doors: ["cottage_door$", "mcwdoors:print_spruce"],
+            four_panel_doors: ["four_panel_door$", "mcwdoors:print_dark_oak"],
+            japanese_two_doors: "japanese2_door$",
+            japanese_doors: "japanese_door$",
+            modern_doors: "modern_door$",
+            mystic_doors: ["mystic_door$", "mcwdoors:print_mystic"],
+            nether_doors: ["nether_door$", "mcwdoors:print_nether"],
+            paper_doors: ["paper_door$", "mcwdoors:print_birch"],
+            stable_doors: "stable_door$",
+            stable_head_doors: "stable_head_door$",
+            swamp_doors: ["swamp_door$", "mcwdoors:print_swamp"],
+            tropical_doors: ["tropical_door$", "mcwdoors:print_acacia"],
+            waffle_doors: ["waffle_door$", "mcwdoors:print_waffle"],
+            western_doors: "western_door$",
+            whispering_doors: ["whispering_door$", "mcwdoors:print_whispering"],
+            classic_doors: ["classic_door$", "mcwdoors:print_oak"],
+            hinged_locometal_doors: "hinged_locometal_door$",
+            sliding_locometal_doors: "sliding_locometal_door$",
+            folding_locometal_doors: "folding_locometal_door$",
+            glass_doors: {
                 pattern: "glass_door$",
                 exact: ["-ancient_aether:aerogel_glass_door"],
                 children: {
-                    "barn_glass_doors": "barn_glass_door$",
-                    "bark_glass_doors": "bark_glass_door$"
-                }
-            }
-        }
+                    barn_glass_doors: "barn_glass_door$",
+                    bark_glass_doors: "bark_glass_door$",
+                },
+            },
+        },
     },
-    "trapdoors": {
+    trapdoors: {
         pattern: "trapdoor$",
         children: {
-            "bamboo_trapdoors": ["bamboo_trapdoor$", "mcwtrpdoors:print_bamboo"],
-            "bark_trapdoors": "bark_trapdoor$",
-            "barn_trapdoors": "barn_trapdoor$",
-            "barred_trapdoors": ["barred_trapdoor$", "mcwtrpdoors:print_barred"],
-            "classic_trapdoors": ["classic_trapdoor$", "mcwtrpdoors:print_classic"],
-            "locometal_trapdoors": "locometal_trapdoor$",
-            "barrel_trapdoors": "barrel_trapdoor$",
-            "beach_trapdoors": ["beach_trapdoor$", "mcwtrpdoors:print_beach"],
-            "blossom_trapdoors": ["blossom_trapdoor$", "mcwtrpdoors:print_blossom"],
-            "cottage_trapdoors": ["cottage_trapdoor$", "mcwtrpdoors:print_cottage"],
-            "four_panel_trapdoors": ["four_panel_trapdoor$", "mcwtrpdoors:print_four_panel"],
-            "glass_trapdoors": "glass_trapdoor$",
-            "mystic_trapdoors": ["mystic_trapdoor$", "mcwtrpdoors:print_mystic"],
-            "paper_trapdoors": ["paper_trapdoor$", "mcwtrpdoors:print_paper"],
-            "ranch_trapdoors": "ranch_trapdoor$",
-            "swamp_trapdoors": ["swamp_trapdoor$", "mcwtrpdoors:print_swamp"],
-            "tropical_trapdoors": ["tropical_trapdoor$", "mcwtrpdoors:print_tropical"],
-            "whispering_trapdoors": ["whispering_trapdoor$", "mcwtrpdoors:print_whispering"]
-        }
+            bamboo_trapdoors: {
+                pattern: ["bamboo_trapdoor$", "mcwtrpdoors:print_bamboo"],
+                exact: ["-mcwtrpdoors:bamboo_trapdoor"],
+            },
+            bark_trapdoors: "bark_trapdoor$",
+            barn_trapdoors: "barn_trapdoor$",
+            barred_trapdoors: ["barred_trapdoor$", "mcwtrpdoors:print_barred"],
+            classic_trapdoors: [
+                "classic_trapdoor$",
+                "mcwtrpdoors:print_classic",
+            ],
+            locometal_trapdoors: "locometal_trapdoor$",
+            barrel_trapdoors: "barrel_trapdoor$",
+            beach_trapdoors: ["beach_trapdoor$", "mcwtrpdoors:print_beach"],
+            blossom_trapdoors: [
+                "blossom_trapdoor$",
+                "mcwtrpdoors:print_blossom",
+            ],
+            cottage_trapdoors: [
+                "cottage_trapdoor$",
+                "mcwtrpdoors:print_cottage",
+            ],
+            four_panel_trapdoors: [
+                "four_panel_trapdoor$",
+                "mcwtrpdoors:print_four_panel",
+            ],
+            glass_trapdoors: "glass_trapdoor$",
+            mystic_trapdoors: ["mystic_trapdoor$", "mcwtrpdoors:print_mystic"],
+            paper_trapdoors: ["paper_trapdoor$", "mcwtrpdoors:print_paper"],
+            ranch_trapdoors: "ranch_trapdoor$",
+            swamp_trapdoors: ["swamp_trapdoor$", "mcwtrpdoors:print_swamp"],
+            tropical_trapdoors: [
+                "tropical_trapdoor$",
+                "mcwtrpdoors:print_tropical",
+            ],
+            whispering_trapdoors: [
+                "whispering_trapdoor$",
+                "mcwtrpdoors:print_whispering",
+            ],
+        },
     },
-
-    // ─── Stone-modifier groups (dynamicGrouping: true) ───────────────────
-    "stairs": {
+    stairs: {
         pattern: "stairs?$",
         dynamicGrouping: true,
         children: {
-            "bulk_stairs": "bulk_stairs?$",
-            "compact_stairs": "compact_stairs?$",
-            "loft_stairs": "loft_stairs?$",
-            "skyline_stairs": "skyline_stairs?$",
-            "terrace_stairs": "terrace_stairs?$",
-            "bridge_stairs": "bridge_stair$"
-        }
+            bulk_stairs: "bulk_stairs?$",
+            compact_stairs: "compact_stairs?$",
+            loft_stairs: "loft_stairs?$",
+            skyline_stairs: "skyline_stairs?$",
+            terrace_stairs: "terrace_stairs?$",
+            bridge_stairs: "bridge_stair$",
+        },
     },
-    "slabs": {
+    slabs: {
         pattern: "slabs?$",
         dynamicGrouping: true,
         children: {
-            "vertical_slabs": { pattern: "vertical_slabs?$", children: {} }
-        }
+            vertical_slabs: { pattern: "vertical_slabs?$", children: {} },
+        },
     },
-    "walls": {
+    walls: {
         pattern: "walls?$",
-        dynamicGrouping: false,
+        dynamicGrouping: true,
         children: {
-            "mcw_walls": {
+            mcw_walls: {
                 pattern: "^(?:mcwfences:|stonezone:mcf/).*wall$",
                 noModifiers: true,
                 children: {
-                    "pillar_walls": {
+                    pillar_walls: {
                         pattern: "^(?:mcwfences:|stonezone:mcf/).*pillar_wall$",
                         exclude: "azure",
                         children: {
-                            "brick_pillar_walls": "^(?:mcwfences:|stonezone:mcf/).*brick_pillar_wall$"
-                        }
+                            brick_pillar_walls:
+                                "^(?:mcwfences:|stonezone:mcf/).*brick_pillar_wall$",
+                        },
                     },
-                    "railing_walls": {
-                        pattern: "^(?:mcwfences:|stonezone:mcf/).*railing_.*wall$",
+                    railing_walls: {
+                        pattern:
+                            "^(?:mcwfences:|stonezone:mcf/).*railing_.*wall$",
                         children: {
-                            "brick_railing_walls": "^(?:mcwfences:|stonezone:mcf/).*railing_.*brick_wall$"
-                        }
+                            brick_railing_walls:
+                                "^(?:mcwfences:|stonezone:mcf/).*railing_.*brick_wall$",
+                        },
                     },
-                    "modern_walls": {
-                        pattern: "^(?:mcwfences:|stonezone:mcf/).*modern_.*wall$",
+                    modern_walls: {
+                        pattern:
+                            "^(?:mcwfences:|stonezone:mcf/).*modern_.*wall$",
                         children: {
-                            "brick_modern_walls": "^(?:mcwfences:|stonezone:mcf/).*modern_.*brick_wall$"
-                        }
+                            brick_modern_walls:
+                                "^(?:mcwfences:|stonezone:mcf/).*modern_.*brick_wall$",
+                        },
                     },
-                    "grass_topped_walls": {
-                        pattern: "^(?:mcwfences:|stonezone:mcf/).*grass_topped_wall$",
+                    grass_topped_walls: {
+                        pattern:
+                            "^(?:mcwfences:|stonezone:mcf/).*grass_topped_wall$",
                         children: {
-                            "brick_grass_topped_walls": "^(?:mcwfences:|stonezone:mcf/).*brick_grass_topped_wall$"
-                        }
-                    }
-                }
-            }
-        }
+                            brick_grass_topped_walls:
+                                "^(?:mcwfences:|stonezone:mcf/).*brick_grass_topped_wall$",
+                        },
+                    },
+                },
+            },
+        },
     },
-    "paths": {
+    paths: {
         pattern: "^(mcwpaths:|stonezone:mcp/).*path$",
         dynamicGrouping: true,
         children: {
-            "planks_paths": "planks_path$",
-            "rocky_paths": "rocky_path$"
-        }
+            planks_paths: "planks_path$",
+            rocky_paths: "rocky_path$",
+        },
     },
-
-    // ─── Fences & Gates (no modifiers) ───────────────────────────────────
-    "fences": {
+    fences: {
         pattern: "fences?$",
         children: {
-            "horse_fences": "horse_fence$",
-            "picket_fences": "picket_fence$",
-            "stockade_fences": "stockade_fence$",
-            "wired_fences": "wired_fence$",
-            "metal_fences": "metal_fence$",
-            "cheval_de_frises": "cheval_de_frise$"
-        }
+            horse_fences: "horse_fence$",
+            picket_fences: "picket_fence$",
+            stockade_fences: "stockade_fence$",
+            wired_fences: "wired_fence$",
+            metal_fences: "metal_fence$",
+            cheval_de_frises: "cheval_de_frise$",
+        },
     },
-    "fence_gates": {
+    fence_gates: {
         pattern: "gate$",
         exclude: "supplementaries",
         children: {
-            "railing_gates": {
+            railing_gates: {
                 pattern: "railing_gate$",
                 children: {
-                    "brick_railing_gates": "bricks?_(?:[a-z0-9_]*_)?railing_gate$"
-                }
+                    brick_railing_gates:
+                        "bricks?_(?:[a-z0-9_]*_)?railing_gate$",
+                },
             },
-            "highley_gates": "highley_gate$",
-            "pyramid_gates": "pyramid_gate$",
-            "curved_gates": "curved_gate$",
-            "metal_fence_gates": "metal_fence_gate$"
-        }
+            highley_gates: "highley_gate$",
+            pyramid_gates: "pyramid_gate$",
+            curved_gates: "curved_gate$",
+            metal_fence_gates: "metal_fence_gate$",
+        },
     },
-    "bridges": {
+    bridges: {
         pattern: "bridge$",
         exclude: "create_connected",
         children: {
-            "bridge_piers": "bridge_pier$",
-            "log_bridge_middles": "log_bridge_middle$",
-            "rail_bridges": "rail_bridge$",
-            "rope_bridges": "rope_.*_bridge$",
-            "brick_bridges": "brick_bridge$",
-            "balustrade_bridges": "balustrade_.*bridge$"
-        }
+            bridge_piers: "bridge_pier$",
+            log_bridge_middles: "log_bridge_middle$",
+            rail_bridges: "rail_bridge$",
+            rope_bridges: "rope_.*_bridge$",
+            brick_bridges: "brick_bridge$",
+            balustrade_bridges: "balustrade_.*bridge$",
+        },
     },
-
-    // ─── Stripped-modifier groups (dynamicGrouping: true) ────────────────
-    "logs": {
+    logs: {
         pattern: "(?:log|stem)$",
         dynamicGrouping: true,
-        exclude: [".*(?:wood|hyphae).*", "natures_spirit:lotus_stem", "aether:berry_bush_stem", "aethersdelight:peppermint_bush_stem", "aether_redux:zanberry_bush_stem"],
-        exact: ["upgrade_aquatic:driftwood_log", "minecraft:bamboo_block", "natures_spirit:redwood_log"],
+        exclude: [
+            ".*(?:wood|hyphae).*",
+            "natures_spirit:lotus_stem",
+            "aether:berry_bush_stem",
+            "aethersdelight:peppermint_bush_stem",
+            "aether_redux:zanberry_bush_stem",
+        ],
+        exact: [
+            "upgrade_aquatic:driftwood_log",
+            "minecraft:bamboo_block",
+            "natures_spirit:redwood_log",
+        ],
         children: {
-            "hollow_logs": "hollow_.*_log$",
-            "stripped_logs": {
+            hollow_logs: { pattern: "hollow_.*_log$" },
+            stripped_logs: {
                 pattern: "stripped_(?:.*_)?(?:log|stem)$",
                 exact: ["minecraft:stripped_bamboo_block"],
-                children: {}
-            }
-        }
+                children: {},
+            },
+        },
     },
-    "wood": {
+    wood: {
         pattern: "(?:wood|hyphae|driftwood|redwood)$",
         dynamicGrouping: true,
-        exclude: [".*(?:log|stem).*", "supplementaries", "suppsquared", "railways"],
-        children: {}
+        exclude: [
+            ".*(?:log|stem).*",
+            "supplementaries",
+            "suppsquared",
+            "railways",
+        ],
+        children: {},
     },
-    "windows": {
+    windows: {
         pattern: "^(?:mcwwindows:|everycomp:mcw/|stonezone:mcw/).*window$",
         dynamicGrouping: true,
         children: {
-            "plank_windows": {
+            plank_windows: {
                 pattern: ".*plank_window$",
                 children: {
-                    "plank_windows_four": ".*plank_four_window$",
-                    "plank_pane_windows": ".*plank_pane_window$",
-                    "plank_windows_two": ".*plank_window2$"
-                }
+                    plank_windows_four: ".*plank_four_window$",
+                    plank_pane_windows: ".*plank_pane_window$",
+                    plank_windows_two: ".*plank_window2$",
+                },
             },
-            "windows_four": {
+            windows_four: {
                 pattern: "four_window$",
-                children: {
-                    "plank_windows_four": ".*plank_four_window$"
-                }
+                children: { plank_windows_four: ".*plank_four_window$" },
             },
-            "pane_windows": {
+            pane_windows: {
                 pattern: "pane_window$",
-                children: {
-                    "plank_pane_windows": ".*plank_pane_window$"
-                }
+                children: { plank_pane_windows: ".*plank_pane_window$" },
             },
-            "windows_two": {
+            windows_two: {
                 pattern: "window2$",
-                children: {
-                    "plank_windows_two": ".*plank_window2$"
-                }
-            }
-        }
+                children: { plank_windows_two: ".*plank_window2$" },
+            },
+        },
     },
-    "create_windows": {
+    create_windows: {
         pattern: "^(?:everycomp:c/|create:|railways:).*window$",
         children: {
-            "single_pane_locometal_windows": ".*single_pane_locometal_window$",
-            "two_pane_locometal_windows": ".*two_pane_locometal_window$",
-            "four_pane_locometal_windows": ".*four_pane_locometal_window$",
-            "round_pane_locometal_windows": ".*round_pane_locometal_window$"
-        }
+            single_pane_locometal_windows: ".*single_pane_locometal_window$",
+            two_pane_locometal_windows: ".*two_pane_locometal_window$",
+            four_pane_locometal_windows: ".*four_pane_locometal_window$",
+            round_pane_locometal_windows: ".*round_pane_locometal_window$",
+        },
     },
-    "bookshelves": {
+    bookshelves: {
         pattern: "bookshelf$",
         dynamicGrouping: true,
         children: {
-            "log_bookshelves": {
-                pattern: "^(?:mcwfurnitures:|everycomp:mcfur/).*bookshelf$"
-            }
-        }
+            log_bookshelves: {
+                pattern: "^(?:mcwfurnitures:|everycomp:mcfur/).*bookshelf$",
+            },
+        },
     },
-    "cupboards": {
+    cupboards: {
         pattern: "cupboard$",
         dynamicGrouping: true,
         children: {
-            "bookshelf_cupboards": {
-                pattern: "bookshelf_cupboard$"
-            }
-        }
+            bookshelf_cupboards: { pattern: "bookshelf_cupboard$" },
+        },
     },
-    "chairs": {
+    chairs: {
         pattern: "chair$",
         dynamicGrouping: true,
         children: {
-            "modern_chairs": { pattern: "modern_chair$", children: {} },
-            "stool_chairs": { pattern: "stool_chair$", children: {} },
-            "striped_pattern_chairs": { pattern: "striped_chair$", children: {} }
-        }
+            modern_chairs: { pattern: "modern_chair$", children: {} },
+            stool_chairs: { pattern: "stool_chair$", children: {} },
+            striped_pattern_chairs: { pattern: "striped_chair$", children: {} },
+        },
     },
-    "tables": {
+    tables: {
         pattern: "^(?:mcwfurnitures:|everycomp:mcfur/).*table$",
         dynamicGrouping: true,
         children: {
-            "coffee_tables": { pattern: "coffee_table$", children: {} },
-            "end_tables": { pattern: "end_table$", children: {} },
-            "glass_tables": { pattern: "glass_table$", children: {} }
-        }
+            coffee_tables: { pattern: "coffee_table$", children: {} },
+            end_tables: { pattern: "end_table$", children: {} },
+            glass_tables: { pattern: "glass_table$", children: {} },
+        },
     },
-    "desks": {
+    desks: {
         pattern: "desk$",
         dynamicGrouping: true,
         exclude: "security_desk",
         children: {
-            "covered_desks": { pattern: "covered_desk$", children: {} },
-            "modern_desks": { pattern: "modern_desk$", children: {} }
-        }
+            covered_desks: { pattern: "covered_desk$", children: {} },
+            modern_desks: { pattern: "modern_desk$", children: {} },
+        },
     },
-    "counters": {
+    counters: {
         pattern: "counter$",
         dynamicGrouping: true,
         exclude: "geiger_counter",
         children: {
-            "cupboard_counters": { pattern: "cupboard_counter$", children: {} },
-            "drawer_counters": {
+            cupboard_counters: { pattern: "cupboard_counter$", children: {} },
+            drawer_counters: {
                 pattern: "drawer_counter$",
                 children: {
-                    "double_drawer_counters": { pattern: "double_drawer_counter$", children: {} }
-                }
-            }
-        }
+                    double_drawer_counters: {
+                        pattern: "double_drawer_counter$",
+                        children: {},
+                    },
+                },
+            },
+        },
     },
-    "kitchen_cabinets": {
+    kitchen_cabinets: {
         pattern: "kitchen_cabinet$",
         dynamicGrouping: true,
         children: {
-            "double_kitchen_cabinets": { pattern: "double_kitchen_cabinet$", children: {} },
-            "glass_kitchen_cabinets": { pattern: "glass_kitchen_cabinet$", children: {} }
-        }
+            double_kitchen_cabinets: {
+                pattern: "double_kitchen_cabinet$",
+                children: {},
+            },
+            glass_kitchen_cabinets: {
+                pattern: "glass_kitchen_cabinet$",
+                children: {},
+            },
+        },
     },
-    "wardrobes": {
+    wardrobes: {
         pattern: "wardrobe$",
         dynamicGrouping: true,
         children: {
-            "double_wardrobes": { pattern: "double_wardrobe$", children: {} },
-            "modern_wardrobes": { pattern: "modern_wardrobe$", children: {} }
-        }
+            double_wardrobes: { pattern: "double_wardrobe$", children: {} },
+            modern_wardrobes: { pattern: "modern_wardrobe$", children: {} },
+        },
     },
-    "drawers": {
+    drawers: {
         pattern: "drawer$",
         dynamicGrouping: true,
         exclude: "cabinet_drawer",
         children: {
-            "bookshelf_drawers": {
+            bookshelf_drawers: {
                 pattern: "bookshelf_drawer$",
                 children: {
-                    "lower_bookshelf_drawers": { pattern: "lower_bookshelf_drawer$" }
-                }
+                    lower_bookshelf_drawers: {
+                        pattern: "lower_bookshelf_drawer$",
+                    },
+                },
             },
-            "double_drawers": { pattern: "double_drawer$", children: {} },
-            "large_drawers": { pattern: "large_drawer$", children: {} },
-            "triple_drawers": {
+            double_drawers: { pattern: "double_drawer$", children: {} },
+            large_drawers: { pattern: "large_drawer$", children: {} },
+            triple_drawers: {
                 pattern: "triple_drawer$",
                 children: {
-                    "lower_triple_drawers": { pattern: "lower_triple_drawer$", children: {} }
-                }
-            }
-        }
+                    lower_triple_drawers: {
+                        pattern: "lower_triple_drawer$",
+                        children: {},
+                    },
+                },
+            },
+        },
     },
-    "sinks": {
+    sinks: {
         pattern: "sink$",
         dynamicGrouping: true,
         children: {
-            "kitchen_sinks": { pattern: "kitchen_sink$", children: {} }
-        }
+            kitchen_sinks: { pattern: "kitchen_sink$", children: {} },
+        },
     },
-
-    // ─── Glass ───────────────────────────────────────────────────────────
-    "stained_glass": {
+    stained_glass: {
         pattern: "",
         tag: ["forge:stained_glass"],
         children: {
-            "stained_glass_panes": {
+            stained_glass_panes: {
                 pattern: "",
-                tag: ["forge:stained_glass_panes"]
+                tag: ["forge:stained_glass_panes"],
             },
-            "stained_framed_glass": {
+            stained_framed_glass: {
                 pattern: "",
                 tag: ["quark:stained_framed_glasses"],
                 children: {
-                    "stained_framed_glass_panes": {
+                    stained_framed_glass_panes: {
                         pattern: "",
-                        tag: ["quark:stained_framed_glass_panes"]
-                    }
-                }
-            }
-        }
+                        tag: ["quark:stained_framed_glass_panes"],
+                    },
+                },
+            },
+        },
     },
-    "mosaic_glass": {
+    mosaic_glass: {
         pattern: "mosaic_glass$",
-        children: {
-            "mosaic_glass_panes": "mosaic_glass_pane$"
-        }
+        children: { mosaic_glass_panes: "mosaic_glass_pane$" },
     },
-    "window_panes": {
-        pattern: "window_pane$",
-        children: {}
-    },
-    "shutters": {
+    window_panes: { pattern: "window_pane$", children: {} },
+    shutters: {
         pattern: "shutter$",
-        children: {
-            "louvered_shutters": "louvered_shutter$"
-        }
+        children: { louvered_shutters: "louvered_shutter$" },
     },
-    "corundums": {
+    corundums: {
         pattern: "corundum$",
         children: {
-            "waxed_corundums": "waxed_.*_corundum$",
-            "corundum_panes": "corundum_pane$",
-            "corundum_clusters": "corundum_cluster$"
-        }
+            waxed_corundums: "waxed_.*_corundum$",
+            corundum_panes: "corundum_pane$",
+            corundum_clusters: "corundum_cluster$",
+        },
     },
-
-    // ─── Roofs & Gutters ─────────────────────────────────────────────────
-    "gutter_bases": {
-        pattern: "^mcwroofs:.*gutter_base",
-        children: {}
-    },
-    "gutter_middles": {
-        pattern: "^mcwroofs:.*gutter_middle",
-        children: {}
-    },
-    "roofs": {
+    gutter_bases: { pattern: "^mcwroofs:.*gutter_base", children: {} },
+    gutter_middles: { pattern: "^mcwroofs:.*gutter_middle", children: {} },
+    roofs: {
         pattern: "roof$",
+        dynamicGrouping: true,
         children: {
-            "attic_roofs": "attic_roof$",
-            "lower_roofs": "lower_roof$",
-            "planks_attic_roofs": "planks_attic_roof$",
-            "planks_lower_roofs": "planks_lower_roof$",
-            "planks_roofs": "planks_roof$",
-            "planks_steep_roofs": "planks_steep_roof$",
-            "planks_top_roofs": "planks_top_roof$",
-            "planks_upper_lower_roofs": "planks_upper_lower_roof$",
-            "planks_upper_steep_roofs": "planks_upper_steep_roof$",
-            "steep_roofs": "steep_roof$",
-            "top_roofs": "top_roof$",
-            "upper_lower_roofs": "upper_lower_roof$",
-            "upper_steep_roofs": "upper_steep_roof$",
-            "striped_awnings": "striped_awning$"
-        }
+            attic_roofs: "attic_roof$",
+            lower_base_roofs: {
+                pattern: "lower_roof$",
+                children: { lower_top_roof: "upper_lower_roof$" },
+            },
+            planks_attic_roofs: "planks_attic_roof$",
+            planks_lower_roofs: "planks_lower_roof$",
+            planks_roofs: "planks_roof$",
+            planks_steep_roofs: {pattern: "planks_steep_roof$"},
+            planks_top_roofs: "planks_top_roof$",
+            planks_upper_lower_roofs: "planks_upper_lower_roof$",
+            planks_upper_steep_roofs: "planks_upper_steep_roof$",
+            steep_base_roofs: {pattern: "steep_roof$", children: {steep_top_roofs: "upper_steep_roof$"}},
+            top_roofs: "top_roof$",
+            upper_lower_roofs: "upper_lower_roof$",
+            upper_steep_roofs: "upper_steep_roof$",
+            striped_awnings: "striped_awning$",
+        },
     },
-
-    // ─── Rails ───────────────────────────────────────────────────────────
-    "train_tracks": {
+    train_tracks: {
         pattern: "railways:track_",
         exclude: ["coupler", "switch", "monorail"],
         children: {
-            "narrow_train_tracks": "railways:track_.*_narrow$",
-            "wide_train_tracks": "railways:track_.*_wide$"
-        }
+            narrow_train_tracks: "railways:track_.*_narrow$",
+            wide_train_tracks: "railways:track_.*_wide$",
+        },
     },
-
-    // ─── Pavings & Paths ─────────────────────────────────────────────────
-    "pavings": {
+    pavings: {
         pattern: "paving$",
-        children: {
-            "dumble_paving": "dumble_paving$"
-        }
+        children: { dumble_paving: "dumble_paving$" },
     },
-
-    // ─── Containers & Storage ────────────────────────────────────────────
-    "chests": {
+    chests: {
         pattern: "chest$",
-        exclude: ["cursed", "boat", "minecraft:ender_chest", "unusualend:warped_chest", "aether:treasure_chest", "rottencreatures:treasure_chest", "ae2:chest", "alexscaves:cave_painting_vallumraptor_chest", "echochest:echo_chest", "netherchested:nether_chest", "mekanism:personal_chest"],
-        children: {
-            "trapped_chests": "trapped_.*chest$"
-        }
+        exclude: [
+            "cursed",
+            "ghost",
+            "boat",
+            "minecraft:ender_chest",
+            "unusualend:warped_chest",
+            "aether:treasure_chest",
+            "rottencreatures:treasure_chest",
+            "ae2:chest",
+            "alexscaves:cave_painting_vallumraptor_chest",
+            "echochest:echo_chest",
+            "netherchested:nether_chest",
+            "mekanism:personal_chest",
+        ],
+        children: { trapped_chests: "trapped_.*chest$" },
     },
-    "potions": {
+    potions: {
         pattern: "potion$",
         children: {
-            "lingering_potions": "lingering_potion$",
-            "splash_potions": "splash_potion$"
-        }
+            lingering_potions: "lingering_potion$",
+            splash_potions: "splash_potion$",
+        },
     },
-
-    // ─── Nature & Materials ──────────────────────────────────────────────
-    "concrete": {
+    concrete: {
         pattern: "concrete$",
-        children: {
-            "concrete_powder": "concrete_powder$"
-        }
+        children: { concrete_powder: "concrete_powder$" },
     },
-    "terracotta": {
+    terracotta: {
         pattern: "terracotta$",
-        children: {
-            "glazed_terracotta": "glazed_terracotta$"
-        }
+        children: { glazed_terracotta: "glazed_terracotta$" },
     },
-    "corals": {
+    corals: {
         pattern: "coral$",
-        children: {
-            "coral_blocks": "coral_block$",
-            "coral_fans": "coral_fan$"
-        }
+        children: { coral_blocks: "coral_block$", coral_fans: "coral_fan$" },
     },
-    "carpets": {
+    carpets: {
         pattern: "carpet$",
         exclude: ["bamboo", "cloudbloom", "bison", "fungal"],
         children: {
-            "leaf_carpets": "leaf_carpet$",
-            "moss_carpets": "moss_carpet$"
-        }
+            leaf_carpets: "leaf_carpet$",
+            moss_carpets: "moss_carpet$",
+        },
     },
-    "ladders": {
+    wooden_ladders: {
         pattern: "",
         tag: ["quark:ladders", "blueprint:wooden_ladders"],
-        children: {}
+        children: {},
     },
-    "boats": {
+    boats: {
         pattern: "boat$",
         exact: ["minecraft:bamboo_raft"],
         children: {
-            "furnace_boats": ["furnace_boat$", "boatload:bamboo_furnace_raft"],
-            "chest_boats": ["chest_boat$", "minecraft:bamboo_chest_raft"],
-            "large_boats": ["large_.*_boat$", "boatload:wide_bamboo_raft"]
-        }
+            furnace_boats: ["furnace_boat$", "boatload:bamboo_furnace_raft"],
+            chest_boats: ["chest_boat$", "minecraft:bamboo_chest_raft"],
+            large_boats: ["large_.*_boat$", "boatload:wide_bamboo_raft"],
+        },
     },
-    "signs": {
+    signs: {
         pattern: "sign$",
         exclude: ["spatial_sign"],
         children: {
-            "canvas_signs": {
-                pattern: ".*canvas_sign$",
-                exclude: "hanging",
-            },
-            "hanging_signs": {
+            canvas_signs: { pattern: ".*canvas_sign$", exclude: "hanging" },
+            hanging_signs: {
                 pattern: "hanging_(?:.*_)?sign$",
-                children: {
-                    "hanging_canvas_signs": ".*hanging_.*canvas_sign$"
-                }
-            }
-        }
+                children: { hanging_canvas_signs: ".*hanging_.*canvas_sign$" },
+            },
+        },
     },
-    "parapets": {
+    parapets: {
         pattern: "parapet$",
         children: {
-            "log_parapets": "(log|stem)_parapet$",
-            "plank_parapets": "plank_parapet$"
-        }
+            log_parapets: "(log|stem)_parapet$",
+            plank_parapets: "plank_parapet$",
+        },
     },
-    "dart_shooters": {
-        pattern: "dart_shooter$"
-    },
-    "darts": {
-        pattern: "^aether.*dart$"
-    },
-    "table_cloths": {
+    dart_shooters: { pattern: "dart_shooter$" },
+    darts: { pattern: "^aether.*dart$" },
+    table_cloths: {
         pattern: "table_cloth$",
         children: {
-            "table_covers": "andesite_table_cloth$|brass_table_cloth$|copper_table_cloth$"
-        }
+            table_covers:
+                "andesite_table_cloth$|brass_table_cloth$|copper_table_cloth$",
+        },
     },
-    "buttons": {
-        pattern: "button$",
-        exclude: "eject"
+    buttons: { pattern: "button$", exclude: "eject" },
+    fire_rings: { pattern: "fire_ring$" },
+    stained_encased_copper_pipes: {
+        pattern: "encased_pipe$",
+        exact: ["-quark:encased_pipe"],
     },
+    hang_gliders: { pattern: ".*_hang_glider$" },
+    infested_blocks: {pattern: "infested", exclude: ["opposing_force"]},
 
-    // ─── Blocks sink (catch-all with stone modifiers) ────────────────────
-    "blocks": {
+    // ─── Blocks sink ─────────────────────────────────────────────────────
+    // Catch-all for unclaimed items. Combines modifierTokens + materials
+    // to produce tags like kubejs:polished_granite_blocks
+    blocks: {
         exclude: [
-            "quark:iron_pillar", "alexscaves:scarlet_neodymium_pillar",
-            "alexscaves:azure_neodymium_pillar", "locked", "treasure"
+            "quark:iron_pillar",
+            "alexscaves:scarlet_neodymium_pillar",
+            "alexscaves:azure_neodymium_pillar",
+            "locked",
+            "treasure",
+            "glass",
+            "shard",
+            "trapped",
+            "boss",
         ],
         exact: [
             "-minecraft:brick",
@@ -571,43 +762,41 @@ global.taxonomy = {
             "-endergetic:eumus_brick",
             "-ancient_aether:valkyrie_brick",
             "-alexscaves:cinder_brick",
-            "-create:polished_roze_quartz"
+            "-create:polished_roze_quartz",
         ],
+        forceInclude: ["flagstone", "running_bond", "windmill_weave", "crystal_floor"],
         dynamicGrouping: true,
         isSink: true,
-        excludeModifiers: ["stripped"]
-    }
+        excludeModifiers: ["stripped"],
+    },
 };
 
-// ─── Standalone tags (no parent/child exclusion) ─────────────────────────
+// ─── Standalone tags ─────────────────────────────────────────────────────
 global.standaloneTags = {
-    "paper_lanterns": "paper_lantern$",
-    "beehives": "beehive",
-    "food_displays": "^displaydelight:(?!.*(?:small_)?food_plate$).*",
-    "shingles": "^quark:.*shingles$",
-    "pressure_plates": "pressure_plate$",
-    "planks": "planks$",
-    "leaves": "leaves$",
-    "saplings": "(?:sapling|propagule)$",
-    "beds": "bed$",
-    "paintings": "painting$",
-    "candles": "candle$",
-    "banners": "banner$",
-    "shulker_boxes": "shulker_box$",
-    "seeds": "seeds$",
-    "torches": "torch$",
-    "campfires": "campfire$",
-    "banner_patterns": "banner_pattern",
-    "hedges": "hedge$",
-    "balconies": "balcony$",
-    "platforms": "platform$",
-    "railings": "railing$",
-    "gothic": "gothic$",
-    "arrow_slit": "arrow_slit$",
-    "blinds": "blinds$",
-    "curtains": "curtain$",
-    "curtain_rods": "curtain_rod$",
-    "ores": "[a-z0-9_]+_ores?$"
+    paper_lanterns: "paper_lantern$",
+    beehives: "beehive",
+    food_displays: "^displaydelight:(?!.*(?:small_)?food_plate$).*",
+    pressure_plates: "pressure_plate$",
+    planks: "planks$",
+    leaves: "leaves$",
+    beds: "bed$",
+    paintings: "painting$",
+    banners: "banner$",
+    shulker_boxes: "shulker_box$",
+    seeds: "seeds$",
+    torches: "torch$",
+    campfires: "campfire$",
+    banner_patterns: "banner_pattern",
+    hedges: "hedge$",
+    balconies: "balcony$",
+    platforms: "platform$",
+    railings: "railing$",
+    gothic: "gothic$",
+    arrow_slit: "arrow_slit$",
+    blinds: "blinds$",
+    curtains: "curtain$",
+    curtain_rods: "curtain_rod$",
+    ores: "[a-z0-9_]+_ores?$",
 };
 
 // ─── Custom regex-matched EMI groups ─────────────────────────────────────
@@ -621,11 +810,13 @@ global.customEmiGroups = {
     "ae2:lumen_paint_balls": "^ae2:.*lumen_paint_ball",
     "iceandfire:podiums": "^iceandfire:podium",
     "appmek:chemical_storage_cells": "^appmek:chemical_storage_cell.*",
-    "appmek:portable_chemical_storage_cells": "^appmek:portable_chemical_storage_cell.*",
+    "appmek:portable_chemical_storage_cells":
+        "^appmek:portable_chemical_storage_cell.*",
     "endergetic:bolloom_balloons": "^endergetic:.*_bolloom_balloon$",
     "ae2:facades": "ae2:facade",
     "supplementaries:buntings": "supplementaries:bunting",
-    "supplementaries:bamboo_spikes_tipped": "supplementaries:bamboo_spikes_tipped",
+    "supplementaries:bamboo_spikes_tipped":
+        "supplementaries:bamboo_spikes_tipped",
     "minecraft:tipped_arrows": "minecraft:tipped_arrow",
     "minecraft:suspicious_stews": "minecraft:suspicious_stew",
     "irons_spellbooks:scrolls": "^irons_spellbooks:scroll(?!_forge)",
@@ -636,8 +827,8 @@ global.customEmiGroups = {
     "mcwfurnitures:couches": "couch$",
     "mcwfurnitures:chaises": "chaise$",
     "minecraft:goat_horns": "minecraft:goat_horn",
-    "azure_seastone_murals": "^cataclysm:azure_seastone_mural(?!_empty)",
-    "curved_azure_seastones": "^cataclysm:curved_azure_seastone"
+    azure_seastone_murals: "^cataclysm:azure_seastone_mural(?!_empty)",
+    curved_azure_seastones: "^cataclysm:curved_azure_seastone",
 };
 
 // ─── Pre-existing mod tags registered as EMI tabs ────────────────────────
@@ -669,7 +860,6 @@ global.nativeEmiGroups = [
     "create:seats",
     "ae2:paint_balls",
     "wan_ancient_beasts:charger_armors",
-    "wan_ancient_beasts:hang_gliders",
     "natures_spirit:kaolin",
     "natures_spirit:chalk",
     "waystones:sharestones",
@@ -686,8 +876,11 @@ global.nativeEmiGroups = [
     "minecraft:decorated_pot_sherds",
     "minecraft:wool",
     "supplementaries:sconces",
-    "aether:aerclouds",
     "irons_spellbooks:inscribed_rune",
     "minecraft:trim_templates",
-    "minecraft:smithing_templates"
+    "minecraft:smithing_templates",
+    "minecraft:saplings",
+    "wan_ancient_beasts:raider_horns",
+    "brewinandchewin:fermented_drinks",
+    "minecraft:candles"
 ];

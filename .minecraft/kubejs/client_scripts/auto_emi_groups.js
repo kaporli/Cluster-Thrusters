@@ -1,57 +1,91 @@
-const taxonomy = global.taxonomy;
-const standaloneTags = global.standaloneTags;
-const customEmiGroups = global.customEmiGroups;
-const nativeEmiGroups = global.nativeEmiGroups;
-const modifierTokens = global.modifierTokens;
+var taxonomy = global.taxonomy;
+var standaloneTags = global.standaloneTags;
+var customEmiGroups = global.customEmiGroups;
+var nativeEmiGroups = global.nativeEmiGroups;
+var modifierTokens = global.modifierTokens;
+var materials = global.materials || {};
 
-EmiPlusPlusEvents.registerGroups((event) => {
+EmiPlusPlusEvents.registerGroups(function (event) {
+    var tKeys = Object.keys(modifierTokens);
+    var mKeys = Object.keys(materials);
+
+    function safeRegister(id, tag) {
+        try {
+            event.register(id, tag);
+        } catch (e) {}
+    }
+
     function registerTaxonomyNode(key, nodeData, inheritedDynamic) {
-        var currentDynamic =
-            nodeData.dynamicGrouping || inheritedDynamic || false;
+        if (nodeData.disabled) return;
+
+        var passDownDynamic = nodeData.dynamicGrouping || inheritedDynamic || false;
+        var useMods = passDownDynamic && !nodeData.noModifiers;
+        var useMats = passDownDynamic && !nodeData.noMaterials;
 
         if (key !== "blocks") {
-            event.register("kubejs:" + key, "#kubejs:" + key);
+            safeRegister("kubejs:" + key, "#kubejs:" + key);
         }
 
-        if (currentDynamic) {
+        if (useMods || useMats) {
             var suffix = nodeData.isSink ? "blocks" : key;
-            var tKeys = Object.keys(modifierTokens);
-            tKeys.forEach((t1) => {
-                event.register(
-                    "kubejs:" + t1 + "_" + suffix,
-                    "#kubejs:" + t1 + "_" + suffix,
-                );
-                tKeys.forEach((t2) => {
-                    if (t1 >= t2) return;
-                    var c2 = [t1, t2].sort().join("_");
-                    event.register(
-                        "kubejs:" + c2 + "_" + suffix,
-                        "#kubejs:" + c2 + "_" + suffix,
-                    );
+
+            if (useMods) {
+                tKeys.forEach(function (t1) {
+                    safeRegister("kubejs:" + t1 + "_" + suffix, "#kubejs:" + t1 + "_" + suffix);
+
+                    if (useMats) {
+                        mKeys.forEach(function (m) {
+                            safeRegister("kubejs:" + t1 + "_" + m + "_" + suffix, "#kubejs:" + t1 + "_" + m + "_" + suffix);
+                        });
+                    }
+
+                    tKeys.forEach(function (t2) {
+                        if (t1 >= t2) return;
+                        var c2 = [t1, t2].sort().join("_");
+                        safeRegister("kubejs:" + c2 + "_" + suffix, "#kubejs:" + c2 + "_" + suffix);
+
+                        if (useMats) {
+                            mKeys.forEach(function (m) {
+                                safeRegister("kubejs:" + c2 + "_" + m + "_" + suffix, "#kubejs:" + c2 + "_" + m + "_" + suffix);
+                            });
+                        }
+                    });
                 });
-            });
+            }
+
+            if (useMats) {
+                mKeys.forEach(function (m) {
+                    safeRegister("kubejs:" + m + "_" + suffix, "#kubejs:" + m + "_" + suffix);
+                });
+            }
         }
 
+        // Recurse into children
         var children =
             typeof nodeData === "object" &&
             !Array.isArray(nodeData) &&
             nodeData.children
                 ? nodeData.children
                 : {};
-        Object.keys(children).forEach((ck) =>
-            registerTaxonomyNode(ck, children[ck], currentDynamic),
-        );
+        Object.keys(children).forEach(function (ck) {
+            registerTaxonomyNode(ck, children[ck], passDownDynamic);
+        });
     }
 
-    Object.keys(taxonomy).forEach((pk) =>
-        registerTaxonomyNode(pk, taxonomy[pk], false),
-    );
-    Object.keys(standaloneTags).forEach((k) =>
-        event.register("kubejs:" + k, "#kubejs:" + k),
-    );
-    Object.keys(customEmiGroups).forEach((k) => event.register(k, "#" + k));
-    nativeEmiGroups.forEach((k) => {
+    Object.keys(taxonomy).forEach(function (pk) {
+        registerTaxonomyNode(pk, taxonomy[pk], false);
+    });
+
+    Object.keys(standaloneTags).forEach(function (k) {
+        safeRegister("kubejs:" + k, "#kubejs:" + k);
+    });
+
+    Object.keys(customEmiGroups).forEach(function (k) {
+        safeRegister(k, "#" + k);
+    });
+
+    nativeEmiGroups.forEach(function (k) {
         var isTag = k.indexOf("#") === 0;
-        event.register(isTag ? k.substring(1) : k, isTag ? k : "#" + k);
+        safeRegister(isTag ? k.substring(1) : k, isTag ? k : "#" + k);
     });
 });
