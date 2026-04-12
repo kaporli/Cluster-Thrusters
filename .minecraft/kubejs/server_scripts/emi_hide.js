@@ -39,14 +39,9 @@ ServerEvents.tags('item', event => {
     event.add('c:hidden_from_recipe_viewers', /ancient_aether:.*sapling.*/);
     event.add('c:hidden_from_recipe_viewers', /upgrade_aquatic:.*sapling.*/);
     event.add('c:hidden_from_recipe_viewers', /minecraft:.*propagule.*/);
-    event.add('c:hidden_from_recipe_viewers', /minecraft:.*propagule.*/);
     event.add('c:hidden_from_recipe_viewers', /xaeroworldmap:.*/);
     event.add('c:hidden_from_recipe_viewers', /xaerominimap:.*/);
     event.add('c:hidden_from_recipe_viewers', /citadel:.*/);
     event.add('c:hidden_from_recipe_viewers', /structure_gel:.*/);
     event.add('c:hidden_from_recipe_viewers', /dragonlib:.*/);
-});
-
-ServerEvents.tags('item', event => {
-    event.add('forge:hidden_from_recipe_viewers', '#c:hidden_from_recipe_viewers');
 });

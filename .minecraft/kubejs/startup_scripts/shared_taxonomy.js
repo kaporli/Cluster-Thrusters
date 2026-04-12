@@ -184,7 +184,7 @@ global.materials = {
     fluix: "fluix",
     gingerbread: "gingerbread",
     wafer_cookie: "wafer_cookie",
-    bricks: "^minecraft:bricks?",
+    bricks: {pattern: "^(minecraft:|mcwpaths:|quark:|v_slab_compat:mcwpaths/).*bricks?.*", exclude: ["(?:^|[_/:])stone(?:[_/:]|$)", "(?:^|[_/:])mud(?:[_/:]|$)"]},
     ash_bricks: "ash_bricks?",
     aercloud: "aercloud",
     shell: "shell",
