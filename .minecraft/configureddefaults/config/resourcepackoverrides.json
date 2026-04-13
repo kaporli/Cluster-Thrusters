@@ -98,8 +98,7 @@
             "file/Quark Programmer Art.zip",
             "distinguishedpotions:potion_overrides",
             "builtin/builtin_resource_packs/legacy_dead_king_resource_pack",
-            "builtin/emissive_ores_compatibility",
-            "file/mod-descriptions-v11.1.zip"
+            "builtin/emissive_ores_compatibility"
         ],
         "$$hidden": {
             "hidden": true
