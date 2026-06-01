@@ -60,7 +60,7 @@
 	only_one_research_needed = false
 	#How many attempts to find a biome a cave map engages in when used. Increase this to increase the search radius, or decrease it to make them faster.
 	#Range: > 64
-	cave_map_search_attempts = 128000
+	cave_map_search_attempts = 64
 	#How wide each search attempt scans for a biome. Increasing this generally makes cave biome maps faster - at the cost of losing fidelity(may skip biomes smaller than this in block width).
 	#Range: 4 ~ 256
 	cave_map_search_width = 64

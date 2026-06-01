@@ -5,7 +5,7 @@
         "builtin/add_pack_finders_test",
         "mod/subtle_effects:resourcepacks/biome_color_water_particles",
         "eatinganimations_compat",
-        "file/ArmorTrimsCompat_1.0.zip",
+        "file/Armor Trims Compat 1.1.zip",
         "obscure_tooltips/packs/vibrant_tooltips",
         "builtin/aether_tips",
         "file/§eEating Animations More Compat.zip",
@@ -87,7 +87,7 @@
             "builtin/add_pack_finders_test",
             "mod/subtle_effects:resourcepacks/biome_color_water_particles",
             "eatinganimations_compat",
-            "file/ArmorTrimsCompat_1.0.zip",
+            "file/Armor Trims Compat 1.1.zip",
             "Moonlight Mods Dynamic Assets",
             "file/SE Vanilla Consistency 1.20.1.zip",
             "builtin/plank_consistency",
@@ -98,8 +98,7 @@
             "file/Quark Programmer Art.zip",
             "distinguishedpotions:potion_overrides",
             "builtin/builtin_resource_packs/legacy_dead_king_resource_pack",
-            "builtin/emissive_ores_compatibility",
-            "file/mod-descriptions-v11.1.zip"
+            "builtin/emissive_ores_compatibility"
         ],
         "$$hidden": {
             "hidden": true
