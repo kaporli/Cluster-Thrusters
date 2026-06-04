@@ -12,18 +12,18 @@ ServerEvents.recipes(event => {
         }
       }
     },
-    {
-      "id": "ae2:charger/charged_certus_quartz_crystal_calt2",
-      "recipe": {
-        "type": "extendedae:ex_charger", // TODO
-        "ingredient": {
-          "item": "create:polished_rose_quartz"
-        },
-        "result": {
-          "item": "ae2:charged_certus_quartz_crystal"
-        }
-      }
-    },
+    // {
+    //   "id": "ae2:charger/charged_certus_quartz_crystal_calt2",
+    //   "recipe": {
+    //     "type": "extendedae:ex_charger", // TODO
+    //     "ingredient": {
+    //       "item": "create:polished_rose_quartz"
+    //     },
+    //     "result": {
+    //       "item": "ae2:charged_certus_quartz_crystal"
+    //     }
+    //   }
+    // },
     {
       "id": "ae2:decorative/quartz_fixture_calt",
       "recipe": {
