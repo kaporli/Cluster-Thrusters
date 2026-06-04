@@ -2,6 +2,8 @@
     "schema_version": 2,
     "failed_reloads_per_session": 5,
     "default_packs": [
+        "continuity:default",
+        "continuity:glass_pane_culling_fix",
         "builtin/add_pack_finders_test",
         "mod/subtle_effects:resourcepacks/biome_color_water_particles",
         "eatinganimations_compat",
