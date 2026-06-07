@@ -6,10 +6,18 @@ ServerEvents.recipes(event => {
     event.remove({ type: 'scguns:powered_macerating' });
     event.remove({ type: 'scguns:gun_bench' });
 
-    event.remove({ type: 'create_armorer:create_workbench' });
-    event.remove({ type: 'tacz:gun_smith_table' });
-    event.remove({ type: 'tacz:attachment_workbench' });
-    event.remove({ type: 'tacz:ammo_workbench' });
+    // create_armorer:create_workbench recipes intentionally NOT removed — removing them
+    // causes JEI to lose the create_armorer gun entries. The workbench itself is
+    // uncraftable (item_obliterator + recipe removed), so these recipes are unreachable anyway.
+    // Remove recipes processed IN the tacz workbenches (custom crafting station types)
+    // event.remove({ type: 'tacz:gun_smith_table' });
+    // event.remove({ type: 'tacz:gun_smith_table_crafting' });
+    // event.remove({ type: 'tacz:attachment_workbench' });
+    // event.remove({ type: 'tacz:ammo_workbench' });
+    // Remove the vanilla crafting recipes that CRAFT the tacz workbench blocks themselves
+    // event.remove({ id: 'tacz:ammo_workbench' });
+    // event.remove({ id: 'tacz:attachment_workbench' });
+    // event.remove({ id: 'tacz:gun_smith_table' });
 
     // storagenetwork:stock_upgrade recipe
     event.remove({ output: 'storagenetwork:stock_upgrade' });
