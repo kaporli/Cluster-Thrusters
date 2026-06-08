@@ -1,16 +1,3 @@
-// Applied Armorer — AE2 Recipes
-// Ammo:         ae2:inscriber  (kept — thematic and working)
-// Muzzle chips: ae2:inscriber  (kept — chips = inscribed circuits)
-// Guns:         create:mechanical_crafting  with AE2 components
-// Attachments:  create:mechanical_crafting  with AE2 components
-//
-// Tier legend (guns):
-//   Tier 1  — Logic Processor          (pistols)
-//   Tier 2  — Calculation Processor    (lever, SMG, rifle, shotgun)
-//   Tier 3  — Engineering Processor    (GL)
-//   Tier 4  — Engineering + Energy     (sniper, HMG)
-//   Tier 5  — Controller + Dense Cell  (EMG — maximum endgame)
-
 ServerEvents.recipes(event => {
 
     // ==========================================================
@@ -18,58 +5,72 @@ ServerEvents.recipes(event => {
     // ==========================================================
 
     // etched_quartz_bullet — standard rifle/SMG/pistol ammo
+    event.remove({ id: 'applied_armorer:ammo/etched_quartz_bullet' });
     event.custom({
         type: 'ae2:inscriber',
         ingredients: {
-            top: { item: 'ae2:printed_silicon' },
-            middle: { item: 'ae2:certus_quartz_crystal' }
+            top: { item: 'ae2:charged_certus_quartz_crystal' },
+            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:gas_pistol_ammo"}' },
+            // bottom: { item: 'ae2:fluix_crystal'}
         },
         mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 8, nbt: { AmmoId: 'applied_armorer:etched_quartz_bullet' } }
+        result: { item: 'tacz:ammo', count: 8, nbt: '{AmmoId:"applied_armorer:etched_quartz_bullet"}' }
     })
 
+    
     // hard_core_quartz_bullet — sniper ammo
+    event.remove({ id: 'applied_armorer:ammo/hard_core_quartz_bullet' });
     event.custom({
         type: 'ae2:inscriber',
         ingredients: {
-            top: { item: 'ae2:printed_engineering_processor' },
-            middle: { item: 'ae2:charged_certus_quartz_crystal' }
+            top: { item: 'ae2:charged_certus_quartz_crystal' },
+            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:rbapb"}' },
+            // bottom: { item: 'ae2:fluix_crystal'}
         },
         mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 4, nbt: { AmmoId: 'applied_armorer:hard_core_quartz_bullet' } }
+        result: { item: 'tacz:ammo', count: 4, nbt: '{AmmoId:"applied_armorer:hard_core_quartz_bullet"}' }
     })
 
     // cluster_quartz_bullet — shotgun pellet ammo
+    event.remove({ id: 'applied_armorer:ammo/cluster_quartz_bullet' });
     event.custom({
         type: 'ae2:inscriber',
         ingredients: {
-            top: { item: 'ae2:printed_calculation_processor' },
-            middle: { item: 'ae2:certus_quartz_dust' }
+            top: { item: 'ae2:quartz_cluster' },
+            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"tacz:12g"}' },
+            // bottom: { item: 'ae2:fluix_crystal'}
         },
         mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 8, nbt: { AmmoId: 'applied_armorer:cluster_quartz_bullet' } }
+        result: { item: 'tacz:ammo', count: 8, nbt: '{AmmoId:"applied_armorer:cluster_quartz_bullet"}' }
     })
 
+    
     // fluix_battery — EMG energy cell ammo
+    event.remove({ id: 'applied_armorer:ammo/fluix_battery' });
     event.custom({
         type: 'ae2:inscriber',
         ingredients: {
-            top: { item: 'ae2:printed_engineering_processor' },
-            middle: { item: 'ae2:fluix_crystal' }
+            top: { item: 'ae2:silicon' },
+            middle: { item: 'ae2:calculation_processor' },
+            bottom: { item: 'ae2:fluix_crystal'}
         },
         mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 4, nbt: { AmmoId: 'applied_armorer:fluix_battery' } }
+        result: { item: 'tacz:ammo', count: 4, nbt: '{AmmoId:"applied_armorer:fluix_battery"}' }
     })
 
+    
     // fluix_infused_grenade — grenade launcher explosive
+    event.remove({ id: 'applied_armorer:ammo/fluix_infused_grenade' });
     event.custom({
         type: 'ae2:inscriber',
         ingredients: {
-            top: { item: 'ae2:engineering_processor' },
-            middle: { item: 'ae2:fluix_crystal' }
+            // top: { item: 'ae2:charged_certus_quartz_crystal' },
+            top: { item: 'ae2:fluix_crystal'},
+            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:gernade"}' }
+            
         },
         mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 2, nbt: { AmmoId: 'applied_armorer:fluix_infused_grenade' } }
+        result: { item: 'tacz:ammo', count: 2, nbt: '{AmmoId:"applied_armorer:fluix_infused_grenade"}' }
     })
 
     // ==========================================================
@@ -78,237 +79,208 @@ ServerEvents.recipes(event => {
 
     // ── Tier 1: Pistols ───────────────────────────────────────
 
+    
     // niklas_pistol_semi_pride
-    // B = certus_quartz_crystal barrel (crystal-lined precision bore)
-    // I = iron_ingot slide (iron construction)
-    // K = sky_stone_block grip (meteorite frame)
-    // L = logic_processor trigger   F = fluix_crystal firing pin
+    event.remove({ id: 'applied_armorer:gun/niklas_pistol_semi_pride' });
     event.custom({
         type: 'create:mechanical_crafting',
-        pattern: [
-            'BBBBBBBBBBBB',
-            '  IIIIIIIIII',
-            '          KK',
-            '          LF',
-        ],
         key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            I: { item: 'minecraft:iron_ingot' },
-            K: { item: 'ae2:sky_stone_block' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' }
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:quartz_block' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            S: { item: 'ae2:sky_stone_block' },
+            X: { item: 'ae2:fluix_block'},
+            Q: { item: 'ae2:certus_quartz_crystal'},
+            L: { item: 'ae2:fluix_smart_cable'},
+            A: { item: 'ae2:flawless_budding_quartz'},
+            W: { item: 'create:precision_mechanism' },
         },
+        pattern: [
+            '    Q',
+            'BLWFA',
+            '  STC',
+            '    X'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_semi_pride"}' }
     })
 
-    // niklas_pistol_semi_right  (massive barrel — same pattern shape, materials swapped in)
-    // B = certus_quartz_crystal  (27-cell double barrel — crystal precision bore)
-    // S = smooth_sky_stone_block (slide/upper frame)
-    // G = quartz_glass           (front sight post | isolated cell)
-    // Q = charged_certus         (rear sight / slide end cluster)
-    // C = andesite_alloy         (lower receiver frame)   A = calculation_processor
-    // L = logic_processor   F = fluix_crystal   K = sky_stone_block grip
-    // X = silicon                (rubber grip coating, bottom row)
+    
+    // niklas_pistol_semi_right
+    event.remove({ id: 'applied_armorer:gun/niklas_pistol_semi_right' });
     event.custom({
         type: 'create:mechanical_crafting',
-        pattern: [
-            'BBBBBBBBBBBBBBBBBBBBBBBBBBB',
-            'BBBBBBBBBBBBBBBBBBBBBBBBBBB',
-            '       SSSSSSSSSSSSSSSSSSSS',
-            '                 G      QQQ',
-            '                 CCAALFQQBB',
-            '                        KKK',
-            '                        XXX'
-        ],
         key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
-            G: { item: 'ae2:quartz_glass' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            C: { item: 'create:andesite_alloy' },
-            A: { item: 'ae2:calculation_processor' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            K: { item: 'ae2:sky_stone_block' },
-            X: { item: 'ae2:silicon' }
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            I: { item: 'minecraft:iron_ingot' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            S: { item: 'ae2:sky_stone_block' },
+            X: { item: 'ae2:fluix_block' },
+            Q: { item: 'ae2:quartz_cluster' },
+            W: { item: 'create:precision_mechanism' },
+            L: { item: 'ae2:flawless_budding_quartz' },
+            Z: { item: 'ae2:quartz_block'}
         },
+        pattern: [
+            '     Q',
+            'BCWFIL',
+            ' ST SZ',
+            '   Z X',
+            '     X'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_semi_right"}' }
     })
 
-    // niklas_pistol_semi_union  (same pattern shape as semi_right, different ingredient focus)
-    // B = certus barrel   S = smooth_sky_stone slide   G = quartz_glass sight
-    // Q = charged_certus  C = andesite_alloy frame     A = calculation_processor
-    // L = logic_processor (dual trigger → L appears twice)   F = fluix_crystal
-    // K = sky_stone grip  X = silicon rubber grip
+    
+    // niklas_pistol_semi_union
+    event.remove({ id: 'applied_armorer:gun/niklas_pistol_semi_union' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-        'BBBBBBBBBBBBBBBBBBBBBBBBBBB',
-        'BBBBBBBBBBBBBBBBBBBBBBBBBBB',
-               'SSSSSSSSSSSSSSSSSSSS',
-                         'G      QQQ',
-                         'CCAALLQQFF',
-                                'KKK',
-                                'XXX'
-        ],
         key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
-            G: { item: 'ae2:quartz_glass' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            C: { item: 'create:andesite_alloy' },
-            A: { item: 'ae2:calculation_processor' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            K: { item: 'ae2:sky_stone_block' },
-            X: { item: 'ae2:silicon' }
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:fluix_smart_cable' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            S: { item: 'ae2:sky_stone_block' },
+            W: { item: 'create:precision_mechanism'},
+            X: { item: 'ae2:flawless_budding_quartz'},
+            Q: { item: 'ae2:quartz_cluster' },
         },
+        pattern: [
+            '    Q',
+            'BCWFX',
+            '   TS'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_semi_union"}' }
     })
 
-    // niklas_pistol_double_win_win  (akimbo)
-    // B = certus barrel (upper gun, 11 cells)
-    // S = smooth_sky_stone (shared connecting frame, full row)
-    // C = andesite_alloy (lower gun body, 10 cells)
-    // K = sky_stone grip (upper gun grip + lower gun grip bottom)
-    // L = logic_processor trigger   F = fluix_crystal firing pin
-    // X = silicon rubber grip patch
+    
+    // niklas_pistol_double_win_win
+    event.remove({ id: 'applied_armorer:gun/niklas_pistol_double_win_win' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-                              '           BBBBBBBBBBB',
-                              'SSSSSSSSSSSSSSSSSSSSSS',
-                              ' CCCCCCCCCC         KK',
-                              '         LF         KK',
-                              '         KX           '
-        ],
         key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
-            C: { item: 'create:andesite_alloy' },
-            K: { item: 'ae2:sky_stone_block' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            X: { item: 'ae2:silicon' }
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:flawless_budding_quartz' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            S: { item: 'ae2:sky_stone_block' },
+            W: { item: 'create:precision_mechanism'},
+            L: { item: 'ae2:fluix_smart_cable'},
+            Q: { item: 'ae2:quartz_cluster' }
         },
+        pattern: [
+            '    Q    ',
+            'BLWFC   Q',
+            '   TBLWFC',
+            '       TS'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_double_win_win"}' }
     })
 
     // ── Tier 2: Lever Action ──────────────────────────────────
 
-    // niklas_lever_vigenere  (lever action)
-    // B = certus barrel (17 cells, crystal-bored precision)
-    // S = smooth_sky_stone full receiver (23 cells)
-    // L = logic_processor lever sear   C = andesite_alloy lever frame (×3)
-    // K = sky_stone stock (11 cells — the long lever-action tube magazine stock)
-    // Q = charged_certus chamber   A = calculation_processor ballistics
-    // F = fluix_crystal spring   X = silicon rubber grip
+    
+    // niklas_lever_vigenere
+    event.remove({ id: 'applied_armorer:gun/niklas_lever_vigenere' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            'BBBBBBBBBBBBBBBBB         ',
-            '   SSSSSSSSSSSSSSSSSSSSSSS',
-            '    LCCC       KKKKKKKKKKK',
-            '                      QALF',
-            '                       KXX'
-        ],
         key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
-            L: { item: 'ae2:logic_processor' },
-            C: { item: 'create:andesite_alloy' },
-            K: { item: 'ae2:sky_stone_block' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            A: { item: 'ae2:calculation_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            X: { item: 'ae2:silicon' }
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            I: { item: 'ae2:quartz_block' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            S: { item: 'ae2:sky_stone_block' },
+            W: { item: 'create:precision_mechanism'},
+            Q: { item: 'ae2:quartz_cluster'},
+
         },
+        pattern: [
+            ' Q     ',
+            'BCCCWFI',
+            '  ST ST',
+            '    TTT'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_lever_vigenere"}' }
     })
 
     // ── Tier 2: SMG ───────────────────────────────────────────
 
-    // niklas_smg_freedom  (compact auto)
-    // B = certus barrel (10 cells)   S = smooth_sky_stone receiver (13 cells)
-    // K = sky_stone grip (already placed in pattern by user — kept)
-    // C = andesite_alloy frame piece (single cell near trigger)
-    // M = iron_block magazine housing (3 cells row 2, 5 cells row 3)
-    // L/A/Q/F = logic/calc/charged_certus/fluix (trigger group — already placed by user)
-    // X = silicon (trigger seal at pos 9, already placed by user)
+    
+    // niklas_smg_freedom
+    event.remove({ id: 'applied_armorer:gun/niklas_smg_freedom' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            'BBBBBBBBBB               ',
-            '      SSSSSSSSSSSSSSK     ',
-            '       CLK         MMM   ',
-            '     QALFX         MMMMM ',
-            '                     KKKK'
-        ],
         key: {
             B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
+            Q: { item: 'ae2:quartz_cluster'},
+            I: { item: 'ae2:quartz_block' },
             K: { item: 'ae2:sky_stone_block' },
-            C: { item: 'create:andesite_alloy' },
-            M: { item: 'minecraft:iron_block' },
-            L: { item: 'ae2:logic_processor' },
-            A: { item: 'ae2:calculation_processor' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            F: { item: 'ae2:fluix_crystal' },
-            X: { item: 'ae2:silicon' }
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            W: { item: 'create:precision_mechanism'},
+            X: { item: 'ae2:fluix_block'},
+            G: { item: 'createimmersivetacz:gunbarrel' },
         },
+        pattern: [
+            'BI    Q ',
+            ' GKKWFK ',
+            '  K  TX ',
+            '      XX',
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_smg_freedom"}' }
     })
 
     // ── Tier 2: Assault Rifle ─────────────────────────────────
 
-    // moritz_rifle_ar77  (assault rifle)
-    // B/S/K/A/Q/L/F already placed in pattern by user — kept as-is
-    // X cells mapped by position:
-    //   row 1 stock extension  → W = zinc_block (zinc alloy buttstock, Create)
-    //   row 2 left barrel ext  → B = certus (barrel continues)
-    //   row 2 receiver section → S = smooth_sky_stone
-    //   row 2 stock section    → W = zinc_block
-    //   row 3 near mechanism   → B = certus (breech area)
-    //   row 3 receiver ext     → S = smooth_sky_stone
-    //   row 3 sight post       → G = quartz_glass (optic)
-    //   row 3 stock section    → W = zinc_block
-    //   row 4 X in QALFX       → X = silicon (trigger seal, kept)
-    //   row 4 stock end        → W = zinc_block
+    
+    // moritz_rifle_ar77
+    event.remove({ id: 'applied_armorer:gun/moritz_rifle_ar77' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            '        BBBBBSSSK',
-            ' SSSSSSSSKWWWWWWWWWWWWWWWWWWWWWWW',
-            'BBBBBBBBBBBKSSSSSS    WWWWWWWW',
-            '    BBAKSSSS           G  WWWW',
-            '         QALFX          WWWWWW'
-        ],
         key: {
             B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
+            Q: { item: 'ae2:quartz_cluster'},
+            I: { item: 'ae2:quartz_block' },
             K: { item: 'ae2:sky_stone_block' },
-            A: { item: 'ae2:calculation_processor' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            W: { item: 'create:zinc_block' },
-            G: { item: 'ae2:quartz_glass' },
-            X: { item: 'ae2:silicon' }
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            F: { item: 'createimmersivetacz:firing_mechanism' },
+            W: { item: 'create:precision_mechanism'},
+            X: { item: 'ae2:fluix_block'},
+            G: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
+            
         },
+        pattern: [
+            '      BIQ',
+            'GCIKKKWFK',
+            ' IIKK IKX',
+            '  II  T X',
+            '   K   KK'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_rifle_ar77"}' }
     })
 
     // ── Tier 2: Shotgun ───────────────────────────────────────
 
+    
     // moritz_shotgun_sg914
+    event.remove({ id: 'applied_armorer:gun/moritz_shotgun_sg914' });
     event.custom({
         type: 'create:mechanical_crafting',
-
+        key: {
+            B: { item: 'ae2:certus_quartz_crystal' },
+            Q: { item: 'ae2:charged_certus_quartz_crystal' },
+            S: { item: 'ae2:smooth_sky_stone_block' },
+            K: { item: 'ae2:sky_stone_block' },
+            A: { item: 'ae2:calculation_processor' },
+            L: { item: 'ae2:logic_processor' },
+            F: { item: 'ae2:fluix_crystal' },
+            X: { item: 'ae2:silicon' }
+        },
         pattern: [
             'BBQQSSSSK',
             'BBQQSSSSK',
@@ -316,33 +288,16 @@ ServerEvents.recipes(event => {
             '      ALK',
             '   QAFFX '
         ],
-        key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
-            K: { item: 'ae2:sky_stone_block' },
-            A: { item: 'ae2:calculation_processor' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            X: { item: 'ae2:silicon' }
-        },
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_shotgun_sg914"}' }
     })
 
     // ── Tier 3: Grenade Launcher ──────────────────────────────
 
+    
     // moritz_gernade_gl3
+    event.remove({ id: 'applied_armorer:gun/moritz_gernade_gl3' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            'BBBQSSSSK',
-            'BBBQSSSSK',
-            '        K',
-            '       EK',
-            '     NEAK',
-            '   NEAFX '
-        ],
         key: {
             B: { item: 'ae2:certus_quartz_crystal' },
             Q: { item: 'ae2:charged_certus_quartz_crystal' },
@@ -354,53 +309,57 @@ ServerEvents.recipes(event => {
             F: { item: 'ae2:fluix_crystal' },
             X: { item: 'ae2:silicon' }
         },
+        pattern: [
+            'BBBQSSSSK',
+            'BBBQSSSSK',
+            '        K',
+            '       EK',
+            '     NEAK',
+            '   NEAFX '
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_gernade_gl3"}' }
     })
 
     // ── Tier 4: Sniper Rifle ──────────────────────────────────
 
+    
     // moritz_sniper_semi_k30
+    event.remove({ id: 'applied_armorer:gun/moritz_sniper_semi_k30' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            'BBBBBBBSK',
-            'SSSSSSSSK',
-            '      EVK',
-            '      EVK',
-            '    EVALK',
-            '   QVALFX'
-        ],
         key: {
-            B: { item: 'ae2:certus_quartz_crystal' },
-            S: { item: 'ae2:smooth_sky_stone_block' },
-            K: { item: 'ae2:sky_stone_block' },
-            E: { item: 'ae2:engineering_processor' },
-            V: { item: 'ae2:dense_energy_cell' },
-            A: { item: 'ae2:calculation_processor' },
-            L: { item: 'ae2:logic_processor' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            F: { item: 'ae2:fluix_crystal' },
-            X: { item: 'ae2:silicon' }
+            U: { item: 'ae2:certus_quartz_crystal' },
+            E: { item: 'ae2:charged_certus_quartz_crystal' },
+            S: { item: 'ae2:sky_stone_block' },
+            F: { item: 'ae2:flawless_budding_quartz' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
+            Q: { item: 'ae2:quartz_block' },
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            W: { item: 'create:precision_mechanism' },
+            I: { item: 'createimmersivetacz:firing_mechanism' },
+            P: { item: 'minecraft:spyglass'},
+            X: { item: 'ae2:fluix_block' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            A: { item: 'create:shaft'}
         },
+        pattern: [
+            ' U     PE',
+            'BCSQQWIFQ',
+            '  X SSS X',
+            '  A   WTX'
+
+
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_sniper_semi_k30"}' }
     })
 
     // ── Tier 4: Heavy Machine Gun ─────────────────────────────
 
+    
     // moritz_mg_hmg22
+    event.remove({ id: 'applied_armorer:gun/moritz_mg_hmg22' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            'BBBBBBBBB',
-            'BEEEEEEEB',
-            'BEVVVVVEB',
-            'BEEEEEEEB',
-            'BWWWWWWWB',
-            '       EK',
-            '    QALFX'
-        ],
         key: {
             B: { item: 'ae2:smooth_sky_stone_block' },
             E: { item: 'ae2:engineering_processor' },
@@ -413,23 +372,20 @@ ServerEvents.recipes(event => {
             F: { item: 'ae2:fluix_crystal' },
             X: { item: 'ae2:silicon' }
         },
+        pattern: [
+            'BBBB    B   ',
+            '  SSSSSSSSSK',
+            '   CLK  MM ',
+            '  ALF   MMM',
+            '          KK'
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_mg_hmg22"}' }
     })
 
     // ── Tier 5: EMG Prototype (MAXIMUM ENDGAME) ───────────────
-
+    event.remove({ id: 'applied_armorer:gun/moritz_mg_emg_prototype' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [
-            '  B   B  ',
-            ' BB   BB ',
-            ' BBB BBB ',
-            'BVVVCVVVB',
-            'BEEEEEEEB',
-            '  BSTEB  ',
-            '   EANX  '
-        ],
         key: {
             B: { item: 'ae2:smooth_sky_stone_block' },
             V: { item: 'ae2:dense_energy_cell' },
@@ -441,6 +397,15 @@ ServerEvents.recipes(event => {
             N: { item: 'ae2:energy_cell' },
             X: { item: 'ae2:silicon' }
         },
+        pattern: [
+            '  B   B  ',
+            ' BB   BB ',
+            ' BBB BBB ',
+            'BVVVCVVVB',
+            'BEEEEEEEB',
+            '  BSTEB  ',
+            '   EANX  '
+        ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_mg_emg_prototype"}' }
     })
 
@@ -451,7 +416,9 @@ ServerEvents.recipes(event => {
 
     // ── Extended Magazines ────────────────────────────────────
 
+    
     // extended_mag_aa_1
+    event.remove({ id: 'applied_armorer:attachments/extended_mag_aa_1' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -463,7 +430,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:extended_mag_aa_1"}' }
     })
 
+    
     // extended_mag_aa_2
+    event.remove({ id: 'applied_armorer:attachments/extended_mag_aa_2' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -476,7 +445,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:extended_mag_aa_2"}' }
     })
 
+    
     // extended_mag_aa_3
+    event.remove({ id: 'applied_armorer:attachments/extended_mag_aa_3' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -491,7 +462,9 @@ ServerEvents.recipes(event => {
 
     // ── Extended Mid-Capacity Magazines ───────────────────────
 
+    
     // extended_mid_mag_aa_1
+    event.remove({ id: 'applied_armorer:attachments/extended_mid_mag_aa_1' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -503,7 +476,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:extended_mid_mag_aa_1"}' }
     })
 
+   
     // extended_mid_mag_aa_2
+    event.remove({ id: 'applied_armorer:attachments/extended_mid_mag_aa_2' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -516,7 +491,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:extended_mid_mag_aa_2"}' }
     })
 
+    
     // extended_mid_mag_aa_3
+    event.remove({ id: 'applied_armorer:attachments/extended_mid_mag_aa_3' });
     event.custom({
         type: 'create:mechanical_crafting',
         
@@ -531,7 +508,9 @@ ServerEvents.recipes(event => {
 
     // ── Extended Batteries ────────────────────────────────────
 
+    
     // extended_battery_aa_1
+    event.remove({ id: 'applied_armorer:attachments/extended_battery_aa_1' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -544,7 +523,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:extended_battery_aa_1"}' }
     })
 
+    
     // extended_battery_aa_2
+    event.remove({ id: 'applied_armorer:attachments/extended_battery_aa_2' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -557,7 +538,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:extended_battery_aa_2"}' }
     })
 
+    
     // extended_battery_aa_3e
+    event.remove({ id: 'applied_armorer:attachments/extended_battery_aa_3' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -572,7 +555,9 @@ ServerEvents.recipes(event => {
 
     // ── Grips ─────────────────────────────────────────────────
 
+    
     // grip_eazy
+    event.remove({ id: 'applied_armorer:attachments/grip_eazy' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -585,7 +570,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_eazy"}' }
     })
 
+    
     // grip_hf_17
+    event.remove({ id: 'applied_armorer:attachments/grip_hf_17' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -598,7 +585,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_hf_17"}' }
     })
 
+    
     // grip_lf11
+    event.remove({ id: 'applied_armorer:attachments/grip_lf11' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -611,7 +600,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_lf11"}' }
     })
 
+    
     // grip_light
+    event.remove({ id: 'applied_armorer:attachments/grip_light' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -623,7 +614,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_light"}' }
     })
 
+    
     // grip_sl_2
+    event.remove({ id: 'applied_armorer:attachments/grip_sl_2' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -636,7 +629,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_sl_2"}' }
     })
 
+    
     // grip_stable
+    event.remove({ id: 'applied_armorer:attachments/grip_stable' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -649,7 +644,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_stable"}' }
     })
 
+    
     // grip_static_1
+    event.remove({ id: 'applied_armorer:attachments/grip_static_1' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -662,7 +659,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:grip_static_1"}' }
     })
 
+    
     // grip_storm
+    event.remove({ id: 'applied_armorer:attachments/grip_storm' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -676,52 +675,83 @@ ServerEvents.recipes(event => {
     })
 
     // ── Muzzle Chips  (AE2 Inscriber — kept thematic) ─────────
-
+    event.remove({ id: 'applied_armorer:attachments/muzzle_chip_atm_x2' });
     event.custom({
         type: 'ae2:inscriber',
-        ingredients: { top: { item: 'ae2:printed_logic_processor' }, middle: { item: 'ae2:certus_quartz_crystal' } },
+        ingredients: {
+            top: { item: 'ae2:logic_processor' },
+            middle: { item: 'create_connected:control_chip' },
+            bottom: { item: 'create_connected:kinetic_battery' }
+        },
         mode: 'inscribe',
         result: { item: 'tacz:attachment', nbt: { AttachmentId: 'applied_armorer:muzzle_chip_atm_x2' } }
     })
 
+    event.remove({ id: 'applied_armorer:attachments/muzzle_chip_fat_boy' });
     event.custom({
         type: 'ae2:inscriber',
-        ingredients: { top: { item: 'ae2:printed_calculation_processor' }, middle: { item: 'ae2:charged_certus_quartz_crystal' } },
+        ingredients: {
+            top: { item: 'quark:gunpowder_sack' },
+            middle: { item: 'create_connected:control_chip' },
+            bottom: { item: 'create_connected:kinetic_battery' }
+        },
         mode: 'inscribe',
         result: { item: 'tacz:attachment', nbt: { AttachmentId: 'applied_armorer:muzzle_chip_fat_boy' } }
     })
 
+    event.remove({ id: 'applied_armorer:attachments/muzzle_chip_firefly' });
     event.custom({
         type: 'ae2:inscriber',
-        ingredients: { top: { item: 'ae2:printed_logic_processor' }, middle: { item: 'ae2:fluix_crystal' } },
+        ingredients: {
+            top: { item: 'create:blaze_cake' },
+            middle: { item: 'create_connected:control_chip' },
+            bottom: { item: 'create_connected:kinetic_battery' }
+        },
         mode: 'inscribe',
         result: { item: 'tacz:attachment', nbt: { AttachmentId: 'applied_armorer:muzzle_chip_firefly' } }
     })
 
+    event.remove({ id: 'applied_armorer:attachments/muzzle_chip_firework' });
     event.custom({
         type: 'ae2:inscriber',
-        ingredients: { top: { item: 'ae2:printed_logic_processor' }, middle: { item: 'ae2:charged_certus_quartz_crystal' } },
+        ingredients: {
+            top: { item: 'minecraft:firework_rocket' },
+            middle: { item: 'create_connected:control_chip' },
+            bottom: { item: 'create_connected:kinetic_battery' }
+        },
         mode: 'inscribe',
         result: { item: 'tacz:attachment', nbt: { AttachmentId: 'applied_armorer:muzzle_chip_firework' } }
     })
 
+    event.remove({ id: 'applied_armorer:attachments/muzzle_chip_hyper_propellant' });
     event.custom({
         type: 'ae2:inscriber',
-        ingredients: { top: { item: 'ae2:printed_engineering_processor' }, middle: { item: 'ae2:charged_certus_quartz_crystal' } },
+        ingredients: {
+            top: { item: 'create:blaze_burner' },
+            middle: { item: 'create_connected:control_chip' },
+            bottom: { item: 'create_connected:kinetic_battery' }
+        },
         mode: 'inscribe',
         result: { item: 'tacz:attachment', nbt: { AttachmentId: 'applied_armorer:muzzle_chip_hyper_propellant' } }
     })
 
+    event.remove({ id: 'applied_armorer:attachments/muzzle_chip_pcs_x1' });
     event.custom({
         type: 'ae2:inscriber',
-        ingredients: { top: { item: 'ae2:printed_calculation_processor' }, middle: { item: 'ae2:fluix_crystal' } },
+        ingredients: {
+            top: { item: 'ae2:spatial_storage_cell_2' },
+            middle: { item: 'create_connected:control_chip' },
+            bottom: { item: 'create_connected:kinetic_battery' }
+        },
         mode: 'inscribe',
         result: { item: 'tacz:attachment', nbt: { AttachmentId: 'applied_armorer:muzzle_chip_pcs_x1' } }
     })
 
     // ── Standard Muzzles  (Mechanical Crafting) ───────────────
 
+    
     // muzzle_bs_mod4
+    event.remove({ id: 'applied_armorer:attachments/muzzle_bs_mod4' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -733,7 +763,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:muzzle_bs_mod4"}' }
     })
 
+    
     // muzzle_classic
+    event.remove({ id: 'applied_armorer:attachments/muzzle_classic' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -747,6 +779,7 @@ ServerEvents.recipes(event => {
     })
 
     // muzzle_commander
+    event.remove({ id: 'applied_armorer:attachments/muzzle_commander' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -759,7 +792,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:muzzle_commander"}' }
     })
 
+    
     // muzzle_ns_1
+    event.remove({ id: 'applied_armorer:attachments/muzzle_ns_1' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -774,7 +809,9 @@ ServerEvents.recipes(event => {
 
     // ── Scopes ────────────────────────────────────────────────
 
+    
     // scope_ms_14
+    event.remove({ id: 'applied_armorer:attachments/scope_ms_14' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -787,7 +824,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:scope_ms_14"}' }
     })
 
+    
     // scope_xgs_905
+    event.remove({ id: 'applied_armorer:attachments/scope_xgs_905' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -802,7 +841,9 @@ ServerEvents.recipes(event => {
 
     // ── Sights / Optics ───────────────────────────────────────
 
+    
     // si_simple_3
+    event.remove({ id: 'applied_armorer:attachments/si_simple_3' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -815,7 +856,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:si_simple_3"}' }
     })
 
+    
     // si_ms_12
+    event.remove({ id: 'applied_armorer:attachments/si_ms_12' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -829,6 +872,7 @@ ServerEvents.recipes(event => {
     })
 
     // si_xs_07
+    event.remove({ id: 'applied_armorer:attachments/si_xs_07' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -842,7 +886,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:si_xs_07"}' }
     })
 
+    
     // si_double_sided_mirror
+    event.remove({ id: 'applied_armorer:attachments/si_double_sided_mirror' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -856,20 +902,26 @@ ServerEvents.recipes(event => {
     })
 
     // si_pride_default
+    event.remove({ id: 'applied_armorer:attachments/si_pride_default' });
     event.custom({
         type: 'create:mechanical_crafting',
-
-        pattern: [ 'GFG', 'IKI', ' I ' ],
         key: {
             G: { item: 'ae2:quartz_glass' },
             F: { item: 'ae2:fluix_crystal' },
             I: { item: 'minecraft:iron_ingot' },
             K: { item: 'ae2:certus_quartz_crystal' }
         },
+        pattern: [ 
+            'GFG',
+            'IKI',
+            ' I ' 
+        ],
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:si_pride_default"}' }
     })
 
+    
     // si_pricision
+    event.remove({ id: 'applied_armorer:attachments/si_pricision' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -883,7 +935,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:si_pricision"}' }
     })
 
+    
     // si_profession
+    event.remove({ id: 'applied_armorer:attachments/si_profession' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -897,7 +951,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:si_profession"}' }
     })
 
+    
     // si_zako_2403
+    event.remove({ id: 'applied_armorer:attachments/si_zako_2403' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -912,7 +968,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:si_zako_2403"}' }
     })
 
+    
     // sight_type_3741
+    event.remove({ id: 'applied_armorer:attachments/sight_type_3741' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -929,7 +987,9 @@ ServerEvents.recipes(event => {
 
     // ── Bayonets ──────────────────────────────────────────────
 
+    
     // bayonet_er
+    event.remove({ id: 'applied_armorer:attachments/bayonet_er' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -941,7 +1001,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bayonet_er"}' }
     })
 
-    // bayonet_gladiuS
+    
+    // bayonet_gladius
+    event.remove({ id: 'applied_armorer:attachments/bayonet_gladius' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -955,7 +1017,9 @@ ServerEvents.recipes(event => {
 
     // ── Bracelets ─────────────────────────────────────────────
 
+    
     // bracelet_aerial_wristband
+    event.remove({ id: 'applied_armorer:attachments/bracelet_aerial_wristband' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -968,7 +1032,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_aerial_wristband"}' }
     })
 
+    
     // bracelet_broken_handcuffs
+    event.remove({ id: 'applied_armorer:attachments/bracelet_broken_handcuffs' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -981,7 +1047,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_broken_handcuffs"}' }
     })
 
+    
     // bracelet_broken_watch
+    event.remove({ id: 'applied_armorer:attachments/bracelet_broken_watch' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -994,7 +1062,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_broken_watch"}' }
     })
 
+    
     // bracelet_exo
+    event.remove({ id: 'applied_armorer:attachments/bracelet_exo' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -1007,7 +1077,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_exo"}' }
     })
 
+    
     // bracelet_koeis_armband
+    event.remove({ id: 'applied_armorer:attachments/bracelet_koeis_armband' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -1020,7 +1092,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_koeis_armband"}' }
     })
 
+    
     // bracelet_magma_wristband
+    event.remove({ id: 'applied_armorer:attachments/bracelet_magma_wristband' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -1033,7 +1107,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_magma_wristband"}' }
     })
 
+    
     // bracelet_niklas
+    event.remove({ id: 'applied_armorer:attachments/bracelet_niklas' });
     event.custom({
         type: 'create:mechanical_crafting',
 
@@ -1046,7 +1122,9 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:attachment', nbt: '{AttachmentId:"applied_armorer:bracelet_niklas"}' }
     })
 
+    
     // bracelet_zenith
+    event.remove({ id: 'applied_armorer:attachments/bracelet_zenith' });
     event.custom({
         type: 'create:mechanical_crafting',
 
