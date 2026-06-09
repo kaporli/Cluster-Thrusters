@@ -101,7 +101,7 @@
 				#Uses ResourceLocation to identify it
 				#Example 1: "minecraft:chest" - Ignores chests only
 				#Example 2: "ae2:*" - ignores all Block entities from Applied Energetics 2
-				whitelist = ["waterframes:*", "mekanism:*"]
+				whitelist = ["waterframes:*"]
 
 			[xenonextras.performance.distanceCulling.entities]
 				#Toggles distance culling for entities
