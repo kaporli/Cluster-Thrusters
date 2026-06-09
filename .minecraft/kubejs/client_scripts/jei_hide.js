@@ -20,11 +20,6 @@ JEIEvents.hideItems(event => {
     event.hide('alexsmobsinteraction:eggs')
     event.hide('ae2:facade')
 
-    // event.hide('cataclysm:stone_tiles')
-    // event.hide('cataclysm:stone_tile_slab')
-    // event.hide('cataclysm:stone_tile_stairs')
-    // event.hide('cataclysm:stone_tile_wall')
-
     event.hide(/minecraft:.*sapling.*/)
     event.hide(/biomesoplenty:.*sapling.*/)
     event.hide(/natures_spirit:.*sapling.*/)

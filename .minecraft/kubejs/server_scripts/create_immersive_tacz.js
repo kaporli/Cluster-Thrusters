@@ -339,16 +339,16 @@ ServerEvents.recipes(event => {
             "C": { "item": "create:flywheel" },
             "T": { "item": "createimmersivetacz:gun_trigger" },
             "W": { "tag": "minecraft:planks" },
-            "E": {"tag": "create:andesite_casing"},
-            "R": {"tag": "create:electron_tube"},
-            "S": {"tag": "create:shaft"}
+            "E": { "item": "create:andesite_casing"},
+            "R": { "item": "create:electron_tube"},
+            "S": { "item": "create:shaft"}
         },
         "pattern": [
-            " R     ",
-            " EEEEEEE",
-            "BOOFI  E", 
-            " CTW   E",
-            "   S    "
+            ' R      ',
+            ' EEEEEEE',
+            'BOOFI  E', 
+            ' CTW   E',
+            '   S    '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:mg_platemag_flywheel", GunFireMode:"AUTO"}' }
     });
