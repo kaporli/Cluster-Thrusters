@@ -327,17 +327,16 @@ ServerEvents.recipes(event => {
             A: { item: 'create:shaft' },
             D: { item: 'ae2:dense_energy_cell' },
             Z: { item: 'ae2:sky_stone_stairs'},
-            Y: { item: 'ae2:sky_stone_slab'},
             R: { item: 'createbigcannons:he_shell'}
 
         },
         pattern: [
             '     P   ',
-            ' KYYYQ   ',
-            ' SSOOWWNH',
+            '   KOQ   ',
+            '    OWWNH',
             'BCDDD  TU',
-            ' ZRSOZ  U',
-            '   ZSOZ A'
+            '  RRRZ  U',
+            '    SSZ A'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_gernade_gl3"}' }
     })
@@ -382,23 +381,27 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
-            M: { item: 'ae2:smooth_sky_stone_block' },
-            S: { item: 'ae2:sky_stone_block' },
-            E: { item: 'ae2:engineering_processor' },
-            V: { item: 'ae2:dense_energy_cell' },
-            n: { item: 'ae2:cell_component_16k' },
+            K: { item: 'ae2:certus_quartz_crystal' },
             Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            A: { item: 'ae2:calculation_processor' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            Z: { item: 'ae2:silicon' }
+            S: { item: 'ae2:sky_stone_block' },
+            H: { item: 'ae2:flawless_budding_quartz' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
+            O: { item: 'ae2:quartz_block' },
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            W: { item: 'create:precision_mechanism' },
+            N: { item: 'createimmersivetacz:firing_mechanism' },
+            P: { item: 'minecraft:spyglass' },
+            U: { item: 'ae2:fluix_block' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            A: { item: 'create:shaft' },
+            D: { item: 'ae2:dense_energy_cell' },
         },
         pattern: [
-            'MMMM    M   ',
-            '  SSSSSSSSSS',
-            '   CLS  MM ',
-            '  ALF   MMM',
-            '          SS'
+            'KOQQ   P ',
+            ' SWWNNNH ',
+            'BCCDDSTWH',
+            ' UDDU  UH',
+            ' A  A   U'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_mg_hmg22"}' }
     })
@@ -409,24 +412,38 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
-            M: { item: 'ae2:smooth_sky_stone_block' },
-            V: { item: 'ae2:dense_energy_cell' },
-            o: { item: 'ae2:controller' },
-            E: { item: 'ae2:engineering_processor' },
-            s: { item: 'ae2:singularity' },
-            q: { item: 'ae2:quantum_entangled_singularity' },
-            A: { item: 'ae2:calculation_processor' },
-            P: { item: 'ae2:energy_cell' },
-            Z: { item: 'ae2:silicon' }
+            // K: { item: 'ae2:certus_quartz_crystal' },
+            Q: { item: 'ae2:charged_certus_quartz_crystal' },
+            H: { item: 'ae2:flawless_budding_quartz' },
+            // C: { item: 'ae2:fluix_covered_dense_cable' },
+            O: { item: 'ae2:quartz_block' },
+            // B: { item: 'createimmersivetacz:gunbarrel' },
+            W: { item: 'create:precision_mechanism' },
+            N: { item: 'createimmersivetacz:firing_mechanism' },
+            U: { item: 'ae2:fluix_block' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            D: { item: 'ae2:dense_energy_cell' },
+            G: { item: 'ae2:quantum_entangled_singularity' },
+            S: { item: 'ae2:singularity' },
+            F: { item: 'ae2:controller' },
+            L: { item: 'ae2:fluix_crystal' },
+            R: { item: 'ae2:mysterious_cube'},
+            X: { item: 'minecraft:nether_star'},
+            P: { type: 'forge:nbt', item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_mg_hmg22"}' },
+            C: { type: 'forge:nbt', item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_rifle_ar77"}' },
+            Z: { type: 'forge:nbt', item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_smg_freedom"}' },
+            J: { type: 'forge:nbt', item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_semi_pride"}' }
         },
         pattern: [
-            '  M   M  ',
-            ' MM   MM ',
-            ' MMM MMM ',
-            'MVVVoVVVM',
-            'MEEEEEEEM',
-            '  MsqEM  ',
-            '   EAPZ  '
+            '  P   P  ',
+            ' CH   HC ',
+            ' UHH HHU ',
+            'LDDHFHDDL',
+            'JWNGSGNWJ',
+            '  DWNWD  ',
+            'LUUDXDUUL',
+            'ZO R R OZ',
+            ' Q T T Q '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_mg_emg_prototype"}' }
     })
