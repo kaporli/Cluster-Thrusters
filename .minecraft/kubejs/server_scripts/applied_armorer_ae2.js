@@ -90,12 +90,12 @@ ServerEvents.recipes(event => {
             O: { item: 'ae2:quartz_block' },
             K: { item: 'ae2:certus_quartz_crystal' },
             U: { item: 'ae2:fluix_block' },
-            E: { item: 'ae2:energy_cell' },
+            V: { item: 'ae2:dense_energy_cell' }
         },
         pattern: [
             '    K',
             'BYWNH',
-            ' ESTO',
+            ' VSTO',
             '    U'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_semi_pride"}' }
@@ -146,7 +146,9 @@ ServerEvents.recipes(event => {
         pattern: [
             '    J',
             'BYWNH',
-            '  ETS'
+            '  ETS',
+            '    S',
+            '    S'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_pistol_semi_union"}' }
     })
@@ -195,11 +197,12 @@ ServerEvents.recipes(event => {
             U: { item: 'ae2:fluix_block' },
             H: { item: 'ae2:flawless_budding_quartz' },
             K: { item: 'ae2:certus_quartz_crystal' },
+            Z: { item: 'ae2:sky_stone_stairs'}
         },
         pattern: [
-            ' K    J',
-            'BCEDWNH',
-            '  ST SUS',
+            ' K    J  ',
+            'BCEDWNH  ',
+            '  ST SUSZ',
             '    OOUSS'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_lever_vigenere"}' }
@@ -223,12 +226,15 @@ ServerEvents.recipes(event => {
             U: { item: 'ae2:fluix_block' },
             E: { item: 'ae2:energy_cell' },
             D: { item: 'ae2:dense_energy_cell' },
+            Z: { item: 'ae2:sky_stone_stairs'},
+            Y: { item: 'ae2:fluix_smart_cable' },
+            
         },
         pattern: [
-            'KO    J ',
-            ' BDWWNS ',
-            '  E  TU ',
-            '      UU',
+            'KO     J ',
+            ' BYDWWNS ',
+            '  EZ  TU ',
+            '       UU',
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:niklas_smg_freedom"}' }
     })
@@ -252,13 +258,15 @@ ServerEvents.recipes(event => {
             U: { item: 'ae2:fluix_block' },
             D: { item: 'ae2:dense_energy_cell' },
             H: { item: 'ae2:flawless_budding_quartz' },
+            A: { item: 'create:shaft' },
+            Z: { item: 'ae2:sky_stone_stairs'}
         },
         pattern: [
             ' K     KJ',
             'BCCOWWWNH',
-            ' ODDS ONU',
-            '  OO  T U',
-            '   S   SS'
+            ' ODDS OND',
+            '  OS  T U',
+            '   A  ZSS'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_rifle_ar77"}' }
     })
@@ -270,21 +278,29 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
             K: { item: 'ae2:certus_quartz_crystal' },
-            Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            M: { item: 'ae2:smooth_sky_stone_block' },
+            J: { item: 'ae2:quartz_cluster' },
+            O: { item: 'ae2:quartz_block' },
             S: { item: 'ae2:sky_stone_block' },
-            A: { item: 'ae2:calculation_processor' },
-            L: { item: 'ae2:logic_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            Z: { item: 'ae2:silicon' }
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            N: { item: 'createimmersivetacz:firing_mechanism' },
+            W: { item: 'create:precision_mechanism' },
+            U: { item: 'ae2:fluix_block' },
+            D: { item: 'ae2:dense_energy_cell' },
+            H: { item: 'ae2:flawless_budding_quartz' },
+            A: { item: 'create:shaft' },
+            Y: { item: 'ae2:sky_stone_slab'},
+            Z: { item: 'ae2:sky_stone_stairs'},
+            Z: { item: 'ae2:sky_stone_stairs'}
         },
         pattern: [
-            'KKQQMMMMS',
-            'KKQQMMMMS',
-            '        S',
-            '      ALS',
-            '   QAFFZ '
+            ' KYYY  YJ',
+            'BCCOWWWNH',
+            ' ODDZ TND',
+            '  OS  ZSU',
+            '   A     '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_shotgun_sg914"}' }
     })
@@ -298,21 +314,30 @@ ServerEvents.recipes(event => {
         key: {
             K: { item: 'ae2:certus_quartz_crystal' },
             Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            M: { item: 'ae2:smooth_sky_stone_block' },
             S: { item: 'ae2:sky_stone_block' },
-            E: { item: 'ae2:engineering_processor' },
-            P: { item: 'ae2:energy_cell' },
-            A: { item: 'ae2:calculation_processor' },
-            F: { item: 'ae2:fluix_crystal' },
-            Z: { item: 'ae2:silicon' }
+            H: { item: 'ae2:flawless_budding_quartz' },
+            C: { item: 'ae2:fluix_covered_dense_cable' },
+            O: { item: 'ae2:quartz_block' },
+            B: { item: 'createimmersivetacz:gunbarrel' },
+            W: { item: 'create:precision_mechanism' },
+            N: { item: 'createimmersivetacz:firing_mechanism' },
+            P: { item: 'minecraft:spyglass' },
+            U: { item: 'ae2:fluix_block' },
+            T: { item: 'createimmersivetacz:gun_trigger' },
+            A: { item: 'create:shaft' },
+            D: { item: 'ae2:dense_energy_cell' },
+            Z: { item: 'ae2:sky_stone_stairs'},
+            Y: { item: 'ae2:sky_stone_slab'},
+            R: { item: 'createbigcannons:he_shell'}
+
         },
         pattern: [
-            'KKKQMMMMS',
-            'KKKQMMMMS',
-            '        S',
-            '       ES',
-            '     PEAS',
-            '   PEAFZ '
+            '     P   ',
+            ' KYYYQ   ',
+            ' SSOOWWNH',
+            'BCDDD  TU',
+            ' ZRSOZ  U',
+            '   ZSOZ A'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_gernade_gl3"}' }
     })
@@ -337,14 +362,14 @@ ServerEvents.recipes(event => {
             p: { item: 'minecraft:spyglass' },
             U: { item: 'ae2:fluix_block' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            a: { item: 'create:shaft' },
+            A: { item: 'create:shaft' },
             D: { item: 'ae2:dense_energy_cell' }
         },
         pattern: [
             ' K     pQ',
-            'BCSOOWNHO',
-            '  U SDD U',
-            '  a   WTU'
+            'BCDWWNNHO',
+            ' UU SDD O',
+            ' AA   WTU'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_sniper_semi_k30"}' }
     })
