@@ -314,7 +314,8 @@ ServerEvents.recipes(event => {
         key: {
             K: { item: 'ae2:certus_quartz_crystal' },
             Q: { item: 'ae2:charged_certus_quartz_crystal' },
-            S: { item: 'ae2:sky_stone_block' },
+            S: { item: 'createbigcannons:small_steel_cannon_layer' },
+            L: { item: 'createbigcannons:small_steel_cannon_layer' },
             H: { item: 'ae2:flawless_budding_quartz' },
             C: { item: 'ae2:fluix_covered_dense_cable' },
             O: { item: 'ae2:quartz_block' },
@@ -326,8 +327,10 @@ ServerEvents.recipes(event => {
             T: { item: 'createimmersivetacz:gun_trigger' },
             A: { item: 'create:shaft' },
             D: { item: 'ae2:dense_energy_cell' },
-            Z: { item: 'ae2:sky_stone_stairs'},
-            R: { item: 'createbigcannons:he_shell'}
+            Z: { item: 'createbigcannons:steel_sliding_breech' },
+            V: { item: 'createbigcannons:steel_block' },
+            R: { item: 'createbigcannons:he_shell'},
+            X: { item: 'createbigcannons:thick_steel_cannon_chamber' },
 
         },
         pattern: [
@@ -335,8 +338,8 @@ ServerEvents.recipes(event => {
             '   KOQ   ',
             '    OWWNH',
             'BCDDD  TU',
-            '  RRRZ  U',
-            '    SSZ A'
+            '  RRXV  U',
+            '    SLZ A'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"applied_armorer:moritz_gernade_gl3"}' }
     })

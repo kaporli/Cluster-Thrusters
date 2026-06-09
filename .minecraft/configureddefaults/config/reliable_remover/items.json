@@ -1,6 +1,17 @@
 {
     "action": "REMOVE",
     "items": [
+        "supplementaries:crank",
+        "ae2:matter_ball",
+        "ae2:color_applicator",
+        "ae2:crank",
+        "ae2:charged_staff",
+        "ae2:tiny_tnt",
+        "ae2:quantum_ring",
+        "ae2:quantum_link",
+        "ae2:matter_cannon",
+        "ae2:condenser",
+        "ae2:vibration_chamber",
         "upgrade_aquatic:glass_door",
         "lowlands_clothing:rawgrizzlymeat",
         "lowlands_clothing:cookedgrizzlymeat",
@@ -1145,6 +1156,7 @@
         "^farmersdelight:.*canvas_sign$",
         "mcwfences|everycomp:mcf/.*_hedge$",
         "railways:.*paint.*",
-        "railways:(brown|maroon|red|vermilion|orange|granite|dripstone|ochrum|yellow|chartreuse|olive_green|lime|green|pine_green|cyan|sea_green|turquoise|light_blue|blue|royal_blue|purple|magenta|pink|white|diorite|limestone|light_gray|tuff|gray|scorchia|black)_.*"
+        "railways:(brown|maroon|red|vermilion|orange|granite|dripstone|ochrum|yellow|chartreuse|olive_green|lime|green|pine_green|cyan|sea_green|turquoise|light_blue|blue|royal_blue|purple|magenta|pink|white|diorite|limestone|light_gray|tuff|gray|scorchia|black)_.*",
+        "ae2:.*paint_ball"
     ]
 }

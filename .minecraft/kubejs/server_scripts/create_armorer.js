@@ -252,21 +252,27 @@ ServerEvents.recipes(event => {
     // GUNS
     // ==========================================================
 
-    // assault_rifle -> rifle_assult_crane (AUTO)
+    // assault_rifle -> rifle_assult_crane
     event.remove({ id: 'createimmersivetacz:guns/assault_rifle' });
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
             B: { item: 'createimmersivetacz:gunbarrel' },
-            P: { item: 'create:precision_mechanism' },
+            M: { item: 'create:precision_mechanism' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             I: { item: 'minecraft:iron_ingot' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            N: { item: 'create:industrial_iron_block' },
+            // R: { item: 'create:brass_casing' },
+            E: { item: 'create:electron_tube' },
+            C: { item: 'create:brass_block' },
+            G: { item: 'create:cogwheel' },
         },
         pattern: [
-            'BPFI',
-            ' TW '
+            '    E  ',
+            'BCMFNII',
+            ' WGT  I'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:rifle_assult_crane", GunFireMode:"AUTO"}' }
     });
@@ -280,11 +286,15 @@ ServerEvents.recipes(event => {
             C: { item: 'create:brass_block' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            I: { item: 'create:industrial_iron_block' },
+            R: { item: 'create:brass_casing' },
+            M: { item: 'create:precision_mechanism' },
         },
         pattern: [
-            'BCF',
-            'BTW'
+            'BIRCF',
+            'BIMTW',
+            '    W'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:shotgun_db_stone", GunFireMode:"SEMI"}' }
     });
@@ -295,21 +305,31 @@ ServerEvents.recipes(event => {
         type: 'create:mechanical_crafting',
         key: {
             B: { item: 'createimmersivetacz:gunbarrel' },
-            C: { item: 'create:cogwheel' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
-            I: { item: 'minecraft:iron_ingot' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            I: { item: 'createbigcannons:very_large_nethersteel_cannon_layer' },
+            L: { item: 'createbigcannons:large_nethersteel_cannon_layer' },
+            X: { item: 'createbigcannons:thick_nethersteel_cannon_chamber' },
+            O: { item: "create:brass_block" },
+            G: { item: 'create:gantry_shaft' },
+            S: { item: 'createbigcannons:nethersteel_block'},
+            M: { item: 'create:precision_mechanism' },
+            R: { item: 'create:brass_casing' },
+            H: { item: 'createbigcannons:he_shell'},
+            Z: { item: 'createbigcannons:nethersteel_sliding_breech' },
         },
         pattern: [
-            ' BBB   ',
-            'BBBBCFI',
-            '   WT W'
+            ' OLIOIO  ',
+            ' OLIOIO  ',
+            'BOHHOHOXX',
+            ' MORTFZSS',
+            '   G   SW'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:cannon_40mm_salamander", GunFireMode:"SEMI"}' }
     });
 
-    // grenade_launcher -> gl_revolver_devastator (SEMI)
+    // grenade_launcher -> gl_revolver_devastator
     event.remove({ id: 'createimmersivetacz:guns/grenade_launcher' });
     event.custom({
         type: 'create:mechanical_crafting',
@@ -318,50 +338,56 @@ ServerEvents.recipes(event => {
             C: { item: 'create:cogwheel' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            G: { item: 'create:gantry_shaft' },
+            R: { item: 'create:brass_casing' },
+            I: { item: 'createbigcannons:medium_steel_cannon_layer' },
+            L: { item: 'createbigcannons:large_steel_cannon_layer' },
+            X: { item: 'createbigcannons:thick_steel_cannon_chamber' },
+            O: { item: "create:brass_block" },
+            M: { item: 'create:precision_mechanism' },
+            H: { item: 'createbigcannons:he_shell'},
+            Z: { item: 'createbigcannons:steel_sliding_breech' },
         },
         pattern: [
-            'BBBCFC',
-            '   WTW'
+            '      C  ',
+            'BOILGFMO ',
+            'RORZMTOW ',
+            ' HHH  XOO'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:gl_revolver_devastator", GunFireMode:"SEMI"}' }
     });
 
-    // lmg -> mg_platemag_flywheel (AUTO)
+    // lmg -> mg_platemag_flywheel
     event.remove({ id: 'createimmersivetacz:guns/lmg' });
       event.custom({
         "type": "create:mechanical_crafting",
         "key": {
-            "B": { "item": "createimmersivetacz:gunbarrel" },
-            "O": { "item": "create:brass_block" },
-            "F": { "item": "createimmersivetacz:firing_mechanism" },
-            "I": { "item": "minecraft:iron_block" },
-            "C": { "item": "create:flywheel" },
-            "T": { "item": "createimmersivetacz:gun_trigger" },
-            "W": { "tag": "minecraft:planks" },
-            "E": { "item": "create:andesite_casing"},
-            "R": { "item": "create:electron_tube"},
-            "S": { "item": "create:shaft"}
+            B: { item: "createimmersivetacz:gunbarrel" },
+            O: { item: "create:brass_block" },
+            F: { item: "createimmersivetacz:firing_mechanism" },
+            C: { item: "create:flywheel" },
+            T: { item: "createimmersivetacz:gun_trigger" },
+            W: { tag: "minecraft:planks" },
+            // E: { item: "create:andesite_casing"},
+            S: { item: 'create:steam_engine' },
+            A: { item: 'create:shaft' },
+            M: { item: 'create:precision_mechanism' },
+            V: { item: 'create:chain_conveyor' },
+            L: { item: 'create:copper_valve_handle' },
+            D: { item: 'createdieselgenerators:engine_piston' },
+            I: { item: 'create:industrial_iron_block' },
+            R: { item: 'create:metal_bracket' },
+            G: { item: 'create:brass_casing' },
         },
         "pattern": [
-            ' R      ',
-            ' EEEEEEE',
-            'BOOFI  E', 
-            ' CTW   E',
-            '   S    '
+            '   LV R  ',
+            ' SDOOOOII',
+            'BOMMFTG I', 
+            'RDSIC W I',
+            'I A   W  '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:mg_platemag_flywheel", GunFireMode:"AUTO"}' }
-    });
-
-    // melee_wrench -> special_melee_wrench (SEMI)
-    event.remove({ id: 'createimmersivetacz:guns/melee_wrench' });
-    event.custom({
-        type: 'create:mechanical_crafting',
-        key: { W: { item: 'create:wrench' } },
-        pattern: [
-            'W'
-        ],
-        result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:special_melee_wrench", GunFireMode:"SEMI"}' }
     });
 
     // pistol -> pistol_auto_stress (SEMI)
@@ -373,16 +399,22 @@ ServerEvents.recipes(event => {
             C: { item: 'create:brass_block' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            // W: { tag: 'minecraft:planks' },
+            M: { item: 'create:precision_mechanism' },
+            E: { item: 'create:electron_tube' },
+            R: { item: 'create:brass_casing' },
+            I: { item: 'create:industrial_iron_block' }
         },
         pattern: [
-            'BCF',
-            ' TW'
+            '  E ',
+            'BCFM',
+            'ITCR',
+            '   R'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:pistol_auto_stress", GunFireMode:"SEMI"}' }
     });
 
-    // pump_shotgun -> shotgun_pump_bearing (SEMI)
+    // pump_shotgun -> shotgun_pump_bearing
     event.remove({ id: 'createimmersivetacz:guns/pump_shotgun' });
     event.custom({
         type: 'create:mechanical_crafting',
@@ -392,29 +424,41 @@ ServerEvents.recipes(event => {
             A: { item: 'create:brass_block' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            I: { item: 'create:industrial_iron_block' },
+            R: { item: 'create:brass_casing' },
+            // S: { tag: 'minecraft:wooden_slabs' }
+            M: { item: 'create:precision_mechanism' },
         },
         pattern: [
-            'BCAF',
-            ' WTW'
+            '      C ',
+            'BIIF AIW',
+            ' ATMRWW ',
+            // '     S  '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:shotgun_pump_bearing", GunFireMode:"SEMI"}' }
     });
 
-    // revolver -> pistol_revolver_torque (SEMI)
+    // revolver -> pistol_revolver_torque
     event.remove({ id: 'createimmersivetacz:guns/revolver' });
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
             B: { item: 'createimmersivetacz:gunbarrel' },
-            C: { item: 'create:cogwheel' },
+            C: { item: 'create:brass_block' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            M: { item: 'create:precision_mechanism' },
+            // E: { item: 'create:electron_tube' },
+            R: { item: 'create:brass_casing' },
+            I: { item: 'create:industrial_iron_block' },
+            G: { item: 'create:cogwheel' },
         },
         pattern: [
-            'BCF',
-            ' TW'
+            'GCIR',
+            'BFTM',
+            '   W'
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:pistol_revolver_torque", GunFireMode:"SEMI"}' }
     });
@@ -430,7 +474,7 @@ ServerEvents.recipes(event => {
             Y: { item: 'create:flywheel' },
             I: { item: 'minecraft:iron_ingot' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
         },
         pattern: [
             'BPFFYI',
@@ -439,7 +483,7 @@ ServerEvents.recipes(event => {
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:rifle_assult_roller", GunFireMode:"AUTO"}' }
     });
 
-    // semi_rifle -> sniper_semi_m1 (SEMI)
+    // semi_rifle -> sniper_semi_m1
     event.remove({ id: 'createimmersivetacz:guns/semi_rifle' });
     event.custom({
         type: 'create:mechanical_crafting',
@@ -449,49 +493,70 @@ ServerEvents.recipes(event => {
             F: { item: 'createimmersivetacz:firing_mechanism' },
             I: { item: 'minecraft:iron_ingot' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            N: { item: 'create:industrial_iron_block' },
+            R: { item: 'create:brass_casing' },
+            M: { item: 'create:precision_mechanism' },
+            C: { item: 'create:brass_block' },
+            A: { item: 'create:shaft' }
         },
         pattern: [
-            'BBCFI',
-            ' WT W'
+            'BICFMC RW',
+            ' WT WNIRW',
+            '       A '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:sniper_semi_m1", GunFireMode:"SEMI"}' }
     });
 
-    // smg -> smg_auto_crank (AUTO)
+    // smg -> smg_auto_crank
     event.remove({ id: 'createimmersivetacz:guns/smg' });
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
             B: { item: 'createimmersivetacz:gunbarrel' },
-            P: { item: 'create:brass_ingot' },
+            // P: { item: 'create:brass_ingot' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
             I: { item: 'minecraft:iron_ingot' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            // W: { tag: 'minecraft:planks' },
+            S: { item: 'create:steam_engine' },
+            N: { item: 'create:industrial_iron_block' },
+            E: { item: 'create:electron_tube' },
+            C: { item: 'create:brass_block' },
+            M: { item: 'create:precision_mechanism' },
+            O: { item: 'create:cogwheel' },
         },
         pattern: [
-            'BPFI',
-            ' TW '
+            '     E   ',
+            'BSCMOCIN ',
+            '  CTF  NN',
+            '   N     '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:smg_auto_crank", GunFireMode:"AUTO"}' }
     });
 
-    // sniper -> sniper_semi_clockwork (SEMI)
+    // sniper -> sniper_semi_clockwork
     event.remove({ id: 'createimmersivetacz:guns/sniper' });
     event.custom({
         type: 'create:mechanical_crafting',
         key: {
             B: { item: 'createimmersivetacz:gunbarrel' },
-            C: { item: 'create:cogwheel' },
             F: { item: 'createimmersivetacz:firing_mechanism' },
-            I: { item: 'minecraft:iron_ingot' },
             T: { item: 'createimmersivetacz:gun_trigger' },
-            W: { tag: 'minecraft:planks' }
+            W: { tag: 'minecraft:planks' },
+            P: { item: 'create:copper_casing' },
+            E: { item: 'create:brass_ingot' },
+            I: { item: 'create:industrial_iron_block' },
+            O: { item: 'create:brass_block' },
+            M: { item: 'create:precision_mechanism' },
+            Z: { item: 'minecraft:copper_ingot'},
+            G: { item: 'minecraft:iron_ingot' },
         },
         pattern: [
-            'BBCFI',
-            '  T W'
+            'EEEZZZ   ',
+            'BIOOMPPGI',
+            ' EZPFTW I',
+            '      W  '
         ],
         result: { item: 'tacz:modern_kinetic_gun', nbt: '{GunId:"create_armorer:sniper_semi_clockwork", GunFireMode:"SEMI"}' }
     });
