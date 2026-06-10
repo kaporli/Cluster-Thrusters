@@ -6,6 +6,7 @@
 
 ## Mods incompatible with Mac OS
 - It's The Little Things
+- BetterTags
 - Distant Horizons
 
 ## Client-Side Only Mods

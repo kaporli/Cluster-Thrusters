@@ -1,5 +1,7 @@
 {
   "swapper": {
+    "dawnera:worm_dirt": "minecraft:dirt",
+
     "natures_spirit:chert_coal_ore": "natures_spirit:chert",
     "natures_spirit:chert_iron_ore": "natures_spirit:chert",
     "natures_spirit:chert_copper_ore": "natures_spirit:chert",
