@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "compositemachines:block/item_output_port" },
+    "formed=true": { "model": "compositemachines:block/item_output_port_formed" }
+  }
+}

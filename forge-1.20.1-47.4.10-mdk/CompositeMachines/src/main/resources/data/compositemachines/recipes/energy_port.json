@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SRS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "tag": "forge:ingots/steel" },
+    "R": { "item": "minecraft:redstone_block" }
+  },
+  "result": { "item": "compositemachines:energy_port" }
+}

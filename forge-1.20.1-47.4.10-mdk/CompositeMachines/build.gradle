@@ -1,0 +1,78 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = '0.2.0'
+group = 'com.compositemachines'
+
+base {
+    archivesName = 'composite-machines'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                compositemachines {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        name = 'ModMaven'
+        url = 'https://modmaven.dev/'
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.10'
+
+    implementation fg.deobf('mekanism:Mekanism:1.20.1-10.4.16.80')
+    // Fallback if ModMaven is unreachable (compile against the pack's own jar):
+    // implementation fg.deobf(project.files('../../.minecraft/mods/Mekanism-1.20.1-10.4.16.80.jar'))
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title'     : 'Composite Machines',
+            'Specification-Vendor'    : 'compositemachines',
+            'Specification-Version'   : '1',
+            'Implementation-Title'    : project.name,
+            'Implementation-Version'  : project.jar.archiveVersion,
+            'Implementation-Vendor'   : 'compositemachines',
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+// Builds, reobfuscates and drops the jar straight into the modpack's mods folder,
+// removing any older composite-machines jar so the modid is never duplicated.
+tasks.register('deployJar', Copy) {
+    dependsOn 'build'
+    from jar.archiveFile
+    into '../../.minecraft/mods'
+    doFirst {
+        fileTree(dir: '../../.minecraft/mods', include: 'composite-machines-*.jar').each { it.delete() }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

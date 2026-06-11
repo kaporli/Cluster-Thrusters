@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SHS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "tag": "forge:ingots/steel" },
+    "H": { "item": "minecraft:hopper" }
+  },
+  "result": { "item": "compositemachines:item_input_port" }
+}

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north,formed=false,lit=false": { "model": "compositemachines:block/smelter_core" },
+    "facing=east,formed=false,lit=false": { "model": "compositemachines:block/smelter_core", "y": 90 },
+    "facing=south,formed=false,lit=false": { "model": "compositemachines:block/smelter_core", "y": 180 },
+    "facing=west,formed=false,lit=false": { "model": "compositemachines:block/smelter_core", "y": 270 },
+    "facing=north,formed=false,lit=true": { "model": "compositemachines:block/smelter_core" },
+    "facing=east,formed=false,lit=true": { "model": "compositemachines:block/smelter_core", "y": 90 },
+    "facing=south,formed=false,lit=true": { "model": "compositemachines:block/smelter_core", "y": 180 },
+    "facing=west,formed=false,lit=true": { "model": "compositemachines:block/smelter_core", "y": 270 },
+    "facing=north,formed=true,lit=false": { "model": "compositemachines:block/smelter_core_formed" },
+    "facing=east,formed=true,lit=false": { "model": "compositemachines:block/smelter_core_formed", "y": 90 },
+    "facing=south,formed=true,lit=false": { "model": "compositemachines:block/smelter_core_formed", "y": 180 },
+    "facing=west,formed=true,lit=false": { "model": "compositemachines:block/smelter_core_formed", "y": 270 },
+    "facing=north,formed=true,lit=true": { "model": "compositemachines:block/smelter_core_lit" },
+    "facing=east,formed=true,lit=true": { "model": "compositemachines:block/smelter_core_lit", "y": 90 },
+    "facing=south,formed=true,lit=true": { "model": "compositemachines:block/smelter_core_lit", "y": 180 },
+    "facing=west,formed=true,lit=true": { "model": "compositemachines:block/smelter_core_lit", "y": 270 }
+  }
+}

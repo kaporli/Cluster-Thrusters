@@ -1,0 +1,9 @@
+{
+  "values": [
+    "mekanism:steel_casing",
+    "mekanism:structural_glass",
+    "compositemachines:item_input_port",
+    "compositemachines:item_output_port",
+    "compositemachines:energy_port"
+  ]
+}

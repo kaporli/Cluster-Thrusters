@@ -1,0 +1,9 @@
+{
+  "itemGroup.compositemachines": "Composite Machines",
+  "container.compositemachines.smelter": "Composite Smelter",
+  "block.compositemachines.smelter_core": "Smelter Core",
+  "block.compositemachines.heating_unit": "Heating Unit",
+  "block.compositemachines.item_input_port": "Item Input Port",
+  "block.compositemachines.item_output_port": "Item Output Port",
+  "block.compositemachines.energy_port": "Energy Port"
+}

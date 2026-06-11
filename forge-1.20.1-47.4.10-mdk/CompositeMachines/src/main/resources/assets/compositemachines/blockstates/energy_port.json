@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "compositemachines:block/energy_port" },
+    "formed=true": { "model": "compositemachines:block/energy_port_formed" }
+  }
+}

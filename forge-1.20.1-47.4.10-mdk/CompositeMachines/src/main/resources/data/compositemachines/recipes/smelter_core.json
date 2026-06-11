@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SRS",
+    "SFS",
+    "SRS"
+  ],
+  "key": {
+    "S": { "tag": "forge:ingots/steel" },
+    "R": { "item": "minecraft:redstone" },
+    "F": { "item": "minecraft:furnace" }
+  },
+  "result": { "item": "compositemachines:smelter_core" }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SDS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "tag": "forge:ingots/steel" },
+    "D": { "item": "minecraft:dropper" }
+  },
+  "result": { "item": "compositemachines:item_output_port" }
+}

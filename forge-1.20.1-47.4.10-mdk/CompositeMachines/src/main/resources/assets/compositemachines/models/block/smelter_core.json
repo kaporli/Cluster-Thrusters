@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "compositemachines:block/smelter_core_top",
+    "front": "compositemachines:block/smelter_core_front",
+    "side": "compositemachines:block/smelter_core_side"
+  }
+}

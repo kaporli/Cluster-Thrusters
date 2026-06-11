@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SBS",
+    "BMB",
+    "SBS"
+  ],
+  "key": {
+    "S": { "tag": "forge:ingots/steel" },
+    "B": { "item": "minecraft:blaze_powder" },
+    "M": { "item": "minecraft:magma_block" }
+  },
+  "result": { "item": "compositemachines:heating_unit" }
+}

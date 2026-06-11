@@ -1,0 +1,9 @@
+{
+  "values": [
+    "compositemachines:smelter_core",
+    "compositemachines:heating_unit",
+    "compositemachines:item_input_port",
+    "compositemachines:item_output_port",
+    "compositemachines:energy_port"
+  ]
+}
