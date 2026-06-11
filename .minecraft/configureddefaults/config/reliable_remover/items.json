@@ -131,7 +131,6 @@
         "cataclysm:stone_tile_wall",
 
         "caverns_and_chasms:glare_spawn_egg",
-        "caverns_and_chasms:gunpowder_block",
 
         "create:handheld_worldshaper",
 
@@ -1021,6 +1020,13 @@
         "luminous_beasts:scarecrow_trophy",
         "luminous_beasts:ultimate_bestiary",
 
+        "mekanism:ingot_tin",
+        "mekanism:nugget_tin",
+        "mekanism:block_tin",
+        "mekanism:tin_ore",
+        "mekanism:deepslate_tin_ore",
+        "mekanism:block_raw_tin",
+        "mekanism:raw_tin",
         "mekanism:sawdust",
         "mekanism:upgrade_stone_generator",
         "mekanism:flamethrower",
@@ -1226,7 +1232,6 @@
 
         "mcwfences|everycomp:mcf/.*_hedge$",
 
-        "mekanism:.*tin.*",
         "mekanism:.*sulfur.*",
         "mekanism:.*uranium.*",
         "mekanism:.*steel.*",
