@@ -2,7 +2,12 @@
   "itemGroup.compositemachines": "Composite Machines",
   "container.compositemachines.smelter": "Composite Smelter",
   "block.compositemachines.smelter_core": "Smelter Core",
-  "block.compositemachines.heating_unit": "Heating Unit",
+  "block.compositemachines.heating_unit": "Basic Heating Unit",
+  "block.compositemachines.heating_unit_advanced": "Advanced Heating Unit",
+  "block.compositemachines.heating_unit_elite": "Elite Heating Unit",
+  "block.compositemachines.heating_unit_ultimate": "Ultimate Heating Unit",
+  "block.compositemachines.cauldron_unit": "Cauldron Unit",
+  "block.compositemachines.chimney": "Chimney",
   "block.compositemachines.item_input_port": "Item Input Port",
   "block.compositemachines.item_output_port": "Item Output Port",
   "block.compositemachines.energy_port": "Energy Port"

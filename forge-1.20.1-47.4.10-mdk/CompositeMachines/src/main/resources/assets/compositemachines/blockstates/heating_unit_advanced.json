@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "compositemachines:block/heating_unit_advanced" },
+    "lit=true": { "model": "compositemachines:block/heating_unit_advanced_lit" }
+  }
+}

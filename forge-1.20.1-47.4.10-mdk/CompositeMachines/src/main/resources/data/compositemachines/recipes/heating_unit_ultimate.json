@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NSN",
+    "SHS",
+    "NSN"
+  ],
+  "key": {
+    "N": { "item": "minecraft:netherite_ingot" },
+    "S": { "tag": "forge:ingots/steel" },
+    "H": { "item": "compositemachines:heating_unit_elite" }
+  },
+  "result": { "item": "compositemachines:heating_unit_ultimate" }
+}

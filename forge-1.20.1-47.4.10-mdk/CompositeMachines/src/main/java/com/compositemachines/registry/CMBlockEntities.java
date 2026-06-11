@@ -1,6 +1,7 @@
 package com.compositemachines.registry;
 
 import com.compositemachines.CompositeMachinesMod;
+import com.compositemachines.blockentity.CauldronUnitBlockEntity;
 import com.compositemachines.blockentity.PortBlockEntity;
 import com.compositemachines.blockentity.SmelterCoreBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -15,6 +16,11 @@ public final class CMBlockEntities {
     public static final RegistryObject<BlockEntityType<SmelterCoreBlockEntity>> SMELTER_CORE =
             BLOCK_ENTITIES.register("smelter_core", () -> BlockEntityType.Builder
                     .of(SmelterCoreBlockEntity::new, CMBlocks.SMELTER_CORE.get())
+                    .build(null));
+
+    public static final RegistryObject<BlockEntityType<CauldronUnitBlockEntity>> CAULDRON_UNIT =
+            BLOCK_ENTITIES.register("cauldron_unit", () -> BlockEntityType.Builder
+                    .of(CauldronUnitBlockEntity::new, CMBlocks.CAULDRON_UNIT.get())
                     .build(null));
 
     public static final RegistryObject<BlockEntityType<PortBlockEntity>> PORT =

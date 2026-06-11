@@ -269,7 +269,8 @@ public class SmelterCoreBlockEntity extends BlockEntity {
                 case SmelterMenu.DATA_ENERGY_HI -> energy.getEnergyStored() >>> 15;
                 case SmelterMenu.DATA_CAPACITY_LO -> energy.getMaxEnergyStored() & 0x7FFF;
                 case SmelterMenu.DATA_CAPACITY_HI -> energy.getMaxEnergyStored() >>> 15;
-                case SmelterMenu.DATA_PROGRESS_PERCENT -> progressPercent();
+                case SmelterMenu.DATA_PROGRESS -> guiProgressTicks();
+                case SmelterMenu.DATA_TICKS_PER_OP -> guiTicksPerOp();
                 case SmelterMenu.DATA_ACTIVE_OPS -> activeOps;
                 case SmelterMenu.DATA_MAX_OPS -> structure == null ? 0 : structure.columnCount();
                 default -> 0;
@@ -287,18 +288,40 @@ public class SmelterCoreBlockEntity extends BlockEntity {
         }
     };
 
-    /** Progress (0..100) of the furthest-along column, for the GUI arrow. */
-    private int progressPercent() {
-        if (structure == null) {
-            return 0;
+    /** Raw progress ticks of the furthest-along column, for the GUI arrow. */
+    private int guiProgressTicks() {
+        return guiProgressColumn() >= 0 ? progress[guiProgressColumn()] : 0;
+    }
+
+    /** Ticks-per-op of the column driving the GUI arrow. */
+    private int guiTicksPerOp() {
+        int k = guiProgressColumn();
+        if (k < 0 || structure == null) {
+            return SmelterTuning.BASE_TICKS;
         }
-        int best = 0;
+        return SmelterTuning.ticksFor(structure.columns().get(k).tier());
+    }
+
+    /** Column index with the highest relative smelt progress, or -1 if none. */
+    private int guiProgressColumn() {
+        if (structure == null) {
+            return -1;
+        }
+        int best = -1;
+        int bestRatio = -1;
         List<SmelterColumn> columns = structure.columns();
         for (int k = 0; k < columns.size() && k < SLOTS; k++) {
+            if (progress[k] <= 0) {
+                continue;
+            }
             int ticks = SmelterTuning.ticksFor(columns.get(k).tier());
-            best = Math.max(best, progress[k] * 100 / ticks);
+            int ratio = progress[k] * 1000 / ticks;
+            if (ratio > bestRatio) {
+                bestRatio = ratio;
+                best = k;
+            }
         }
-        return Math.min(100, best);
+        return best;
     }
 
     /** Resets all column visuals (lit states, cauldron displays) of the given structure. */

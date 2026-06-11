@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "compositemachines:block/chimney" },
+    "lit=true": { "model": "compositemachines:block/chimney_lit" }
+  }
+}

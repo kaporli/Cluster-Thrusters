@@ -55,8 +55,9 @@ public class HeatingUnitBlock extends Block {
         if (!state.getValue(LIT)) {
             return;
         }
+        int particleBoost = Math.min(3, tier.speedMultiplier() / 2);
         // flames licking up around the cauldron above
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 2 + particleBoost; i++) {
             double angle = random.nextDouble() * Math.PI * 2;
             double radius = 0.35 + random.nextDouble() * 0.2;
             double x = pos.getX() + 0.5 + Math.cos(angle) * radius;

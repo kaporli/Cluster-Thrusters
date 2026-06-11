@@ -81,17 +81,48 @@ def core_top():
     return img
 
 
-def heating_unit(lit=False):
+def heating_unit(lit=False, hot=(255, 90, 30), hotter=(255, 170, 60)):
     img = steel_base()
     d = ImageDraw.Draw(img)
     # glowing coil bars; white-hot when lit
-    hot = (255, 230, 120) if lit else (255, 90, 30)
-    hotter = (255, 255, 200) if lit else (255, 170, 60)
+    hot_c = hot if not lit else (255, 230, 120)
+    hotter_c = hotter if not lit else (255, 255, 200)
     for y in (4, 7, 10):
-        d.rectangle([3, y, 12, y + 1], fill=hot + (255,))
-        d.rectangle([4, y, 11, y], fill=hotter + (255,))
+        d.rectangle([3, y, 12, y + 1], fill=hot_c + (255,))
+        d.rectangle([4, y, 11, y], fill=hotter_c + (255,))
     if lit:
         d.rectangle([2, 3, 13, 12], outline=(255, 140, 40, 255))
+    return img
+
+
+def chimney_texture(lit=False):
+    img = steel_base()
+    d = ImageDraw.Draw(img)
+    # dark flue opening at top, soot streaks when active
+    d.rectangle([5, 5, 10, 10], fill=(25, 25, 28, 255))
+    if lit:
+        d.rectangle([6, 6, 9, 9], fill=(60, 60, 65, 255))
+        d.line([7, 2, 7, 5], fill=(90, 90, 95, 255))
+        d.line([8, 2, 8, 5], fill=(90, 90, 95, 255))
+    return img
+
+
+def cauldron_frame():
+    """Steel frame texture for holder pillars and base plate."""
+    img = port_frame()
+    d = ImageDraw.Draw(img)
+    # warm tint on inner edges
+    d.line([2, 2, 13, 2], fill=(100, 70, 50, 255))
+    d.line([2, 13, 13, 13], fill=(100, 70, 50, 255))
+    return img
+
+
+def cauldron_basin():
+    """Dark recessed basin floor inside the holder."""
+    img = Image.new("RGBA", (16, 16), (20, 18, 16, 255))
+    d = ImageDraw.Draw(img)
+    d.rectangle([2, 2, 13, 13], outline=(50, 40, 35, 255))
+    d.rectangle([4, 4, 11, 11], fill=(80, 45, 20, 255))
     return img
 
 
@@ -182,6 +213,16 @@ save(core_side(), "smelter_core_side")
 save(core_top(), "smelter_core_top")
 save(heating_unit(), "heating_unit")
 save(heating_unit(lit=True), "heating_unit_lit")
+save(heating_unit(hot=(255, 50, 120), hotter=(255, 120, 180)), "heating_unit_advanced")
+save(heating_unit(lit=True, hot=(255, 120, 180), hotter=(255, 200, 230)), "heating_unit_advanced_lit")
+save(heating_unit(hot=(180, 60, 255), hotter=(220, 140, 255)), "heating_unit_elite")
+save(heating_unit(lit=True, hot=(220, 140, 255), hotter=(240, 200, 255)), "heating_unit_elite_lit")
+save(heating_unit(hot=(60, 220, 255), hotter=(140, 240, 255)), "heating_unit_ultimate")
+save(heating_unit(lit=True, hot=(140, 240, 255), hotter=(220, 255, 255)), "heating_unit_ultimate_lit")
+save(chimney_texture(), "chimney")
+save(chimney_texture(lit=True), "chimney_lit")
+save(cauldron_frame(), "cauldron_unit")
+save(cauldron_basin(), "cauldron_unit_basin")
 save(port_frame(), "port_frame")
 # flat textures kept for the item-port inventory icons / fallbacks
 save(port(INPUT_BLUE, True, False), "item_input_port")

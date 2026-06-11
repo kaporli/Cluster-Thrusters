@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PEP",
+    "EHE",
+    "PEP"
+  ],
+  "key": {
+    "P": { "item": "minecraft:ender_pearl" },
+    "E": { "item": "minecraft:blaze_rod" },
+    "H": { "item": "compositemachines:heating_unit_advanced" }
+  },
+  "result": { "item": "compositemachines:heating_unit_elite" }
+}

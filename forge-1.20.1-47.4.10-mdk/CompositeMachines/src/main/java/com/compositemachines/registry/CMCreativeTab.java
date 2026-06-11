@@ -19,6 +19,11 @@ public final class CMCreativeTab {
                     .displayItems((params, output) -> {
                         output.accept(CMItems.SMELTER_CORE.get());
                         output.accept(CMItems.HEATING_UNIT.get());
+                        output.accept(CMItems.HEATING_UNIT_ADVANCED.get());
+                        output.accept(CMItems.HEATING_UNIT_ELITE.get());
+                        output.accept(CMItems.HEATING_UNIT_ULTIMATE.get());
+                        output.accept(CMItems.CAULDRON_UNIT.get());
+                        output.accept(CMItems.CHIMNEY.get());
                         output.accept(CMItems.ITEM_INPUT_PORT.get());
                         output.accept(CMItems.ITEM_OUTPUT_PORT.get());
                         output.accept(CMItems.ENERGY_PORT.get());

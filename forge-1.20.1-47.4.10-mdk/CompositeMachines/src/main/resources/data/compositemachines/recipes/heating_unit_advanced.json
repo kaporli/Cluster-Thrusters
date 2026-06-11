@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SHS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "tag": "forge:ingots/steel" },
+    "H": { "item": "compositemachines:heating_unit" }
+  },
+  "result": { "item": "compositemachines:heating_unit_advanced" }
+}
