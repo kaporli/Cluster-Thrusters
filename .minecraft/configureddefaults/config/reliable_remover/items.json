@@ -1,6 +1,17 @@
 {
     "action": "REMOVE",
     "items": [
+        "supplementaties:wrench",
+        "mekanismgenerators:heat_generator",
+        "mekanismgenerators:solar_generator",
+        "mekanismgenerators:solar_panel",
+        "mekanismgenerators:advanced_solar_generator",
+        "mekanismgenerators:module_solar_recharging_unit",
+        "mekanismgenerators:module_geothermal_recharging_unit",
+        "mekanismgenerators:wind_generator",
+        "mekanismgenerators:bio_generator",
+        "mekanismgenerators:gas_burning_generator",
+        "mekanism:upgrade_stone_generator",
         "supplementaries:crank",
         "ae2:matter_ball",
         "ae2:color_applicator",
