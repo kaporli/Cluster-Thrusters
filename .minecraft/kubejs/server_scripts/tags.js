@@ -24,4 +24,7 @@ ServerEvents.tags("item", function (event) {
     event.add("farmersdelight:cabinets", "mynethersdelight:blackstone_bricks_cabinet");
     event.add("farmersdelight:cabinets", "mynethersdelight:red_nether_bricks_cabinet");
     event.add("farmersdelight:cabinets", "aethersdelight:skyroot_cabinet");
+
+
+    event.add("forge:sawdust", "createdieselgenerators:wood_chip");
 });

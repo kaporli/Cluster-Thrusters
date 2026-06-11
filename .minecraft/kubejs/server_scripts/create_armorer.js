@@ -317,7 +317,7 @@ ServerEvents.recipes(event => {
             M: { item: 'create:precision_mechanism' },
             R: { item: 'create:brass_casing' },
             H: { item: 'createbigcannons:he_shell'},
-            Z: { item: 'createbigcannons:nethersteel_sliding_breech' },
+            Z: { item: 'createbigcannons:nethersteel_screw_breech' },
         },
         pattern: [
             ' OLIOIO  ',

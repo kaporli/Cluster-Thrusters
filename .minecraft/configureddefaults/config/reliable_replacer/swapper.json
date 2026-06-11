@@ -1,5 +1,8 @@
 {
   "swapper": {
+    "iceandfire:silver_ore": "minecraft:stone",
+    "iceandfire:deepslate_silver_ore": "minecraft:deepslate",
+
     "dawnera:worm_dirt": "minecraft:dirt",
 
     "natures_spirit:chert_coal_ore": "natures_spirit:chert",
@@ -18,6 +21,8 @@
 
     "mekanism:uranium_ore": "minecraft:stone",
     "mekanism:deepslate_uranium_ore": "minecraft:deepslate",
+    "mekanism:tin_ore": "minecraft:stone",
+    "mekanism:deepslate_tin_ore": "minecraft:deepslate",
 
     "excavated_variants:create_limestone_uranium_ore": "create:limestone",
     "excavated_variants:andesite_uranium_ore": "minecraft:andesite",

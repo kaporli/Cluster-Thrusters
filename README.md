@@ -13,6 +13,11 @@
 
 These mods are client-side only and do not need to be installed on the server.
 
+- CreateSchematicHelper
+- GuideME
+- Third Person Shooting: Zero
+- Shoulder Surfing Reloaded
+- Continuity
 - Accurate Block Placement
 - AppleSkin
 - Async Particles
@@ -86,3 +91,9 @@ These mods are client-side only and do not need to be installed on the server.
 - Xaero's World Map
 - Xaero's Waystones Compatibility
 - XaeroPlus
+
+## TODO
+- retexture simply swords' silver weapons to match the color of caverns & chasms silver
+- redo ae2 recipes to fit create theme
+- adjust stress levels required to power create: big cannons so that you need to set up create: diesel generators
+- remove overlap between caverns & chasms and quark azalea

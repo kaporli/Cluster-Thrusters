@@ -1,0 +1,74 @@
+{
+  mod_id: 'iceandfire',
+  provided_stones: [],
+  provided_ores: [
+    {
+      id: 'silver_ore',
+      stone: [
+        'stone',
+        'deepslate',
+      ],
+      block_id: [
+        'caverns_and_chasms:silver_ore',
+        'caverns_and_chasms:deepslate_silver_ore',
+      ],
+      lang: {
+        en_us: 'Silver Ore',
+      },
+      types: [
+        'stone',
+      ],
+    },
+    {
+      id: 'tin_ore',
+      stone: [
+        'stone',
+        'deepslate',
+      ],
+      block_id: [
+        'caverns_and_chasms:tin_ore',
+        'caverns_and_chasms:deepslate_tin_ore',
+      ],
+      lang: {
+        en_us: 'Tin Ore',
+      },
+      types: [
+        'stone',
+      ],
+    },
+    {
+      id: 'turquoise_ore',
+      stone: [
+        'stone',
+        'deepslate',
+      ],
+      block_id: [
+        'caverns_and_chasms:turquoise_ore',
+        'caverns_and_chasms:deepslate_turquoise_ore',
+      ],
+      lang: {
+        en_us: 'Turquoise Ore',
+      },
+      types: [
+        'stone',
+      ],
+    },
+    {
+      id: 'spinel_ore',
+      stone: [
+        'stone',
+        'deepslate',
+      ],
+      block_id: [
+        'caverns_and_chasms:spinel_ore',
+        'caverns_and_chasms:deepslate_spinel_ore',
+      ],
+      lang: {
+        en_us: 'Spinel Ore',
+      },
+      types: [
+        'stone',
+      ],
+    },
+  ],
+}

@@ -49,5 +49,11 @@
       "dawnera:aegirocassis"
     ],
     "result": "deny"
+  },
+  {
+    "mob": [
+      "caverns_and_chasms:glare"
+    ],
+    "result": "deny"
   }
 ]

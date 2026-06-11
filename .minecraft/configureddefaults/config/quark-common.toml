@@ -1825,7 +1825,7 @@
 	Crate = false
 	Magnets = false
 	"Matrix Enchanting" = false
-	Pipes = true
+	Pipes = false
 	"Tiny Potato" = false
 	"Totem Of Holding" = false
 
