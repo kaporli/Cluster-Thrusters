@@ -50,21 +50,32 @@ write("heating_unit_elite_lit", heater_model("compositemachines:block/heating_un
 write("heating_unit_ultimate", heater_model("compositemachines:block/heating_unit_ultimate"))
 write("heating_unit_ultimate_lit", heater_model("compositemachines:block/heating_unit_ultimate_lit"))
 
-write("chimney", column_block(
-    {"frame": "compositemachines:block/port_frame", "flue": "compositemachines:block/chimney"},
-    [
-        element((2, 0, 2), (14, 4, 14), "#frame"),
-        element((4, 4, 4), (12, 16, 12), "#flue"),
-    ],
-))
+def full_chimney(top_tex):
+    """Full 16³ block — steel casing footprint with a vent on the top face."""
+    side = "compositemachines:block/chimney_side"
+    return column_block(
+        {
+            "side": side,
+            "top": top_tex,
+            "particle": side,
+        },
+        [{
+            "from": [0, 0, 0],
+            "to": [16, 16, 16],
+            "faces": {
+                "up": {"texture": "#top"},
+                "down": {"texture": "#side"},
+                "north": {"texture": "#side"},
+                "south": {"texture": "#side"},
+                "east": {"texture": "#side"},
+                "west": {"texture": "#side"},
+            },
+        }],
+    )
 
-write("chimney_lit", column_block(
-    {"frame": "compositemachines:block/port_frame", "flue": "compositemachines:block/chimney_lit"},
-    [
-        element((2, 0, 2), (14, 4, 14), "#frame"),
-        element((4, 4, 4), (12, 16, 12), "#flue"),
-    ],
-))
+
+write("chimney", full_chimney("compositemachines:block/chimney_top"))
+write("chimney_lit", full_chimney("compositemachines:block/chimney_top_lit"))
 
 write("cauldron_unit", column_block(
     {

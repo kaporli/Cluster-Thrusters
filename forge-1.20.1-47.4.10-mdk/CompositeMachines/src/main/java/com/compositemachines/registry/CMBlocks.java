@@ -5,8 +5,10 @@ import com.compositemachines.block.CauldronUnitBlock;
 import com.compositemachines.block.ChimneyBlock;
 import com.compositemachines.block.HeaterTier;
 import com.compositemachines.block.HeatingUnitBlock;
+import com.compositemachines.block.OverheadRailBlock;
 import com.compositemachines.block.PortBlock;
 import com.compositemachines.block.PortType;
+import com.compositemachines.block.RailHoistBlock;
 import com.compositemachines.block.SmelterCoreBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -38,6 +40,12 @@ public final class CMBlocks {
     public static final RegistryObject<Block> CHIMNEY = BLOCKS.register("chimney",
             () -> new ChimneyBlock(column().noOcclusion()
                     .lightLevel(state -> state.getValue(ChimneyBlock.LIT) ? 5 : 0)));
+
+    public static final RegistryObject<Block> OVERHEAD_RAIL = BLOCKS.register("overhead_rail",
+            () -> new OverheadRailBlock(column().noOcclusion()));
+
+    public static final RegistryObject<Block> RAIL_HOIST = BLOCKS.register("rail_hoist",
+            () -> new RailHoistBlock(column().noOcclusion()));
 
     public static final RegistryObject<Block> ITEM_INPUT_PORT = BLOCKS.register("item_input_port",
             () -> new PortBlock(steel().noOcclusion(), PortType.ITEM_INPUT));

@@ -21,6 +21,8 @@ public final class CMItems {
             blockItem("heating_unit_ultimate", CMBlocks.HEATING_UNIT_ULTIMATE);
     public static final RegistryObject<Item> CAULDRON_UNIT = blockItem("cauldron_unit", CMBlocks.CAULDRON_UNIT);
     public static final RegistryObject<Item> CHIMNEY = blockItem("chimney", CMBlocks.CHIMNEY);
+    public static final RegistryObject<Item> OVERHEAD_RAIL = blockItem("overhead_rail", CMBlocks.OVERHEAD_RAIL);
+    public static final RegistryObject<Item> RAIL_HOIST = blockItem("rail_hoist", CMBlocks.RAIL_HOIST);
     public static final RegistryObject<Item> ITEM_INPUT_PORT = blockItem("item_input_port", CMBlocks.ITEM_INPUT_PORT);
     public static final RegistryObject<Item> ITEM_OUTPUT_PORT = blockItem("item_output_port", CMBlocks.ITEM_OUTPUT_PORT);
     public static final RegistryObject<Item> ENERGY_PORT = blockItem("energy_port", CMBlocks.ENERGY_PORT);

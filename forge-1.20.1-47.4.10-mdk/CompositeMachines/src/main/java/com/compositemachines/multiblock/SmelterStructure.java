@@ -10,19 +10,22 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Immutable description of a formed Composite Smelter: cuboid bounds (wall layer
- * inclusive), the smelting columns inside and the positions of all port blocks.
+ * Immutable description of a formed Composite Smelter: cuboid bounds, smelting
+ * columns (with rail hoists), overhead rail segments on the rail plane, and ports.
  */
 public final class SmelterStructure {
     private final BlockPos min;
     private final BlockPos max;
     private final List<SmelterColumn> columns;
+    private final List<BlockPos> rails;
     private final List<BlockPos> ports;
 
-    public SmelterStructure(BlockPos min, BlockPos max, List<SmelterColumn> columns, List<BlockPos> ports) {
+    public SmelterStructure(BlockPos min, BlockPos max, List<SmelterColumn> columns,
+                            List<BlockPos> rails, List<BlockPos> ports) {
         this.min = min.immutable();
         this.max = max.immutable();
         this.columns = List.copyOf(columns);
+        this.rails = List.copyOf(rails);
         this.ports = List.copyOf(ports);
     }
 
@@ -34,12 +37,21 @@ public final class SmelterStructure {
         return max;
     }
 
+    /** Y level of the single overhead rail plane (one below the roof). */
+    public int railY() {
+        return max.getY() - 1;
+    }
+
     public List<SmelterColumn> columns() {
         return columns;
     }
 
     public int columnCount() {
         return columns.size();
+    }
+
+    public List<BlockPos> rails() {
+        return rails;
     }
 
     public List<BlockPos> ports() {
@@ -71,6 +83,7 @@ public final class SmelterStructure {
             columnList.add(column.save());
         }
         tag.put("columns", columnList);
+        tag.putLongArray("rails", rails.stream().mapToLong(BlockPos::asLong).toArray());
         tag.putLongArray("ports", ports.stream().mapToLong(BlockPos::asLong).toArray());
         return tag;
     }
@@ -80,23 +93,30 @@ public final class SmelterStructure {
         for (Tag entry : tag.getList("columns", Tag.TAG_COMPOUND)) {
             columns.add(SmelterColumn.load((CompoundTag) entry));
         }
+        List<BlockPos> rails = new ArrayList<>();
+        if (tag.contains("rails")) {
+            for (long packed : tag.getLongArray("rails")) {
+                rails.add(BlockPos.of(packed));
+            }
+        }
         List<BlockPos> ports = new ArrayList<>();
         for (long packed : tag.getLongArray("ports")) {
             ports.add(BlockPos.of(packed));
         }
         return new SmelterStructure(BlockPos.of(tag.getLong("min")), BlockPos.of(tag.getLong("max")),
-                columns, ports);
+                columns, rails, ports);
     }
 
     @Override
     public boolean equals(Object o) {
         return o instanceof SmelterStructure other
                 && min.equals(other.min) && max.equals(other.max)
-                && columns.equals(other.columns) && ports.equals(other.ports);
+                && columns.equals(other.columns) && rails.equals(other.rails)
+                && ports.equals(other.ports);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(min, max, columns, ports);
+        return Objects.hash(min, max, columns, rails, ports);
     }
 }

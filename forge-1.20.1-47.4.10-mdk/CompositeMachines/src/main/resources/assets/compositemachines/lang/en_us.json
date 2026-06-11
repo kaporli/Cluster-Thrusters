@@ -8,6 +8,8 @@
   "block.compositemachines.heating_unit_ultimate": "Ultimate Heating Unit",
   "block.compositemachines.cauldron_unit": "Cauldron Unit",
   "block.compositemachines.chimney": "Chimney",
+  "block.compositemachines.overhead_rail": "Overhead Rail",
+  "block.compositemachines.rail_hoist": "Rail Hoist",
   "block.compositemachines.item_input_port": "Item Input Port",
   "block.compositemachines.item_output_port": "Item Output Port",
   "block.compositemachines.energy_port": "Energy Port"

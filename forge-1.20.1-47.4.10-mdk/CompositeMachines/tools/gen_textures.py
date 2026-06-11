@@ -95,15 +95,20 @@ def heating_unit(lit=False, hot=(255, 90, 30), hotter=(255, 170, 60)):
     return img
 
 
-def chimney_texture(lit=False):
+def chimney_side():
+    """Side/bottom faces — same riveted steel look as the casing walls."""
+    return steel_base()
+
+
+def chimney_top(lit=False):
+    """Top face — steel panel with a vent opening for smoke."""
     img = steel_base()
     d = ImageDraw.Draw(img)
-    # dark flue opening at top, soot streaks when active
-    d.rectangle([5, 5, 10, 10], fill=(25, 25, 28, 255))
+    d.rectangle([3, 3, 12, 12], fill=(22, 22, 26, 255))
+    d.rectangle([4, 4, 11, 11], fill=(14, 14, 16, 255))
     if lit:
-        d.rectangle([6, 6, 9, 9], fill=(60, 60, 65, 255))
-        d.line([7, 2, 7, 5], fill=(90, 90, 95, 255))
-        d.line([8, 2, 8, 5], fill=(90, 90, 95, 255))
+        d.rectangle([5, 5, 10, 10], fill=(55, 52, 48, 255))
+        d.rectangle([6, 6, 9, 9], fill=(90, 70, 45, 255))
     return img
 
 
@@ -206,6 +211,27 @@ def energy_port(formed):
 INPUT_BLUE = (80, 160, 255)
 OUTPUT_ORANGE = (255, 160, 60)
 
+
+def overhead_rail():
+    """I-beam rail segment seen from below."""
+    img = steel_base()
+    d = ImageDraw.Draw(img)
+    d.rectangle([3, 13, 12, 15], fill=STEEL_DARK + (255,))
+    d.rectangle([4, 14, 11, 15], fill=STEEL_LIGHT + (255,))
+    d.rectangle([6, 12, 9, 14], fill=RIVET + (255,))
+    return img
+
+
+def rail_hoist():
+    """Hoist carriage body."""
+    img = steel_base()
+    d = ImageDraw.Draw(img)
+    d.rectangle([4, 2, 11, 8], fill=STEEL_DARK + (255,))
+    d.rectangle([5, 3, 10, 7], fill=(90, 90, 95, 255))
+    d.rectangle([7, 0, 8, 3], fill=RIVET + (255,))
+    return img
+
+
 save(core_front(False), "smelter_core_front")
 save(core_front(True), "smelter_core_front_formed")
 save(core_front(True, lit=True), "smelter_core_front_lit")
@@ -219,8 +245,11 @@ save(heating_unit(hot=(180, 60, 255), hotter=(220, 140, 255)), "heating_unit_eli
 save(heating_unit(lit=True, hot=(220, 140, 255), hotter=(240, 200, 255)), "heating_unit_elite_lit")
 save(heating_unit(hot=(60, 220, 255), hotter=(140, 240, 255)), "heating_unit_ultimate")
 save(heating_unit(lit=True, hot=(140, 240, 255), hotter=(220, 255, 255)), "heating_unit_ultimate_lit")
-save(chimney_texture(), "chimney")
-save(chimney_texture(lit=True), "chimney_lit")
+save(chimney_side(), "chimney_side")
+save(chimney_top(), "chimney_top")
+save(chimney_top(lit=True), "chimney_top_lit")
+save(overhead_rail(), "overhead_rail")
+save(rail_hoist(), "rail_hoist")
 save(cauldron_frame(), "cauldron_unit")
 save(cauldron_basin(), "cauldron_unit_basin")
 save(port_frame(), "port_frame")

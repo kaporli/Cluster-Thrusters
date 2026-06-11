@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
@@ -20,9 +19,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
  */
 public class ChimneyBlock extends Block {
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
-    private static final VoxelShape SHAPE = Shapes.or(
-            box(2, 0, 2, 14, 4, 14),
-            box(4, 4, 4, 12, 16, 12));
+    private static final VoxelShape SHAPE = box(0, 0, 0, 16, 16, 16);
 
     public ChimneyBlock(Properties properties) {
         super(properties);

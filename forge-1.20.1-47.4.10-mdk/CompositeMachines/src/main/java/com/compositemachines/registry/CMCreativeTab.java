@@ -24,6 +24,8 @@ public final class CMCreativeTab {
                         output.accept(CMItems.HEATING_UNIT_ULTIMATE.get());
                         output.accept(CMItems.CAULDRON_UNIT.get());
                         output.accept(CMItems.CHIMNEY.get());
+                        output.accept(CMItems.OVERHEAD_RAIL.get());
+                        output.accept(CMItems.RAIL_HOIST.get());
                         output.accept(CMItems.ITEM_INPUT_PORT.get());
                         output.accept(CMItems.ITEM_OUTPUT_PORT.get());
                         output.accept(CMItems.ENERGY_PORT.get());

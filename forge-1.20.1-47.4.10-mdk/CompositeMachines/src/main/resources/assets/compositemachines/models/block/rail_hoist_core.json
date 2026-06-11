@@ -1,0 +1,139 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "compositemachines:block/rail_hoist",
+    "rail": "compositemachines:block/overhead_rail",
+    "hoist": "compositemachines:block/rail_hoist",
+    "frame": "compositemachines:block/port_frame"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        14,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#rail"
+        },
+        "south": {
+          "texture": "#rail"
+        },
+        "east": {
+          "texture": "#rail"
+        },
+        "west": {
+          "texture": "#rail"
+        },
+        "up": {
+          "texture": "#rail"
+        },
+        "down": {
+          "texture": "#rail"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        4,
+        7
+      ],
+      "to": [
+        9,
+        14,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frame"
+        },
+        "south": {
+          "texture": "#frame"
+        },
+        "east": {
+          "texture": "#frame"
+        },
+        "west": {
+          "texture": "#frame"
+        },
+        "up": {
+          "texture": "#frame"
+        },
+        "down": {
+          "texture": "#frame"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        4,
+        7
+      ],
+      "to": [
+        11,
+        6,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hoist"
+        },
+        "south": {
+          "texture": "#hoist"
+        },
+        "east": {
+          "texture": "#hoist"
+        },
+        "west": {
+          "texture": "#hoist"
+        },
+        "up": {
+          "texture": "#hoist"
+        },
+        "down": {
+          "texture": "#hoist"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        2,
+        7
+      ],
+      "to": [
+        10,
+        4,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#hoist"
+        },
+        "south": {
+          "texture": "#hoist"
+        },
+        "east": {
+          "texture": "#hoist"
+        },
+        "west": {
+          "texture": "#hoist"
+        },
+        "up": {
+          "texture": "#hoist"
+        },
+        "down": {
+          "texture": "#hoist"
+        }
+      }
+    }
+  ]
+}

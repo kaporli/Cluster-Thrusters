@@ -7,6 +7,8 @@
     "compositemachines:heating_unit_ultimate",
     "compositemachines:cauldron_unit",
     "compositemachines:chimney",
+    "compositemachines:overhead_rail",
+    "compositemachines:rail_hoist",
     "compositemachines:item_input_port",
     "compositemachines:item_output_port",
     "compositemachines:energy_port"
