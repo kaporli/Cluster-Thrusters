@@ -27,4 +27,18 @@ ServerEvents.tags("item", function (event) {
 
 
     event.add("forge:sawdust", "createdieselgenerators:wood_chip");
+
+    // Mekanism tin items removed by reliable_remover — clean dead references from tags
+    event.remove("forge:ingots/tin", "mekanism:ingot_tin");
+    event.remove("forge:nuggets/tin", "mekanism:nugget_tin");
+    event.remove("forge:storage_blocks/tin", "mekanism:block_tin");
+    event.remove("forge:storage_blocks/raw_tin", "mekanism:block_raw_tin");
+    event.remove("forge:raw_materials/tin", "mekanism:raw_tin");
+    event.remove("forge:ores/tin", "mekanism:tin_ore");
+    event.remove("forge:ores/tin", "mekanism:deepslate_tin_ore");
+    event.remove("forge:ore_rates/singular", "mekanism:tin_ore");
+    event.remove("forge:ore_rates/singular", "mekanism:deepslate_tin_ore");
+    event.remove("forge:ores_in_ground/stone", "mekanism:tin_ore");
+    event.remove("forge:ores_in_ground/deepslate", "mekanism:deepslate_tin_ore");
+    event.remove("minecraft:beacon_payment_items", "mekanism:ingot_tin");
 });

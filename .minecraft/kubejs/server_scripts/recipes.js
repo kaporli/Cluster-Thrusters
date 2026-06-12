@@ -85,54 +85,54 @@ ServerEvents.recipes(event => {
     });
 
     // lowlands_clothing furpelt -> alexsmobs:bear_fur replacements
-    event.remove({ id: 'lowlands_clothing:furpeltdecraft' });
-    event.stonecutting('minecraft:leather', 'alexsmobs:bear_fur').id('kubejs:bear_fur_to_leather');
+    // event.remove({ id: 'lowlands_clothing:furpeltdecraft' });
+    // event.stonecutting('minecraft:leather', 'alexsmobs:bear_fur').id('kubejs:bear_fur_to_leather');
 
-    event.remove({ id: 'lowlands_clothing:mountainmenbootscraft' });
-    event.shaped('lowlands_clothing:mountainmenclothes_boots', [
-        'A A',
-        'B B'
-    ], { A: 'alexsmobs:bear_fur', B: 'minecraft:leather' }).id('kubejs:mountainmen_boots');
+    // event.remove({ id: 'lowlands_clothing:mountainmenbootscraft' });
+    // event.shaped('lowlands_clothing:mountainmenclothes_boots', [
+    //     'A A',
+    //     'B B'
+    // ], { A: 'alexsmobs:bear_fur', B: 'minecraft:leather' }).id('kubejs:mountainmen_boots');
 
-    event.remove({ id: 'lowlands_clothing:mountainmencloackcraft' });
-    event.shaped('lowlands_clothing:mountainmenclothes_chestplate', [
-        'A A',
-        'BAB',
-        'AAA'
-    ], { A: 'alexsmobs:bear_fur', B: 'minecraft:leather' }).id('kubejs:mountainmen_chestplate');
+    // event.remove({ id: 'lowlands_clothing:mountainmencloackcraft' });
+    // event.shaped('lowlands_clothing:mountainmenclothes_chestplate', [
+    //     'A A',
+    //     'BAB',
+    //     'AAA'
+    // ], { A: 'alexsmobs:bear_fur', B: 'minecraft:leather' }).id('kubejs:mountainmen_chestplate');
 
-    event.remove({ id: 'lowlands_clothing:mountainmenhatcraft' });
-    event.shaped('lowlands_clothing:mountainmenclothes_helmet', [
-        'AAA',
-        'B B'
-    ], { A: 'alexsmobs:bear_fur', B: 'minecraft:leather' }).id('kubejs:mountainmen_helmet');
+    // event.remove({ id: 'lowlands_clothing:mountainmenhatcraft' });
+    // event.shaped('lowlands_clothing:mountainmenclothes_helmet', [
+    //     'AAA',
+    //     'B B'
+    // ], { A: 'alexsmobs:bear_fur', B: 'minecraft:leather' }).id('kubejs:mountainmen_helmet');
 
-    event.remove({ id: 'lowlands_clothing:mountainmenpantscraft' });
-    event.shaped('lowlands_clothing:mountainmenclothes_leggings', [
-        'AAA',
-        'A A',
-        'B B'
-    ], { A: 'minecraft:leather', B: 'alexsmobs:bear_fur' }).id('kubejs:mountainmen_leggings');
+    // event.remove({ id: 'lowlands_clothing:mountainmenpantscraft' });
+    // event.shaped('lowlands_clothing:mountainmenclothes_leggings', [
+    //     'AAA',
+    //     'A A',
+    //     'B B'
+    // ], { A: 'minecraft:leather', B: 'alexsmobs:bear_fur' }).id('kubejs:mountainmen_leggings');
 
-    event.remove({ id: 'lowlands_clothing:norsianbootscraft' });
-    event.shaped('lowlands_clothing:norsian_armor_boots', [
-        'A A',
-        'B B'
-    ], { A: 'alexsmobs:bear_fur', B: 'minecraft:iron_ingot' }).id('kubejs:norsian_boots');
+    // event.remove({ id: 'lowlands_clothing:norsianbootscraft' });
+    // event.shaped('lowlands_clothing:norsian_armor_boots', [
+    //     'A A',
+    //     'B B'
+    // ], { A: 'alexsmobs:bear_fur', B: 'minecraft:iron_ingot' }).id('kubejs:norsian_boots');
 
-    event.remove({ id: 'lowlands_clothing:norsianchestplatecraft' });
-    event.shaped('lowlands_clothing:norsian_armor_chestplate', [
-        'A A',
-        'BBB',
-        'BAB'
-    ], { A: 'alexsmobs:bear_fur', B: 'minecraft:iron_ingot' }).id('kubejs:norsian_chestplate');
+    // event.remove({ id: 'lowlands_clothing:norsianchestplatecraft' });
+    // event.shaped('lowlands_clothing:norsian_armor_chestplate', [
+    //     'A A',
+    //     'BBB',
+    //     'BAB'
+    // ], { A: 'alexsmobs:bear_fur', B: 'minecraft:iron_ingot' }).id('kubejs:norsian_chestplate');
 
-    event.remove({ id: 'lowlands_clothing:norsianarmorleggingscraft' });
-    event.shaped('lowlands_clothing:norsian_armor_leggings', [
-        'AAA',
-        'B B',
-        'B B'
-    ], { A: 'alexsmobs:bear_fur', B: 'minecraft:iron_ingot' }).id('kubejs:norsian_leggings');
+    // event.remove({ id: 'lowlands_clothing:norsianarmorleggingscraft' });
+    // event.shaped('lowlands_clothing:norsian_armor_leggings', [
+    //     'AAA',
+    //     'B B',
+    //     'B B'
+    // ], { A: 'alexsmobs:bear_fur', B: 'minecraft:iron_ingot' }).id('kubejs:norsian_leggings');
 
     // alexsmobs:sopa_de_macaco alternate recipe with neapolitan banana
     // event.shaped('alexsmobs:sopa_de_macaco', [
