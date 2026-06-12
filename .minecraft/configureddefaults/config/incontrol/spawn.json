@@ -46,7 +46,8 @@
       "dawnera:deinonychus",
       "dawnera:diplocaulus",
       "dawnera:sachicasaurus",
-      "dawnera:aegirocassis"
+      "dawnera:aegirocassis",
+      "dawnera:worm"
     ],
     "result": "deny"
   },
