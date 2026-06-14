@@ -167,7 +167,7 @@
 		"Enable Beetroot Crate" = true
 		"Enable Cocoa Bean Sack" = true
 		"Enable Nether Wart Sack" = true
-		"Enable Gunpowder Sack" = true
+		"Enable Gunpowder Sack" = false
 		"Enable Berry Sack" = true
 		"Enable Glow Berry Sack" = true
 		"Enable Blaze Lantern" = true
@@ -298,7 +298,7 @@
 		#Enable comparing enchantments to find a replacement
 		"Enable Enchant Matching" = true
 		#Allow pulling items from one hotbar slot to another
-		"Check Hotbar" = false
+		"Check Hotbar" = true
 		"Unstackables Only" = false
 		#Any items you place in this list will be ignored by the restock feature
 		"Ignored Items" = ["botania:exchange_rod", "botania:dirt_rod", "botania:skydirt_rod", "botania:cobble_rod"]
@@ -1825,7 +1825,7 @@
 	Crate = false
 	Magnets = false
 	"Matrix Enchanting" = false
-	Pipes = true
+	Pipes = false
 	"Tiny Potato" = false
 	"Totem Of Holding" = false
 

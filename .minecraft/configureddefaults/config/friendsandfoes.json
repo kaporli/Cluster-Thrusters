@@ -1,5 +1,5 @@
 {
-  "enableCopperGolem": true,
+  "enableCopperGolem": false,
   "generateCopperGolemAreaStructure": true,
   "copperGolemAreaStructureWeight": 1,
   "generateCopperGolemInAncientCity": true,

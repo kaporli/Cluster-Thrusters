@@ -2,23 +2,23 @@
   mod_id: 'iceandfire',
   provided_stones: [],
   provided_ores: [
-    {
-      id: 'silver_ore',
-      stone: [
-        'stone',
-        'deepslate',
-      ],
-      block_id: [
-        'iceandfire:silver_ore',
-        'iceandfire:deepslate_silver_ore',
-      ],
-      lang: {
-        en_us: 'Silver Ore',
-      },
-      types: [
-        'stone',
-      ],
-    },
+    // {
+    //   id: 'silver_ore',
+    //   stone: [
+    //     'stone',
+    //     'deepslate',
+    //   ],
+    //   block_id: [
+    //     'iceandfire:silver_ore',
+    //     'iceandfire:deepslate_silver_ore',
+    //   ],
+    //   lang: {
+    //     en_us: 'Silver Ore',
+    //   },
+    //   types: [
+    //     'stone',
+    //   ],
+    // },
     {
       id: 'sapphire_ore',
       stone: [

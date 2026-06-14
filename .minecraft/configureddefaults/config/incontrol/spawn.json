@@ -46,7 +46,14 @@
       "dawnera:deinonychus",
       "dawnera:diplocaulus",
       "dawnera:sachicasaurus",
-      "dawnera:aegirocassis"
+      "dawnera:aegirocassis",
+      "dawnera:worm"
+    ],
+    "result": "deny"
+  },
+  {
+    "mob": [
+      "caverns_and_chasms:glare"
     ],
     "result": "deny"
   }

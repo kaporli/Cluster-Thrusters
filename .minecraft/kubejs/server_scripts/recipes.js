@@ -1,4 +1,28 @@
 ServerEvents.recipes(event => {
+    event.remove({ id: 'mekanism:infusion_conversion/tin/from_dust' });
+    event.remove({ id: 'mekanism:infusion_conversion/tin/from_enriched' });
+    event.custom({
+        type: 'mekanism:infusion_conversion',
+        input: { ingredient: { tag: 'forge:ingots/tin' }, amount: 1 },
+        output: { infuse_type: 'mekanism:tin', amount: 10 }
+    }).id('kubejs:tin_infusion_from_ingot');
+
+    event.remove({ id: 'mekanism:processing/uranium/slurry/dirty/from_raw_block' });
+    event.remove({ id: 'mekanism:processing/uranium/uranium_oxide' });
+
+    // Precision sawmill: redirect sawdust secondary output to wood_chip.
+    // replaceOutput skips Mekanism's custom 'secondaryOutput' field, so patch via forEachRecipe.
+    event.forEachRecipe({ type: 'mekanism:sawing' }, recipe => {
+        const secondary = recipe.json.get('secondaryOutput')
+        if (secondary !== null && secondary.isJsonObject()) {
+            const secondaryObj = secondary.getAsJsonObject()
+            const item = secondaryObj.get('item')
+            if (item !== null && item.getAsString() === 'mekanism:sawdust') {
+                secondaryObj.addProperty('item', 'createdieselgenerators:wood_chip')
+            }
+        }
+    })
+
     // Remove all recipes that are processed IN scguns machines
     event.remove({ type: 'scguns:mechanical_pressing' });
     event.remove({ type: 'scguns:powered_mechanical_pressing' });
