@@ -5,7 +5,6 @@ JEIEvents.hideItems(event => {
     event.hide('create_jetpack:jetpack_placeable')
     event.hide('create_jetpack:netherite_jetpack_placeable')
     event.hide('moonlight:placeable_item')
-    event.hide('create_connected:incomplete_control_chip')
     event.hide('extra_compat:foul_soup_cup')
     event.hide('extra_compat:cavern_explorer_stew_cup')
     event.hide('extra_compat:miso_with_bamboo_sprouts_cup')
