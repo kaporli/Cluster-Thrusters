@@ -1,5 +1,4 @@
 JEIEvents.hideItems(event => {
-    event.hide('mekanism:block_raw_uranium')
     event.hide('biomesoplenty:redwood_log')
     event.hide('biomesoplenty:fir_log')
     event.hide('create_jetpack:jetpack_placeable')

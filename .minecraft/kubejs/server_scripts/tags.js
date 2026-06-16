@@ -1,4 +1,5 @@
 ServerEvents.tags("item", function (event) {
+    // Smithing templates
     event.add("minecraft:smithing_templates", "minecraft:netherite_upgrade_smithing_template");
     event.add("minecraft:smithing_templates", "traveloptics:tectonic_upgrade_smithing_template");
     event.add("minecraft:smithing_templates", "traveloptics:darkness_upgrade_smithing_template");
@@ -25,10 +26,16 @@ ServerEvents.tags("item", function (event) {
     event.add("farmersdelight:cabinets", "mynethersdelight:red_nether_bricks_cabinet");
     event.add("farmersdelight:cabinets", "aethersdelight:skyroot_cabinet");
 
+    // Alexscaves
+    event.add("forge:ores/uranium", "alexscaves:radrock_uranium_ore");
 
+    // Create Diesel Generators
     event.add("forge:sawdust", "createdieselgenerators:wood_chip");
 
     // Mekanism tin items removed by reliable_remover — clean dead references from tags
+    event.remove("forge:ores/uranium", "mekanism:uranium_ore");
+    event.remove("forge:ores/uranium", "mekanism:deepslate_uranium_ore");
+    event.remove("forge:raw_materials/uranium", "mekanism:raw_uranium");
     event.remove("forge:ingots/tin", "mekanism:ingot_tin");
     event.remove("forge:nuggets/tin", "mekanism:nugget_tin");
     event.remove("forge:storage_blocks/tin", "mekanism:block_tin");

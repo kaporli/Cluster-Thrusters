@@ -1,10 +1,10 @@
 ServerEvents.recipes(event => {
     let remove = [
-        'ae2:inscriber',
+        // 'ae2:inscriber',
+        // 'expatternprovider:ex_inscriber',
         'ae2:charger',
-        'aeinfinitybooster:dimension_card',
-        'expatternprovider:ex_inscriber',
-        'expatternprovider:ex_charger'
+        'expatternprovider:ex_charger',
+        'aeinfinitybooster:dimension_card'
     ]
 
     remove.forEach(element => {
@@ -34,43 +34,85 @@ function addFocusingRecipeAE2(event, input, output, beamType, processingTime) {
 
 ServerEvents.recipes(event => {
     // blank_circuit: superheated compacting
-    event.recipes.create.compacting(['4x kubejs:blank_circuit'], [
-        '#forge:stone', 'minecraft:redstone', 'minecraft:iron_ingot', 'minecraft:quartz'
-    ]).superheated()
+    event.custom({
+        type: 'create:compacting',
+        heatRequirement: 'superheated',
+        ingredients: [
+            { tag: 'forge:stone' },
+            { item: 'minecraft:redstone' },
+            { item: 'minecraft:iron_ingot' },
+            { item: 'minecraft:quartz' }
+        ],
+        results: [{ count: 4, item: 'kubejs:blank_circuit' }]
+    })
 
     // copper_circuit: deploy copper wire onto blank_circuit
-    event.recipes.create.deploying('kubejs:copper_circuit', ['kubejs:blank_circuit', 'createaddition:copper_wire'])
+    event.custom({
+        type: 'create:deploying',
+        ingredients: [{ item: 'kubejs:blank_circuit' }, { item: 'createaddition:copper_wire' }],
+        results: [{ item: 'kubejs:copper_circuit' }]
+    })
 
     // Vibrant Quartz Glass
     event.remove({output: 'ae2:quartz_vibrant_glass'})
     addFocusingRecipeAE2(event, 'ae2:quartz_glass', 'ae2:quartz_vibrant_glass', 3, 50)
 
     // Certus Quartz (mixing, superheated)
-    event.recipes.create.mixing(['2x ae2:certus_quartz_crystal'], [
-        '2x minecraft:quartz', 'ae2:certus_quartz_dust', Fluid.of('minecraft:water', 500)
-    ]).superheated()
+    event.custom({
+        type: 'create:mixing',
+        heatRequirement: 'superheated',
+        ingredients: [
+            { count: 2, item: 'minecraft:quartz' },
+            { item: 'ae2:certus_quartz_dust' },
+            { amount: 500, fluid: 'minecraft:water', nbt: {} }
+        ],
+        results: [{ count: 2, item: 'ae2:certus_quartz_crystal' }]
+    })
 
     // Sky Stone (mixing, superheated)
-    event.recipes.create.mixing(['2x ae2:sky_stone_block'], [
-        '2x create:powdered_obsidian', 'minecraft:ice', Fluid.of('minecraft:water', 500)
-    ]).superheated()
+    event.custom({
+        type: 'create:mixing',
+        heatRequirement: 'superheated',
+        ingredients: [
+            { count: 2, item: 'create:powdered_obsidian' },
+            { item: 'minecraft:ice' },
+            { amount: 500, fluid: 'minecraft:water', nbt: {} }
+        ],
+        results: [{ count: 2, item: 'ae2:sky_stone_block' }]
+    })
 
     // Fluix Pearl (mixing, superheated)
     event.remove({output: 'ae2:fluix_pearl'})
-    event.recipes.create.mixing(['ae2:fluix_pearl'], [
-        '2x ae2:fluix_dust', '2x ae2:ender_dust', '#aether:swet_balls', Fluid.of('minecraft:water', 500)
-    ]).superheated()
+    event.custom({
+        type: 'create:mixing',
+        heatRequirement: 'superheated',
+        ingredients: [
+            { count: 2, item: 'ae2:fluix_dust' },
+            { count: 2, item: 'ae2:ender_dust' },
+            { tag: 'aether:swet_balls' },
+            { amount: 500, fluid: 'minecraft:water', nbt: {} }
+        ],
+        results: [{ item: 'ae2:fluix_pearl' }]
+    })
 
     // Fluix Crystal (mixing, superheated)
     event.remove({id: 'create:mixing/compat/ae2/fluix_crystal'})
     event.remove({id: 'ae2:transform/fluix_crystals'})
     event.remove({id: 'ae2:transform/fluix_crystal'})
-    event.recipes.create.mixing([
-        'ae2:fluix_crystal',
-        Item.of('ae2:fluix_crystal').withChance(0.5)
-    ], [
-        '4x minecraft:amethyst_shard', '2x ae2:fluix_dust', 'ae2:charged_certus_quartz_crystal', Fluid.of('minecraft:water', 500)
-    ]).superheated()
+    event.custom({
+        type: 'create:mixing',
+        heatRequirement: 'superheated',
+        ingredients: [
+            { count: 4, item: 'minecraft:amethyst_shard' },
+            { count: 2, item: 'ae2:fluix_dust' },
+            { item: 'ae2:charged_certus_quartz_crystal' },
+            { amount: 500, fluid: 'minecraft:water', nbt: {} }
+        ],
+        results: [
+            { item: 'ae2:fluix_crystal' },
+            { item: 'ae2:fluix_crystal', chance: 0.5 }
+        ]
+    })
 
     // Overcharged items (Tesla Coil)
     addChargingRecipeAE2(event, "minecraft:diamond",        "kubejs:overcharged_diamond",       10000, 400)
@@ -83,24 +125,48 @@ ServerEvents.recipes(event => {
     addChargingRecipeAE2(event, "minecraft:book", "ae2:guide", 1000, 200)
     addChargingRecipeAE2(event, "minecraft:compass", "ae2:meteorite_compass", 1000, 200)
 
-    // Press (sequenced assembly, 2x pressing instead of curving)
+    // Press dies — crafted one-way from the press (press consumed, die lasts indefinitely)
+    const dieData = [
+        { press: "ae2:silicon_press",               die: "kubejs:silicon_press_die" },
+        { press: "ae2:calculation_processor_press", die: "kubejs:calculation_press_die" },
+        { press: "ae2:logic_processor_press",       die: "kubejs:logic_press_die" },
+        { press: "ae2:engineering_processor_press", die: "kubejs:engineering_press_die" },
+    ]
+    dieData.forEach(element => {
+        event.shapeless(element.die, [element.press])
+    })
+
+    // Press (sequenced assembly — deployer holds die to differentiate which press is made)
     const pressData = [
-        { press: "ae2:silicon_press",               incomplete: "createappliedkinetics:incomplete_silicon_press" },
-        { press: "ae2:calculation_processor_press", incomplete: "createappliedkinetics:incomplete_calculation_processor_press" },
-        { press: "ae2:logic_processor_press",       incomplete: "createappliedkinetics:incomplete_logic_processor_press" },
-        { press: "ae2:engineering_processor_press", incomplete: "createappliedkinetics:incomplete_engineering_processor_press" },
-        { press: "ae2:name_press",                  incomplete: "kubejs:incomplete_name_press" },
+        { press: "ae2:silicon_press",               incomplete: "kubejs:incomplete_silicon_press",               die: "kubejs:silicon_press_die" },
+        { press: "ae2:calculation_processor_press", incomplete: "kubejs:incomplete_calculation_processor_press", die: "kubejs:calculation_press_die" },
+        { press: "ae2:logic_processor_press",       incomplete: "kubejs:incomplete_logic_processor_press",       die: "kubejs:logic_press_die" },
+        { press: "ae2:engineering_processor_press", incomplete: "kubejs:incomplete_engineering_processor_press", die: "kubejs:engineering_press_die" },
     ]
     pressData.forEach(element => {
         event.remove({ output: element.press })
-        let inter1 = element.incomplete
-        event.recipes.create.sequenced_assembly([
-            Item.of(element.press),
-        ], 'create:iron_sheet', [
-            event.recipes.create.pressing(inter1, inter1),
-            event.recipes.create.pressing(inter1, inter1),
-        ]).transitionalItem(inter1).loops(15)
+        event.custom({
+            type: 'create:sequenced_assembly',
+            ingredient: { item: 'create:iron_sheet' },
+            loops: 5,
+            results: [{ item: element.press }],
+            sequence: [
+                {
+                    type: 'create:deploying',
+                    ingredients: [{ item: element.incomplete }, { item: element.die }],
+                    results: [{ item: element.incomplete }]
+                },
+                {
+                    type: 'create:pressing',
+                    ingredients: [{ item: element.incomplete }],
+                    results: [{ item: element.incomplete }]
+                }
+            ],
+            transitionalItem: { item: element.incomplete }
+        })
     })
+
+    // Name press — loot only (no sequenced assembly recipe)
 
     // Formation Core
     event.remove({output: 'ae2:formation_core'})
@@ -131,22 +197,22 @@ ServerEvents.recipes(event => {
     // Printed Circuit (sequenced assembly)
     const printedCircuitDatas = [
         {
-            press:       "ae2:calculation_processor_press",
-            incomplete:  "createappliedkinetics:incomplete_printed_calculation_circuit",
+            die:         "kubejs:calculation_press_die",
+            incomplete:  "kubejs:incomplete_printed_calculation_circuit",
             inputDeploy: "ae2:charged_certus_quartz_crystal",
             output:      "ae2:printed_calculation_processor",
             input:       "kubejs:blank_circuit"
         },
         {
-            press:       "ae2:logic_processor_press",
-            incomplete:  "createappliedkinetics:incomplete_printed_logic_circuit",
+            die:         "kubejs:logic_press_die",
+            incomplete:  "kubejs:incomplete_printed_logic_circuit",
             inputDeploy: "create:golden_sheet",
             output:      "ae2:printed_logic_processor",
             input:       "kubejs:blank_circuit"
         },
         {
-            press:       "ae2:engineering_processor_press",
-            incomplete:  "createappliedkinetics:incomplete_printed_engineering_circuit",
+            die:         "kubejs:engineering_press_die",
+            incomplete:  "kubejs:incomplete_printed_engineering_circuit",
             inputDeploy: "kubejs:overcharged_diamond",
             output:      "ae2:printed_engineering_processor",
             input:       "kubejs:blank_circuit"
@@ -163,6 +229,11 @@ ServerEvents.recipes(event => {
                 {
                     type: 'create:deploying',
                     ingredients: [{ item: recipe.incomplete }, { item: recipe.inputDeploy }],
+                    results: [{ item: recipe.incomplete }]
+                },
+                {
+                    type: 'create:deploying',
+                    ingredients: [{ item: recipe.incomplete }, { item: recipe.die }],
                     results: [{ item: recipe.incomplete }]
                 },
                 {
@@ -184,13 +255,25 @@ ServerEvents.recipes(event => {
 
     // Printed Silicon
     event.remove({ output: 'ae2:printed_silicon' })
-    let inter1 = 'createappliedkinetics:incomplete_silicon_print'
-    event.recipes.create.sequenced_assembly([
-        Item.of('ae2:printed_silicon'),
-    ], 'ae2:silicon', [
-        event.recipes.create.pressing(inter1, inter1),
-        event.recipes.create.pressing(inter1, inter1),
-    ]).transitionalItem(inter1).loops(1)
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: { item: 'ae2:silicon' },
+        loops: 1,
+        results: [{ item: 'ae2:printed_silicon' }],
+        sequence: [
+            {
+                type: 'create:deploying',
+                ingredients: [{ item: 'kubejs:incomplete_silicon_print' }, { item: 'kubejs:silicon_press_die' }],
+                results: [{ item: 'kubejs:incomplete_silicon_print' }]
+            },
+            {
+                type: 'create:pressing',
+                ingredients: [{ item: 'kubejs:incomplete_silicon_print' }],
+                results: [{ item: 'kubejs:incomplete_silicon_print' }]
+            }
+        ],
+        transitionalItem: { item: 'kubejs:incomplete_silicon_print' }
+    })
 
     // Processor (sequenced assembly)
     const processorData = [
@@ -200,7 +283,7 @@ ServerEvents.recipes(event => {
             deploy1:    "ae2:printed_logic_processor",
             deploy2:    "minecraft:redstone",
             fluid:      "createdieselgenerators:ethanol",
-            incomplete: "createappliedkinetics:incomplete_logic_processor"
+            incomplete: "kubejs:incomplete_logic_processor"
         },
         {
             output:     "ae2:calculation_processor",
@@ -208,7 +291,7 @@ ServerEvents.recipes(event => {
             deploy1:    "ae2:printed_calculation_processor",
             deploy2:    "ae2:fluix_dust",
             fluid:      "createdieselgenerators:ethanol",
-            incomplete: "createappliedkinetics:incomplete_calculation_processor"
+            incomplete: "kubejs:incomplete_calculation_processor"
         },
         {
             output:     "ae2:engineering_processor",
@@ -216,19 +299,40 @@ ServerEvents.recipes(event => {
             deploy1:    "ae2:printed_engineering_processor",
             deploy2:    "minecraft:blaze_powder",
             fluid:      "createdieselgenerators:ethanol",
-            incomplete: "createappliedkinetics:incomplete_engineering_processor"
+            incomplete: "kubejs:incomplete_engineering_processor"
         }
     ]
     processorData.forEach(element => {
         event.remove({ output: element.output })
-        event.recipes.create.sequenced_assembly([
-            Item.of(element.output),
-        ], element.input, [
-            event.recipes.create.deploying(element.incomplete, [element.incomplete, element.deploy1]),
-            event.recipes.create.deploying(element.incomplete, [element.incomplete, element.deploy2]),
-            event.recipes.create.filling(element.incomplete, [Fluid.of(element.fluid, 250), element.incomplete]),
-            event.recipes.create.pressing(element.incomplete, element.incomplete),
-        ]).transitionalItem(element.incomplete).loops(1)
+        event.custom({
+            type: 'create:sequenced_assembly',
+            ingredient: { item: element.input },
+            loops: 1,
+            results: [{ item: element.output }],
+            sequence: [
+                {
+                    type: 'create:deploying',
+                    ingredients: [{ item: element.incomplete }, { item: element.deploy1 }],
+                    results: [{ item: element.incomplete }]
+                },
+                {
+                    type: 'create:deploying',
+                    ingredients: [{ item: element.incomplete }, { item: element.deploy2 }],
+                    results: [{ item: element.incomplete }]
+                },
+                {
+                    type: 'create:filling',
+                    ingredients: [{ item: element.incomplete }, { amount: 250, fluid: element.fluid }],
+                    results: [{ item: element.incomplete }]
+                },
+                {
+                    type: 'create:pressing',
+                    ingredients: [{ item: element.incomplete }],
+                    results: [{ item: element.incomplete }]
+                }
+            ],
+            transitionalItem: { item: element.incomplete }
+        })
     })
 })
 

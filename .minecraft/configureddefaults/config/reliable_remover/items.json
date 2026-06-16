@@ -8,10 +8,6 @@
         "ae2:crank",
         "ae2:charged_staff",
         "ae2:tiny_tnt",
-        "ae2:quantum_ring",
-        "ae2:quantum_link",
-        "ae2:matter_cannon",
-        "ae2:condenser",
         "ae2:vibration_chamber",
         "ae2:nether_quartz_pickaxe",
         "ae2:nether_quartz_axe",
@@ -32,6 +28,7 @@
         "ae2:fluix_hoe",
         "ae2:fluix_sword",
         "ae2:fluix_upgrade_smithing_template",
+        "ae2:name_press",
 
         "aether:aether_portal_frame",
 
@@ -1020,6 +1017,9 @@
         "luminous_beasts:scarecrow_trophy",
         "luminous_beasts:ultimate_bestiary",
 
+        "mekanism:uranium_ore",
+        "mekanism:deepslate_uranium_ore",
+        "mekanism:raw_uranium",
         "mekanism:ingot_tin",
         "mekanism:nugget_tin",
         "mekanism:block_tin",
@@ -1233,7 +1233,6 @@
         "mcwfences|everycomp:mcf/.*_hedge$",
 
         "mekanism:.*sulfur.*",
-        "mekanism:.*uranium.*",
         "mekanism:.*steel.*",
 
         "railways:.*incomplete.*",

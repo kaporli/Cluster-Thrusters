@@ -1,0 +1,10 @@
+{
+	musicDelayLength2: "NONE",
+	musicSwitchSpeed2: "INSTANT",
+	debugModeEnabled: false,
+	loadedUserSongpack: "",
+	blacklistedDimensions: [],
+	savedHomePositions: {},
+	soundsMuteMusic: [],
+	hasForcedInitialVolume: true
+}
