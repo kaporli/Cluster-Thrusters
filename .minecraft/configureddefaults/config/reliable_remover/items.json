@@ -1017,9 +1017,6 @@
         "luminous_beasts:scarecrow_trophy",
         "luminous_beasts:ultimate_bestiary",
 
-        "mekanism:uranium_ore",
-        "mekanism:deepslate_uranium_ore",
-        "mekanism:raw_uranium",
         "mekanism:ingot_tin",
         "mekanism:nugget_tin",
         "mekanism:block_tin",
@@ -1234,6 +1231,7 @@
 
         "mekanism:.*sulfur.*",
         "mekanism:.*steel.*",
+        "mekanism:.*uranium.*",
 
         "railways:.*incomplete.*",
         "railways:.*paint.*",

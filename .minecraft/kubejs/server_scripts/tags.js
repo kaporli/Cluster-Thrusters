@@ -26,16 +26,21 @@ ServerEvents.tags("item", function (event) {
     event.add("farmersdelight:cabinets", "mynethersdelight:red_nether_bricks_cabinet");
     event.add("farmersdelight:cabinets", "aethersdelight:skyroot_cabinet");
 
-    // Alexscaves
-    event.add("forge:ores/uranium", "alexscaves:radrock_uranium_ore");
-
     // Create Diesel Generators
     event.add("forge:sawdust", "createdieselgenerators:wood_chip");
 
-    // Mekanism tin items removed by reliable_remover — clean dead references from tags
+    // Mekanism uranium items removed by reliable_remover — clean dead references from tags
     event.remove("forge:ores/uranium", "mekanism:uranium_ore");
     event.remove("forge:ores/uranium", "mekanism:deepslate_uranium_ore");
+    event.remove("forge:ingots/uranium", "mekanism:ingot_uranium");
+    event.remove("forge:nuggets/uranium", "mekanism:nugget_uranium");
     event.remove("forge:raw_materials/uranium", "mekanism:raw_uranium");
+    event.remove("forge:storage_blocks/uranium", "mekanism:block_uranium");
+    event.remove("forge:storage_blocks/raw_uranium", "mekanism:block_raw_uranium");
+    event.remove("forge:dusts/uranium", "mekanism:dust_uranium");
+    event.remove("minecraft:beacon_payment_items", "mekanism:ingot_uranium");
+
+    // Mekanism tin items removed by reliable_remover — clean dead references from tags
     event.remove("forge:ingots/tin", "mekanism:ingot_tin");
     event.remove("forge:nuggets/tin", "mekanism:nugget_tin");
     event.remove("forge:storage_blocks/tin", "mekanism:block_tin");
