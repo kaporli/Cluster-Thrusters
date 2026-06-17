@@ -7,8 +7,20 @@ ServerEvents.recipes(event => {
         output: { infuse_type: 'mekanism:tin', amount: 10 }
     }).id('kubejs:tin_infusion_from_ingot');
 
+    event.remove({ id: 'mekanism:processing/uranium/yellow_cake_uranium' });
+    event.remove({ id: 'mekanism:processing/uranium/slurry/dirty/from_ore' });
+    event.remove({ id: 'mekanism:processing/uranium/slurry/dirty/from_raw_ore' });
     event.remove({ id: 'mekanism:processing/uranium/slurry/dirty/from_raw_block' });
-    event.remove({ id: 'mekanism:processing/uranium/uranium_oxide' });
+    event.remove({ id: 'mekanism:processing/uranium/slurry/clean' });
+    event.remove({ id: 'mekanism:processing/uranium/clump/from_ore' });
+    event.remove({ id: 'mekanism:processing/uranium/dust/from_ore' });
+
+    // alexscaves:uranium → yellow cake (feeds fission reactor fuel chain)
+    event.custom({
+        type: 'mekanism:enriching',
+        input: { ingredient: { item: 'alexscaves:uranium' }, amount: 1 },
+        output: { count: 2, item: 'mekanism:yellow_cake_uranium' }
+    }).id('kubejs:yellow_cake_uranium_from_alexscaves_uranium');
 
     // Precision sawmill: redirect sawdust secondary output to wood_chip.
     // replaceOutput skips Mekanism's custom 'secondaryOutput' field, so patch via forEachRecipe.

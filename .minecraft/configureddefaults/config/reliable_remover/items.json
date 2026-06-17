@@ -1,7 +1,7 @@
 {
     "action": "REMOVE",
     "items": [
-        "acended_quark:quicksoil_glass_shard",
+        "ascended_quark:quicksoil_glass_shard",
 
         "ae2:matter_ball",
         "ae2:color_applicator",
@@ -1017,6 +1017,20 @@
         "luminous_beasts:scarecrow_trophy",
         "luminous_beasts:ultimate_bestiary",
 
+        "mekanism:uranium_ore",
+        "mekanism:deepslate_uranium_ore",
+        "mekanism:raw_uranium",
+        "mekanism:block_raw_uranium",
+        "mekanism:ingot_uranium",
+        "mekanism:nugget_uranium",
+        "mekanism:block_uranium",
+        "mekanism:dust_uranium",
+        "mekanism:dirty_dust_uranium",
+        "mekanism:clump_uranium",
+        "mekanism:shard_uranium",
+        "mekanism:crystal_uranium",
+        "mekanism:dirty_uranium",
+        "mekanism:clean_uranium",
         "mekanism:ingot_tin",
         "mekanism:nugget_tin",
         "mekanism:block_tin",
@@ -1126,6 +1140,10 @@
         "obscure_api:vial_of_knowledge",
         "obscure_api:astral_dust",
 
+        "quark:stone_lamp",
+        "quark:stone_brick_lamp",
+        "quark:gunpowder_sack",
+
         "railways:track_biomesoplenty_redwood_narrow",
         "railways:track_biomesoplenty_redwood",
         "railways:track_incomplete_biomesoplenty_redwood_wide",
@@ -1231,7 +1249,8 @@
 
         "mekanism:.*sulfur.*",
         "mekanism:.*steel.*",
-        "mekanism:.*uranium.*",
+
+        "quark:.*shard.*",
 
         "railways:.*incomplete.*",
         "railways:.*paint.*",
