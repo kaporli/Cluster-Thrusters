@@ -1,72 +1,54 @@
 ServerEvents.recipes(event => {
 
     // ==========================================================
-    // AMMO  (AE2 Inscriber — no key/pattern system)
+    // AMMO  (Tesla Coil charging)
     // ==========================================================
 
     // etched_quartz_bullet — standard rifle/SMG/pistol ammo
     event.remove({ id: 'applied_armorer:ammo/etched_quartz_bullet' });
     event.custom({
-        type: 'ae2:inscriber',
-        ingredients: {
-            top: { item: 'ae2:charged_certus_quartz_crystal' },
-            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:gas_pistol_ammo"}' },
-            // bottom: { item: 'ae2:fluix_crystal'}
-        },
-        mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 8, nbt: '{AmmoId:"applied_armorer:etched_quartz_bullet"}' }
+        type: 'createaddition:charging',
+        input: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:gas_pistol_ammo"}' },
+        result: { item: 'tacz:ammo', count: 8, nbt: '{AmmoId:"applied_armorer:etched_quartz_bullet"}' },
+        energy: 4000,
+        maxChargeRate: 200
     })
 
     // hard_core_quartz_bullet — sniper ammo
     event.remove({ id: 'applied_armorer:ammo/hard_core_quartz_bullet' });
     event.custom({
-        type: 'ae2:inscriber',
-        ingredients: {
-            top: { item: 'ae2:charged_certus_quartz_crystal' },
-            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:rbapb"}' },
-            // bottom: { item: 'ae2:fluix_crystal'}
-        },
-        mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 4, nbt: '{AmmoId:"applied_armorer:hard_core_quartz_bullet"}' }
+        type: 'createaddition:charging',
+        input: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:rbapb"}' },
+        result: { item: 'tacz:ammo', count: 4, nbt: '{AmmoId:"applied_armorer:hard_core_quartz_bullet"}' },
+        energy: 8000,
+        maxChargeRate: 200
     })
 
     // cluster_quartz_bullet — shotgun pellet ammo
     event.remove({ id: 'applied_armorer:ammo/cluster_quartz_bullet' });
     event.custom({
-        type: 'ae2:inscriber',
-        ingredients: {
-            top: { item: 'ae2:quartz_cluster' },
-            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"tacz:12g"}' },
-            // bottom: { item: 'ae2:fluix_crystal'}
-        },
-        mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 8, nbt: '{AmmoId:"applied_armorer:cluster_quartz_bullet"}' }
+        type: 'createaddition:charging',
+        input: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"tacz:12g"}' },
+        result: { item: 'tacz:ammo', count: 8, nbt: '{AmmoId:"applied_armorer:cluster_quartz_bullet"}' },
+        energy: 4000,
+        maxChargeRate: 200
     })
 
-    // fluix_battery — EMG energy cell ammo
+    // fluix_battery — EMG energy cell ammo (3 ingredients → shapeless craft)
     event.remove({ id: 'applied_armorer:ammo/fluix_battery' });
-    event.custom({
-        type: 'ae2:inscriber',
-        ingredients: {
-            top: { item: 'ae2:silicon' },
-            middle: { item: 'ae2:calculation_processor' },
-            bottom: { item: 'ae2:fluix_crystal' }
-        },
-        mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 4, nbt: '{AmmoId:"applied_armorer:fluix_battery"}' }
-    })
+    event.shapeless(
+        Item.of('tacz:ammo', 4, '{AmmoId:"applied_armorer:fluix_battery"}'),
+        ['ae2:silicon', 'ae2:calculation_processor', 'ae2:fluix_crystal']
+    )
 
     // fluix_infused_grenade — grenade launcher explosive
     event.remove({ id: 'applied_armorer:ammo/fluix_infused_grenade' });
     event.custom({
-        type: 'ae2:inscriber',
-        ingredients: {
-            // top: { item: 'ae2:charged_certus_quartz_crystal' },
-            top: { item: 'ae2:fluix_crystal' },
-            middle: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:gernade"}' }
-        },
-        mode: 'inscribe',
-        result: { item: 'tacz:ammo', count: 2, nbt: '{AmmoId:"applied_armorer:fluix_infused_grenade"}' }
+        type: 'createaddition:charging',
+        input: { type: 'forge:nbt', item: 'tacz:ammo', nbt: '{AmmoId:"create_armorer:gernade"}' },
+        result: { item: 'tacz:ammo', count: 2, nbt: '{AmmoId:"applied_armorer:fluix_infused_grenade"}' },
+        energy: 6000,
+        maxChargeRate: 200
     })
 
     // ==========================================================
