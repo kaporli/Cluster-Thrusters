@@ -1017,6 +1017,9 @@
         "luminous_beasts:scarecrow_trophy",
         "luminous_beasts:ultimate_bestiary",
 
+        "mekanism:block_steel",
+        "mekanism:nugget_steel",
+        "mekanism:ingot_steel",
         "mekanism:uranium_ore",
         "mekanism:deepslate_uranium_ore",
         "mekanism:raw_uranium",
@@ -1248,7 +1251,6 @@
         "mcwfences|everycomp:mcf/.*_hedge$",
 
         "mekanism:.*sulfur.*",
-        "mekanism:.*steel.*",
 
         "quark:.*shard.*",
 
